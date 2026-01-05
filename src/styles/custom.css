@@ -430,3 +430,116 @@ html {
 .min-vh-100 {
   min-height: 100vh;
 }
+
+/* ========================================
+   SERVICE FLIP CARDS
+   ======================================== */
+
+.service-flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 350px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.service-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.service-flip-card:hover .service-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.service-flip-card-front,
+.service-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.service-flip-card-front {
+  background-color: var(--primary-color);
+}
+
+.service-flip-card-back {
+  background-color: var(--primary-color);
+  transform: rotateY(180deg);
+}
+
+.service-icon {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.service-icon svg,
+.service-icon i {
+  font-size: 3.5rem;
+  color: white;
+}
+
+.service-icon-small {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.service-icon-small svg,
+.service-icon-small i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Responsive para las cards */
+@media (max-width: 991px) {
+  .service-flip-card {
+    height: 320px;
+  }
+  
+  .service-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .service-icon svg,
+  .service-icon i {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-flip-card {
+    height: 300px;
+  }
+  
+  .service-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .service-icon svg,
+  .service-icon i {
+    font-size: 2.5rem;
+  }
+}
