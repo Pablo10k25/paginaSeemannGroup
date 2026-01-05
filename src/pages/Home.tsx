@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import HeroSlider from '../components/HeroSlider';
 import ServiceCard from '../components/ServiceCard';
 import LogoCarousel from '../components/LogoCarousel';
+import HistoryTabs from '../components/HistoryTabs';
 import AOS from 'aos';
 import { 
   Plane,          // Transporte Aéreo
@@ -178,151 +179,8 @@ const Home = () => {
       {/* Logo Carousel - Empresas Afiliadas */}
       <LogoCarousel />
 
-      {/* Historia Section con Tabs */}
-      <div id="historia-section"></div>
-      <br /><br /><br />
-      <section className="ftco-section ftco-no-pb ftco-no-pt ftco-services bg-light">
-        <div className="container">
-          <div className="row no-gutters">
-            <div className="col-md-4 ftco-animate py-2 nav-link-wrap">
-              <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <button
-                  className="nav-link px-4 block-team-member-1 active"
-                  id="v-pills-historia-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#v-pills-historia"
-                  type="button"
-                  role="tab"
-                  style={{ padding: '15px' }}
-                >
-                  <span className="me-3">▼</span>Historia
-                </button>
-                <button
-                  className="nav-link px-4 block-team-member-1"
-                  id="v-pills-mision-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#v-pills-mision"
-                  type="button"
-                  role="tab"
-                  style={{ padding: '15px' }}
-                >
-                  <span className="me-3">▶</span>Misión
-                </button>
-                <button
-                  className="nav-link px-4 block-team-member-1"
-                  id="v-pills-vision-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#v-pills-vision"
-                  type="button"
-                  role="tab"
-                  style={{ padding: '15px' }}
-                >
-                  <span className="me-3">▼</span>Visión
-                </button>
-                <button
-                  className="nav-link px-4 block-team-member-1"
-                  id="v-pills-valores-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#v-pills-valores"
-                  type="button"
-                  role="tab"
-                  style={{ padding: '15px' }}
-                >
-                  <span className="me-3">▶</span>Valores
-                </button>
-              </div>
-            </div>
-
-            <div className="col-md-8 ftco-animate p-4 p-md-5 d-flex align-items-center text-center" style={{ justifyContent: 'center' }}>
-              <div className="tab-content pl-md-5" id="v-pills-tabContent">
-                
-                {/* Historia Tab */}
-                <div className="ul-check primary list-unstyled mt-1 tab-pane fade show active py-1" id="v-pills-historia" role="tabpanel">
-                  <h2 className="icon mb-4 d-block">
-                    <i className="fas fa-globe"></i>
-                  </h2>
-                  <h2 className="mb-4">Historia</h2>
-                  <p style={{ textAlign: 'justify' }}>
-                    Seemann Group nace como resultado de una vasta experiencia de sus fundadores en el mercado de los seguros,
-                    reaseguros y de logística internacional, con más de 35 años de desarrollo.
-                  </p>
-                  <p data-aos="fade-up" data-aos-delay="200">
-                    <a href="#contacto" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      Contáctanos
-                    </a>{' '}
-                    <Link to="/nuestra-empresa#historia" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      Ver más
-                    </Link>
-                  </p>
-                </div>
-
-                {/* Misión Tab */}
-                <div className="tab-pane fade py-1" id="v-pills-mision" role="tabpanel">
-                  <h2 className="icon mb-4 d-block">
-                    <i className="fas fa-hand-peace"></i>
-                  </h2>
-                  <h2 className="mb-4">Misión</h2>
-                  <p style={{ textAlign: 'justify' }}>
-                    Somos una organización flexible, orientada, y preparada, para enfrentar los cambios que necesita el mercado de
-                    hoy día, que nos permita dar una rápida y profesional respuesta a las necesidades de nuestros clientes.
-                  </p>
-                  <p data-aos="fade-up" data-aos-delay="200">
-                    <a href="#contacto" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      Contáctanos
-                    </a>{' '}
-                    <Link to="/nuestra-empresa#mision" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      Ver más
-                    </Link>
-                  </p>
-                </div>
-
-                {/* Visión Tab */}
-                <div className="tab-pane fade py-1" id="v-pills-vision" role="tabpanel">
-                  <h2 className="icon mb-4 d-block">
-                    <i className="fas fa-eye"></i>
-                  </h2>
-                  <h2 className="mb-4">Visión</h2>
-                  <p style={{ textAlign: 'justify' }}>
-                    A nivel interno, buscamos seguir desarrollando procesos de mejoramiento continuo que nos permitan seguir
-                    evaluando y mejorando la calidad de nuestro servicio.
-                  </p>
-                  <p data-aos="fade-up" data-aos-delay="200">
-                    <a href="#contacto" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      Contáctanos
-                    </a>{' '}
-                    <Link to="/nuestra-empresa#vision" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      Ver más
-                    </Link>
-                  </p>
-                </div>
-
-                {/* Valores Tab */}
-                <div className="ul-check primary list-unstyled mt-1 tab-pane fade py-1" id="v-pills-valores" role="tabpanel">
-                  <h2 className="icon mb-4 d-block">
-                    <i className="fas fa-smile"></i>
-                  </h2>
-                  <h2 className="mb-4">Valores</h2>
-                  <li style={{ textAlign: 'justify' }}>Empatía y Orientación al cliente.</li>
-                  <li style={{ textAlign: 'justify' }}>Personalización.</li>
-                  <li style={{ textAlign: 'justify' }}>Responsabilidad.</li>
-                  <li style={{ textAlign: 'justify' }}>Sinceridad/Transparencia.</li>
-                  <li style={{ textAlign: 'justify' }}>Compromiso/Pro actividad.</li>
-                  <li style={{ textAlign: 'justify' }}>Flexibilidad.</li>
-                  <br />
-                  <p data-aos="fade-up" data-aos-delay="200">
-                    <a href="#contacto" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md text-center">
-                      Contáctanos
-                    </a>{' '}
-                    <Link to="/nuestra-empresa#valores" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md text-center">
-                      Ver más
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Historia Section - Modern Cards */}
+      <HistoryTabs />
 
       {/* Herramientas Section */}
       <div className="site-section" id="herramientas">

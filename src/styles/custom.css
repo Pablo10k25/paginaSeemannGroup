@@ -639,3 +639,127 @@ html {
   display: flex;
   align-items: center;
 }
+
+/* ========================================
+   HISTORY TABS - MODERN DESIGN
+   ======================================== */
+
+.history-tabs-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.history-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.history-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(189, 33, 33, 0.15);
+}
+
+.history-card.active {
+  box-shadow: 0 12px 24px rgba(189, 33, 33, 0.2);
+  transform: translateY(-8px);
+}
+
+.history-card.active::before {
+  background: linear-gradient(90deg, rgba(189, 33, 33, 0.1), rgba(189, 33, 33, 0.3));
+}
+
+.history-card-icon {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.history-card:hover .history-card-icon {
+  transform: scale(1.1);
+}
+
+.history-card.active .history-card-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.history-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+.history-card-content {
+  opacity: 1;
+  margin-top: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-card-content p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+  flex: 1;
+}
+
+.history-card-actions {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .history-card {
+    min-height: 380px;
+  }
+
+  .history-card-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .history-card {
+    min-height: 350px;
+    padding: 25px 15px;
+  }
+
+  .history-card-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .history-card-title {
+    font-size: 1.3rem;
+  }
+
+  .history-card-content p {
+    font-size: 0.75rem;
+  }
+}
