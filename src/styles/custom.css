@@ -579,3 +579,63 @@ html {
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+/* ========================================
+   LOGO CAROUSEL
+   ======================================== */
+
+.logo-carousel-section {
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.logo-slide-item {
+  padding: 0 15px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-wrapper img {
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.logo-wrapper:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Slick carousel overrides */
+.slick-slider {
+  margin: 0 -15px;
+}
+
+.slick-slide {
+  opacity: 1;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}

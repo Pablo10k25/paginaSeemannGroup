@@ -14,28 +14,62 @@ const Servicios = () => {
   return (
     <div className="site-wrap">
       {/* Banner Hero */}
-      <div 
-        className="site-section-cover overlay inner-page bg-light" 
-        style={{ backgroundImage: "url('/images/servicios.jpg')" }}
-        data-aos="fade"
-      >
-        <div className="container">
-          <div className="row align-items-center justify-content-center text-center">
-            <div className="col-lg-10">
-              <div className="box-shadow-content">
-                <div className="block-heading-1">
-                  <span className="d-block mb-3 text-white" data-aos="fade-up">
-                    Transporte <span className="mx-2 text-primary">•</span> Seguridad
-                  </span>
-                  <h1 className="mb-4" data-aos="fade-up" data-aos-delay="100">
-                    Servicios
-                  </h1>
+        <div 
+            className="site-section-cover inner-page bg-light position-relative" 
+            style={{ 
+                backgroundImage: "url('/images/logo2.jpg')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                minHeight: '400px'
+            }}
+            data-aos="fade"
+            >
+            {/* Overlay oscuro */}
+            <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                zIndex: 1
+            }}></div>
+
+            {/* Contenido */}
+            <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+                <div className="row align-items-center justify-content-center text-center" style={{ minHeight: '400px' }}>
+                    <div className="col-lg-10">
+                        <div className="py-5">
+                            <div className="block-heading-1">
+                                <span 
+                                className="d-block mb-2 text-white" 
+                                data-aos="fade-up"
+                                style={{ 
+                                    fontSize: '1rem',
+                                    letterSpacing: '2px',
+                                    textTransform: 'uppercase'
+                                }}
+                                >
+                                Transporte <span className="text-danger fw-bold">•</span> Seguridad
+                                </span>
+                                <h1 
+                                className="mb-0 text-white" 
+                                data-aos="fade-up" 
+                                data-aos-delay="100"
+                                style={{ 
+                                    fontSize: '3rem',
+                                    fontWeight: '700',
+                                    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                                }}
+                                >
+                                SERVICIOS
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Intro Servicios */}
       <div className="site-section" id="servicios-section">
@@ -54,7 +88,7 @@ const Servicios = () => {
               <div 
                 className="col-12 col-lg-6 block__73422" 
                 style={{ 
-                  backgroundImage: "url('/images/1202.jpg')",
+                  backgroundImage: "url('/images/1202.png')",
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   minHeight: '400px'
@@ -93,7 +127,7 @@ const Servicios = () => {
               <div className="col-md-6 col-lg-6 bg-light mb-4" data-aos="fade-up" data-aos-delay="">
                 <h2><a style={{ color: '#ce4747' }}>Transporte Aéreo</a></h2>
                 <br />
-                <img src="/images/transporte aereo4.jpg" alt="Transporte Aéreo" className="img-fluid rounded mb-4" />
+                <img src="/images/1203.jpg" alt="Transporte Aéreo" className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
                   Dada la naturaleza de la prestación, donde el plazo de entrega resulta ser el factor fundamental, 
@@ -129,7 +163,7 @@ const Servicios = () => {
               <div className="col-md-6 col-lg-6 bg-light mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2><a style={{ color: '#ce4747' }}>Transporte Marítimo</a></h2>
                 <br />
-                <img src="/images/Transporte marítimo 3.jpg" alt="Transporte Marítimo" className="img-fluid rounded mb-4" />
+                <img src="/images/1204.jpg" alt="Transporte Marítimo" className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
                   Los mercados hoy en día buscan el transporte marítimo por la fuerte vocación de obtener eficacia en 
@@ -162,7 +196,7 @@ const Servicios = () => {
               <div className="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="">
                 <h2><a style={{ color: '#ce4747' }}>Transporte Terrestre</a></h2>
                 <br />
-                <img src="/images/El transporte internacional de carga.jpg" alt="Transporte Terrestre" className="img-fluid rounded mb-4" />
+                <img src="/images/1205.jpg" alt="Transporte Terrestre" className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
                   En vista que varios de los incoterms actualmente utilizados en los proceso de compra y venta de comercio 
@@ -189,7 +223,7 @@ const Servicios = () => {
               <div className="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2><a style={{ color: '#ce4747' }}>Warehouse</a></h2>
                 <br />
-                <img src="/images/werehouse 2.jpg" alt="Warehouse" className="img-fluid rounded mb-4" />
+                <img src="/images/1206.jpg" alt="Warehouse" className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
                   Actualmente contamos con una amplia cobertura de warehouse a nivel mundial, que le otorgará a nuestros 
@@ -215,7 +249,7 @@ const Servicios = () => {
               <div className="col-md-6 col-lg-6 bg-light mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2><a style={{ color: '#ce4747' }}>Servicio Multimodal</a></h2>
                 <br />
-                <img src="/images/TRANSPORTEMULTIMODAL2.jpg" alt="Servicio Multimodal" className="img-fluid rounded mb-4" />
+                <img src="/images/1207.jpg" alt="Servicio Multimodal" className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
                   Dada la constante búsqueda de las empresa por la optimización de los procesos, con miras a la obtención 
@@ -234,7 +268,7 @@ const Servicios = () => {
               <div className="col-md-6 col-lg-6 bg-light mb-4" data-aos="fade-up" data-aos-delay="">
                 <h2><a style={{ color: '#ce4747' }}>Servicio de Aduanas</a></h2>
                 <br />
-                <img src="/images/logistica internacional 1.jpg" alt="Servicio de Aduanas" className="img-fluid rounded mb-4" />
+                <img src="/images/1208.jpg" alt="Servicio de Aduanas" className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
                   Nuestra amplia red de oficinas a nivel internacional, nos permite asesorar a nuestros clientes en los 
@@ -269,7 +303,7 @@ const Servicios = () => {
             <div className="row">
               <div className="col-md-12 col-lg-12 bg-light" data-aos="fade-up" data-aos-delay="">
                 <div className="text-center mb-4">
-                  <img src="/images/werehouse 3.jpg" alt="Webtracking" className="img-fluid rounded" />
+                  <img src="/images/1209.jpg" alt="Webtracking" className="img-fluid rounded" />
                 </div>
 
                 <p style={{ textAlign: 'justify' }}>

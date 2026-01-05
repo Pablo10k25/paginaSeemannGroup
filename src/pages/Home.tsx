@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HeroSlider from '../components/HeroSlider';
 import ServiceCard from '../components/ServiceCard';
+import LogoCarousel from '../components/LogoCarousel';
 import AOS from 'aos';
 import { 
   Plane,          // Transporte Aéreo
@@ -33,8 +34,8 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
-              <div className="block-heading-1" data-aos="fade-up" data-aos-delay="0">
-                <span>Enviamos adjunto formato</span>
+              <div className="block-heading-1 mt-5" data-aos="fade-up" data-aos-delay="0">
+                <span>Seleccione uno de nuestros servicios</span>
                 <h2>Nuestros Servicios</h2>
               </div>
             </div>
@@ -174,30 +175,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Nuestra Empresa Banner */}
-      <div
-        className="site-section-cover overlay inner-page bg-light"
-        style={{ backgroundImage: "url('/images/shaking-hands-1.jpg')" }}
-        data-aos="fade"
-        id="services-section"
-      >
-        <div className="container">
-          <div className="row align-items-center justify-content-center text-center">
-            <div className="col-lg-10">
-              <div className="box-shadow-content">
-                <div className="block-heading-1">
-                  <span className="d-block mb-3 text-white" data-aos="fade-up">
-                    Transporte <span className="mx-2 text-primary">•</span> Seguridad
-                  </span>
-                  <h1 className="mb-4" data-aos="fade-up" data-aos-delay="100">
-                    Nuestra empresa
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Logo Carousel - Empresas Afiliadas */}
+      <LogoCarousel />
 
       {/* Historia Section con Tabs */}
       <div id="historia-section"></div>
