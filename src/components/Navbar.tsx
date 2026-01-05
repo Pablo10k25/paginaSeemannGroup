@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,7 +19,12 @@ const Navbar = () => {
   // Cerrar menú móvil al cambiar de ruta
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setOpenDropdown(null);
   }, [location]);
+
+  const toggleDropdown = (dropdown: string) => {
+    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+  };
 
   return (
     <>
@@ -72,87 +78,91 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              {/* Nuestra Empresa - Dropdown */}
-              <li className="nav-item dropdown">
+              {/* Nuestra Empresa - Dropdown con 4 opciones */}
+              <li 
+                className={`nav-item dropdown ${openDropdown === 'empresa' ? 'show' : ''}`}
+                onMouseEnter={() => setOpenDropdown('empresa')}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleDropdown('empresa');
+                  }}
+                  aria-expanded={openDropdown === 'empresa'}
                 >
                   Nuestra empresa
                 </a>
-                <ul className="dropdown-menu">
+                <ul className={`dropdown-menu ${openDropdown === 'empresa' ? 'show' : ''}`}>
                   <li>
-                    <Link className="dropdown-item" to="/nuestra-empresa#historia">
+                    <Link className="dropdown-item" to="/nuestra-empresa">
                       Historia
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/nuestra-empresa#fotografias">
+                    <Link className="dropdown-item" to="#">
                       Fotografías
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/#oficinas">
-                      Nuestras oficinas
+                    <Link className="dropdown-item" to="#">
+                      Nuestras Oficinas
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/network">
+                    <Link className="dropdown-item" to="#">
                       Network
                     </Link>
                   </li>
                 </ul>
               </li>
 
-              {/* Herramientas - Dropdown */}
-              <li className="nav-item dropdown">
+              {/* Herramientas - Dropdown con 5 opciones */}
+              <li 
+                className={`nav-item dropdown ${openDropdown === 'herramientas' ? 'show' : ''}`}
+                onMouseEnter={() => setOpenDropdown('herramientas')}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleDropdown('herramientas');
+                  }}
+                  aria-expanded={openDropdown === 'herramientas'}
                 >
                   Herramientas
                 </a>
-                <ul className="dropdown-menu">
+                <ul className={`dropdown-menu ${openDropdown === 'herramientas' ? 'show' : ''}`}>
                   <li>
-                    <a
-                      className="dropdown-item"
-                      href="https://seemanngroup.sistemaforward.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Webtracking
-                    </a>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/cotizaciones">
-                      Cotizaciones
+                    <Link className="dropdown-item" to="#">
+                      Opción 1
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/#herramientas">
-                      Conversiones
+                    <Link className="dropdown-item" to="#">
+                      Opción 2
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/#tarifario">
-                      Tarifarios
+                    <Link className="dropdown-item" to="#">
+                      Opción 3
                     </Link>
                   </li>
                   <li>
-                    <a
-                      className="dropdown-item"
-                      href="https://myseemann.clickandcargo.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Tracking Click and Cargo
-                    </a>
+                    <Link className="dropdown-item" to="#">
+                      Opción 4
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="#">
+                      Opción 5
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -171,11 +181,16 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              {/* Reclamos */}
               <li className="nav-item">
-                <Link className="nav-link" to="/#reclamos">
-                  Reclamos
-                </Link>
+                <a 
+                  className="nav-link btn btn-primary text-white fw-semibold border border-2 border-dark rounded ms-lg-2 mt-2 mt-lg-0" 
+                  href="https://portalclientes.seemanngroup.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-user-circle me-2"></i>
+                  Portal Clientes
+                </a>
               </li>
             </ul>
           </div>

@@ -97,9 +97,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation Links */
 .site-navigation .nav-link {
   color: var(--text-black);
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
   padding: 0.5rem 1rem;
   transition: color 0.3s;
 }
@@ -112,14 +111,19 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0;
+  border-top: 3px solid var(--primary-color);
 }
 
 .site-navigation .dropdown-item {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   padding: 10px 20px;
   transition: all 0.3s;
+  border-top: 1px solid var(--primary-color);
+}
+
+.site-navigation .dropdown-item:first-child {
+  border-top: none;
 }
 
 .site-navigation .dropdown-item:hover {
@@ -542,4 +546,36 @@ html {
   .service-icon i {
     font-size: 2.5rem;
   }
+}
+
+/* Bloques de Historia/Misión/Visión */
+.block__73694 {
+  padding: 60px 0;
+}
+
+.block__73422 {
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+}
+
+/* Lista con checks */
+.ul-check {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ul-check li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.ul-check li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
 }

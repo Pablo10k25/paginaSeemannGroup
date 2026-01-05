@@ -3,12 +3,8 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-// Importaremos más páginas después
-// import Servicios from './pages/Servicios';
-// import NuestraEmpresa from './pages/NuestraEmpresa';
-// import Network from './pages/Network';
-// import Cotizaciones from './pages/Cotizaciones';
-// import NuevosClientes from './pages/NuevosClientes';
+import NuestraEmpresa from './pages/NuestraEmpresa';
+import Servicios from './pages/Servicios';
 
 function App() {
   useEffect(() => {
@@ -29,12 +25,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Rutas adicionales - se agregarán después */}
-          {/* <Route path="/servicios" element={<Servicios />} />
           <Route path="/nuestra-empresa" element={<NuestraEmpresa />} />
-          <Route path="/network" element={<Network />} />
-          <Route path="/cotizaciones" element={<Cotizaciones />} />
-          <Route path="/nuevos-clientes" element={<NuevosClientes />} /> */}
+          <Route path="/servicios" element={<Servicios />} />
         </Routes>
         <Footer />
       </div>
