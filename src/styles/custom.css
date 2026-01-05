@@ -1,0 +1,432 @@
+/* ========================================
+   SEEMANN GROUP - ESTILOS PERSONALIZADOS
+   ======================================== */
+
+:root {
+  --primary-color: #bd2121;
+  --primary-dark: #9a1b1b;
+  --text-black: #000000;
+  --text-gray: #656565;
+  --text-muted: #888;
+  --bg-light: #f8f9fa;
+  --overlay-dark: rgba(0, 0, 0, 0.5);
+}
+
+/* Reset y estilos base */
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Headings con font Oswald */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Colores primarios Bootstrap override */
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.top-bar a:hover {
+  opacity: 0.8;
+}
+
+.top-bar .fa {
+  margin: 0 5px;
+}
+
+/* Navbar Sticky */
+.site-navbar {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.site-navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.site-logo img {
+  height: 80px;
+  transition: height 0.3s ease;
+}
+
+.site-navbar.sticky .site-logo img {
+  height: 60px;
+}
+
+/* Navigation Links */
+.site-navigation .nav-link {
+  color: var(--text-black);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+.site-navigation .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.site-navigation .dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+
+.site-navigation .dropdown-item {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 20px;
+  transition: all 0.3s;
+}
+
+.site-navigation .dropdown-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  height: 600px;
+}
+
+.hero-slide {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-slide.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-dark);
+}
+
+.hero-slide .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.hero-slide h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-slide p {
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Block Heading */
+.block-heading-1 {
+  margin-bottom: 2rem;
+}
+
+.block-heading-1 span {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.block-heading-1 h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-black);
+}
+
+/* Service Cards / Team Member Blocks */
+.block-team-member-1 {
+  transition: all 0.3s ease;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.block-team-member-1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.block-team-member-1 h1.icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.block-team-member-1 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.primary-outline-primary--hover {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+  transition: all 0.3s;
+  padding: 10px 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.primary-outline-primary--hover:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-outline-white {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  transition: all 0.3s;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn-outline-white:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Tabs/Pills Navigation */
+.nav-pills .nav-link {
+  border-radius: 0;
+  border-left: 3px solid transparent;
+  color: var(--text-black);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.nav-pills .nav-link.active {
+  background-color: transparent;
+  border-left-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #f8f9fa;
+  border-left-color: var(--primary-color);
+}
+
+/* Overlay sections */
+.site-section-cover {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+.site-section-cover.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-dark);
+}
+
+.site-section-cover .container {
+  position: relative;
+  z-index: 2;
+}
+
+.box-shadow-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  font-size: 15px;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(189, 33, 33, 0.25);
+}
+
+/* Footer */
+.site-footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.site-footer h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.site-footer a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.site-footer a:hover {
+  color: var(--primary-color);
+}
+
+.site-footer ul {
+  padding-left: 0;
+}
+
+.site-footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.site-footer .rrss .fa {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.site-footer .rrss .fa:hover {
+  transform: scale(1.2);
+}
+
+.copyright {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* Icons */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hero-slide h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-slide {
+    height: 400px;
+  }
+  
+  .hero-slider {
+    height: 400px;
+  }
+  
+  .site-logo img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-slide h1 {
+    font-size: 2rem;
+  }
+  
+  .block-heading-1 h2 {
+    font-size: 2rem;
+  }
+  
+  .block-team-member-1 h1.icon {
+    font-size: 3rem;
+  }
+}
+
+/* Loading Spinner */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utilidades adicionales */
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
