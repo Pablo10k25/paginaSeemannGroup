@@ -763,3 +763,142 @@ html {
     font-size: 0.75rem;
   }
 }
+
+/* ========================================
+   LANGUAGE SWITCHER - TOGGLE STYLE
+   ======================================== */
+
+.language-toggle {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.language-switch {
+  position: relative;
+  width: 70px;
+  height: 36px;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+  border: 2px solid var(--primary-color);
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.language-switch:hover {
+  border-color: var(--primary-dark);
+  box-shadow: 0 2px 8px rgba(189, 33, 33, 0.3);
+}
+
+.switch-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.switch-slider.english {
+  left: calc(100% - 32px);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.switch-slider.spanish {
+  left: 2px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.switch-slider .flag-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Efecto de hover */
+.language-switch:active .switch-slider {
+  transform: scale(0.95);
+}
+
+/* Indicadores de idioma en el fondo */
+.language-switch::before,
+.language-switch::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.language-switch::before {
+  content: '🇨🇱';
+  left: 8px;
+  font-size: 1rem;
+}
+
+.language-switch::after {
+  content: '🇺🇸';
+  right: 8px;
+  font-size: 1rem;
+}
+
+/* Ocultar banderas de fondo cuando están activas */
+.switch-slider.spanish ~ .language-switch::before,
+.switch-slider.english ~ .language-switch::after {
+  opacity: 0.3;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .language-toggle {
+    margin-left: 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .language-switch {
+    width: 80px;
+    height: 40px;
+  }
+
+  .switch-slider {
+    width: 34px;
+    height: 34px;
+  }
+
+  .switch-slider.english {
+    left: calc(100% - 36px);
+  }
+
+  .switch-slider .flag-icon {
+    font-size: 1.6rem;
+  }
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.language-toggle {
+  animation: slideIn 0.3s ease;
+}

@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const LogoCarousel = () => {
+  const { t } = useTranslation();
+
   const settings = {
     dots: false,
     infinite: true,
@@ -44,8 +47,8 @@ const LogoCarousel = () => {
         <div className="row">
           <div className="col-12 text-center mb-4">
             <div className="block-heading-1" data-aos="fade-up">
-              <span>Nuestros Partners</span>
-              <h2>Empresas Afiliadas</h2>
+              <span>{t('logoCarousel.subtitle')}</span>
+              <h2>{t('logoCarousel.title')}</h2>
             </div>
           </div>
         </div>

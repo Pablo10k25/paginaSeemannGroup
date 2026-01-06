@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,7 +19,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Cerrar menú móvil al cambiar de ruta
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setOpenDropdown(null);
@@ -52,12 +54,10 @@ const Navbar = () => {
       {/* Main Navbar */}
       <nav className={`navbar navbar-expand-lg site-navbar ${isSticky ? 'sticky' : ''}`}>
         <div className="container">
-          {/* Logo */}
           <Link className="navbar-brand site-logo" to="/">
             <img src="/images/logo1.png" alt="Seemann Group Logo" />
           </Link>
 
-          {/* Mobile Toggle Button */}
           <button
             className="navbar-toggler"
             type="button"
@@ -67,18 +67,17 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Navigation Menu */}
           <div className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`}>
             <ul className="navbar-nav ms-auto site-navigation">
               
               {/* Servicios */}
               <li className="nav-item">
-                <Link className="nav-link" to="/servicios">
-                  Servicios
+                <Link className="nav-link" to="/servicios" onClick={() => window.scrollTo(0, 0)}>
+                  {t('navbar.services')}
                 </Link>
               </li>
 
-              {/* Nuestra Empresa - Dropdown con 4 opciones */}
+              {/* Nuestra Empresa */}
               <li 
                 className={`nav-item dropdown ${openDropdown === 'empresa' ? 'show' : ''}`}
                 onMouseEnter={() => setOpenDropdown('empresa')}
@@ -94,33 +93,33 @@ const Navbar = () => {
                   }}
                   aria-expanded={openDropdown === 'empresa'}
                 >
-                  Nuestra empresa
+                  {t('navbar.ourCompany')}
                 </a>
                 <ul className={`dropdown-menu ${openDropdown === 'empresa' ? 'show' : ''}`}>
                   <li>
-                    <Link className="dropdown-item" to="/nuestra-empresa">
-                      Historia
+                    <Link className="dropdown-item" to="/nuestra-empresa" onClick={() => window.scrollTo(0, 0)}>
+                      {t('navbar.history')}
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#">
-                      Fotografías
+                    <Link className="dropdown-item" to="#" onClick={() => window.scrollTo(0, 0)}>
+                      {t('navbar.photos')}
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#">
-                      Nuestras Oficinas
+                    <Link className="dropdown-item" to="#" onClick={() => window.scrollTo(0, 0)}>
+                      {t('navbar.offices')}
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#">
-                      Network
+                    <Link className="dropdown-item" to="#" onClick={() => window.scrollTo(0, 0)}>
+                      {t('navbar.network')}
                     </Link>
                   </li>
                 </ul>
               </li>
 
-              {/* Herramientas - Dropdown con 5 opciones */}
+              {/* Herramientas */}
               <li 
                 className={`nav-item dropdown ${openDropdown === 'herramientas' ? 'show' : ''}`}
                 onMouseEnter={() => setOpenDropdown('herramientas')}
@@ -136,51 +135,37 @@ const Navbar = () => {
                   }}
                   aria-expanded={openDropdown === 'herramientas'}
                 >
-                  Herramientas
+                  {t('navbar.tools')}
                 </a>
                 <ul className={`dropdown-menu ${openDropdown === 'herramientas' ? 'show' : ''}`}>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Opción 1
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Opción 2
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Opción 3
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Opción 4
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Opción 5
-                    </Link>
-                  </li>
+                  <li><Link className="dropdown-item" to="#">Opción 1</Link></li>
+                  <li><Link className="dropdown-item" to="#">Opción 2</Link></li>
+                  <li><Link className="dropdown-item" to="#">Opción 3</Link></li>
+                  <li><Link className="dropdown-item" to="#">Opción 4</Link></li>
+                  <li><Link className="dropdown-item" to="#">Opción 5</Link></li>
                 </ul>
               </li>
 
               {/* Clientes Nuevos */}
               <li className="nav-item">
                 <Link className="nav-link" to="/nuevos-clientes">
-                  Clientes Nuevos
+                  {t('navbar.newClients')}
                 </Link>
               </li>
 
               {/* Contacto */}
               <li className="nav-item">
                 <Link className="nav-link" to="/#contacto">
-                  Contacto
+                  {t('navbar.contact')}
                 </Link>
               </li>
 
+              {/* Language Switcher */}
+              <li className="nav-item">
+                <LanguageSwitcher />
+              </li>
+
+              {/* Portal Clientes */}
               <li className="nav-item">
                 <a 
                   className="nav-link btn btn-primary text-white fw-semibold border border-2 border-dark rounded ms-lg-2 mt-2 mt-lg-0" 
@@ -189,7 +174,7 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                 >
                   <i className="fas fa-user-circle me-2"></i>
-                  Portal Clientes
+                  {t('navbar.clientPortal')}
                 </a>
               </li>
             </ul>

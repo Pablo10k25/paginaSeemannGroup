@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const HeroSlider = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     // Inicializar carousel de Bootstrap si es necesario
     const carouselElement = document.querySelector('#heroCarousel');
@@ -15,11 +18,11 @@ const HeroSlider = () => {
   const slides = [
     {
       id: 1,
-      image: '/images/1.jpg',
+      image: '/images/1.png',
       overlay: true,
-      title: 'Bienvenido a Seemanngroup',
-      subtitle: 'Si eres un cliente nuevo regístrate en el siguiente enlace',
-      btnText: 'Nuevo Cliente',
+      titleKey: 'hero.welcome',
+      subtitleKey: 'hero.newClientSubtitle',
+      btnTextKey: 'hero.newClientBtn',
       btnLink: '/nuevos-clientes',
       align: 'center'
     },
@@ -27,9 +30,9 @@ const HeroSlider = () => {
       id: 2,
       image: '/images/2.jpeg',
       overlay: true,
-      title: 'Utiliza nuestro cotizador en línea',
-      subtitle: '',
-      btnText: 'Cotizar Ahora',
+      titleKey: 'hero.quoteTitle',
+      subtitleKey: '',
+      btnTextKey: 'hero.quoteBtn',
       btnLink: '/cotizaciones',
       align: 'center'
     },
@@ -37,9 +40,9 @@ const HeroSlider = () => {
       id: 3,
       image: '/images/3.jpeg',
       overlay: true,
-      title: '',
-      subtitle: '',
-      btnText: 'Cotizar Ahora',
+      titleKey: '',
+      subtitleKey: '',
+      btnTextKey: 'hero.quoteBtn',
       btnLink: '/cotizaciones',
       align: 'center'
     }
@@ -77,23 +80,23 @@ const HeroSlider = () => {
             <div className="container h-100">
               <div className={`row align-items-center h-100 ${slide.align === 'center' ? 'justify-content-center text-center' : 'text-start'}`}>
                 <div className={slide.align === 'center' ? 'col-md-12 col-lg-8' : 'col-md-12 col-lg-7'}>
-                  {slide.title && (
+                  {slide.titleKey && (
                     <h1 data-aos="fade-up" data-aos-delay="0">
-                      {slide.title}
+                      {t(slide.titleKey)}
                     </h1>
                   )}
-                  {slide.subtitle && (
+                  {slide.subtitleKey && (
                     <p className="mb-5" data-aos="fade-up" data-aos-delay="100">
-                      {slide.subtitle}
+                      {t(slide.subtitleKey)}
                     </p>
                   )}
-                  {slide.btnText && (
+                  {slide.btnTextKey && (
                     <p data-aos="fade-up" data-aos-delay="200">
                       <a 
                         href={slide.btnLink} 
                         className={slide.overlay ? 'btn btn-outline-white border-w-2 btn-md' : 'btn btn-primary text-white border-w-2 btn-md'}
                       >
-                        {slide.btnText}
+                        {t(slide.btnTextKey)}
                       </a>
                     </p>
                   )}

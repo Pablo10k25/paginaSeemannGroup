@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import NuestraEmpresa from './pages/NuestraEmpresa';
+import ScrollToTop from './components/ScrollToTop';
 import Servicios from './pages/Servicios';
 
 function App() {
@@ -20,13 +21,21 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true
+      }}
+    >
+      <ScrollToTop /> {/* ← AGREGAR AQUÍ */}
+      
       <div className="App">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/nuestra-empresa" element={<NuestraEmpresa />} />
           <Route path="/servicios" element={<Servicios />} />
+          <Route path="/nuestra-empresa" element={<NuestraEmpresa />} />
+          {/* ... otras rutas */}
         </Routes>
         <Footer />
       </div>

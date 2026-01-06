@@ -1,0 +1,276 @@
+{
+  "navbar": {
+    "services": "Services",
+    "ourCompany": "Our Company",
+    "history": "History",
+    "photos": "Photos",
+    "offices": "Our Offices",
+    "network": "Network",
+    "tools": "Tools",
+    "newClients": "New Clients",
+    "contact": "Contact",
+    "clientPortal": "Client Portal"
+  },
+  "hero": {
+    "welcome": "Welcome to Seemanngroup",
+    "newClientSubtitle": "If you are a new client, register at the following link",
+    "newClientBtn": "New Client",
+    "quoteTitle": "Use our online quotation tool",
+    "quoteBtn": "Quote Now"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Select one of our services",
+    "seeMore": "See more",
+    "contactUs": "Contact us",
+    "howWeHelp": {
+      "title": "How we help you",
+      "subtitle": "Logistics solutions designed for your business",
+      "description": "At Seemann Group we know that every minute counts. Connect your business with the world through integrated international transport solutions.",
+      "detail1": "We find suppliers",
+      "detail2": "We anticipate documents",
+      "detail3": "We manage customs",
+      "detail4": "Inventories and insurance"
+    },
+    "air": {
+      "title": "Air Transport",
+      "subtitle": "The speed your business demands.",
+      "description": "We manage your air cargo with agility, precision and flexibility, designing routes that minimize transit times.",
+      "detail1": "General Cargo",
+      "detail2": "DG Shipments / Dangerous Goods",
+      "detail3": "Project Cargo / Oversized Shipments",
+      "detail4": "Just-in-time Shipments",
+      "detail5": "Charter Service",
+      "detail6": "International Courier"
+    },
+    "sea": {
+      "title": "Sea Transport",
+      "subtitle": "We move your cargo by sea without stopping the clock",
+      "description": "We optimize your maritime logistics by negotiating free days, drop off and documents issued on time.",
+      "detail1": "FCL / Full Container Load",
+      "detail2": "LCL / Consolidated Cargo",
+      "detail3": "RoRo / Vehicles and Machinery",
+      "detail4": "Break Bulk / Project Cargo",
+      "detail5": "Bonded Cargo / In Transit",
+      "detail6": "Reefer / Refrigerated Container"
+    },
+    "land": {
+      "title": "Land Transport",
+      "subtitle": "Connected without pauses.",
+      "description": "We connect first and last mile with precision. Thanks to our network of international alliances, we manage recognitions and land dispatch.",
+      "detail1": "Less than truck Load (LTL)",
+      "detail2": "Full Truck Load Service (FTL)",
+      "detail3": "Roll-on/Roll-off (RoRo)",
+      "detail4": "Break Bulk (BB) or project cargo",
+      "detail5": "In transit cargo / Bonded Cargo"
+    },
+    "contact": {
+      "title": "Contact us",
+      "subtitle": "",
+      "description": "Do you have questions or need a quote? Our team is ready to help you.",
+      "detail1": "Email",
+      "detail2": "Phone",
+      "detail3": "Web form",
+      "detail4": "Social media"
+    },
+    "warehouse": {
+      "title": "Warehouse",
+      "subtitle": "Fast inventories, more agile operations.",
+      "description": "Our global network of warehouses optimizes your supply chain from key ports and airports.",
+      "detail1": "Order storage",
+      "detail2": "Inventory control",
+      "detail3": "Merchandise inspection",
+      "detail4": "Repacking"
+    },
+    "multimodal": {
+      "title": "Multimodal Service",
+      "subtitle": "Fast inventories, more agile operations",
+      "description": "We combine maritime efficiency with optimized transit times to meet your critical deadlines.",
+      "detail1": "Ocean/air and air/ocean solutions",
+      "detail2": "Profitable and flexible operations",
+      "detail3": "Balance between speed and cost"
+    },
+    "customs": {
+      "title": "Customs Service",
+      "subtitle": "We comply with the standard. We save time.",
+      "description": "We advise export and import customs processes anticipating documentary and packaging requirements.",
+      "detail1": "We eliminate delays",
+      "detail2": "We ensure compliance",
+      "detail3": "We optimize times",
+      "detail4": "Complete documentation"
+    }
+  },
+  "logoCarousel": {
+    "subtitle": "Our Partners",
+    "title": "Affiliated Companies"
+  },
+  "history": {
+    "subtitle": "Get to know us better",
+    "title": "Our Essence",
+    "historia": {
+      "title": "History",
+      "description": "Seemann Group was born as a result of the vast experience of its founders in the insurance, reinsurance and international logistics market, with more than 35 years of development."
+    },
+    "mision": {
+      "title": "Mission",
+      "description": "We are a flexible, oriented, and prepared organization to face the changes that today's market needs, allowing us to provide a fast and professional response to the needs of our clients."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "Internally, we seek to continue developing continuous improvement processes that allow us to continue evaluating and improving the quality of our service."
+    },
+    "valores": {
+      "title": "Values",
+      "description": "• Empathy and Customer orientation\n • Personalization\n • Responsibility\n • Sincerity/Transparency\n • Commitment/Pro activity\n • Flexibility"
+    },
+    "seeMore": "See more"
+  },
+  "tools": {
+    "title": "Tools",
+    "subtitle": "SeemannGroup",
+    "quotations": "Quotations",
+    "conversions": "Conversions",
+    "enterHere": "Enter here"
+  },
+  "footer": {
+    "menu": "Menu",
+    "offices": "Our offices",
+    "schedule": "Schedule",
+    "mondayFriday": "Monday - Friday",
+    "copyright": "Designed and Programmed by KRAKEN"
+  },
+  "ourCompany": {
+    "banner": {
+      "subtitle": "Transport • Security",
+      "title": "OUR COMPANY"
+    },
+    "historia": {
+      "title": "History",
+      "p1": "Seemann Group was born as a result of the vast experience of its founders in the insurance, reinsurance and international logistics market, with more than 35 years of development.",
+      "p2": "Its strength lies in providing professional and technical advice to its clients, always evaluating the best alternative to meet their objectives.",
+      "p3": "Throughout its trajectory, useful and versatile tools have been developed for different company sizes, allowing us to work effectively with small, medium and large companies in Latin America, recently in the United States and soon in Europe."
+    },
+    "mision": {
+      "title": "Mission",
+      "p1": "Seemann Group is a company dedicated to international cargo transportation, freight forwarding, with a strong service vocation, basing its commercial proposal on customer satisfaction with the work provided. Our commitment will be sustainable growth that guarantees high quality in the service offered, internalizing and committing to the needs of each of our clients.",
+      "p2": "We are a flexible, oriented, and prepared organization to face the changes that today's market needs, allowing us to provide a fast and professional response to our clients' needs. Currently our company is composed of professionals from various areas with a strong service vocation, working under pressure and oriented to change."
+    },
+    "vision": {
+      "title": "Vision",
+      "p1": "We seek to be a solid company worldwide, with relevant international expansion, achieving greater coverage in economies that we consider strategic, allowing us to guarantee work with the highest quality in managing foreign trade operations, as we currently develop in the markets we participate in.",
+      "p2": "Internally, we seek to continue developing continuous improvement processes that allow us to continue evaluating and optimizing the quality of our service."
+    },
+    "valores": {
+      "title": "Values",
+      "intro": "Among our company's corporate values are:",
+      "empathy": {
+        "title": "Empathy and customer orientation:",
+        "description": "our main objective will be to deliver a high-quality professional service, where customer satisfaction with the work performed is paramount."
+      },
+      "personalization": {
+        "title": "Personalization:",
+        "description": "knowledge and empathy with our clients in attention to their needs, developing high-impact personalized solutions that guarantee us greater satisfaction with the work performed."
+      },
+      "responsibility": {
+        "title": "Responsibility:",
+        "description": "with information management, commitments made and the treatment of operations as a whole."
+      },
+      "sincerity": {
+        "title": "Sincerity and transparency:",
+        "description": "commitment to providing reliable information in a timely manner."
+      },
+      "commitment": {
+        "title": "Commitment and proactivity:",
+        "description": "in the search for solutions that provide optimization in our clients' operations."
+      },
+      "flexibility": {
+        "title": "Flexibility:",
+        "description": "being a flexible organization, oriented to changes, that allows us to quickly adapt to the needs of both the client and the environment."
+      }
+    },
+    "gallery": {
+      "subtitle": "Our Experience",
+      "title": "Photographs"
+    }
+  },
+  "servicesPage": {
+    "banner": {
+      "subtitle": "Transport • Security",
+      "title": "Services"
+    },
+    "intro": {
+      "title": "Our services",
+      "description": "Our service is a comprehensive service, where the main factor is related to international cargo transportation. However, we offer and provide professional advice in the search and negotiation of new product suppliers, advice on the issuance of documents and/or certificates; support in customs processes necessary in customs and/or destination countries; inventory management; and advice and management of insurance involved in foreign trade processes."
+    },
+    "moreAbout": {
+      "subtitle": "More about us",
+      "title": "Seemann Group"
+    },
+    "airTransport": {
+      "title": "Air Transport",
+      "p1": "Given the nature of the service, where delivery time is the fundamental factor, our service is characterized by timely and proactive operations management, analyzing various shipping options, guaranteeing greater departure frequency and transit flexibility.",
+      "p2": "Since our proposal is based on customer individualization, our service will always seek and present alternatives for transit, allowing the establishment of solutions adapted to each of the different realities of various industries.",
+      "servicesIntro": "The services we currently provide are:",
+      "service1": "General Cargo Service",
+      "service2": "Dangerous Goods Service / DG Shipments",
+      "service3": "Project Cargo Service / Oversize Shipments",
+      "service4": "In Transit Cargo Service / Bonded Cargo",
+      "service5": "Just in time Cargo Service",
+      "service6": "Perishable or Temperature-controlled Cargo Service (Pharmaceutical)",
+      "service7": "Charter Service",
+      "service8": "Courier Service"
+    },
+    "seaTransport": {
+      "title": "Sea Transport",
+      "p1": "Today's markets seek sea transport due to the strong vocation to obtain efficiency in operations, seeking to optimize the resources involved in each of these, which is why our company commits to strong negotiation on sea transport contracts.",
+      "p2": "Our worldwide coverage has allowed us to establish positions at each of the requested embarkation or destination ports, establishing service for both full container and consolidated cargo.",
+      "servicesIntro": "The services we currently develop are:",
+      "service1": "Full Container Service (FCL)",
+      "service2": "Less Container Service (LCL), or Consolidated Cargo",
+      "service3": "Roll-on/Roll-off Service (RoRo)",
+      "service4": "Break Bulk Service (BB), or project cargo",
+      "service5": "In Transit Cargo / Bonded Cargo Service",
+      "service6": "Full Container Reefer Service"
+    },
+    "landTransport": {
+      "title": "Land Transport",
+      "p1": "Given that several of the incoterms currently used in foreign trade purchase and sale processes involve land transit, we have made alliances with various companies internationally that allow us to provide pickup and/or dispatch services for your operations.",
+      "servicesIntro": "Among the tools we have available for our clients are:",
+      "service1": "Less than truck Load Service (LTL)",
+      "service2": "Full Truck Load Service (FTL)",
+      "service3": "Roll-on/Roll-off Service (RoRo)",
+      "service4": "Break Bulk Service (BB), or project cargo",
+      "service5": "In Transit Cargo / Bonded Cargo Service"
+    },
+    "warehouse": {
+      "title": "Warehouse",
+      "p1": "We currently have extensive warehouse coverage worldwide, which will give our clients the ability to store and consolidate cargo at various ports and/or airports, with the aim of optimizing each logistics operation.",
+      "servicesIntro": "Among the services we can currently provide to our client are:",
+      "service1": "Order storage",
+      "service2": "Inventory control",
+      "service3": "Merchandise inspection",
+      "service4": "Repacking"
+    },
+    "multimodal": {
+      "title": "Multimodal Service",
+      "p1": "Given companies' constant search for process optimization, with a view to obtaining advantages in their industries, our company currently provides a multimodal service through which it delivers the competitiveness of maritime cargo transport, without detriment to the associated transit time."
+    },
+    "customs": {
+      "title": "Customs Service",
+      "p1": "Our extensive network of offices internationally allows us to advise our clients on the various customs processes necessary for the export and/or import of goods. This service will allow us to anticipate the necessary requirements at the documentary and packing level."
+    },
+    "webtracking": {
+      "subtitle": "Access your operations",
+      "title": "WEBTRACKING",
+      "p1": "Our proposal will not only base its strengths on strong compliance and customer satisfaction with the work performed, but also on the timely management of information to our clients, allowing greater traceability of their operations.",
+      "statusTitle": "Know the current status of your operations:",
+      "feature1": "Obtaining documents associated with the operation such as invoice, packing list and/or certificate of origin.",
+      "feature2": "Obtaining associated international transport documents such as Airway Bill, Bill of Lading or CRT.",
+      "feature3": "Photographs of the cargo if requested.",
+      "feature4": "Invoices associated with the service provided once completed.",
+      "feature5": "Quotations associated with the current operation.",
+      "p2": "Our web system will allow you to access ongoing operations, and will show those operations that have already been completed.",
+      "enterHere": "Enter here"
+    }
+  }
+}

@@ -1,22 +1,25 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import HeroSlider from '../components/HeroSlider';
 import ServiceCard from '../components/ServiceCard';
 import LogoCarousel from '../components/LogoCarousel';
 import HistoryTabs from '../components/HistoryTabs';
 import AOS from 'aos';
 import { 
-  Plane,          // Transporte Aéreo
-  Ship,           // Transporte Marítimo
-  Truck,          // Transporte Terrestre
-  Warehouse,      // Warehouse
-  RefreshCw,      // Servicio Multimodal
-  Building2,      // Servicio de Aduanas
-  Users,          // Cómo te ayudamos (cambiado)
-  Mail            // Contáctanos
+  Plane,
+  Ship,
+  Truck,
+  Warehouse,
+  RefreshCw,
+  Building2,
+  Users,
+  Mail
 } from 'lucide-react';
 
 const Home = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -36,8 +39,8 @@ const Home = () => {
           <div className="row">
             <div className="col-12 text-center mb-5">
               <div className="block-heading-1 mt-5" data-aos="fade-up" data-aos-delay="0">
-                <span>Seleccione uno de nuestros servicios</span>
-                <h2>Nuestros Servicios</h2>
+                <span>{t('services.subtitle')}</span>
+                <h2>{t('services.title')}</h2>
               </div>
             </div>
           </div>
@@ -47,14 +50,14 @@ const Home = () => {
             {/* Card: Cómo te ayudamos */}
             <ServiceCard
               icon={<Users size={60} strokeWidth={1.5} />}
-              title="Cómo te ayudamos"
-              subtitle="Soluciones logísticas diseñadas para tu negocio"
-              description="En Seemann Group sabemos que cada minuto cuenta. Conecta tu negocio con el mundo a través de soluciones integradas en transporte internacional."
+              title={t('services.howWeHelp.title')}
+              subtitle={t('services.howWeHelp.subtitle')}
+              description={t('services.howWeHelp.description')}
               details={[
-                "Buscamos proveedores",
-                "Anticipamos documentos",
-                "Gestionamos aduanas",
-                "Inventarios y seguros"
+                t('services.howWeHelp.detail1'),
+                t('services.howWeHelp.detail2'),
+                t('services.howWeHelp.detail3'),
+                t('services.howWeHelp.detail4')
               ]}
               link="/servicios"
               variant="secondary"
@@ -63,16 +66,16 @@ const Home = () => {
             {/* Card: Transporte Aéreo */}
             <ServiceCard
               icon={<Plane size={60} strokeWidth={1.5} />}
-              title="Transporte Aéreo"
-              subtitle="La velocidad que exige tu negocio."
-              description="Gestionamos tu carga aérea con agilidad, precisión y flexibilidad, diseñando rutas que reducen al mínimo los tiempos de tránsito."
+              title={t('services.air.title')}
+              subtitle={t('services.air.subtitle')}
+              description={t('services.air.description')}
               details={[
-                "General Cargo / Carga General",
-                "DG Shipments / Carga Peligrosa",
-                "Project Cargo / Carga Sobredimensionada",
-                "Just-in-time Shipments",
-                "Charter Service",
-                "Courier Internacional"
+                t('services.air.detail1'),
+                t('services.air.detail2'),
+                t('services.air.detail3'),
+                t('services.air.detail4'),
+                t('services.air.detail5'),
+                t('services.air.detail6')
               ]}
               link="/servicios#transporte-aereo"
             />
@@ -80,16 +83,16 @@ const Home = () => {
             {/* Card: Transporte Marítimo */}
             <ServiceCard
               icon={<Ship size={60} strokeWidth={1.5} />}
-              title="Transporte Marítimo"
-              subtitle="Movemos tu carga por mar sin detener el reloj"
-              description="Optimizamos tu logística marítima negociando días libres, drop off y documentos emitidos a tiempo."
+              title={t('services.sea.title')}
+              subtitle={t('services.sea.subtitle')}
+              description={t('services.sea.description')}
               details={[
-                "FCL / Contenedor Completo",
-                "LCL / Carga Consolidada",
-                "RoRo / Vehículos y Maquinaria",
-                "Break Bulk / Carga de Proyecto",
-                "Bonded Cargo / Carga en Tránsito",
-                "Reefer / Contenedor Refrigerado"
+                t('services.sea.detail1'),
+                t('services.sea.detail2'),
+                t('services.sea.detail3'),
+                t('services.sea.detail4'),
+                t('services.sea.detail5'),
+                t('services.sea.detail6')
               ]}
               link="/servicios#transporte-maritimo"
             />
@@ -97,15 +100,15 @@ const Home = () => {
             {/* Card: Transporte Terrestre */}
             <ServiceCard
               icon={<Truck size={60} strokeWidth={1.5} />}
-              title="Transporte Terrestre"
-              subtitle="Conectado sin pausas."
-              description="Conectamos primera y última milla con precisión. Gracias a nuestra red de alianzas internacionales, gestionamos reconocimientos y despacho terrestre."
+              title={t('services.land.title')}
+              subtitle={t('services.land.subtitle')}
+              description={t('services.land.description')}
               details={[
-                "Less than truck Load (LTL)",
-                "Full Truck Load Service (FTL)",
-                "Roll-on/Roll-off (RoRo)",
-                "Break Bulk (BB) o carga proyecto",
-                "Cargas en tránsito / Bonded Cargo"
+                t('services.land.detail1'),
+                t('services.land.detail2'),
+                t('services.land.detail3'),
+                t('services.land.detail4'),
+                t('services.land.detail5')
               ]}
               link="/servicios#transporte-terrestre"
             />
@@ -116,14 +119,14 @@ const Home = () => {
             {/* Card: Contáctanos */}
             <ServiceCard
               icon={<Mail size={60} strokeWidth={1.5} />}
-              title="Contáctanos"
-              subtitle=""
-              description="¿Tienes dudas o necesitas una cotización? Nuestro equipo está listo para ayudarte."
+              title={t('services.contact.title')}
+              subtitle={t('services.contact.subtitle')}
+              description={t('services.contact.description')}
               details={[
-                "Email",
-                "Teléfono",
-                "Formulario web",
-                "Redes sociales"
+                t('services.contact.detail1'),
+                t('services.contact.detail2'),
+                t('services.contact.detail3'),
+                t('services.contact.detail4')
               ]}
               link="#contacto"
               variant="secondary"
@@ -132,14 +135,14 @@ const Home = () => {
             {/* Card: Warehouse */}
             <ServiceCard
               icon={<Warehouse size={60} strokeWidth={1.5} />}
-              title="Warehouse"
-              subtitle="Inventarios rápidos, operaciones más ágiles."
-              description="Nuestra red global de almacenes optimiza tu cadena de suministro desde puertos y aeropuertos clave."
+              title={t('services.warehouse.title')}
+              subtitle={t('services.warehouse.subtitle')}
+              description={t('services.warehouse.description')}
               details={[
-                "Almacenaje de las órdenes",
-                "Control de inventario",
-                "Inspección de mercadería",
-                "Repacking"
+                t('services.warehouse.detail1'),
+                t('services.warehouse.detail2'),
+                t('services.warehouse.detail3'),
+                t('services.warehouse.detail4')
               ]}
               link="/servicios#warehouse"
             />
@@ -147,13 +150,13 @@ const Home = () => {
             {/* Card: Servicio Multimodal */}
             <ServiceCard
               icon={<RefreshCw size={60} strokeWidth={1.5} />}
-              title="Servicio Multimodal"
-              subtitle="Inventarios rápidos, operaciones más ágiles"
-              description="Combinamos eficiencia marítima con tiempos de tránsito optimizados para cumplir tus plazos críticos."
+              title={t('services.multimodal.title')}
+              subtitle={t('services.multimodal.subtitle')}
+              description={t('services.multimodal.description')}
               details={[
-                "Soluciones ocean/air y air/ocean",
-                "Operaciones rentables y flexibles",
-                "Balance entre velocidad y costo"
+                t('services.multimodal.detail1'),
+                t('services.multimodal.detail2'),
+                t('services.multimodal.detail3')
               ]}
               link="/servicios#servicio-multimodal"
             />
@@ -161,14 +164,14 @@ const Home = () => {
             {/* Card: Servicio de Aduanas */}
             <ServiceCard
               icon={<Building2 size={60} strokeWidth={1.5} />}
-              title="Servicio de Aduanas"
-              subtitle="Cumplimos la norma. Ganamos tiempo."
-              description="Asesoramos procesos aduaneros de exportación e importación anticipando requisitos documentales y de embalaje."
+              title={t('services.customs.title')}
+              subtitle={t('services.customs.subtitle')}
+              description={t('services.customs.description')}
               details={[
-                "Eliminamos retrasos",
-                "Aseguramos cumplimiento",
-                "Optimizamos tiempos",
-                "Documentación completa"
+                t('services.customs.detail1'),
+                t('services.customs.detail2'),
+                t('services.customs.detail3'),
+                t('services.customs.detail4')
               ]}
               link="/servicios#servicio-aduanas"
             />
@@ -188,8 +191,8 @@ const Home = () => {
           <div className="row bg-light">
             <div className="col-lg-4 col-md-12 col-sm-12 mb-5">
               <div className="block-heading-1" data-aos="fade-right" data-aos-delay="0">
-                <h2>Herramientas</h2>
-                <h1 className="text-black">SeemannGroup</h1>
+                <h2>{t('tools.title')}</h2>
+                <h1 className="text-black">{t('tools.subtitle')}</h1>
               </div>
             </div>
 
@@ -202,13 +205,13 @@ const Home = () => {
                   </h1>
                   <h2 className="h4">
                     <Link to="/cotizaciones" className="text-black">
-                      Cotizaciones
+                      {t('tools.quotations')}
                     </Link>
                   </h2>
                   <p></p>
                   <p data-aos="fade-up" data-aos-delay="200">
                     <Link to="/cotizaciones" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      Entre aquí
+                      {t('tools.enterHere')}
                     </Link>
                   </p>
                 </li>
@@ -224,13 +227,13 @@ const Home = () => {
                   </h1>
                   <h2 className="h4">
                     <a href="#herramientas" className="text-black">
-                      Conversiones
+                      {t('tools.conversions')}
                     </a>
                   </h2>
                   <p></p>
                   <p data-aos="fade-up" data-aos-delay="200">
                     <a href="#herramientas" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      Entre aquí
+                      {t('tools.enterHere')}
                     </a>
                   </p>
                 </li>
@@ -239,14 +242,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Por ahora dejaré estas secciones pendientes para el siguiente bloque:
-          - Oficinas (con tabs)
-          - Network Banner
-          - Tarifarios
-          - Contacto (formulario)
-          - Reclamos (formulario)
-      */}
       
     </div>
   );

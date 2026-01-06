@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -11,19 +13,19 @@ const Footer = () => {
             <div className="row">
               {/* Menú */}
               <div className="col-md-2 mb-4">
-                <h2 className="footer-heading mb-3">Menú</h2>
+                <h2 className="footer-heading mb-3">{t('footer.menu')}</h2>
                 <ul className="list-unstyled">
                   <li>
-                    <Link to="/servicios">Servicios</Link>
+                    <Link to="/servicios">{t('navbar.services')}</Link>
                   </li>
                   <li>
-                    <Link to="/nuestra-empresa#historia">Historia</Link>
+                    <Link to="/nuestra-empresa#historia">{t('navbar.history')}</Link>
                   </li>
                   <li>
-                    <Link to="/#oficinas">Nuestras oficinas</Link>
+                    <Link to="/#oficinas">{t('navbar.offices')}</Link>
                   </li>
                   <li>
-                    <Link to="/nuevos-clientes">Clientes nuevos</Link>
+                    <Link to="/nuevos-clientes">{t('navbar.newClients')}</Link>
                   </li>
                   <li>
                     <a href="https://seemanngroup.sistemaforward.com/" target="_blank" rel="noopener noreferrer">
@@ -31,23 +33,23 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <Link to="/cotizaciones">Cotizaciones</Link>
+                    <Link to="/cotizaciones">{t('tools.quotations')}</Link>
                   </li>
                   <li>
-                    <Link to="/#herramientas">Conversiones</Link>
+                    <Link to="/#herramientas">{t('tools.conversions')}</Link>
                   </li>
                   <li>
-                    <Link to="/network">Network</Link>
+                    <Link to="/network">{t('navbar.network')}</Link>
                   </li>
                   <li>
-                    <Link to="/#contacto">Contacto</Link>
+                    <Link to="/#contacto">{t('navbar.contact')}</Link>
                   </li>
                 </ul>
               </div>
 
               {/* Oficinas Chile y Perú */}
               <div className="col-md-4 mb-4" style={{ fontFamily: 'Oswald, sans-serif', textTransform: 'uppercase' }}>
-                <h2 className="footer-heading mb-3">Nuestras oficinas</h2>
+                <h2 className="footer-heading mb-3">{t('footer.offices')}</h2>
                 
                 {/* Viña del Mar */}
                 <ul className="list-unstyled mb-4">
@@ -118,8 +120,8 @@ const Footer = () => {
                 <br />
                 <div className="mb-3">
                   <ul className="list-unstyled">
-                    <h2 className="footer-heading mb-3">Horarios</h2>
-                    <li>Lunes - Viernes</li>
+                    <h2 className="footer-heading mb-3">{t('footer.schedule')}</h2>
+                    <li>{t('footer.mondayFriday')}</li>
                     <li>
                       <i className="fas fa-clock me-2"></i>
                       08:00 AM - 18:00 PM
@@ -150,7 +152,7 @@ const Footer = () => {
             <div className="border-top pt-5">
               <p className="copyright">
                 <small>
-                  Copyright © {currentYear} Diseñado y Programado por KRAKEN&nbsp;
+                  Copyright © {currentYear} {t('footer.copyright')}&nbsp;
                   <a href="http://krakensoluciones.cl/" target="_blank" rel="noopener noreferrer">
                     <img src="/images/logo-kraken1.png" alt="Kraken" style={{ height: '20px' }} />
                   </a>

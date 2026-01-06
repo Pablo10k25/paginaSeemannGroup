@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 
 const Servicios = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -14,62 +17,31 @@ const Servicios = () => {
   return (
     <div className="site-wrap">
       {/* Banner Hero */}
-        <div 
-            className="site-section-cover inner-page bg-light position-relative" 
-            style={{ 
-                backgroundImage: "url('/images/logo2.jpg')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                minHeight: '400px'
-            }}
-            data-aos="fade"
-            >
-            {/* Overlay oscuro */}
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                zIndex: 1
-            }}></div>
-
-            {/* Contenido */}
-            <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-                <div className="row align-items-center justify-content-center text-center" style={{ minHeight: '400px' }}>
-                    <div className="col-lg-10">
-                        <div className="py-5">
-                            <div className="block-heading-1">
-                                <span 
-                                className="d-block mb-2 text-white" 
-                                data-aos="fade-up"
-                                style={{ 
-                                    fontSize: '1rem',
-                                    letterSpacing: '2px',
-                                    textTransform: 'uppercase'
-                                }}
-                                >
-                                Transporte <span className="text-danger fw-bold">•</span> Seguridad
-                                </span>
-                                <h1 
-                                className="mb-0 text-white" 
-                                data-aos="fade-up" 
-                                data-aos-delay="100"
-                                style={{ 
-                                    fontSize: '3rem',
-                                    fontWeight: '700',
-                                    textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-                                }}
-                                >
-                                SERVICIOS
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
+      <div 
+        className="site-section-cover overlay inner-page bg-light" 
+        style={{ backgroundImage: "url('/images/logo2.jpg')" }}
+        data-aos="fade"
+      >
+        <div className="container">
+          <div className="row align-items-center justify-content-center text-center">
+            <div className="col-lg-10">
+              <div className="box-shadow-content">
+                <div className="block-heading-1">
+                  <span 
+                    className="d-block mb-3 text-white" 
+                    data-aos="fade-up"
+                    dangerouslySetInnerHTML={{ __html: t('servicesPage.banner.subtitle') }}
+                  >
+                  </span>
+                  <h1 className="mb-4" data-aos="fade-up" data-aos-delay="100">
+                    {t('servicesPage.banner.title')}
+                  </h1>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
       {/* Intro Servicios */}
       <div className="site-section" id="servicios-section">
@@ -79,7 +51,7 @@ const Servicios = () => {
               <div className="col-12 text-center mb-5">
                 <div className="block-heading-1" data-aos="fade-up" data-aos-delay="">
                   <span></span>
-                  <h2>Nuestros servicios</h2>
+                  <h2>{t('servicesPage.intro.title')}</h2>
                 </div>
               </div>
             </div>
@@ -99,11 +71,7 @@ const Servicios = () => {
 
               <div className="col-lg-6 ms-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="">
                 <p style={{ textAlign: 'justify' }}>
-                  Nuestro servicio es un servicio integral, donde el factor principal dice relación al transporte 
-                  internacional de cargas. No obstante aquello, ofrecemos y realizamos asesorías profesionales en la 
-                  búsqueda y negociación de nuevos proveedores de productos, asesoría en la emisión de documentos y/o 
-                  certificados; apoyo en los proceso de aduanas en necesarios en los países de aduana y/o destino; 
-                  administración de inventarios; y asesoría y gestión de seguros involucrados en los proceso de comercio exterior.
+                  {t('servicesPage.intro.description')}
                 </p>
               </div>
             </div>
@@ -116,8 +84,8 @@ const Servicios = () => {
             <div className="row">
               <div className="col-12 text-center mb-5" id="transporte-aereo">
                 <div className="block-heading-1" data-aos="fade-up" data-aos-delay="">
-                  <span>Más de nosotros</span>
-                  <h2>Seemann Group</h2>
+                  <span>{t('servicesPage.moreAbout.subtitle')}</span>
+                  <h2>{t('servicesPage.moreAbout.title')}</h2>
                 </div>
               </div>
             </div>
@@ -125,160 +93,145 @@ const Servicios = () => {
             <div className="row">
               {/* Transporte Aéreo */}
               <div className="col-md-6 col-lg-6 bg-light mb-4" data-aos="fade-up" data-aos-delay="">
-                <h2><a style={{ color: '#ce4747' }}>Transporte Aéreo</a></h2>
+                <h2><a style={{ color: '#ce4747' }}>{t('servicesPage.airTransport.title')}</a></h2>
                 <br />
-                <img src="/images/1203.jpg" alt="Transporte Aéreo" className="img-fluid rounded mb-4" />
+                <img src="/images/1203.jpg" alt={t('servicesPage.airTransport.title')} className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
-                  Dada la naturaleza de la prestación, donde el plazo de entrega resulta ser el factor fundamental, 
-                  nuestro servicio se caracteriza por una oportuna y proactiva gestión de las operaciones, analizando 
-                  diversas opciones de embarque, garantizando una mayor frecuencia de salida y flexibilidad en el tránsito.
+                  {t('servicesPage.airTransport.p1')}
                 </p>
 
                 <p style={{ textAlign: 'justify' }}>
-                  Dado que nuestra propuesta se basa en la individualización de los clientes, nuestro servicio siempre 
-                  buscará y presentará alternativas para los tránsitos, que permita el establecimiento de soluciones 
-                  adaptadas a cada una las distintas realidades de las diversas industrias.
+                  {t('servicesPage.airTransport.p2')}
                 </p>
 
                 <ul className="ul-check primary list-unstyled mt-3">
-                  <p style={{ textAlign: 'justify' }}>Los servicios que actualmente brindamos son:</p>
-                  <li style={{ textAlign: 'justify' }}>Servicio Carga General / General Cargo</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Carga Peligrosa / Dangerous Goods (DG Shipments)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Carga Proyecto / Project Cargo (Oversize Shipments)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Carga en tránsito / Bonded Cargo (In transit shipments)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Carga Just in time</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Carga perecederos o con control de temperatura (Pharmaceutical)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Charter</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Courier</li>
+                  <p style={{ textAlign: 'justify' }}>{t('servicesPage.airTransport.servicesIntro')}</p>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.airTransport.service1')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.airTransport.service2')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.airTransport.service3')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.airTransport.service4')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.airTransport.service5')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.airTransport.service6')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.airTransport.service7')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.airTransport.service8')}</li>
                 </ul>
                 <p data-aos="fade-up" data-aos-delay="200">
                   <Link to="/#contact-section" className="primary-outline-primary--hover border-w-2 btn-md">
-                    Contáctanos
+                    {t('services.contactUs')}
                   </Link>
                 </p>
               </div>
 
               {/* Transporte Marítimo */}
               <div className="col-md-6 col-lg-6 bg-light mb-4" data-aos="fade-up" data-aos-delay="100">
-                <h2><a style={{ color: '#ce4747' }}>Transporte Marítimo</a></h2>
+                <h2><a style={{ color: '#ce4747' }}>{t('servicesPage.seaTransport.title')}</a></h2>
                 <br />
-                <img src="/images/1204.jpg" alt="Transporte Marítimo" className="img-fluid rounded mb-4" />
+                <img src="/images/1204.jpg" alt={t('servicesPage.seaTransport.title')} className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
-                  Los mercados hoy en día buscan el transporte marítimo por la fuerte vocación de obtener eficacia en 
-                  las operaciones, buscando optimizar los recursos involucrados en cada una de éstas, por lo que nuestra 
-                  empresa se compromete a una fuerte negociación sobre los contratos de transporte marítimo.
+                  {t('servicesPage.seaTransport.p1')}
                 </p>
 
                 <p style={{ textAlign: 'justify' }}>
-                  Nuestra cobertura a nivel mundial nos ha permitido establecer posiciones en cada uno de los puertos de 
-                  embarque o destino que se nos solicite, estableciendo un servicio tanto para full container, como carga consolidada.
+                  {t('servicesPage.seaTransport.p2')}
                 </p>
 
                 <ul className="ul-check primary list-unstyled mt-3">
-                  <p style={{ textAlign: 'justify' }}>Los servicios que actualmente desarrollamos son:</p>
-                  <li style={{ textAlign: 'justify' }}>Servicio Full Container (FCL)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Less Container (LCL), o Carga consolidada</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Roll-on/Roll-off (RoRo)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Break Bulk (BB), o carga proyecto</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Cargas en tránsito / Bonded Cargo (In transit shipments)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Full Container Reefer</li>
+                  <p style={{ textAlign: 'justify' }}>{t('servicesPage.seaTransport.servicesIntro')}</p>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.seaTransport.service1')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.seaTransport.service2')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.seaTransport.service3')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.seaTransport.service4')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.seaTransport.service5')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.seaTransport.service6')}</li>
                 </ul>
                 <p data-aos="fade-up" data-aos-delay="200">
                   <Link to="/#contact-section" className="primary-outline-primary--hover border-w-2 btn-md">
-                    Contáctanos
+                    {t('services.contactUs')}
                   </Link>
                 </p>
               </div>
 
               {/* Transporte Terrestre */}
               <div className="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="">
-                <h2><a style={{ color: '#ce4747' }}>Transporte Terrestre</a></h2>
+                <h2><a style={{ color: '#ce4747' }}>{t('servicesPage.landTransport.title')}</a></h2>
                 <br />
-                <img src="/images/1205.jpg" alt="Transporte Terrestre" className="img-fluid rounded mb-4" />
+                <img src="/images/1205.jpg" alt={t('servicesPage.landTransport.title')} className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
-                  En vista que varios de los incoterms actualmente utilizados en los proceso de compra y venta de comercio 
-                  exterior involucran el tránsito terrestre, hemos realizado alianzas con las diversas empresas a nivel 
-                  internacional que nos permite entregarles los servicios de recogida y/o despacho de sus operaciones.
+                  {t('servicesPage.landTransport.p1')}
                 </p>
 
                 <ul className="ul-check primary list-unstyled mt-3">
-                  <p style={{ textAlign: 'justify' }}>Dentro de las herramientas que disponemos para nuestros clientes se encuentran:</p>
-                  <li style={{ textAlign: 'justify' }}>Servicio Less than truck Load (LTL)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Full Truck Load Service (FTL)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Roll-on/Roll-off (RoRo)</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Break Bulk (BB), o carga proyecto</li>
-                  <li style={{ textAlign: 'justify' }}>Servicio Cargas en tránsito / Bonded Cargo (In transit shipments)</li>
+                  <p style={{ textAlign: 'justify' }}>{t('servicesPage.landTransport.servicesIntro')}</p>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.landTransport.service1')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.landTransport.service2')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.landTransport.service3')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.landTransport.service4')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.landTransport.service5')}</li>
                 </ul>
                 <p data-aos="fade-up" data-aos-delay="200">
                   <Link to="/#contact-section" className="primary-outline-primary--hover border-w-2 btn-md">
-                    Contáctanos
+                    {t('services.contactUs')}
                   </Link>
                 </p>
               </div>
 
               {/* Warehouse */}
               <div className="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <h2><a style={{ color: '#ce4747' }}>Warehouse</a></h2>
+                <h2><a style={{ color: '#ce4747' }}>{t('servicesPage.warehouse.title')}</a></h2>
                 <br />
-                <img src="/images/1206.jpg" alt="Warehouse" className="img-fluid rounded mb-4" />
+                <img src="/images/1206.jpg" alt={t('servicesPage.warehouse.title')} className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
-                  Actualmente contamos con una amplia cobertura de warehouse a nivel mundial, que le otorgará a nuestros 
-                  clientes la capacidad de almacenar y consolidar carga en los diversos puertos y/o aeropuertos, con el 
-                  objetivo de optimizar cada logística.
+                  {t('servicesPage.warehouse.p1')}
                 </p>
 
                 <ul className="ul-check primary list-unstyled mt-3">
-                  <p style={{ textAlign: 'justify' }}>Dentro de los servicios que actualmente podemos entregarle a nuestro cliente se encuentra:</p>
-                  <li style={{ textAlign: 'justify' }}>Almacenaje de las órdenes</li>
-                  <li style={{ textAlign: 'justify' }}>Control de inventario</li>
-                  <li style={{ textAlign: 'justify' }}>Inspección de mercadería</li>
-                  <li style={{ textAlign: 'justify' }}>Repacking</li>
+                  <p style={{ textAlign: 'justify' }}>{t('servicesPage.warehouse.servicesIntro')}</p>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.warehouse.service1')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.warehouse.service2')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.warehouse.service3')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.warehouse.service4')}</li>
                 </ul>
                 <p data-aos="fade-up" data-aos-delay="200">
                   <Link to="/#contact-section" className="primary-outline-primary--hover border-w-2 btn-md">
-                    Contáctanos
+                    {t('services.contactUs')}
                   </Link>
                 </p>
               </div>
 
               {/* Servicio Multimodal */}
               <div className="col-md-6 col-lg-6 bg-light mb-4" data-aos="fade-up" data-aos-delay="100">
-                <h2><a style={{ color: '#ce4747' }}>Servicio Multimodal</a></h2>
+                <h2><a style={{ color: '#ce4747' }}>{t('servicesPage.multimodal.title')}</a></h2>
                 <br />
-                <img src="/images/1207.jpg" alt="Servicio Multimodal" className="img-fluid rounded mb-4" />
+                <img src="/images/1207.jpg" alt={t('servicesPage.multimodal.title')} className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
-                  Dada la constante búsqueda de las empresa por la optimización de los procesos, con miras a la obtención 
-                  de ventajas en sus industrias, es que nuestra empresa actualmente brinda un servicio multimodal a través 
-                  del cual entrega la competitividad del transporte marítimo de cargas, sin desmedro del tiempo de tránsito asociado.
+                  {t('servicesPage.multimodal.p1')}
                 </p>
 
                 <p data-aos="fade-up" data-aos-delay="200">
                   <Link to="/#contact-section" className="primary-outline-primary--hover border-w-2 btn-md">
-                    Contáctanos
+                    {t('services.contactUs')}
                   </Link>
                 </p>
               </div>
 
               {/* Servicio de Aduanas */}
               <div className="col-md-6 col-lg-6 bg-light mb-4" data-aos="fade-up" data-aos-delay="">
-                <h2><a style={{ color: '#ce4747' }}>Servicio de Aduanas</a></h2>
+                <h2><a style={{ color: '#ce4747' }}>{t('servicesPage.customs.title')}</a></h2>
                 <br />
-                <img src="/images/1208.jpg" alt="Servicio de Aduanas" className="img-fluid rounded mb-4" />
+                <img src="/images/1208.jpg" alt={t('servicesPage.customs.title')} className="img-fluid rounded mb-4" />
 
                 <p style={{ textAlign: 'justify' }}>
-                  Nuestra amplia red de oficinas a nivel internacional, nos permite asesorar a nuestros clientes en los 
-                  diversos procesos de aduanas necesarios para la exportación y/o importación de bienes. Dicho servicio 
-                  nos permitirá anticipar los requisitos necesarios a nivel documental y de packing.
+                  {t('servicesPage.customs.p1')}
                 </p>
 
                 <p data-aos="fade-up" data-aos-delay="200">
                   <Link to="/#contact-section" className="primary-outline-primary--hover border-w-2 btn-md">
-                    Contáctanos
+                    {t('services.contactUs')}
                   </Link>
                 </p>
               </div>
@@ -292,9 +245,9 @@ const Servicios = () => {
             <div className="row">
               <div className="col-12 text-center mb-5">
                 <div className="block-heading-1" data-aos="fade-up" data-aos-delay="">
-                  <span>Accede a tus operaciones</span>
+                  <span>{t('servicesPage.webtracking.subtitle')}</span>
                   <a href="https://seemanngroup.sistemaforward.com/" target="_blank" rel="noopener noreferrer">
-                    <h2>WEBTRACKING</h2>
+                    <h2>{t('servicesPage.webtracking.title')}</h2>
                   </a>
                 </div>
               </div>
@@ -307,23 +260,20 @@ const Servicios = () => {
                 </div>
 
                 <p style={{ textAlign: 'justify' }}>
-                  Nuestra propuesta no sólo basara sus fortalezas en el fuerte cumplimiento y satisfacción de los clientes 
-                  con el trabajo realizado, sino también con el manejo oportuno de la información hacia nuestros clientes, 
-                  permitiendo una mayor trazabilidad de sus operaciones.
+                  {t('servicesPage.webtracking.p1')}
                 </p>
 
                 <ul className="ul-check primary list-unstyled mt-3">
-                  <p style={{ textAlign: 'justify' }}><strong>Conocer el status actual de sus operaciones:</strong></p>
-                  <li style={{ textAlign: 'justify' }}>Obtención de documentos asociados a la operación como invoice, packing list y/o certificado de origen.</li>
-                  <li style={{ textAlign: 'justify' }}>Obtención de los documentos de transporte internacional asociados como Airway Bill, Bill of Landing o CRT.</li>
-                  <li style={{ textAlign: 'justify' }}>Fotografías de la carga en el caso de que se hubiesen solicitado.</li>
-                  <li style={{ textAlign: 'justify' }}>Facturas asociadas al servicio prestado una vez concluido el mismo.</li>
-                  <li style={{ textAlign: 'justify' }}>Cotizaciones asociadas a la operación en curso.</li>
+                  <p style={{ textAlign: 'justify' }}><strong>{t('servicesPage.webtracking.statusTitle')}</strong></p>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.webtracking.feature1')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.webtracking.feature2')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.webtracking.feature3')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.webtracking.feature4')}</li>
+                  <li style={{ textAlign: 'justify' }}>{t('servicesPage.webtracking.feature5')}</li>
                 </ul>
 
                 <p style={{ textAlign: 'justify' }}>
-                  Nuestro sistema web, les permitirá acceder a las operaciones que se mantienen en curso, y mostrara 
-                  aquellas operaciones que ya han sido cursadas.
+                  {t('servicesPage.webtracking.p2')}
                 </p>
 
                 <p className="text-center" data-aos="fade-up" data-aos-delay="200">
@@ -333,7 +283,7 @@ const Servicios = () => {
                     rel="noopener noreferrer"
                     className="primary-outline-primary--hover border-w-2 btn-md"
                   >
-                    Entre aquí
+                    {t('servicesPage.webtracking.enterHere')}
                   </a>
                 </p>
               </div>

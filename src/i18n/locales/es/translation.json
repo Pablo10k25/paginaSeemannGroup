@@ -1,0 +1,276 @@
+{
+  "navbar": {
+    "services": "Servicios",
+    "ourCompany": "Nuestra empresa",
+    "history": "Historia",
+    "photos": "Fotografías",
+    "offices": "Nuestras Oficinas",
+    "network": "Network",
+    "tools": "Herramientas",
+    "newClients": "Clientes Nuevos",
+    "contact": "Contacto",
+    "clientPortal": "Portal Clientes"
+  },
+  "hero": {
+    "welcome": "Bienvenido a Seemanngroup",
+    "newClientSubtitle": "Si eres un cliente nuevo regístrate en el siguiente enlace",
+    "newClientBtn": "Nuevo Cliente",
+    "quoteTitle": "Utiliza nuestro cotizador en línea",
+    "quoteBtn": "Cotizar Ahora"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Seleccione uno de nuestros servicios",
+    "seeMore": "Ver más",
+    "contactUs": "Contáctanos",
+    "howWeHelp": {
+      "title": "Cómo te ayudamos",
+      "subtitle": "Soluciones logísticas diseñadas para tu negocio",
+      "description": "En Seemann Group sabemos que cada minuto cuenta. Conecta tu negocio con el mundo a través de soluciones integradas en transporte internacional.",
+      "detail1": "Buscamos proveedores",
+      "detail2": "Anticipamos documentos",
+      "detail3": "Gestionamos aduanas",
+      "detail4": "Inventarios y seguros"
+    },
+    "air": {
+      "title": "Transporte Aéreo",
+      "subtitle": "La velocidad que exige tu negocio.",
+      "description": "Gestionamos tu carga aérea con agilidad, precisión y flexibilidad, diseñando rutas que reducen al mínimo los tiempos de tránsito.",
+      "detail1": "General Cargo / Carga General",
+      "detail2": "DG Shipments / Carga Peligrosa",
+      "detail3": "Project Cargo / Carga Sobredimensionada",
+      "detail4": "Just-in-time Shipments",
+      "detail5": "Charter Service",
+      "detail6": "Courier Internacional"
+    },
+    "sea": {
+      "title": "Transporte Marítimo",
+      "subtitle": "Movemos tu carga por mar sin detener el reloj",
+      "description": "Optimizamos tu logística marítima negociando días libres, drop off y documentos emitidos a tiempo.",
+      "detail1": "FCL / Contenedor Completo",
+      "detail2": "LCL / Carga Consolidada",
+      "detail3": "RoRo / Vehículos y Maquinaria",
+      "detail4": "Break Bulk / Carga de Proyecto",
+      "detail5": "Bonded Cargo / Carga en Tránsito",
+      "detail6": "Reefer / Contenedor Refrigerado"
+    },
+    "land": {
+      "title": "Transporte Terrestre",
+      "subtitle": "Conectado sin pausas.",
+      "description": "Conectamos primera y última milla con precisión. Gracias a nuestra red de alianzas internacionales, gestionamos reconocimientos y despacho terrestre.",
+      "detail1": "Less than truck Load (LTL)",
+      "detail2": "Full Truck Load Service (FTL)",
+      "detail3": "Roll-on/Roll-off (RoRo)",
+      "detail4": "Break Bulk (BB) o carga proyecto",
+      "detail5": "Cargas en tránsito / Bonded Cargo"
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "subtitle": "",
+      "description": "¿Tienes dudas o necesitas una cotización? Nuestro equipo está listo para ayudarte.",
+      "detail1": "Email",
+      "detail2": "Teléfono",
+      "detail3": "Formulario web",
+      "detail4": "Redes sociales"
+    },
+    "warehouse": {
+      "title": "Warehouse",
+      "subtitle": "Inventarios rápidos, operaciones más ágiles.",
+      "description": "Nuestra red global de almacenes optimiza tu cadena de suministro desde puertos y aeropuertos clave.",
+      "detail1": "Almacenaje de las órdenes",
+      "detail2": "Control de inventario",
+      "detail3": "Inspección de mercadería",
+      "detail4": "Repacking"
+    },
+    "multimodal": {
+      "title": "Servicio Multimodal",
+      "subtitle": "Inventarios rápidos, operaciones más ágiles",
+      "description": "Combinamos eficiencia marítima con tiempos de tránsito optimizados para cumplir tus plazos críticos.",
+      "detail1": "Soluciones ocean/air y air/ocean",
+      "detail2": "Operaciones rentables y flexibles",
+      "detail3": "Balance entre velocidad y costo"
+    },
+    "customs": {
+      "title": "Servicio de Aduanas",
+      "subtitle": "Cumplimos la norma. Ganamos tiempo.",
+      "description": "Asesoramos procesos aduaneros de exportación e importación anticipando requisitos documentales y de embalaje.",
+      "detail1": "Eliminamos retrasos",
+      "detail2": "Aseguramos cumplimiento",
+      "detail3": "Optimizamos tiempos",
+      "detail4": "Documentación completa"
+    }
+  },
+  "logoCarousel": {
+    "subtitle": "Nuestros Partners",
+    "title": "Empresas Afiliadas"
+  },
+  "history": {
+    "subtitle": "Conócenos mejor",
+    "title": "Nuestra Esencia",
+    "historia": {
+      "title": "Historia",
+      "description": "Seemann Group nace como resultado de una vasta experiencia de sus fundadores en el mercado de los seguros, reaseguros y de logística internacional, con más de 35 años de desarrollo."
+    },
+    "mision": {
+      "title": "Misión",
+      "description": "Somos una organización flexible, orientada, y preparada, para enfrentar los cambios que necesita el mercado de hoy día, que nos permita dar una rápida y profesional respuesta a las necesidades de nuestros clientes."
+    },
+    "vision": {
+      "title": "Visión",
+      "description": "A nivel interno, buscamos seguir desarrollando procesos de mejoramiento continuo que nos permitan seguir evaluando y mejorando la calidad de nuestro servicio."
+    },
+    "valores": {
+      "title": "Valores",
+      "description": "• Empatía y Orientación al cliente\n • Personalización\n • Responsabilidad\n • Sinceridad/Transparencia\n • Compromiso/Pro actividad\n • Flexibilidad"
+    },
+    "seeMore": "Ver más"
+  },
+  "tools": {
+    "title": "Herramientas",
+    "subtitle": "SeemannGroup",
+    "quotations": "Cotizaciones",
+    "conversions": "Conversiones",
+    "enterHere": "Entre aquí"
+  },
+  "footer": {
+    "menu": "Menú",
+    "offices": "Nuestras oficinas",
+    "schedule": "Horarios",
+    "mondayFriday": "Lunes - Viernes",
+    "copyright": "Diseñado y Programado por KRAKEN"
+  },
+  "ourCompany": {
+    "banner": {
+      "subtitle": "Transporte • Seguridad",
+      "title": "NUESTRA EMPRESA"
+    },
+    "historia": {
+      "title": "Historia",
+      "p1": "Seemann Group nace como resultado de una vasta experiencia de sus fundadores en el mercado de los seguros, reaseguros y de logística internacional, con más de 35 años de desarrollo.",
+      "p2": "Su fortaleza consiste en la entrega de asesorías profesionales y técnicas a sus clientes, evaluando siempre la mejor alternativa para el cumplimiento de sus objetivos.",
+      "p3": "A través de su trayectoria, se han desarrollado herramientas útiles y versátiles para diferentes tamaños de empresas, que nos permiten un trabajo eficaz en pequeñas, medianas y grandes empresas de Latino América, recientemente en Estados Unidos y próximamente en Europa."
+    },
+    "mision": {
+      "title": "Misión",
+      "p1": "Seemann Group es una empresa dedicada al transporte internacional de carga, freight forward, con una fuerte vocación de servicio, fundamentando su propuesta comercial en la satisfacción de sus clientes respecto del trabajo otorgado. Nuestro compromiso estará en un crecimiento sustentable que garantice una alta calidad en el servicio ofrecido, interiorizándonos y comprometiéndonos con las necesidades de cada uno de nuestros clientes.",
+      "p2": "Somos una organización flexible, orientada, y preparada, para enfrentar los cambios que necesita el mercado de hoy, que nos permita dar una rápida y profesional respuesta a las necesidades de nuestros clientes. Actualmente nuestra empresa se compone por profesionales de diversas áreas con fuerte vocación de servicio, trabajo bajo presión y orientación al cambio."
+    },
+    "vision": {
+      "title": "Visión",
+      "p1": "Buscamos ser una empresa sólida a nivel mundial, con una expansión internacional relevante, alcanzando una mayor cobertura en economías que consideramos estratégicas que nos permita garantizar un trabajo con la más alta calidad en la gestión de operaciones de comercio exterior, como actualmente lo desarrollamos en los mercados que participamos.",
+      "p2": "A nivel interno, buscamos seguir desarrollando procesos de mejoramiento continuos que nos permitan seguir evaluando y optimizando la calidad de nuestro servicio."
+    },
+    "valores": {
+      "title": "Valores",
+      "intro": "Dentro de los valores corporativos de nuestra empresa se encuentran:",
+      "empathy": {
+        "title": "Empatía y orientación al cliente:",
+        "description": "nuestro principal objetivo será la entrega de un servicio de alta calidad profesional, donde prime la satisfacción del cliente respecto del trabajo realizado."
+      },
+      "personalization": {
+        "title": "Personalización:",
+        "description": "conocimiento y empatía con nuestros clientes en atención a sus necesidades, desarrollando soluciones personalizadas de alto impacto que nos garanticen una mayor satisfacción del trabajo realizado."
+      },
+      "responsibility": {
+        "title": "Responsabilidad:",
+        "description": "con el manejo de la información, los compromisos adquiridos y el tratamiento de las operaciones en su globalidad."
+      },
+      "sincerity": {
+        "title": "Sinceridad y transparencia:",
+        "description": "compromiso con la entrega de la información fidedigna y de manera oportuna."
+      },
+      "commitment": {
+        "title": "Compromiso y pro actividad:",
+        "description": "en la búsqueda de soluciones que brinden una optimización en las operaciones de nuestros clientes."
+      },
+      "flexibility": {
+        "title": "Flexibilidad:",
+        "description": "ser una organización flexible, orientada a los cambios, que nos permita una pronta adaptación a las necesidades tanto del cliente, como del entorno."
+      }
+    },
+    "gallery": {
+      "subtitle": "Nuestra Experiencia",
+      "title": "Fotografías"
+    }
+  },
+  "servicesPage": {
+    "banner": {
+      "subtitle": "Transporte • Seguridad",
+      "title": "Servicios"
+    },
+    "intro": {
+      "title": "Nuestros servicios",
+      "description": "Nuestro servicio es un servicio integral, donde el factor principal dice relación al transporte internacional de cargas. No obstante aquello, ofrecemos y realizamos asesorías profesionales en la búsqueda y negociación de nuevos proveedores de productos, asesoría en la emisión de documentos y/o certificados; apoyo en los proceso de aduanas en necesarios en los países de aduana y/o destino; administración de inventarios; y asesoría y gestión de seguros involucrados en los proceso de comercio exterior."
+    },
+    "moreAbout": {
+      "subtitle": "Más de nosotros",
+      "title": "Seemann Group"
+    },
+    "airTransport": {
+      "title": "Transporte Aéreo",
+      "p1": "Dada la naturaleza de la prestación, donde el plazo de entrega resulta ser el factor fundamental, nuestro servicio se caracteriza por una oportuna y proactiva gestión de las operaciones, analizando diversas opciones de embarque, garantizando una mayor frecuencia de salida y flexibilidad en el tránsito.",
+      "p2": "Dado que nuestra propuesta se basa en la individualización de los clientes, nuestro servicio siempre buscará y presentará alternativas para los tránsitos, que permita el establecimiento de soluciones adaptadas a cada una las distintas realidades de las diversas industrias.",
+      "servicesIntro": "Los servicios que actualmente brindamos son:",
+      "service1": "Servicio Carga General / General Cargo",
+      "service2": "Servicio Carga Peligrosa / Dangerous Goods (DG Shipments)",
+      "service3": "Servicio Carga Proyecto / Project Cargo (Oversize Shipments)",
+      "service4": "Servicio Carga en tránsito / Bonded Cargo (In transit shipments)",
+      "service5": "Servicio Carga Just in time",
+      "service6": "Servicio Carga perecederos o con control de temperatura (Pharmaceutical)",
+      "service7": "Servicio Charter",
+      "service8": "Servicio Courier"
+    },
+    "seaTransport": {
+      "title": "Transporte Marítimo",
+      "p1": "Los mercados hoy en día buscan el transporte marítimo por la fuerte vocación de obtener eficacia en las operaciones, buscando optimizar los recursos involucrados en cada una de éstas, por lo que nuestra empresa se compromete a una fuerte negociación sobre los contratos de transporte marítimo.",
+      "p2": "Nuestra cobertura a nivel mundial nos ha permitido establecer posiciones en cada uno de los puertos de embarque o destino que se nos solicite, estableciendo un servicio tanto para full container, como carga consolidada.",
+      "servicesIntro": "Los servicios que actualmente desarrollamos son:",
+      "service1": "Servicio Full Container (FCL)",
+      "service2": "Servicio Less Container (LCL), o Carga consolidada",
+      "service3": "Servicio Roll-on/Roll-off (RoRo)",
+      "service4": "Servicio Break Bulk (BB), o carga proyecto",
+      "service5": "Servicio Cargas en tránsito / Bonded Cargo (In transit shipments)",
+      "service6": "Servicio Full Container Reefer"
+    },
+    "landTransport": {
+      "title": "Transporte Terrestre",
+      "p1": "En vista que varios de los incoterms actualmente utilizados en los proceso de compra y venta de comercio exterior involucran el tránsito terrestre, hemos realizado alianzas con las diversas empresas a nivel internacional que nos permite entregarles los servicios de recogida y/o despacho de sus operaciones.",
+      "servicesIntro": "Dentro de las herramientas que disponemos para nuestros clientes se encuentran:",
+      "service1": "Servicio Less than truck Load (LTL)",
+      "service2": "Servicio Full Truck Load Service (FTL)",
+      "service3": "Servicio Roll-on/Roll-off (RoRo)",
+      "service4": "Servicio Break Bulk (BB), o carga proyecto",
+      "service5": "Servicio Cargas en tránsito / Bonded Cargo (In transit shipments)"
+    },
+    "warehouse": {
+      "title": "Warehouse",
+      "p1": "Actualmente contamos con una amplia cobertura de warehouse a nivel mundial, que le otorgará a nuestros clientes la capacidad de almacenar y consolidar carga en los diversos puertos y/o aeropuertos, con el objetivo de optimizar cada logística.",
+      "servicesIntro": "Dentro de los servicios que actualmente podemos entregarle a nuestro cliente se encuentra:",
+      "service1": "Almacenaje de las órdenes",
+      "service2": "Control de inventario",
+      "service3": "Inspección de mercadería",
+      "service4": "Repacking"
+    },
+    "multimodal": {
+      "title": "Servicio Multimodal",
+      "p1": "Dada la constante búsqueda de las empresa por la optimización de los procesos, con miras a la obtención de ventajas en sus industrias, es que nuestra empresa actualmente brinda un servicio multimodal a través del cual entrega la competitividad del transporte marítimo de cargas, sin desmedro del tiempo de tránsito asociado."
+    },
+    "customs": {
+      "title": "Servicio de Aduanas",
+      "p1": "Nuestra amplia red de oficinas a nivel internacional, nos permite asesorar a nuestros clientes en los diversos procesos de aduanas necesarios para la exportación y/o importación de bienes. Dicho servicio nos permitirá anticipar los requisitos necesarios a nivel documental y de packing."
+    },
+    "webtracking": {
+      "subtitle": "Accede a tus operaciones",
+      "title": "WEBTRACKING",
+      "p1": "Nuestra propuesta no sólo basara sus fortalezas en el fuerte cumplimiento y satisfacción de los clientes con el trabajo realizado, sino también con el manejo oportuno de la información hacia nuestros clientes, permitiendo una mayor trazabilidad de sus operaciones.",
+      "statusTitle": "Conocer el status actual de sus operaciones:",
+      "feature1": "Obtención de documentos asociados a la operación como invoice, packing list y/o certificado de origen.",
+      "feature2": "Obtención de los documentos de transporte internacional asociados como Airway Bill, Bill of Landing o CRT.",
+      "feature3": "Fotografías de la carga en el caso de que se hubiesen solicitado.",
+      "feature4": "Facturas asociadas al servicio prestado una vez concluido el mismo.",
+      "feature5": "Cotizaciones asociadas a la operación en curso.",
+      "p2": "Nuestro sistema web, les permitirá acceder a las operaciones que se mantienen en curso, y mostrara aquellas operaciones que ya han sido cursadas.",
+      "enterHere": "Entre aquí"
+    }
+  }
+}

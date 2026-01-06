@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 interface ServiceCardProps {
   icon: ReactNode;
@@ -20,6 +21,8 @@ const ServiceCard = ({
   link = '#',
   variant = 'primary' 
 }: ServiceCardProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
       <div className="service-flip-card">
@@ -76,7 +79,7 @@ const ServiceCard = ({
                   style={{ fontSize: '0.7rem', padding: '0.4rem 0.8rem' }}
                 >
                   <i className="bi bi-plus-circle me-1"></i>
-                  Ver más
+                  {t('services.seeMore')}
                 </Link>
               </div>
             </div>

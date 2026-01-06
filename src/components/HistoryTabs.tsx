@@ -1,46 +1,48 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Globe, Heart, Eye, Smile } from 'lucide-react';
 
 interface TabContent {
   id: string;
-  title: string;
+  titleKey: string;
   icon: JSX.Element;
-  description: string;
+  descriptionKey: string;
   color: string;
 }
 
 const HistoryTabs = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('valores');
 
   const tabs: TabContent[] = [
     {
       id: 'historia',
-      title: 'Historia',
+      titleKey: 'history.historia.title',
       icon: <Globe size={48} />,
-      description: 'Seemann Group nace como resultado de una vasta experiencia de sus fundadores en el mercado de los seguros, reaseguros y de logística internacional, con más de 35 años de desarrollo.',
+      descriptionKey: 'history.historia.description',
       color: '#bd2121'
     },
     {
       id: 'mision',
-      title: 'Misión',
+      titleKey: 'history.mision.title',
       icon: <Heart size={48} />,
-      description: 'Somos una organización flexible, orientada, y preparada, para enfrentar los cambios que necesita el mercado de hoy día, que nos permita dar una rápida y profesional respuesta a las necesidades de nuestros clientes.',
+      descriptionKey: 'history.mision.description',
       color: '#e63946'
     },
     {
       id: 'vision',
-      title: 'Visión',
+      titleKey: 'history.vision.title',
       icon: <Eye size={48} />,
-      description: 'A nivel interno, buscamos seguir desarrollando procesos de mejoramiento continuo que nos permitan seguir evaluando y mejorando la calidad de nuestro servicio.',
+      descriptionKey: 'history.vision.description',
       color: '#f77f00'
     },
     {
-        id: 'valores',
-        title: 'Valores',
-        icon: <Smile size={48} />,
-        description: '• Empatía y Orientación al cliente\n • Personalización\n • Responsabilidad\n • Sinceridad/Transparencia\n • Compromiso/Pro actividad\n • Flexibilidad',
-        color: '#06d6a0'
+      id: 'valores',
+      titleKey: 'history.valores.title',
+      icon: <Smile size={48} />,
+      descriptionKey: 'history.valores.description',
+      color: '#06d6a0'
     }
   ];
 
@@ -50,8 +52,8 @@ const HistoryTabs = () => {
         <div className="row mb-5">
           <div className="col-12 text-center">
             <div className="block-heading-1" data-aos="fade-up">
-              <span>Conócenos mejor</span>
-              <h2>Nuestra Esencia</h2>
+              <span>{t('history.subtitle')}</span>
+              <h2>{t('history.title')}</h2>
             </div>
           </div>
         </div>
@@ -79,21 +81,21 @@ const HistoryTabs = () => {
                 >
                   {tab.icon}
                 </div>
-                <h3 className="history-card-title">{tab.title}</h3>
+                <h3 className="history-card-title">{t(tab.titleKey)}</h3>
                 
                 {/* Contenido siempre visible */}
                 <div className="history-card-content">
-                <p style={{ whiteSpace: activeTab === 'valores' ? 'pre-line' : 'normal' }}>
-                    {tab.description}
-                </p>
-                <div className="history-card-actions">
+                  <p style={{ whiteSpace: tab.id === 'valores' ? 'pre-line' : 'normal' }}>
+                    {t(tab.descriptionKey)}
+                  </p>
+                  <div className="history-card-actions">
                     <Link 
-                    to={`/nuestra-empresa#${tab.id}`}
-                    className="btn btn-sm btn-outline-danger"
+                      to={`/nuestra-empresa#${tab.id}`}
+                      className="btn btn-sm btn-outline-danger"
                     >
-                    Ver más
+                      {t('history.seeMore')}
                     </Link>
-                </div>
+                  </div>
                 </div>
               </div>
             </div>
