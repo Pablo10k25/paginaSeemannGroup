@@ -4,8 +4,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import NuestraEmpresa from './pages/NuestraEmpresa';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './components/Scrolls/ScrollToTop';
 import Servicios from './pages/Servicios';
+import ScrollToHash from './components/Scrolls/ScrollToHash';
 
 function App() {
   useEffect(() => {
@@ -27,7 +28,8 @@ function App() {
         v7_relativeSplatPath: true
       }}
     >
-      <ScrollToTop /> {/* ← AGREGAR AQUÍ */}
+      <ScrollToTop />
+      <ScrollToHash />
       
       <div className="App">
         <Navbar />
@@ -35,7 +37,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/nuestra-empresa" element={<NuestraEmpresa />} />
-          {/* ... otras rutas */}
         </Routes>
         <Footer />
       </div>

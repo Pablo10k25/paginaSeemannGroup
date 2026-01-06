@@ -54,7 +54,7 @@ const Navbar = () => {
       {/* Main Navbar */}
       <nav className={`navbar navbar-expand-lg site-navbar ${isSticky ? 'sticky' : ''}`}>
         <div className="container">
-          <Link className="navbar-brand site-logo" to="/">
+          <Link className="navbar-brand site-logo" to="/" onClick={() => window.scrollTo(0, 0)}>
             <img src="/images/logo1.png" alt="Seemann Group Logo" />
           </Link>
 
@@ -107,7 +107,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#" onClick={() => window.scrollTo(0, 0)}>
+                    <Link className="dropdown-item" to="/#oficinas-section">
                       {t('navbar.offices')}
                     </Link>
                   </li>

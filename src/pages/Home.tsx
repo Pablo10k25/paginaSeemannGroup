@@ -5,6 +5,8 @@ import HeroSlider from '../components/HeroSlider';
 import ServiceCard from '../components/ServiceCard';
 import LogoCarousel from '../components/LogoCarousel';
 import HistoryTabs from '../components/HistoryTabs';
+import OfficeCards from '../components/OfficeCards';
+import BlogSection from '../components/BlogSection';
 import AOS from 'aos';
 import { 
   Plane,
@@ -185,63 +187,11 @@ const Home = () => {
       {/* Historia Section - Modern Cards */}
       <HistoryTabs />
 
-      {/* Herramientas Section */}
-      <div className="site-section" id="herramientas">
-        <div className="container">
-          <div className="row bg-light">
-            <div className="col-lg-4 col-md-12 col-sm-12 mb-5">
-              <div className="block-heading-1" data-aos="fade-right" data-aos-delay="0">
-                <h2>{t('tools.title')}</h2>
-                <h1 className="text-black">{t('tools.subtitle')}</h1>
-              </div>
-            </div>
-
-            {/* Cotizaciones */}
-            <div className="col-lg-4 col-md-6 col-sm-6 text-center">
-              <ul className="list-unstyled">
-                <li className="mb-5 block-team-member-1" data-aos="fade-right" data-aos-delay="0">
-                  <h1 className="icon">
-                    <i className="fas fa-dollar-sign"></i>
-                  </h1>
-                  <h2 className="h4">
-                    <Link to="/cotizaciones" className="text-black">
-                      {t('tools.quotations')}
-                    </Link>
-                  </h2>
-                  <p></p>
-                  <p data-aos="fade-up" data-aos-delay="200">
-                    <Link to="/cotizaciones" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      {t('tools.enterHere')}
-                    </Link>
-                  </p>
-                </li>
-              </ul>
-            </div>
-
-            {/* Conversiones */}
-            <div className="col-lg-4 col-md-6 col-sm-6 text-center">
-              <ul className="list-unstyled">
-                <li className="mb-5 block-team-member-1" data-aos="fade-right" data-aos-delay="0">
-                  <h1 className="icon">
-                    <i className="fas fa-cog"></i>
-                  </h1>
-                  <h2 className="h4">
-                    <a href="#herramientas" className="text-black">
-                      {t('tools.conversions')}
-                    </a>
-                  </h2>
-                  <p></p>
-                  <p data-aos="fade-up" data-aos-delay="200">
-                    <a href="#herramientas" className="col-xs-12 col-sm-12 col-md-12 col-lg-6 primary-outline-primary--hover border-w-2 btn-md">
-                      {t('tools.enterHere')}
-                    </a>
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Blog Section */}
+      <BlogSection />
+      
+      {/* Offices Section */}
+      <OfficeCards />
       
     </div>
   );

@@ -134,10 +134,10 @@
   },
   "footer": {
     "menu": "Menu",
-    "offices": "Our offices",
-    "schedule": "Schedule",
-    "mondayFriday": "Monday - Friday",
-    "copyright": "Designed and Programmed by KRAKEN"
+    "getInTouch": "Follow Us",
+    "description": "Leader in international logistics solutions with over 35 years of experience. We connect your business with the world.",
+    "copyright": "Designed and Programmed by SphereGlobal",
+    "terms": "Terms & Conditions"
   },
   "ourCompany": {
     "banner": {
@@ -272,5 +272,16 @@
       "p2": "Our web system will allow you to access ongoing operations, and will show those operations that have already been completed.",
       "enterHere": "Enter here"
     }
+  },
+  "offices": {
+    "subtitle": "Where we are",
+    "title": "Our Offices",
+    "viewOnMap": "View on map"
+  },
+  "blog": {
+    "subtitle": "News and Updates",
+    "title": "Our Blog",
+    "readMore": "Read more",
+    "viewAll": "View all articles"
   }
 }
