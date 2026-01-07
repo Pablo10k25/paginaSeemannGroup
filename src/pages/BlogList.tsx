@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getBlogPosts } from '../services/contentful';
-import { Entry } from 'contentful';
+import { Entry, Asset } from 'contentful';
 import { BlogPost } from '../services/contentful';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { format } from 'date-fns';
@@ -17,7 +17,7 @@ const BlogList = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: 'slide',
+      easing: 'ease',
       delay: 0
     });
   }, []);
@@ -25,7 +25,7 @@ const BlogList = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
-      const blogPosts = await getBlogPosts(20); // Traer hasta 20 posts
+      const blogPosts = await getBlogPosts(20);
       setPosts(blogPosts);
       setLoading(false);
     };
@@ -43,7 +43,6 @@ const BlogList = () => {
 
   return (
     <div className="site-wrap">
-      {/* Banner Hero */}
       <div 
         className="site-section-cover overlay inner-page bg-light" 
         style={{ 
@@ -87,7 +86,6 @@ const BlogList = () => {
         </div>
       </div>
 
-      {/* Blog Grid */}
       <div className="site-section bg-light py-5">
         <div className="container">
           {loading ? (
@@ -105,8 +103,9 @@ const BlogList = () => {
             <div className="row g-4">
               {posts.map((post, index) => {
                 const { title, slug, author, publishDate, featuredImage, excerpt, category } = post.fields;
-                const imageUrl = featuredImage?.fields?.file?.url 
-                  ? `https:${featuredImage.fields.file.url}` 
+                const imageAsset = featuredImage as Asset | undefined;
+                const imageUrl = imageAsset?.fields?.file?.url 
+                  ? `https:${imageAsset.fields.file.url}` 
                   : '/images/default-blog.jpg';
 
                 return (

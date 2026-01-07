@@ -6,7 +6,7 @@ const Cotizaciones = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: 'slide',
+      easing: 'ease',
       delay: 0
     });
     window.scrollTo(0, 0);

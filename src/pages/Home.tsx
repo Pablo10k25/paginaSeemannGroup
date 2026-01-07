@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import HeroSlider from '../components/HeroSlider';
 import ServiceCard from '../components/ServiceCard';
@@ -25,7 +24,7 @@ const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: 'slide',
+      easing: 'ease',
       delay: 0
     });
   }, []);

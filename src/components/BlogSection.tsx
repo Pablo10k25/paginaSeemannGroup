@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getBlogPosts } from '../services/contentful';
-import { Entry } from 'contentful';
+import { Entry, Asset } from 'contentful';
 import { BlogPost } from '../services/contentful';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { format } from 'date-fns';
@@ -16,7 +16,7 @@ const BlogSection = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
-      const blogPosts = await getBlogPosts(3); // Últimos 3 posts
+      const blogPosts = await getBlogPosts(3);
       setPosts(blogPosts);
       setLoading(false);
     };
@@ -45,7 +45,7 @@ const BlogSection = () => {
   }
 
   if (posts.length === 0) {
-    return null; // No mostrar la sección si no hay posts
+    return null;
   }
 
   return (
@@ -63,8 +63,11 @@ const BlogSection = () => {
         <div className="row g-4">
           {posts.map((post, index) => {
             const { title, slug, author, publishDate, featuredImage, excerpt, category } = post.fields;
-            const imageUrl = featuredImage?.fields?.file?.url 
-              ? `https:${featuredImage.fields.file.url}` 
+            
+            // Manejar la imagen correctamente
+            const imageAsset = featuredImage as Asset | undefined;
+            const imageUrl = imageAsset?.fields?.file?.url 
+              ? `https:${imageAsset.fields.file.url}` 
               : '/images/default-blog.jpg';
 
             return (

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getBlogPostBySlug } from '../services/contentful';
-import { Entry } from 'contentful';
+import { Entry, Asset } from 'contentful';
 import { BlogPost as BlogPostType } from '../services/contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
@@ -20,7 +20,7 @@ const BlogPost = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: 'slide',
+      easing: 'ease',
       delay: 0
     });
   }, []);
@@ -33,8 +33,6 @@ const BlogPost = () => {
       const blogPost = await getBlogPostBySlug(slug);
       setPost(blogPost);
       setLoading(false);
-
-      // Scroll to top
       window.scrollTo(0, 0);
     };
 
@@ -48,31 +46,30 @@ const BlogPost = () => {
     return format(date, 'dd MMMM yyyy', { locale });
   };
 
-  // Opciones para renderizar Rich Text
   const richTextOptions = {
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node: any, children: any) => (
+      [BLOCKS.PARAGRAPH]: (_node: any, children: any) => (
         <p className="blog-content-paragraph">{children}</p>
       ),
-      [BLOCKS.HEADING_1]: (node: any, children: any) => (
+      [BLOCKS.HEADING_1]: (_node: any, children: any) => (
         <h1 className="blog-content-h1">{children}</h1>
       ),
-      [BLOCKS.HEADING_2]: (node: any, children: any) => (
+      [BLOCKS.HEADING_2]: (_node: any, children: any) => (
         <h2 className="blog-content-h2">{children}</h2>
       ),
-      [BLOCKS.HEADING_3]: (node: any, children: any) => (
+      [BLOCKS.HEADING_3]: (_node: any, children: any) => (
         <h3 className="blog-content-h3">{children}</h3>
       ),
-      [BLOCKS.UL_LIST]: (node: any, children: any) => (
+      [BLOCKS.UL_LIST]: (_node: any, children: any) => (
         <ul className="blog-content-ul">{children}</ul>
       ),
-      [BLOCKS.OL_LIST]: (node: any, children: any) => (
+      [BLOCKS.OL_LIST]: (_node: any, children: any) => (
         <ol className="blog-content-ol">{children}</ol>
       ),
-      [BLOCKS.LIST_ITEM]: (node: any, children: any) => (
+      [BLOCKS.LIST_ITEM]: (_node: any, children: any) => (
         <li className="blog-content-li">{children}</li>
       ),
-      [BLOCKS.QUOTE]: (node: any, children: any) => (
+      [BLOCKS.QUOTE]: (_node: any, children: any) => (
         <blockquote className="blog-content-quote">{children}</blockquote>
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
@@ -125,13 +122,13 @@ const BlogPost = () => {
   }
 
   const { title, author, publishDate, featuredImage, content, category } = post.fields;
-  const imageUrl = featuredImage?.fields?.file?.url 
-    ? `https:${featuredImage.fields.file.url}` 
+  const imageAsset = featuredImage as Asset | undefined;
+  const imageUrl = imageAsset?.fields?.file?.url 
+    ? `https:${imageAsset.fields.file.url}` 
     : null;
 
   return (
     <div className="site-wrap">
-      {/* Hero Banner */}
       {imageUrl && (
         <div 
           className="blog-post-hero"
@@ -142,12 +139,10 @@ const BlogPost = () => {
         </div>
       )}
 
-      {/* Content */}
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-10 col-xl-8">
             
-            {/* Back Button */}
             <div className="blog-post-back" data-aos="fade-up">
               <Link to="/blog" className="blog-back-link">
                 <ArrowLeft size={18} />
@@ -155,7 +150,6 @@ const BlogPost = () => {
               </Link>
             </div>
 
-            {/* Article Header */}
             <article className="blog-post-article">
               <header className="blog-post-header" data-aos="fade-up">
                 {category && (
@@ -183,12 +177,10 @@ const BlogPost = () => {
                 </div>
               </header>
 
-              {/* Article Content */}
               <div className="blog-post-content" data-aos="fade-up" data-aos-delay="100">
                 {documentToReactComponents(content, richTextOptions)}
               </div>
 
-              {/* Share Section */}
               <div className="blog-post-share" data-aos="fade-up">
                 <p className="mb-3">{t('blog.shareArticle')}</p>
                 <div className="blog-share-buttons">
@@ -227,7 +219,6 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              {/* Back to Blog */}
               <div className="blog-post-footer" data-aos="fade-up">
                 <Link to="/blog" className="btn btn-outline-danger">
                   <ArrowLeft size={16} className="me-2" />
