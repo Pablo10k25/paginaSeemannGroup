@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getBlogPostBySlug } from '../services/contentful';
-import { Entry, Asset } from 'contentful';
-import { BlogPost as BlogPostType } from '../services/contentful';
+import { Asset } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import { Calendar, User, ArrowLeft, Tag } from 'lucide-react';
@@ -14,7 +13,7 @@ import AOS from 'aos';
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, i18n } = useTranslation();
-  const [post, setPost] = useState<Entry<BlogPostType> | null>(null);
+  const [post, setPost] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getBlogPosts } from '../services/contentful';
-import { Entry, Asset } from 'contentful';
-import { BlogPost } from '../services/contentful';
+import { Asset } from 'contentful';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { format } from 'date-fns';
 import { es, enUS } from 'date-fns/locale';
@@ -11,7 +10,7 @@ import AOS from 'aos';
 
 const BlogList = () => {
   const { t, i18n } = useTranslation();
-  const [posts, setPosts] = useState<Entry<BlogPost>[]>([]);
+  const [posts, setPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -101,7 +100,7 @@ const BlogList = () => {
             </div>
           ) : (
             <div className="row g-4">
-              {posts.map((post, index) => {
+              {posts.map((post: any, index: number) => {
                 const { title, slug, author, publishDate, featuredImage, excerpt, category } = post.fields;
                 const imageAsset = featuredImage as Asset | undefined;
                 const imageUrl = imageAsset?.fields?.file?.url 

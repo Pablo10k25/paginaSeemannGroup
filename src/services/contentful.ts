@@ -1,20 +1,8 @@
-import { createClient, Entry, Asset, EntryFieldTypes } from 'contentful';
+import { createClient, Entry, Asset } from 'contentful';
 import { Document } from '@contentful/rich-text-types';
 
-// Definir el skeleton type para Contentful v10+
+// Interface para los campos del blog post
 export interface BlogPostFields {
-  title: EntryFieldTypes.Text;
-  slug: EntryFieldTypes.Text;
-  author?: EntryFieldTypes.Text;
-  publishDate: EntryFieldTypes.Date;
-  featuredImage?: EntryFieldTypes.AssetLink;
-  excerpt?: EntryFieldTypes.Text;
-  content: EntryFieldTypes.RichText;
-  category?: EntryFieldTypes.Text;
-}
-
-// Tipo para usar en la app
-export interface BlogPost {
   title: string;
   slug: string;
   author?: string;
@@ -25,6 +13,12 @@ export interface BlogPost {
   category?: string;
 }
 
+// Tipo Entry con campos tipados
+export type BlogPostEntry = Entry<{
+  fields: BlogPostFields;
+  contentTypeId: 'blog1';
+}>;
+
 const client = createClient({
   space: import.meta.env.VITE_CONTENTFUL_SPACE_ID as string,
   accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN as string,
@@ -32,16 +26,16 @@ const client = createClient({
 });
 
 // Obtener todos los posts del blog
-export const getBlogPosts = async (limit = 10): Promise<Entry<BlogPost>[]> => {
+export const getBlogPosts = async (limit = 10): Promise<any[]> => {
   try {
-    const response = await client.getEntries<BlogPost>({
+    const response = await client.getEntries({
       content_type: 'blog1',
-      order: ['-fields.publishDate'] as any,
+      order: ['-fields.publishDate'],
       limit,
     });
     
     console.log('✅ Blog posts fetched:', response.items);
-    return response.items as Entry<BlogPost>[];
+    return response.items;
   } catch (error) {
     console.error('❌ Error fetching blog posts:', error);
     return [];
@@ -49,14 +43,14 @@ export const getBlogPosts = async (limit = 10): Promise<Entry<BlogPost>[]> => {
 };
 
 // Obtener un post específico por slug
-export const getBlogPostBySlug = async (slug: string): Promise<Entry<BlogPost> | null> => {
+export const getBlogPostBySlug = async (slug: string): Promise<any | null> => {
   try {
-    const response = await client.getEntries<BlogPost>({
+    const response = await client.getEntries({
       content_type: 'blog1',
       'fields.slug': slug,
       limit: 1,
     });
-    return (response.items[0] as Entry<BlogPost>) || null;
+    return response.items[0] || null;
   } catch (error) {
     console.error('Error fetching blog post:', error);
     return null;
@@ -64,7 +58,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<Entry<BlogPost> |
 };
 
 // Obtener posts recientes para widget
-export const getRecentPosts = async (limit = 3): Promise<Entry<BlogPost>[]> => {
+export const getRecentPosts = async (limit = 3): Promise<any[]> => {
   return getBlogPosts(limit);
 };
 
