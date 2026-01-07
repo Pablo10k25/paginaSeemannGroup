@@ -7,6 +7,10 @@ import NuestraEmpresa from './pages/NuestraEmpresa';
 import ScrollToTop from './components/Scrolls/ScrollToTop';
 import Servicios from './pages/Servicios';
 import ScrollToHash from './components/Scrolls/ScrollToHash';
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
+import Cotizaciones from './components/Ejecutivos/Cotizaciones';
+import NewClients from './components/NewClients/NewClients';
 
 function App() {
   useEffect(() => {
@@ -37,6 +41,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/nuestra-empresa" element={<NuestraEmpresa />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogPost />} /> 
+          <Route path="/team" element={<Cotizaciones />} />
+          <Route path="/nuevos-clientes" element={<NewClients />} />
         </Routes>
         <Footer />
       </div>

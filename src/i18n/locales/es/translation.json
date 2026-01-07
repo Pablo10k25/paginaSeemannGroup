@@ -5,11 +5,16 @@
     "history": "Historia",
     "photos": "Fotografías",
     "offices": "Nuestras Oficinas",
-    "network": "Network",
+    "network": "Nuestro Equipo",
     "tools": "Herramientas",
     "newClients": "Clientes Nuevos",
     "contact": "Contacto",
-    "clientPortal": "Portal Clientes"
+    "clientPortal": "Portal Clientes",
+    "blog": "Blog",
+    "tracking": "Tracking",
+    "cotizacion": "Cotizaciones",
+    "pricing": "Tarifario",
+    "reclamos": "Reclamos"
   },
   "hero": {
     "welcome": "Bienvenido a Seemanngroup",
@@ -130,7 +135,8 @@
     "subtitle": "SeemannGroup",
     "quotations": "Cotizaciones",
     "conversions": "Conversiones",
-    "enterHere": "Entre aquí"
+    "enterHere": "Entre aquí",
+    "tracking": "Webtracking"
   },
   "footer": {
     "menu": "Menú",
@@ -282,6 +288,26 @@
     "subtitle": "Noticias y Novedades",
     "title": "Nuestro Blog",
     "readMore": "Leer más",
-    "viewAll": "Ver todos los artículos"
+    "viewAll": "Ver todos los artículos",
+    "backToBlog": "Volver al blog",
+    "shareArticle": "Compartir este artículo",
+    "notFound": "Artículo no encontrado",
+    "notFoundMessage": "Lo sentimos, no pudimos encontrar el artículo que buscas.",
+    "noPosts": "No hay artículos disponibles",
+    "noPostsMessage": "Aún no hemos publicado ningún artículo. ¡Vuelve pronto!"
+  },
+  "executives": {
+    "subtitle": "Estamos aquí para ayudarte con tu logística internacional",
+    "title": "Realiza tus cotizaciones con nosotros",
+    "meetTeam": "Conoce a nuestro equipo",
+    "ourTeam": "Nuestros Ejecutivos",
+    "contactViaWhatsApp": "Contactar por WhatsApp"
+  },
+  "newclients": {
+    "subtitle": "Para nosotros es un placer tenerte como nuevo cliente",
+    "title": "Contacta a uno de nuestros ejecutivos",
+    "meetTeam": "Conoce a nuestro equipo",
+    "ourTeam": "Nuestros Ejecutivos",
+    "contactViaWhatsApp": "Contactar por WhatsApp"
   }
 }

@@ -240,7 +240,7 @@ const Servicios = () => {
         </div>
 
         {/* Webtracking Section */}
-        <div className="site-section" id="webtracking-section">
+        <div className="site-section scroll-offset1 py-5" id="webtracking-section">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center mb-5">

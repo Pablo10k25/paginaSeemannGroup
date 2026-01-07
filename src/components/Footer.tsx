@@ -40,7 +40,7 @@ const Footer = () => {
               <li><Link to="/servicios">{t('navbar.services')}</Link></li>
               <li><Link to="/nuestra-empresa">{t('navbar.history')}</Link></li>
               <li><Link to="/#oficinas-section">{t('navbar.offices')}</Link></li>
-              <li><Link to="/nuevos-clientes">{t('navbar.newClients')}</Link></li>
+              <li><Link to="/team">{t('navbar.network')}</Link></li>
             </ul>
           </div>
 
@@ -48,15 +48,20 @@ const Footer = () => {
           <div className="col-lg-2 col-md-6 mb-4">
             <h4 className="footer-heading">{t('navbar.tools')}</h4>
             <ul className="footer-links">
+              <li><Link to="/servicios/#webtracking-section">{t('tools.tracking')}</Link></li>
+              <li><Link to="/team">{t('tools.quotations')}</Link></li>
               <li>
-                <a href="https://seemanngroup.sistemaforward.com/" target="_blank" rel="noopener noreferrer">
-                  Webtracking
+                <a
+                  className="dropdown-item"
+                  href="https://portalclientes.seemanngroup.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('navbar.pricing')}
                 </a>
               </li>
-              <li><Link to="/cotizaciones">{t('tools.quotations')}</Link></li>
-              <li><Link to="/#herramientas">{t('tools.conversions')}</Link></li>
-              <li><Link to="/network">{t('navbar.network')}</Link></li>
-              <li><Link to="/#contacto">{t('navbar.contact')}</Link></li>
+              <li><Link to="/nuevos-clientes">{t('navbar.newClients')}</Link></li>
+              <li><Link to="/#contacto">{t('navbar.reclamos')}</Link></li>
             </ul>
           </div>
 

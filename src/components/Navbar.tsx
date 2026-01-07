@@ -112,7 +112,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#" onClick={() => window.scrollTo(0, 0)}>
+                    <Link className="dropdown-item" to="/team" onClick={() => window.scrollTo(0, 0)}>
                       {t('navbar.network')}
                     </Link>
                   </li>
@@ -138,11 +138,21 @@ const Navbar = () => {
                   {t('navbar.tools')}
                 </a>
                 <ul className={`dropdown-menu ${openDropdown === 'herramientas' ? 'show' : ''}`}>
-                  <li><Link className="dropdown-item" to="#">Opción 1</Link></li>
-                  <li><Link className="dropdown-item" to="#">Opción 2</Link></li>
-                  <li><Link className="dropdown-item" to="#">Opción 3</Link></li>
-                  <li><Link className="dropdown-item" to="#">Opción 4</Link></li>
-                  <li><Link className="dropdown-item" to="#">Opción 5</Link></li>
+                  <li><Link className="dropdown-item" to="/blog">{t('navbar.blog')}</Link></li>
+                  <li><Link className="dropdown-item" to="/servicios/#webtracking-section">{t('navbar.tracking')}</Link></li>
+                  <li><Link className="dropdown-item" to="/team">{t('navbar.cotizacion')}</Link></li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="https://portalclientes.seemanngroup.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t('navbar.pricing')}
+                    </a>
+                  </li>
+
+                  <li><Link className="dropdown-item" to="#">{t('navbar.reclamos')}</Link></li>
                 </ul>
               </li>
 

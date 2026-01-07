@@ -136,7 +136,7 @@ const OfficeCards = () => {
   };
 
   return (
-    <div className="office-cards-section py-5" id="oficinas-section">
+    <div className="site-section scroll-offset1 py-5" id="oficinas-section">
       <div className="container">
         <div className="row mb-5">
           <div className="col-12 text-center">
