@@ -1,7 +1,7 @@
-import { createClient, Asset, Entry, EntrySkeletonType } from 'contentful';
-import { Document } from '@contentful/rich-text-types';
+import { createClient, Asset, Entry, EntrySkeletonType } from "contentful";
+import { Document } from "@contentful/rich-text-types";
 
-// ✅ Fields reales del content type
+// ✅ 1) Fields (lo que usted tenía como BlogPost)
 export interface BlogPostFields {
   title: string;
   slug: string;
@@ -13,33 +13,37 @@ export interface BlogPostFields {
   category?: string;
 }
 
-// ✅ Skeleton requerido por Contentful (su content type id real es "blog1")
-export type BlogPostSkeleton = EntrySkeletonType<BlogPostFields, 'blog1'>;
+// ✅ 2) Skeleton requerido por Contentful v10+
+export type BlogPostSkeleton = EntrySkeletonType & {
+  contentTypeId: "blog1";     // <- su Content Type ID real
+  fields: BlogPostFields;
+};
 
-// ✅ Entry tipada correctamente
+// ✅ 3) Entry tipada correctamente
 export type BlogPostEntry = Entry<BlogPostSkeleton>;
 
-// (Opcional) por compatibilidad si en otras partes importan "BlogPost"
+// (Opcional) Para no romper imports antiguos que usen BlogPost:
 export type BlogPost = BlogPostFields;
 
 const client = createClient({
   space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
   accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
-  environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT || 'master',
+  environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT || "master",
 });
 
 // Obtener todos los posts del blog
 export const getBlogPosts = async (limit = 10): Promise<BlogPostEntry[]> => {
   try {
     const response = await client.getEntries<BlogPostSkeleton>({
-      content_type: 'blog1',
-      order: ['-fields.publishDate'],
+      content_type: "blog1",
+      order: ["-fields.publishDate"],
       limit,
     });
 
+    console.log("✅ Blog posts fetched:", response.items);
     return response.items;
   } catch (error) {
-    console.error('❌ Error fetching blog posts:', error);
+    console.error("❌ Error fetching blog posts:", error);
     return [];
   }
 };
@@ -48,14 +52,14 @@ export const getBlogPosts = async (limit = 10): Promise<BlogPostEntry[]> => {
 export const getBlogPostBySlug = async (slug: string): Promise<BlogPostEntry | null> => {
   try {
     const response = await client.getEntries<BlogPostSkeleton>({
-      content_type: 'blog1',
-      'fields.slug': slug,
+      content_type: "blog1",
+      "fields.slug": slug,
       limit: 1,
     });
 
     return response.items[0] ?? null;
   } catch (error) {
-    console.error('Error fetching blog post:', error);
+    console.error("Error fetching blog post:", error);
     return null;
   }
 };
