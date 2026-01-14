@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,6 +12,17 @@ import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import Cotizaciones from './components/Ejecutivos/Cotizaciones';
 import NewClients from './components/NewClients/NewClients';
+import ContactForm from './components/ContactForm';
+import ParticlesBackground from './components/ParticlesBackground';
+import ScrollToTopButton from './components/ScrollToTopButton';
+
+// Service Detail Pages
+import TransporteAereo from './pages/Services/TransporteAereo';
+import TransporteMaritimo from './pages/Services/TransporteMaritimo';
+import TransporteTerrestre from './pages/Services/TransporteTerrestre';
+import Warehouse from './pages/Services/Warehouse';
+import ServicioMultimodal from './pages/Services/ServicioMultimodal';
+import ServicioAduanas from './pages/Services/ServicioAduanas';
 
 function App() {
   useEffect(() => {
@@ -26,29 +38,40 @@ function App() {
   }, []);
 
   return (
-    <Router
-      future={{
-        v7_startTransition: true,
-        v7_relativeSplatPath: true
-      }}
-    >
-      <ScrollToTop />
-      <ScrollToHash />
+    <HelmetProvider>
+      <Router
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true
+        }}
+      >
+        <ScrollToTop />
+        <ScrollToHash />
+        <ParticlesBackground />
       
       <div className="App">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/servicios" element={<Servicios />} />
+          <Route path="/servicios/transporte-aereo" element={<TransporteAereo />} />
+          <Route path="/servicios/transporte-maritimo" element={<TransporteMaritimo />} />
+          <Route path="/servicios/transporte-terrestre" element={<TransporteTerrestre />} />
+          <Route path="/servicios/warehouse" element={<Warehouse />} />
+          <Route path="/servicios/servicio-multimodal" element={<ServicioMultimodal />} />
+          <Route path="/servicios/servicio-aduanas" element={<ServicioAduanas />} />
           <Route path="/nuestra-empresa" element={<NuestraEmpresa />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} /> 
           <Route path="/team" element={<Cotizaciones />} />
           <Route path="/nuevos-clientes" element={<NewClients />} />
+          <Route path="/contacto" element={<ContactForm />} />
         </Routes>
         <Footer />
+        <ScrollToTopButton />
       </div>
-    </Router>
+      </Router>
+    </HelmetProvider>
   );
 }
 

@@ -48,7 +48,7 @@ const LogoCarousel = () => {
           <div className="col-12 text-center mb-4">
             <div className="block-heading-1" data-aos="fade-up">
               <span>{t('logoCarousel.subtitle')}</span>
-              <h2>{t('logoCarousel.title')}</h2>
+              <h2 style={{ color: '#000' }}>{t('logoCarousel.title')}</h2>
             </div>
           </div>
         </div>

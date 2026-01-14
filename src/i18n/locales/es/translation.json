@@ -14,14 +14,91 @@
     "tracking": "Tracking",
     "cotizacion": "Cotizaciones",
     "pricing": "Tarifario",
-    "reclamos": "Reclamos"
+    "reclamos": "Reclamos",
+    "viewAllServices": "Ver todos los servicios"
   },
   "hero": {
-    "welcome": "Bienvenido a Seemanngroup",
-    "newClientSubtitle": "Si eres un cliente nuevo regístrate en el siguiente enlace",
+    "welcome": "Conectamos tu negocio con el mundo",
+    "newClientSubtitle": "35+ años moviendo más que carga: movemos confianza",
     "newClientBtn": "Nuevo Cliente",
-    "quoteTitle": "Utiliza nuestro cotizador en línea",
-    "quoteBtn": "Cotizar Ahora"
+    "quoteTitle": "Soluciones logísticas que impulsan tu negocio",
+    "quoteBtn": "Cotizar Ahora",
+    "experience": "Experiencia comprobada en logística internacional",
+    "globalNetwork": "Tu socio logístico global",
+    "networkDesc": "Red propia en 5 países con 3 alianzas estratégicas internacionales",
+    "ctaQuote": "Cotizar Ahora",
+    "ctaCoverage": "Ver Cobertura"
+  },
+  "stats": {
+    "clients": "Clientes Activos",
+    "countries": "Países",
+    "shipments": "Envíos Anuales",
+    "alliances": "Alianzas Globales"
+  },
+  "value": {
+    "mainTitle": "Más que freight forwarders: somos tu socio logístico",
+    "subtitle": "Por qué elegir Seemann Group",
+    "global": {
+      "title": "Red Global Propia",
+      "desc": "Presencia directa en 5 países con oficinas propias"
+    },
+    "anticipate": {
+      "title": "Anticipamos Problemas",
+      "desc": "Gestionamos documentos y requisitos antes de que sean un obstáculo"
+    },
+    "experience": {
+      "title": "Experiencia 35+ Años",
+      "desc": "Trayectoria comprobada en logística internacional"
+    },
+    "support": {
+      "title": "Disponibilidad 24/7",
+      "desc": "Tu carga nunca duerme, nosotros tampoco"
+    }
+  },
+  "tracking": {
+    "badge": "TRACKING 24/7",
+    "title": "Rastrea tu carga en tiempo real",
+    "subtitle": "Ingresa tu número de seguimiento y conoce el estado de tu envío al instante",
+    "placeholder": "Ej: SG123456789",
+    "button": "Rastrear",
+    "feature1": "Estado Actual",
+    "feature1Desc": "Información en tiempo real",
+    "feature2": "Ubicación Exacta",
+    "feature2Desc": "GPS tracking 24/7",
+    "feature3": "ETA Preciso",
+    "feature3Desc": "Fecha estimada de llegada"
+  },
+  "testimonials": {
+    "badge": "TESTIMONIOS",
+    "title": "Lo que nuestros clientes dicen",
+    "subtitle": "Más de 100 empresas confían en nosotros para sus operaciones logísticas",
+    "client1": "Seemann Group ha sido clave en nuestra expansión internacional. Su red en 5 países y respuesta rápida nos permite operar con confianza.",
+    "client1Position": "Director de Operaciones",
+    "client2": "La transparencia en el tracking y la gestión aduanera impecable hacen de Seemann nuestro socio logístico de confianza desde hace 8 años.",
+    "client2Position": "Gerente Logística",
+    "client3": "Necesitábamos un partner que entendiera transporte refrigerado. Seemann cumplió cada promesa. Envíos perfectos, tiempos exactos.",
+    "client3Position": "CEO",
+    "stat1": "Satisfacción del Cliente",
+    "stat2": "Clientes Activos",
+    "stat3": "Años de Experiencia"
+  },
+  "cta": {
+    "title": "¿Listo para optimizar tu logística?",
+    "subtitle": "Contáctanos y descubre cómo podemos ayudarte",
+    "quote": "Solicitar Cotización",
+    "contact": "Contáctanos"
+  },
+  "industries": {
+    "title": "Soluciones para tu industria",
+    "subtitle": "Experiencia especializada en múltiples sectores",
+    "wine": "Vinos & Bebidas",
+    "wineDesc": "Transporte refrigerado y certificado",
+    "machinery": "Maquinaria",
+    "machineryDesc": "Proyectos y carga sobredimensionada",
+    "construction": "Construcción",
+    "constructionDesc": "Break bulk y carga de proyecto",
+    "ecommerce": "E-commerce",
+    "ecommerceDesc": "Entregas rápidas y tracking 24/7"
   },
   "services": {
     "title": "Nuestros Servicios",
@@ -204,6 +281,99 @@
       "subtitle": "Transporte • Seguridad",
       "title": "Servicios"
     },
+    "hero": {
+      "title": "Soluciones Logísticas Integrales",
+      "subtitle": "Optimizamos tiempo, control y costos en cada envío. Conectamos tu negocio con el mundo de forma confiable y eficiente.",
+      "cta1": "Solicitar Cotización",
+      "cta2": "Ver Servicios",
+      "stat1": "5 Países",
+      "stat2": "24/7 Tracking",
+      "stat3": "Carga Asegurada"
+    },
+    "value": {
+      "title": "¿Por qué confiar en Seemann Group?",
+      "desc": "Más de 35 años de experiencia nos respaldan como líderes en logística internacional. Ofrecemos soluciones integrales adaptadas a las necesidades de cada cliente.",
+      "bullet1Title": "Qué hacemos",
+      "bullet1Desc": "Freight forwarding integral: aéreo, marítimo, terrestre y multimodal con servicios de valor agregado.",
+      "bullet2Title": "Para quién",
+      "bullet2Desc": "Empresas importadoras/exportadoras que buscan un partner logístico confiable y proactivo.",
+      "bullet3Title": "Resultado",
+      "bullet3Desc": "Operaciones optimizadas, visibilidad 24/7 y costos controlados para impulsar tu crecimiento."
+    },
+    "grid": {
+      "title": "Nuestros Servicios",
+      "subtitle": "Soluciones logísticas diseñadas para cada necesidad",
+      "air": {
+        "title": "Transporte Aéreo",
+        "oneLiner": "Velocidad y precisión global",
+        "shortDesc": "Velocidad y eficiencia para cargas urgentes",
+        "benefit1": "Entregas Express 24-72hrs",
+        "benefit2": "Tracking en tiempo real",
+        "benefit3": "Cobertura global 100+ destinos"
+      },
+      "sea": {
+        "title": "Transporte Marítimo",
+        "oneLiner": "Capacidad y economía en océanos",
+        "shortDesc": "Soluciones FCL y LCL optimizadas",
+        "benefit1": "Full Container (FCL) y Consolidado (LCL)",
+        "benefit2": "Tarifas competitivas certificadas",
+        "benefit3": "Gestión documental completa"
+      },
+      "land": {
+        "title": "Transporte Terrestre",
+        "oneLiner": "Conectando destinos continentales",
+        "shortDesc": "Conexión terrestre nacional e internacional",
+        "benefit1": "Rutas Chile, Perú, Argentina",
+        "benefit2": "Flota moderna rastreada GPS",
+        "benefit3": "Entregas puntuales garantizadas"
+      },
+      "warehouse": {
+        "title": "Warehouse & Fulfillment",
+        "oneLiner": "Almacenaje estratégico 24/7",
+        "shortDesc": "Almacenaje y distribución especializada",
+        "benefit1": "Bodegas certificadas estratégicas",
+        "benefit2": "WMS para control de inventario",
+        "benefit3": "Pick & Pack personalizado"
+      },
+      "multimodal": {
+        "title": "Servicio Multimodal",
+        "oneLiner": "Rutas optimizadas integradas",
+        "shortDesc": "Combinación óptima de modos de transporte",
+        "benefit1": "Optimización de costos y tiempos",
+        "benefit2": "Un solo interlocutor end-to-end",
+        "benefit3": "Soluciones personalizadas"
+      },
+      "customs": {
+        "title": "Servicio de Aduanas",
+        "oneLiner": "Cumplimiento normativo garantizado",
+        "shortDesc": "Gestión aduanera integral y eficiente",
+        "benefit1": "Agentes aduaneros certificados",
+        "benefit2": "Clasificación arancelaria correcta",
+        "benefit3": "Despachos ágiles sin demoras"
+      }
+    },
+    "card": {
+      "cta1": "Ver más información"
+    },
+    "webtracking": {
+      "badge": "Tracking 24/7",
+      "title": "WEBTRACKING",
+      "subtitle": "Monitorea tu carga en tiempo real",
+      "description": "Accede a la ubicación exacta de tu carga, documentos digitalizados y actualizaciones en tiempo real. Control total desde cualquier dispositivo.",
+      "feature1Title": "Ubicación GPS",
+      "feature1Desc": "Seguimiento preciso en cada etapa",
+      "feature2Title": "Documentos",
+      "feature2Desc": "Acceso digital a toda la documentación",
+      "feature3Title": "Notificaciones",
+      "feature3Desc": "Alertas automáticas de cada milestone",
+      "cta": "Acceder al Sistema"
+    },
+    "finalCta": {
+      "title": "¿Listo para optimizar tu logística?",
+      "subtitle": "Nuestros expertos están listos para diseñar la solución perfecta para tu negocio",
+      "cta1": "Solicitar Cotización",
+      "cta2": "Hablar con un Experto"
+    },
     "intro": {
       "title": "Nuestros servicios",
       "description": "Nuestro servicio es un servicio integral, donde el factor principal dice relación al transporte internacional de cargas. No obstante aquello, ofrecemos y realizamos asesorías profesionales en la búsqueda y negociación de nuevos proveedores de productos, asesoría en la emisión de documentos y/o certificados; apoyo en los proceso de aduanas en necesarios en los países de aduana y/o destino; administración de inventarios; y asesoría y gestión de seguros involucrados en los proceso de comercio exterior."
@@ -264,19 +434,6 @@
     "customs": {
       "title": "Servicio de Aduanas",
       "p1": "Nuestra amplia red de oficinas a nivel internacional, nos permite asesorar a nuestros clientes en los diversos procesos de aduanas necesarios para la exportación y/o importación de bienes. Dicho servicio nos permitirá anticipar los requisitos necesarios a nivel documental y de packing."
-    },
-    "webtracking": {
-      "subtitle": "Accede a tus operaciones",
-      "title": "WEBTRACKING",
-      "p1": "Nuestra propuesta no sólo basara sus fortalezas en el fuerte cumplimiento y satisfacción de los clientes con el trabajo realizado, sino también con el manejo oportuno de la información hacia nuestros clientes, permitiendo una mayor trazabilidad de sus operaciones.",
-      "statusTitle": "Conocer el status actual de sus operaciones:",
-      "feature1": "Obtención de documentos asociados a la operación como invoice, packing list y/o certificado de origen.",
-      "feature2": "Obtención de los documentos de transporte internacional asociados como Airway Bill, Bill of Landing o CRT.",
-      "feature3": "Fotografías de la carga en el caso de que se hubiesen solicitado.",
-      "feature4": "Facturas asociadas al servicio prestado una vez concluido el mismo.",
-      "feature5": "Cotizaciones asociadas a la operación en curso.",
-      "p2": "Nuestro sistema web, les permitirá acceder a las operaciones que se mantienen en curso, y mostrara aquellas operaciones que ya han sido cursadas.",
-      "enterHere": "Entre aquí"
     }
   },
   "offices": {
@@ -309,5 +466,67 @@
     "meetTeam": "Conoce a nuestro equipo",
     "ourTeam": "Nuestros Ejecutivos",
     "contactViaWhatsApp": "Contactar por WhatsApp"
+  },
+  "contact": {
+    "hero": {
+      "title": "Hagamos Crecer tu Negocio Juntos",
+      "subtitle": "Más de 35 años de experiencia respaldan nuestras soluciones logísticas. Cuéntanos sobre tu proyecto y te ayudaremos a encontrar la mejor solución."
+    },
+    "stats": {
+      "clients": "Clientes Activos",
+      "years": "Años de Experiencia",
+      "satisfaction": "Satisfacción"
+    },
+    "form": {
+      "title": "Solicita una Cotización",
+      "subtitle": "Completa el formulario y te contactaremos pronto",
+      "name": "Nombre Completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email Corporativo",
+      "emailPlaceholder": "tu@empresa.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+56 9 XXXX XXXX",
+      "company": "Empresa",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu necesidad logística...",
+      "submit": "Enviar Solicitud",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado! Te contactaremos pronto."
+    },
+    "benefits": {
+      "title": "¿Por qué elegirnos?",
+      "subtitle": "Nos comprometemos con el éxito de tu operación logística",
+      "response": {
+        "title": "Respuesta en 24 horas",
+        "desc": "Nuestro equipo te responderá en menos de 24 horas hábiles"
+      },
+      "security": {
+        "title": "Operaciones Seguras",
+        "desc": "Garantizamos la seguridad de tu carga con seguros y tracking 24/7"
+      },
+      "optimization": {
+        "title": "Optimización de Costos",
+        "desc": "Analizamos tu operación para encontrar la mejor solución logística"
+      },
+      "coverage": {
+        "title": "Cobertura Global",
+        "desc": "Presencia en 5 países y conexiones en más de 100 destinos"
+      }
+    },
+    "info": {
+      "phone": {
+        "title": "Teléfono",
+        "desc": "Lun - Vie 9:00 - 18:00"
+      },
+      "email": {
+        "title": "Email",
+        "desc": "Respuesta en 24 horas"
+      },
+      "address": {
+        "title": "Oficina Principal",
+        "desc": "Av. Libertad #1405, of. 1203"
+      }
+    }
   }
 }

@@ -24,7 +24,7 @@ const ServiceCard = ({
   const { t } = useTranslation();
 
   return (
-    <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
+    <div className="col-lg-3 col-md-6 col-sm-6 mb-4" data-aos="fade-up">
       <div className="service-flip-card">
         <div className="service-flip-card-inner">
           {/* FRONT SIDE */}

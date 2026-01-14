@@ -1,19 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Calculator } from 'lucide-react';
 
 const HeroSlider = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    // Inicializar carousel de Bootstrap si es necesario
-    const carouselElement = document.querySelector('#heroCarousel');
-    if (carouselElement && typeof window.bootstrap !== 'undefined') {
-      new window.bootstrap.Carousel(carouselElement, {
-        interval: 5000,
-        ride: 'carousel'
-      });
-    }
-  }, []);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
@@ -22,8 +15,7 @@ const HeroSlider = () => {
       overlay: true,
       titleKey: 'hero.welcome',
       subtitleKey: 'hero.newClientSubtitle',
-      btnTextKey: 'hero.newClientBtn',
-      btnLink: '/nuevos-clientes',
+      showDualCTA: true,
       align: 'center'
     },
     {
@@ -31,101 +23,196 @@ const HeroSlider = () => {
       image: '/images/2.jpeg',
       overlay: true,
       titleKey: 'hero.quoteTitle',
-      subtitleKey: '',
-      btnTextKey: 'hero.quoteBtn',
-      btnLink: '/cotizaciones',
+      subtitleKey: 'hero.experience',
+      showDualCTA: true,
       align: 'center'
     },
     {
       id: 3,
       image: '/images/3.jpeg',
       overlay: true,
-      titleKey: '',
-      subtitleKey: '',
-      btnTextKey: 'hero.quoteBtn',
-      btnLink: '/cotizaciones',
+      titleKey: 'hero.globalNetwork',
+      subtitleKey: 'hero.networkDesc',
+      showDualCTA: true,
       align: 'center'
     }
   ];
 
-  return (
-    <div id="heroCarousel" className="carousel slide hero-slider" data-bs-ride="carousel">
-      {/* Indicators */}
-      <div className="carousel-indicators">
-        {slides.map((slide, index) => (
-          <button
-            key={slide.id}
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to={index}
-            className={index === 0 ? 'active' : ''}
-            aria-current={index === 0 ? 'true' : 'false'}
-            aria-label={`Slide ${index + 1}`}
-          ></button>
-        ))}
-      </div>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
 
-      {/* Slides */}
-      <div className="carousel-inner">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`carousel-item hero-slide ${index === 0 ? 'active' : ''} ${slide.overlay ? 'overlay' : ''}`}
-            style={{
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: slide.overlay ? 'cover' : 'cover',
-              backgroundRepeat: slide.overlay ? 'no-repeat' : 'round'
-            }}
-          >
-            <div className="container h-100">
-              <div className={`row align-items-center h-100 ${slide.align === 'center' ? 'justify-content-center text-center' : 'text-start'}`}>
-                <div className={slide.align === 'center' ? 'col-md-12 col-lg-8' : 'col-md-12 col-lg-7'}>
-                  {slide.titleKey && (
-                    <h1 data-aos="fade-up" data-aos-delay="0">
-                      {t(slide.titleKey)}
-                    </h1>
-                  )}
-                  {slide.subtitleKey && (
-                    <p className="mb-5" data-aos="fade-up" data-aos-delay="100">
-                      {t(slide.subtitleKey)}
-                    </p>
-                  )}
-                  {slide.btnTextKey && (
-                    <p data-aos="fade-up" data-aos-delay="200">
-                      <a 
-                        href={slide.btnLink} 
-                        className={slide.overlay ? 'btn btn-outline-white border-w-2 btn-md' : 'btn btn-primary text-white border-w-2 btn-md'}
-                      >
-                        {t(slide.btnTextKey)}
-                      </a>
-                    </p>
-                  )}
-                </div>
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  return (
+    <div className="hero-slider position-relative">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSlide}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className={`hero-slide ${slides[currentSlide].overlay ? 'overlay' : ''}`}
+          style={{
+            backgroundImage: `url(${slides[currentSlide].image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%'
+          }}
+        >
+          <div className="container h-100">
+            <div className={`row align-items-center h-100 ${slides[currentSlide].align === 'center' ? 'justify-content-center text-center' : 'text-start'}`}>
+              <div className={slides[currentSlide].align === 'center' ? 'col-md-12 col-lg-8' : 'col-md-12 col-lg-7'}>
+                {slides[currentSlide].titleKey && (
+                  <motion.h1
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                    style={{ position: 'relative', zIndex: 3 }}
+                  >
+                    {t(slides[currentSlide].titleKey)}
+                  </motion.h1>
+                )}
+                {slides[currentSlide].subtitleKey && (
+                  <motion.p 
+                    className="mb-5 hero-subtitle"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                    style={{ position: 'relative', zIndex: 3 }}
+                  >
+                    {t(slides[currentSlide].subtitleKey)}
+                  </motion.p>
+                )}
+                {slides[currentSlide].showDualCTA && (
+                  <motion.div
+                    className="hero-cta-group"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.6, ease: "backOut" }}
+                    style={{ position: 'relative', zIndex: 3 }}
+                  >
+                    <Link to="/contacto">
+                    <motion.button
+                      className="btn btn-primary text-white btn-lg me-3 mb-3"
+                      whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(189, 33, 33, 0.5)" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Calculator size={20} className="me-2" />
+                      {t('hero.ctaQuote', 'Cotizar Ahora')}
+                    </motion.button>
+                  </Link>
+                    <motion.a 
+                      href="#servicios-section"
+                      className="btn btn-outline-white border-w-2 btn-lg mb-3"
+                      whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {t('hero.ctaCoverage', 'Ver Cobertura')}
+                      <ArrowRight size={20} className="ms-2" />
+                    </motion.a>
+                  </motion.div>
+                )}
               </div>
             </div>
           </div>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Indicators */}
+      <div className="carousel-indicators" style={{ position: 'absolute', bottom: '30px', left: '50%', transform: 'translateX(-50%)', zIndex: 10 }}>
+        {slides.map((_, index) => (
+          <motion.button
+            key={index}
+            type="button"
+            onClick={() => goToSlide(index)}
+            className={index === currentSlide ? 'active' : ''}
+            aria-current={index === currentSlide ? 'true' : 'false'}
+            aria-label={`Slide ${index + 1}`}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            style={{
+              width: index === currentSlide ? '30px' : '10px',
+              height: '10px',
+              borderRadius: '5px',
+              transition: 'all 0.3s ease'
+            }}
+          />
         ))}
       </div>
 
       {/* Controls */}
-      <button
+      <motion.button
         className="carousel-control-prev"
         type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide="prev"
+        onClick={prevSlide}
+        whileHover={{ scale: 1.1, x: -5 }}
+        whileTap={{ scale: 0.9 }}
+        style={{ zIndex: 10 }}
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
-      </button>
-      <button
+      </motion.button>
+      <motion.button
         className="carousel-control-next"
         type="button"
-        data-bs-target="#heroCarousel"
-        data-bs-slide="next"
+        onClick={nextSlide}
+        whileHover={{ scale: 1.1, x: 5 }}
+        whileTap={{ scale: 0.9 }}
+        style={{ zIndex: 10 }}
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
-      </button>
+      </motion.button>
+
+      {/* Partículas decorativas */}
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, pointerEvents: 'none', zIndex: 2 }}>
+        {[...Array(10)].map((_, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ 
+              opacity: [0, 0.5, 0],
+              y: [-100, 700],
+              x: [0, Math.random() * 100 - 50]
+            }}
+            transition={{
+              duration: Math.random() * 5 + 5,
+              repeat: Infinity,
+              delay: Math.random() * 3,
+              ease: "linear"
+            }}
+            style={{
+              position: 'absolute',
+              left: `${Math.random() * 100}%`,
+              width: '4px',
+              height: '4px',
+              background: 'rgba(255, 255, 255, 0.6)',
+              borderRadius: '50%',
+              boxShadow: '0 0 10px rgba(255, 255, 255, 0.8)'
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 };

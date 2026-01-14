@@ -1,196 +1,86 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import HeroSlider from '../components/HeroSlider';
-import ServiceCard from '../components/ServiceCard';
+import StatsBar from '../components/StatsBar';
+import TrackingSection from '../components/TrackingSection';
+import ServicesPreviewGrid from '../components/ServicesPreviewGrid';
+import IndustryUseCases from '../components/IndustryUseCases';
+import TestimonialsSection from '../components/TestimonialsSection';
 import LogoCarousel from '../components/LogoCarousel';
-import HistoryTabs from '../components/HistoryTabs';
-import OfficeCards from '../components/OfficeCards';
-import BlogSection from '../components/BlogSection';
+import WhatsAppButton from '../components/WhatsAppButton';
 import AOS from 'aos';
-import { 
-  Plane,
-  Ship,
-  Truck,
-  Warehouse,
-  RefreshCw,
-  Building2,
-  Users,
-  Mail
-} from 'lucide-react';
 
 const Home = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
-      easing: 'ease',
-      delay: 0
+      duration: 1000,
+      easing: 'ease-out-cubic',
+      delay: 0,
+      once: true
     });
   }, []);
 
   return (
     <div className="site-wrap" id="home-section">
-      {/* Hero Slider */}
       <HeroSlider />
 
-      {/* Servicios Section con Flip Cards */}
-      <div className="site-section bg-light" id="servicios-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <div className="block-heading-1 mt-5" data-aos="fade-up" data-aos-delay="0">
-                <span>{t('services.subtitle')}</span>
-                <h2>{t('services.title')}</h2>
-              </div>
-            </div>
-          </div>
+      {/* Stats Bar - Números que impresionan */}
+      <StatsBar />
 
-          {/* Row 1: Cómo te ayudamos + 3 servicios */}
-          <div className="row justify-content-center">
-            {/* Card: Cómo te ayudamos */}
-            <ServiceCard
-              icon={<Users size={60} strokeWidth={1.5} />}
-              title={t('services.howWeHelp.title')}
-              subtitle={t('services.howWeHelp.subtitle')}
-              description={t('services.howWeHelp.description')}
-              details={[
-                t('services.howWeHelp.detail1'),
-                t('services.howWeHelp.detail2'),
-                t('services.howWeHelp.detail3'),
-                t('services.howWeHelp.detail4')
-              ]}
-              link="/servicios"
-              variant="secondary"
-            />
+      {/* Tracking Section - Nueva */}
+      <TrackingSection />
 
-            {/* Card: Transporte Aéreo */}
-            <ServiceCard
-              icon={<Plane size={60} strokeWidth={1.5} />}
-              title={t('services.air.title')}
-              subtitle={t('services.air.subtitle')}
-              description={t('services.air.description')}
-              details={[
-                t('services.air.detail1'),
-                t('services.air.detail2'),
-                t('services.air.detail3'),
-                t('services.air.detail4'),
-                t('services.air.detail5'),
-                t('services.air.detail6')
-              ]}
-              link="/servicios#transporte-aereo"
-            />
+      {/* Servicios Section - Preview Grid Moderna */}
+      <ServicesPreviewGrid />
 
-            {/* Card: Transporte Marítimo */}
-            <ServiceCard
-              icon={<Ship size={60} strokeWidth={1.5} />}
-              title={t('services.sea.title')}
-              subtitle={t('services.sea.subtitle')}
-              description={t('services.sea.description')}
-              details={[
-                t('services.sea.detail1'),
-                t('services.sea.detail2'),
-                t('services.sea.detail3'),
-                t('services.sea.detail4'),
-                t('services.sea.detail5'),
-                t('services.sea.detail6')
-              ]}
-              link="/servicios#transporte-maritimo"
-            />
+      {/* Industry Use Cases - Soluciones por industria */}
+      <IndustryUseCases />
 
-            {/* Card: Transporte Terrestre */}
-            <ServiceCard
-              icon={<Truck size={60} strokeWidth={1.5} />}
-              title={t('services.land.title')}
-              subtitle={t('services.land.subtitle')}
-              description={t('services.land.description')}
-              details={[
-                t('services.land.detail1'),
-                t('services.land.detail2'),
-                t('services.land.detail3'),
-                t('services.land.detail4'),
-                t('services.land.detail5')
-              ]}
-              link="/servicios#transporte-terrestre"
-            />
-          </div>
+      {/* Testimonials Section - Social Proof */}
+      <TestimonialsSection />
 
-          {/* Row 2: Contáctanos + 3 servicios */}
-          <div className="row justify-content-center mt-4">
-            {/* Card: Contáctanos */}
-            <ServiceCard
-              icon={<Mail size={60} strokeWidth={1.5} />}
-              title={t('services.contact.title')}
-              subtitle={t('services.contact.subtitle')}
-              description={t('services.contact.description')}
-              details={[
-                t('services.contact.detail1'),
-                t('services.contact.detail2'),
-                t('services.contact.detail3'),
-                t('services.contact.detail4')
-              ]}
-              link="#contacto"
-              variant="secondary"
-            />
-
-            {/* Card: Warehouse */}
-            <ServiceCard
-              icon={<Warehouse size={60} strokeWidth={1.5} />}
-              title={t('services.warehouse.title')}
-              subtitle={t('services.warehouse.subtitle')}
-              description={t('services.warehouse.description')}
-              details={[
-                t('services.warehouse.detail1'),
-                t('services.warehouse.detail2'),
-                t('services.warehouse.detail3'),
-                t('services.warehouse.detail4')
-              ]}
-              link="/servicios#warehouse"
-            />
-
-            {/* Card: Servicio Multimodal */}
-            <ServiceCard
-              icon={<RefreshCw size={60} strokeWidth={1.5} />}
-              title={t('services.multimodal.title')}
-              subtitle={t('services.multimodal.subtitle')}
-              description={t('services.multimodal.description')}
-              details={[
-                t('services.multimodal.detail1'),
-                t('services.multimodal.detail2'),
-                t('services.multimodal.detail3')
-              ]}
-              link="/servicios#servicio-multimodal"
-            />
-
-            {/* Card: Servicio de Aduanas */}
-            <ServiceCard
-              icon={<Building2 size={60} strokeWidth={1.5} />}
-              title={t('services.customs.title')}
-              subtitle={t('services.customs.subtitle')}
-              description={t('services.customs.description')}
-              details={[
-                t('services.customs.detail1'),
-                t('services.customs.detail2'),
-                t('services.customs.detail3'),
-                t('services.customs.detail4')
-              ]}
-              link="/servicios#servicio-aduanas"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Logo Carousel - Empresas Afiliadas */}
+      {/* Partners Carousel - Breve */}
       <LogoCarousel />
 
-      {/* Historia Section - Modern Cards */}
-      <HistoryTabs />
+      {/* CTA Final - Llamado a la acción */}
+      <motion.div
+        className="cta-final-section"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="container text-center py-5">
+          <h2 className="mb-4">{t('cta.title', '¿Listo para optimizar tu logística?')}</h2>
+          <p className="mb-4 fs-5">{t('cta.subtitle', 'Contáctanos y descubre cómo podemos ayudarte')}</p>
+          <div className="d-flex gap-3 justify-content-center flex-wrap">
+            <Link to="/contacto">
+              <motion.button
+                className="btn btn-primary btn-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t('cta.quote', 'Solicitar Cotización')}
+              </motion.button>
+            </Link>
+            <motion.a
+              href="/nuevos-clientes"
+              className="btn btn-outline-primary btn-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {t('cta.contact', 'Contáctanos')}
+            </motion.a>
+          </div>
+        </div>
+      </motion.div>
 
-      {/* Blog Section */}
-      <BlogSection />
-      
-      {/* Offices Section */}
-      <OfficeCards />
+      {/* WhatsApp Button Flotante */}
+      <WhatsAppButton />
       
     </div>
   );

@@ -24,7 +24,7 @@ const OfficeCards = () => {
   const countries: Country[] = [
     {
       name: 'CHILE',
-      flag: '🇨🇱',
+      flag: 'https://flagcdn.com/cl.svg',
       offices: [
         {
           city: 'Viña del Mar',
@@ -49,7 +49,7 @@ const OfficeCards = () => {
     },
     {
       name: 'ESTADOS UNIDOS',
-      flag: '🇺🇸',
+      flag: 'https://flagcdn.com/us.svg',
       offices: [
         {
           city: 'Miami',
@@ -62,7 +62,7 @@ const OfficeCards = () => {
     },
     {
       name: 'PERÚ',
-      flag: '🇵🇪',
+      flag: 'https://flagcdn.com/pe.svg',
       offices: [
         {
           city: 'Lima',
@@ -75,7 +75,7 @@ const OfficeCards = () => {
     },
     {
       name: 'COLOMBIA',
-      flag: '🇨🇴',
+      flag: 'https://flagcdn.com/co.svg',
       offices: [
         {
           city: 'Bogotá',
@@ -88,7 +88,7 @@ const OfficeCards = () => {
     },
     {
       name: 'MÉXICO',
-      flag: '🇲🇽',
+      flag: 'https://flagcdn.com/mx.svg',
       offices: [
         {
           city: 'México',
@@ -147,20 +147,23 @@ const OfficeCards = () => {
           </div>
         </div>
 
-        {/* Desktop: Grid normal */}
+        {/* Desktop: Grid con 3 arriba y 2 abajo centradas */}
         <div className="d-none d-lg-block">
-          <div className="row g-4">
-            {countries.map((country, countryIndex) => (
+          {/* Primera fila - 3 oficinas */}
+          <div className="row g-4 justify-content-center mb-4">
+            {countries.slice(0, 3).map((country, countryIndex) => (
               <div 
                 key={countryIndex} 
-                className={country.name === 'CHILE' ? 'col-lg-3' : 'col-lg-3'}
+                className="col-lg-4"
                 data-aos="fade-up"
                 data-aos-delay={countryIndex * 100}
               >
                 <div className="office-card">
                   {/* Bandera y País */}
                   <div className="office-card-header">
-                    <div className="office-flag">{country.flag}</div>
+                    <div className="office-flag">
+                      <img src={country.flag} alt={country.name} style={{width: '64px', height: '48px', objectFit: 'cover', borderRadius: '6px', boxShadow: '0 2px 8px rgba(0,0,0,0.15)'}} />
+                    </div>
                     <h3 className="office-country">{country.name}</h3>
                   </div>
 
@@ -256,6 +259,62 @@ const OfficeCards = () => {
               </div>
             ))}
           </div>
+
+          {/* Segunda fila - 2 oficinas centradas (Colombia y México) */}
+          <div className="row g-4 justify-content-center">
+            {countries.slice(3, 5).map((country, countryIndex) => (
+              <div 
+                key={countryIndex + 3} 
+                className="col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay={(countryIndex + 3) * 100}
+              >
+                <div className="office-card">
+                  <div className="office-card-header">
+                    <div className="office-flag">
+                      <img src={country.flag} alt={country.name} style={{width: '64px', height: '48px', objectFit: 'cover', borderRadius: '6px', boxShadow: '0 2px 8px rgba(0,0,0,0.15)'}} />
+                    </div>
+                    <h3 className="office-country">{country.name}</h3>
+                  </div>
+
+                  <div className="office-card-body">
+                    <div className="office-info">
+                      <div className="office-info-item">
+                        <MapPin size={16} className="me-2 text-danger" />
+                        <span>{country.offices[0].address}</span>
+                      </div>
+
+                      {country.offices[0].phone && (
+                        <div className="office-info-item">
+                          <Phone size={16} className="me-2 text-danger" />
+                          <a href={`tel:${country.offices[0].phone}`}>
+                            {country.offices[0].phone}
+                          </a>
+                        </div>
+                      )}
+
+                      <div className="office-info-item">
+                        <Mail size={16} className="me-2 text-danger" />
+                        <a href={`mailto:${country.offices[0].email}`}>
+                          {country.offices[0].email}
+                        </a>
+                      </div>
+
+                      <a
+                        href={country.offices[0].googleMaps}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline-danger btn-sm mt-3 w-100"
+                      >
+                        <MapPin size={14} className="me-1" />
+                        {t('offices.viewOnMap')}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Mobile/Tablet: Slider */}
@@ -265,7 +324,9 @@ const OfficeCards = () => {
               <div key={countryIndex} className="px-2">
                 <div className="office-card">
                   <div className="office-card-header">
-                    <div className="office-flag">{country.flag}</div>
+                    <div className="office-flag">
+                      <img src={country.flag} alt={country.name} style={{width: '64px', height: '48px', objectFit: 'cover', borderRadius: '6px', boxShadow: '0 2px 8px rgba(0,0,0,0.15)'}} />
+                    </div>
                     <h3 className="office-country">{country.name}</h3>
                   </div>
 

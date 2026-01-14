@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Globe, Heart, Eye, Smile } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 
 interface TabContent {
   id: string;
@@ -46,61 +48,119 @@ const HistoryTabs = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        type: 'spring' as const,
+        stiffness: 100,
+        damping: 12
+      }
+    }
+  };
+
   return (
     <div className="history-tabs-section bg-light py-5" id="historia-section">
       <div className="container">
         <div className="row mb-5">
           <div className="col-12 text-center">
-            <div className="block-heading-1" data-aos="fade-up">
+            <motion.div 
+              className="block-heading-1"
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <span>{t('history.subtitle')}</span>
               <h2>{t('history.title')}</h2>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Cards Grid */}
-        <div className="row g-4">
-          {tabs.map((tab, index) => (
-            <div 
+        <motion.div 
+          className="row g-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {tabs.map((tab) => (
+            <motion.div 
               key={tab.id} 
               className="col-lg-3 col-md-6 col-sm-6"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
+              variants={cardVariants}
             >
-              <div 
-                className={`history-card ${activeTab === tab.id ? 'active' : ''}`}
-                onClick={() => setActiveTab(tab.id)}
-                style={{ 
-                  cursor: 'pointer',
-                  borderTop: activeTab === tab.id ? `4px solid ${tab.color}` : '4px solid transparent'
-                }}
+              <Tilt
+                tiltMaxAngleX={5}
+                tiltMaxAngleY={5}
+                perspective={1000}
+                scale={1.05}
+                transitionSpeed={2000}
               >
-                <div 
-                  className="history-card-icon"
-                  style={{ color: tab.color }}
+                <motion.div 
+                  className={`history-card ${activeTab === tab.id ? 'active' : ''}`}
+                  onHoverStart={() => setActiveTab(tab.id)}
+                  style={{ 
+                    borderTop: activeTab === tab.id ? `4px solid ${tab.color}` : '4px solid transparent'
+                  }}
+                  whileHover={{ y: -5 }}
                 >
-                  {tab.icon}
-                </div>
-                <h3 className="history-card-title">{t(tab.titleKey)}</h3>
-                
-                {/* Contenido siempre visible */}
-                <div className="history-card-content">
-                  <p style={{ whiteSpace: tab.id === 'valores' ? 'pre-line' : 'normal' }}>
-                    {t(tab.descriptionKey)}
-                  </p>
-                  <div className="history-card-actions">
-                    <Link 
-                      to={`/nuestra-empresa#${tab.id}`}
-                      className="btn btn-sm btn-outline-danger"
-                    >
-                      {t('history.seeMore')}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <motion.div 
+                    className="history-card-icon"
+                    style={{ color: tab.color }}
+                    animate={activeTab === tab.id ? {
+                      rotate: [0, -5, 5, -5, 0],
+                      scale: [1, 1.1, 1]
+                    } : {}}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {tab.icon}
+                  </motion.div>
+                  <h3 className="history-card-title">{t(tab.titleKey)}</h3>
+                  
+                  {/* Contenido siempre visible */}
+                  <motion.div 
+                    className="history-card-content"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <p style={{ whiteSpace: tab.id === 'valores' ? 'pre-line' : 'normal' }}>
+                      {t(tab.descriptionKey)}
+                    </p>
+                    <div className="history-card-actions">
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Link 
+                          to={`/nuestra-empresa#${tab.id}`}
+                          className="btn btn-sm btn-outline-danger"
+                        >
+                          {t('history.seeMore')}
+                        </Link>
+                      </motion.div>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              </Tilt>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
