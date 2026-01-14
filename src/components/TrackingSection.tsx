@@ -9,17 +9,8 @@ const TrackingSection = () => {
 
   const handleTrack = (e: React.FormEvent) => {
     e.preventDefault();
-    if (trackingNumber.trim()) {
-      // Redirigir al portal de clientes
-      window.location.href = 'https://portalclientes.seemanngroup.com/login';
-    }
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setTrackingNumber(value);
-    // Redirigir automáticamente al portal cuando se escribe algo
-    if (value.trim().length > 0) {
+    if (trackingNumber.trim().length >= 3) {
+      // Redirigir al portal de clientes cuando tenga al menos 3 caracteres
       window.location.href = 'https://portalclientes.seemanngroup.com/login';
     }
   };
@@ -68,7 +59,9 @@ const TrackingSection = () => {
                     className="form-control tracking-input"
                     placeholder={t('tracking.placeholder', 'Ej: SG123456789')}
                     value={trackingNumber}
-                    onChange={handleInputChange}
+                    onChange={(e) => setTrackingNumber(e.target.value)}
+                    minLength={3}
+                    required
                   />
                   <motion.button
                     type="submit"
