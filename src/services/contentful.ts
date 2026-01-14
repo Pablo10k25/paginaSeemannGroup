@@ -19,46 +19,55 @@ export type BlogPostEntry = Entry<{
   contentTypeId: 'blog1';
 }>;
 
-// Verificar si las credenciales de Contentful están disponibles
-const hasContentfulCredentials = () => {
-  const spaceId = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
-  const accessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
-  return !!(spaceId && accessToken && spaceId.trim() !== '' && accessToken.trim() !== '');
-};
-
-// Crear cliente solo si las credenciales están disponibles
+// Variable para almacenar el cliente
 let client: ReturnType<typeof createClient> | null = null;
+let clientInitialized = false;
 
-try {
-  if (hasContentfulCredentials()) {
-    client = createClient({
-      space: import.meta.env.VITE_CONTENTFUL_SPACE_ID as string,
-      accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN as string,
-      environment: (import.meta.env.VITE_CONTENTFUL_ENVIRONMENT as string) || 'master',
-    });
-  } else {
-    console.info('ℹ️ Contentful credentials not found. Blog features will be disabled.');
+// Función para obtener o crear el cliente
+const getClient = () => {
+  if (clientInitialized) {
+    return client;
   }
-} catch (error) {
-  console.error('❌ Error initializing Contentful client:', error);
-  client = null;
-}
+
+  clientInitialized = true;
+
+  try {
+    const spaceId = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
+    const accessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
+    
+    if (!spaceId || !accessToken || spaceId.trim() === '' || accessToken.trim() === '') {
+      console.info('ℹ️ Contentful credentials not configured. Blog features disabled.');
+      return null;
+    }
+
+    client = createClient({
+      space: spaceId,
+      accessToken: accessToken,
+      environment: import.meta.env.VITE_CONTENTFUL_ENVIRONMENT || 'master',
+    });
+
+    return client;
+  } catch (error) {
+    console.error('❌ Error initializing Contentful:', error);
+    return null;
+  }
+};
 
 // Obtener todos los posts del blog
 export const getBlogPosts = async (limit = 10): Promise<any[]> => {
-  if (!client) {
-    console.warn('⚠️ Contentful not configured. Returning empty blog posts.');
+  const contentfulClient = getClient();
+  
+  if (!contentfulClient) {
     return [];
   }
   
   try {
-    const response = await client.getEntries({
+    const response = await contentfulClient.getEntries({
       content_type: 'blog1',
       order: ['-fields.publishDate'],
       limit,
     });
     
-    console.log('✅ Blog posts fetched:', response.items);
     return response.items;
   } catch (error) {
     console.error('❌ Error fetching blog posts:', error);
@@ -68,13 +77,14 @@ export const getBlogPosts = async (limit = 10): Promise<any[]> => {
 
 // Obtener un post específico por slug
 export const getBlogPostBySlug = async (slug: string): Promise<any | null> => {
-  if (!client) {
-    console.warn('⚠️ Contentful not configured. Returning null for blog post.');
+  const contentfulClient = getClient();
+  
+  if (!contentfulClient) {
     return null;
   }
   
   try {
-    const response = await client.getEntries({
+    const response = await contentfulClient.getEntries({
       content_type: 'blog1',
       'fields.slug': slug,
       limit: 1,
@@ -90,5 +100,3 @@ export const getBlogPostBySlug = async (slug: string): Promise<any | null> => {
 export const getRecentPosts = async (limit = 3): Promise<any[]> => {
   return getBlogPosts(limit);
 };
-
-export { client };
