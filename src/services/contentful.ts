@@ -21,20 +21,28 @@ export type BlogPostEntry = Entry<{
 
 // Verificar si las credenciales de Contentful están disponibles
 const hasContentfulCredentials = () => {
-  return !!(
-    import.meta.env.VITE_CONTENTFUL_SPACE_ID && 
-    import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN
-  );
+  const spaceId = import.meta.env.VITE_CONTENTFUL_SPACE_ID;
+  const accessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
+  return !!(spaceId && accessToken && spaceId.trim() !== '' && accessToken.trim() !== '');
 };
 
 // Crear cliente solo si las credenciales están disponibles
-const client = hasContentfulCredentials() 
-  ? createClient({
+let client: ReturnType<typeof createClient> | null = null;
+
+try {
+  if (hasContentfulCredentials()) {
+    client = createClient({
       space: import.meta.env.VITE_CONTENTFUL_SPACE_ID as string,
       accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN as string,
       environment: (import.meta.env.VITE_CONTENTFUL_ENVIRONMENT as string) || 'master',
-    })
-  : null;
+    });
+  } else {
+    console.info('ℹ️ Contentful credentials not found. Blog features will be disabled.');
+  }
+} catch (error) {
+  console.error('❌ Error initializing Contentful client:', error);
+  client = null;
+}
 
 // Obtener todos los posts del blog
 export const getBlogPosts = async (limit = 10): Promise<any[]> => {
