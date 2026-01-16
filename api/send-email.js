@@ -1,6 +1,3 @@
-const brevo = require('@getbrevo/brevo');
-const { google } = require('googleapis');
-
 module.exports = async function handler(req, res) {
   // Habilitar CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -23,6 +20,12 @@ module.exports = async function handler(req, res) {
 
   try {
     console.log('🔍 Iniciando handler de send-email');
+    
+    // Importar dinámicamente para evitar errores de inicialización
+    const brevo = await import('@getbrevo/brevo');
+    const { google } = await import('googleapis');
+    
+    console.log('✅ Librerías importadas correctamente');
     console.log('📦 Body recibido:', JSON.stringify(req.body));
     
     const { 
