@@ -6,7 +6,6 @@ import HeroSlider from '../components/HeroSlider';
 import StatsBar from '../components/StatsBar';
 import TrackingSection from '../components/TrackingSection';
 import ServicesPreviewGrid from '../components/ServicesPreviewGrid';
-import IndustryUseCases from '../components/IndustryUseCases';
 import TestimonialsSection from '../components/TestimonialsSection';
 import LogoCarousel from '../components/LogoCarousel';
 import WhatsAppButton from '../components/WhatsAppButton';
@@ -36,9 +35,6 @@ const Home = () => {
 
       {/* Servicios Section - Preview Grid Moderna */}
       <ServicesPreviewGrid />
-
-      {/* Industry Use Cases - Soluciones por industria */}
-      <IndustryUseCases />
 
       {/* Testimonials Section - Social Proof */}
       <TestimonialsSection />

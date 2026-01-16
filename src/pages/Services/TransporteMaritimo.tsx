@@ -235,7 +235,7 @@ const TransporteMaritimo = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="https://images.unsplash.com/photo-1605745341075-e62daeaa1496?w=800&h=600&fit=crop"
+                src="/images/1204.jpg"
                 alt="Contenedores en puerto marítimo"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"

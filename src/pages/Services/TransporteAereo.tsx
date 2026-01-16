@@ -254,7 +254,7 @@ const TransporteAereo = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&h=600&fit=crop"
+                src="/images/1203.jpg"
                 alt="Cargo aéreo internacional"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"

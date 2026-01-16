@@ -230,7 +230,7 @@ const ServicioAduanas = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop"
+                src="/images/1208.jpg"
                 alt="Documentación aduanera y compliance"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"

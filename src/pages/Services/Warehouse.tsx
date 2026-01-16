@@ -226,7 +226,7 @@ const Warehouse = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop"
+                src="/images/1206.jpg"
                 alt="Almacén moderno con gestión de inventario"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"

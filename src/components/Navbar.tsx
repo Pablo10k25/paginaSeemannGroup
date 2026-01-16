@@ -275,13 +275,6 @@ const Navbar = () => {
                 </ul>
               </li>
 
-              {/* Clientes Nuevos */}
-              <li className="nav-item">
-                <Link className="nav-link" to="/nuevos-clientes">
-                  {t('navbar.newClients')}
-                </Link>
-              </li>
-
               <div className="navbar-actions d-flex align-items-center" style={{gap: '18px'}}>
                 {/* Contacto */}
                 <li className="nav-item">

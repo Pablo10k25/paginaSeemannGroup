@@ -14,6 +14,7 @@ import {
 interface ServicePreview {
   id: string;
   icon: React.ReactNode;
+  image: string;
   name: string;
   oneLiner: string;
   color: string;
@@ -27,6 +28,7 @@ const ServicesPreviewGrid = () => {
     {
       id: 'air',
       icon: <Plane size={48} strokeWidth={1.5} />,
+      image: '/images/1203.jpg',
       name: t('servicesPage.grid.air.title', 'Transporte Aéreo'),
       oneLiner: t('servicesPage.grid.air.oneLiner', 'Velocidad y precisión global'),
       color: '#0ea5e9',
@@ -35,6 +37,7 @@ const ServicesPreviewGrid = () => {
     {
       id: 'sea',
       icon: <Ship size={48} strokeWidth={1.5} />,
+      image: '/images/1204.jpg',
       name: t('servicesPage.grid.sea.title', 'Transporte Marítimo'),
       oneLiner: t('servicesPage.grid.sea.oneLiner', 'Capacidad y economía en océanos'),
       color: '#3b82f6',
@@ -43,6 +46,7 @@ const ServicesPreviewGrid = () => {
     {
       id: 'land',
       icon: <Truck size={48} strokeWidth={1.5} />,
+      image: '/images/1205.jpg',
       name: t('servicesPage.grid.land.title', 'Transporte Terrestre'),
       oneLiner: t('servicesPage.grid.land.oneLiner', 'Conectando destinos continentales'),
       color: '#22c55e',
@@ -51,6 +55,7 @@ const ServicesPreviewGrid = () => {
     {
       id: 'warehouse',
       icon: <Warehouse size={48} strokeWidth={1.5} />,
+      image: '/images/1206.jpg',
       name: t('servicesPage.grid.warehouse.title', 'Warehouse & Fulfillment'),
       oneLiner: t('servicesPage.grid.warehouse.oneLiner', 'Almacenaje estratégico 24/7'),
       color: '#f59e0b',
@@ -59,6 +64,7 @@ const ServicesPreviewGrid = () => {
     {
       id: 'multimodal',
       icon: <Route size={48} strokeWidth={1.5} />,
+      image: '/images/1207.jpg',
       name: t('servicesPage.grid.multimodal.title', 'Servicio Multimodal'),
       oneLiner: t('servicesPage.grid.multimodal.oneLiner', 'Rutas optimizadas integradas'),
       color: '#8b5cf6',
@@ -67,6 +73,7 @@ const ServicesPreviewGrid = () => {
     {
       id: 'customs',
       icon: <FileText size={48} strokeWidth={1.5} />,
+      image: '/images/1208.jpg',
       name: t('servicesPage.grid.customs.title', 'Servicio de Aduanas'),
       oneLiner: t('servicesPage.grid.customs.oneLiner', 'Cumplimiento normativo garantizado'),
       color: '#ef4444',
@@ -153,7 +160,25 @@ const ServicesPreviewGrid = () => {
                   }
                 }}
               >
-                <div className="service-preview-content">
+                {/* Image Background */}
+                <div 
+                  className="service-preview-image"
+                  style={{
+                    backgroundImage: `url(${service.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    opacity: 0.15,
+                    transition: 'opacity 0.3s ease',
+                    zIndex: 0
+                  }}
+                />
+                
+                <div className="service-preview-content" style={{ position: 'relative', zIndex: 1 }}>
                   {/* Icon with color accent */}
                   <div 
                     className="service-preview-icon"
