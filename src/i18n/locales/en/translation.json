@@ -492,7 +492,8 @@
       "messagePlaceholder": "Tell us about your logistics needs...",
       "submit": "Send Request",
       "sending": "Sending...",
-      "success": "Message sent! We'll contact you soon."
+      "success": "Message sent! We'll contact you soon.",
+      "error": "Error sending the form. Please try again."
     },
     "benefits": {
       "title": "Why choose us?",

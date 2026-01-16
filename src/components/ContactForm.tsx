@@ -12,9 +12,7 @@ import {
   TrendingUp, 
   Globe,
   Send,
-  User,
-  Building2,
-  MessageSquare
+  User
 } from 'lucide-react';
 
 const ContactForm = () => {
@@ -30,12 +28,11 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    company: '',
-    message: ''
+    phone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -47,33 +44,44 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
     
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          nombre: formData.name,
+          telefono: formData.phone,
+          correo: formData.email || undefined
+        }),
       });
-      
+
       const data = await response.json();
-      
-      if (response.ok) {
+
+      if (response.ok && data.success) {
+        setIsSubmitting(false);
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+        setFormData({ name: '', email: '', phone: '' });
+        
+        // Resetear estado después de 5 segundos
         setTimeout(() => setSubmitStatus('idle'), 5000);
       } else {
-        console.error('Error al enviar formulario:', data);
-        setSubmitStatus('error');
-        setTimeout(() => setSubmitStatus('idle'), 5000);
+        throw new Error(data.error || 'Error al enviar el formulario');
       }
     } catch (error) {
-      console.error('Error de red:', error);
-      setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    } finally {
       setIsSubmitting(false);
+      setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'Error desconocido al enviar el formulario');
+      
+      // Resetear estado de error después de 5 segundos
+      setTimeout(() => {
+        setSubmitStatus('idle');
+        setErrorMessage('');
+      }, 5000);
     }
   };
 
@@ -162,6 +170,17 @@ const ContactForm = () => {
                   </motion.div>
                 )}
 
+                {submitStatus === 'error' && (
+                  <motion.div 
+                    className="alert alert-danger"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                  >
+                    {t('contact.form.error', 'Error al enviar el formulario. Intenta nuevamente.')}
+                    {errorMessage && <div className="mt-2 small">{errorMessage}</div>}
+                  </motion.div>
+                )}
+
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label className="form-label">
@@ -181,22 +200,6 @@ const ContactForm = () => {
 
                   <div className="mb-3">
                     <label className="form-label">
-                      <Mail size={18} className="me-2" />
-                      {t('contact.form.email', 'Email Corporativo')} *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      className="form-control form-control-lg"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      placeholder={t('contact.form.emailPlaceholder', 'tu@empresa.com')}
-                    />
-                  </div>
-
-                  <div className="mb-3">
-                    <label className="form-label">
                       <Phone size={18} className="me-2" />
                       {t('contact.form.phone', 'Teléfono')} *
                     </label>
@@ -207,38 +210,22 @@ const ContactForm = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      placeholder={t('contact.form.phonePlaceholder', '+56 9 XXXX XXXX')}
-                    />
-                  </div>
-
-                  <div className="mb-3">
-                    <label className="form-label">
-                      <Building2 size={18} className="me-2" />
-                      {t('contact.form.company', 'Empresa')} *
-                    </label>
-                    <input
-                      type="text"
-                      name="company"
-                      className="form-control form-control-lg"
-                      value={formData.company}
-                      onChange={handleChange}
-                      required
-                      placeholder={t('contact.form.companyPlaceholder', 'Nombre de tu empresa')}
+                      placeholder="+(XX) XXXX XXXX"
                     />
                   </div>
 
                   <div className="mb-4">
                     <label className="form-label">
-                      <MessageSquare size={18} className="me-2" />
-                      {t('contact.form.message', 'Mensaje')}
+                      <Mail size={18} className="me-2" />
+                      {t('contact.form.email', 'Email Corporativo')}
                     </label>
-                    <textarea
-                      name="message"
-                      className="form-control"
-                      rows={4}
-                      value={formData.message}
+                    <input
+                      type="email"
+                      name="email"
+                      className="form-control form-control-lg"
+                      value={formData.email}
                       onChange={handleChange}
-                      placeholder={t('contact.form.messagePlaceholder', 'Cuéntanos sobre tu necesidad logística...')}
+                      placeholder={t('contact.form.emailPlaceholder', 'tu@empresa.com')}
                     />
                   </div>
 

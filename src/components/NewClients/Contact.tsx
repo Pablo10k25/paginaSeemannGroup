@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
+import { useState } from 'react';
 
 interface Executive {
   id: string;

@@ -492,7 +492,8 @@
       "messagePlaceholder": "Cuéntanos sobre tu necesidad logística...",
       "submit": "Enviar Solicitud",
       "sending": "Enviando...",
-      "success": "¡Mensaje enviado! Te contactaremos pronto."
+      "success": "¡Mensaje enviado! Te contactaremos pronto.",
+      "error": "Error al enviar el formulario. Por favor, intenta nuevamente."
     },
     "benefits": {
       "title": "¿Por qué elegirnos?",
