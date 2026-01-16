@@ -225,7 +225,7 @@ const TransporteTerrestre = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="/images/1205.jpg"
+                src="/images/im2.png"
                 alt="Transporte terrestre de carga"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"

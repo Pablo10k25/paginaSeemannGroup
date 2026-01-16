@@ -100,6 +100,286 @@
     "ecommerce": "E-commerce",
     "ecommerceDesc": "Fast deliveries and 24/7 tracking"
   },
+  "servicePages": {
+    "airTransport": {
+      "hero": { "title": "Air Transport: Speed, Traceability and Flexibility", "subtitle": "Transit time reduction through optimized routes and real-time control. Solutions for general cargo, DG, pharma and project cargo." },
+      "features": {
+        "feature1": { "title": "24h Response", "description": "Route and rate confirmation in record time to optimize your supply chain" },
+        "feature2": { "title": "24/7 Tracking", "description": "Complete AWB visibility at every stage with real-time updates" },
+        "feature3": { "title": "Specialized Solutions", "description": "Certified handling of DG, Pharma and temperature-controlled with regulatory compliance" }
+      },
+      "whyChoose": {
+        "title": "Why choose our air service?",
+        "p1": "Given the nature of air transport, where delivery time is the fundamental factor, our service is characterized by timely and proactive operations management.",
+        "p2": "We analyze various shipping options, ensuring greater departure frequency and transit flexibility, allowing us to achieve shorter transit times, guaranteeing the success of the businesses in which we are involved.",
+        "p3": "Since our proposal is based on client individualization, our service will always seek and present transit alternatives that allow establishing solutions adapted to each of the different realities of various industries."
+      },
+      "processTitle": "Our work process",
+      "process": {
+        "step1": { "title": "Quotation", "description": "Rate request with route analysis and transit options", "duration": "24 hours" },
+        "step2": { "title": "Planning", "description": "Pickup coordination, booking and required documentation", "duration": "48-72 hours" },
+        "step3": { "title": "Execution", "description": "Shipment, transit with 24/7 tracking and proactive management", "duration": "Variable per route" },
+        "step4": { "title": "Delivery", "description": "Customs clearance, last mile and post-operation feedback", "duration": "24-48 hours" }
+      },
+      "servicesTitle": "Air transport services we offer",
+      "services": {
+        "service1": { "title": "General Cargo", "description": "Complete management of commercial shipments with optimized routes and flexible frequencies. Ideal for standard cargo requiring reduced transit times." },
+        "service2": { "title": "Dangerous Goods (DG Shipments)", "description": "Certified handling of dangerous goods with trained personnel according to IATA standards. Strict compliance with international regulations." },
+        "service3": { "title": "Project Cargo", "description": "Solutions for oversized and out-of-gauge cargo. Detailed planning and multi-team coordination." },
+        "service4": { "title": "Bonded Cargo / In Transit", "description": "Management of cargo under customs transit regime without nationalization. Time and cost optimization in multi-country operations." },
+        "service5": { "title": "Just-in-Time (JIT)", "description": "Operations synchronized with your production line. Precise deliveries that avoid storage costs and optimize working capital." },
+        "service6": { "title": "Pharmaceutical & Reefer / Perishable Cargo", "description": "Transport of pharmaceutical and perishable products with validated temperature control. Certified cold chain." },
+        "service7": { "title": "Charter / Dedicated Flights", "description": "Exclusive flights for critical cargo requiring immediate departure. Maximum flexibility and total process control." },
+        "service8": { "title": "International Courier", "description": "Fast door-to-door delivery for documents and small packages. Ideal for samples, contracts and urgent shipments." }
+      },
+      "stats": {
+        "title": "35+ years connecting the world",
+        "stat1": { "value": "+100", "label": "Global Destinations" },
+        "stat2": { "value": "+10K", "label": "Annual Shipments" },
+        "stat3": { "value": "98%", "label": "On-time Delivery" }
+      },
+      "faqs": [
+        { "question": "What types of cargo does the air service accept?", "answer": "We accept all types of cargo: general cargo, dangerous goods (DG) with IATA certification, pharmaceutical products with temperature control, project cargo (oversize), and perishable cargo. Each type requires specific documentation and compliance with international regulations." },
+        { "question": "How long does a typical air shipment take between Asia and South America?", "answer": "Direct transit time is 2-4 days depending on specific origin/destination. Routes with connection may take 5-7 days. This includes flight, connections, and customs clearance. We offer express options with direct flights for reductions up to 50% of standard time." },
+        { "question": "Do you handle dangerous goods?", "answer": "Yes, we have certification and trained personnel for DG handling according to IATA. We handle lithium batteries, UN classified chemicals, flammable and corrosive materials. We include packaging, labeling and DGD (Dangerous Goods Declaration) advisory." },
+        { "question": "How does real-time tracking work?", "answer": "Through our WebTracking portal you access your personalized panel with GPS location by stages, digital documents (AWB, Invoice, Packing List), automatic notifications at key milestones, and performance reports. Available 24/7 from any device." },
+        { "question": "What documentation should I prepare for air export?", "answer": "Basic documents: Commercial Invoice, Packing List, and Certificate of Origin (if applicable). For DG: DGD and MSDS. For regulated products: sanitary, phytosanitary permits, or specific authorizations. Our team advises on each requirement according to origin/destination and type of goods." },
+        { "question": "What advantages does the Just-in-Time service offer?", "answer": "JIT service eliminates storage costs, reduces capital tied up in inventory, and synchronizes deliveries with your production. We coordinate with your ERP/WMS systems for deliveries scheduled with hourly precision, ideal for automotive, mining and pharmaceutical industries." },
+        { "question": "Do you offer charter or dedicated flights?", "answer": "Yes, for critical cargo requiring immediate departure (mining emergencies, urgent medical equipment, projects with non-negotiable deadlines) we manage dedicated charters. Availability quote in less than 4 hours, with maximum route and schedule flexibility." }
+      ],
+      "cta": { "title": "Ready to optimize your air shipments?", "subtitle": "Get a personalized quote and discover how we can reduce your transit times", "btnPrimary": "Request quote", "btnSecondary": "Speak with an expert" }
+    },
+    "seaTransport": {
+      "hero": { "title": "Sea Transport: Capacity and Economy Across Oceans", "subtitle": "Direct negotiation with shipping lines for competitive rates and better conditions: free time, specific drop-off and timely document issuance." },
+      "features": {
+        "feature1": { "title": "Competitive Rates", "description": "Direct negotiation with shipping lines for best commercial conditions and free days" },
+        "feature2": { "title": "Worldwide Coverage", "description": "Positioning in main and secondary ports with certified agents" },
+        "feature3": { "title": "FCL and LCL", "description": "Solutions for full containers and consolidated cargo with maximum flexibility" }
+      },
+      "whyChoose": {
+        "title": "Efficiency and resource optimization",
+        "p1": "Today's markets seek sea transport due to the strong vocation to obtain operational efficiency, seeking to optimize the resources involved in each of these operations.",
+        "p2": "Our company commits to strong negotiation on sea transport contracts, seeking to achieve not only the most competitive rate, but also to provide the best conditions for this type of operations in topics such as free days at destination, drop-off at specific points, timely document issuance at destination, etc.",
+        "p3": "Our worldwide coverage has allowed us to establish positions at each of the requested embarkation or destination ports, establishing service for both full container and consolidated cargo."
+      },
+      "processTitle": "Sea transport process",
+      "process": {
+        "step1": { "title": "Quotation", "description": "Route analysis, shipping line and commercial conditions", "duration": "24-48 hours" },
+        "step2": { "title": "Booking", "description": "Space reservation, pickup coordination and documentation", "duration": "2-5 days" },
+        "step3": { "title": "Shipment", "description": "Stuffing, BL issuance, tracking during sea transit", "duration": "15-45 days per route" },
+        "step4": { "title": "Customs Clearance", "description": "Port arrival, customs clearance and final delivery", "duration": "3-7 days" }
+      },
+      "servicesTitle": "Sea transport services we offer",
+      "services": {
+        "service1": { "title": "Full Container Load (FCL)", "description": "Complete container service (20', 40', 40' HC, 45') with direct booking at main shipping lines. Ideal for consolidated volumes." },
+        "service2": { "title": "Less Container Load (LCL) / Consolidated Cargo", "description": "Cargo consolidation for volumes smaller than a full container. Weekly departures on main routes." },
+        "service3": { "title": "Roll-on/Roll-off (RoRo)", "description": "Transport of vehicles and rolling machinery. Loading and unloading without cranes via specialized ramps." },
+        "service4": { "title": "Break Bulk (BB) / Project Cargo", "description": "Handling of loose non-containerizable cargo. Solutions for project cargo and non-standard sized loads." },
+        "service5": { "title": "Bonded Cargo / In Transit", "description": "Management of goods under international customs transit regime. Multi-country operations without intermediate nationalization." },
+        "service6": { "title": "Full Container Reefer / Refrigerated Containers", "description": "Transport of cargo requiring controlled temperature. Continuous monitoring throughout sea transit." }
+      },
+      "stats": {
+        "title": "Leaders in sea transport",
+        "stat1": { "value": "+50", "label": "Operating Ports" },
+        "stat2": { "value": "15K+", "label": "Annual TEUs" },
+        "stat3": { "value": "20+", "label": "Shipping Partners" },
+        "stat4": { "value": "97%", "label": "On-time Arrivals" }
+      },
+      "faqs": [
+        { "question": "What's the difference between FCL and LCL?", "answer": "FCL (Full Container Load) is when you book a complete container for your cargo (20' or 40'). LCL (Less Container Load) is when your cargo doesn't fill a complete container, so it's consolidated with other customers' cargo. FCL is more economical for large volumes (+15m³), while LCL is ideal for small loads (1-14m³)." },
+        { "question": "How long does a sea shipment take between Asia and South America?", "answer": "China-Chile route (port to port): typically 28-35 days. Routes with transshipment may take 35-45 days. Total time includes sea transit, possible transshipments, and customs clearance. We offer direct and connection services according to shipping line availability and cost optimization." },
+        { "question": "What documents do I need for sea export/import?", "answer": "Essential documents: Commercial Invoice, Packing List, Bill of Lading (BL), Certificate of Origin (if GSP/FTA applies). For regulated products: sanitary, phytosanitary permits, importer registration. Our team verifies and manages all pre-shipment documentation." },
+        { "question": "Do you offer consolidation and deconsolidation service?", "answer": "Yes, we have warehouses in key ports (Shanghai, Los Angeles, Valparaíso, Callao) where we consolidate multiple suppliers at origin and deconsolidate for destination distribution. Includes cargo inspection, repacking if necessary, and last-mile coordination." },
+        { "question": "What does the sea transport service include?", "answer": "Comprehensive service: rate negotiation with shipping line, space booking, pickup coordination, BL issuance, 24/7 tracking, destination customs clearance, and final delivery. We also manage port free days, drop-off at specific points, and cargo insurance." },
+        { "question": "Do you handle refrigerated cargo (Reefer)?", "answer": "Yes, we offer Reefer containers 20' and 40' HC with temperature control -25°C to +25°C. Continuous monitoring with data loggers, ATP/FEU certification, and port plug-in coordination. Ideal for pharma, frozen foods, flowers and seafood." },
+        { "question": "What is Break Bulk service and when is it used?", "answer": "Break Bulk is for cargo that doesn't fit in standard containers: industrial machinery, metal structures, plant components. Includes stowage study, lashing plan, specialized crane coordination, and permits management for oversized cargo." }
+      ],
+      "cta": { "title": "Ready to optimize your sea shipments?", "subtitle": "Get competitive rates and better commercial conditions with our team", "btnPrimary": "Request quote", "btnSecondary": "Speak with an expert" }
+    },
+    "landTransport": {
+      "hero": { "title": "Land Transport: Connecting Continental Destinations", "subtitle": "Strategic alliances with certified carriers for pickup and dispatch with fast, secure service and real-time tracking." },
+      "features": {
+        "feature1": { "title": "Regional Coverage", "description": "Strategic alliances with local carriers throughout South America and North America" },
+        "feature2": { "title": "Secure Cargo", "description": "Vehicles equipped with GPS, cargo insurance and certified security protocols" },
+        "feature3": { "title": "Timely Delivery", "description": "Real-time monitoring and proactive coordination to meet your deadlines" }
+      },
+      "whyChoose": {
+        "title": "Fast and secure service",
+        "p1": "Given that several of the incoterms currently used in foreign trade purchase and sale processes involve land transit, we have made alliances with various companies internationally.",
+        "p2": "This allows us to provide pickup and/or dispatch services for your operations through a fast and secure service that will ensure not only the timely delivery of cargo, but also optimal conditions in which it will be carried out.",
+        "p3": "All our alliances have GPS tracking, certified cargo insurance and security protocols that guarantee the integrity of your goods throughout transit."
+      },
+      "processTitle": "Land transport process",
+      "process": {
+        "step1": { "title": "Quotation", "description": "Route analysis, vehicle type and cargo conditions", "duration": "12-24 hours" },
+        "step2": { "title": "Coordination", "description": "Pickup scheduling and documentation preparation", "duration": "24-48 hours" },
+        "step3": { "title": "Transport", "description": "Pickup, transit with GPS tracking and proactive management", "duration": "Variable per distance" },
+        "step4": { "title": "Delivery", "description": "Unloading at final destination and POD (Proof of Delivery)", "duration": "As coordinated" }
+      },
+      "servicesTitle": "Land transport services we offer",
+      "services": {
+        "service1": { "title": "Less than Truck Load (LTL)", "description": "Partial cargo service for volumes not requiring a full truck. Ideal for regular smaller shipments." },
+        "service2": { "title": "Full Truck Load (FTL)", "description": "Dedicated full truck for your cargo. Maximum speed and security without consolidation with third parties." },
+        "service3": { "title": "Roll-on/Roll-off (RoRo)", "description": "Land transport of vehicles and rolling machinery. Loading by driving without need for cranes." },
+        "service4": { "title": "Break Bulk (BB) / Project Cargo", "description": "Transport of loose non-containerized cargo requiring specialized handling and detailed planning." },
+        "service5": { "title": "Bonded Cargo / In Transit", "description": "Management of goods under international land transit regime. Optimized cross-border operations." }
+      },
+      "stats": {
+        "title": "Regional land network",
+        "stat1": { "value": "7", "label": "Operating Countries" },
+        "stat2": { "value": "8K+", "label": "Annual Shipments" },
+        "stat3": { "value": "50+", "label": "Partner Carriers" },
+        "stat4": { "value": "96%", "label": "On-time Delivery" }
+      },
+      "faqs": [
+        { "question": "What's the difference between LTL and FTL?", "answer": "LTL (Less than Truck Load) is when your cargo doesn't fill a complete truck, so it's consolidated with other customers. FTL (Full Truck Load) is a dedicated truck only for your cargo. FTL is faster (no intermediate stops) and more secure, ideal for +10 tons. LTL is more economical for small volumes." },
+        { "question": "What geographic coverage do you have?", "answer": "Complete coverage in Chile, Peru, Argentina, Bolivia, Paraguay, Uruguay and Brazil through alliances with certified carriers. We also manage Mexico-USA and Central America routes. Each partner meets our safety, GPS tracking and cargo insurance standards." },
+        { "question": "Do you offer real-time GPS tracking?", "answer": "Yes, all our transports have GPS tracking you can check on your WebTracking portal. Updates every 30 minutes during transit, alerts at key points (border, customs, delivery), and automatic notifications via email/SMS." },
+        { "question": "What documentation is required for international land transport?", "answer": "Basic documents: Commercial Invoice, Packing List, DTA (Customs Transit Declaration), Waybill CMR/CRT. For regulated products: sanitary, phytosanitary certificates, special permits. Our team manages all pre-shipment documentation." },
+        { "question": "How do you handle oversized cargo?", "answer": "For oversized cargo (machinery, structures) we manage circulation permits, mandatory escorts, time restrictions, and coordination with transit authorities. We evaluate routes, bridges and cable heights to ensure safe transit. Includes all-risk cargo insurance." },
+        { "question": "What cargo insurance does the service include?", "answer": "Our carriers have mandatory liability insurance. For high-value cargo we offer additional all-risk insurance (theft, damage, accident) with coverage according to declared value. Premium calculated according to goods, route and specific conditions." },
+        { "question": "How long does a typical land shipment take?", "answer": "Depends on route: Santiago-Valparaíso (same day), Santiago-Buenos Aires (3-4 days), Santiago-Lima (4-5 days), Santiago-São Paulo (7-10 days). Times include transit, border crossings and customs. We offer express service with priority at borders." }
+      ],
+      "cta": { "title": "Ready to optimize your land logistics?", "subtitle": "Get a quote and discover our routes and delivery times", "btnPrimary": "Request quote", "btnSecondary": "Speak with an expert" }
+    },
+    "warehouse": {
+      "hero": { "title": "Warehouse & Fulfillment: Strategic 24/7 Storage", "subtitle": "Real-time inventory control, 4PL services and fulfillment to generate competitive advantages in your industry." },
+      "features": {
+        "feature1": { "title": "Strategic Storage", "description": "Locations in key ports and airports with 24/7 access and perimeter security" },
+        "feature2": { "title": "Inventory Control", "description": "WMS (Warehouse Management System) with real-time visibility of your stock" },
+        "feature3": { "title": "Pick & Pack", "description": "Fulfillment services, repacking and merchandise inspection" }
+      },
+      "whyChoose": {
+        "title": "Competitive advantages through logistics management",
+        "p1": "We currently have extensive warehouse coverage worldwide, which will provide our clients the ability to store and consolidate cargo at various ports and/or airports, with the aim of optimizing each logistics operation.",
+        "p2": "Seemann offers the possibility of establishing inventory management in our warehouses, allowing us to deliver 4PL services, enabling our clients to generate competitive advantages in their respective industries.",
+        "p3": "Our WMS system allows you real-time visibility of your stock, with automated reports, replenishment alerts and personalized dashboards for informed decision-making."
+      },
+      "processTitle": "Warehouse & fulfillment process",
+      "process": {
+        "step1": { "title": "Quotation", "description": "Analysis of volume, cargo type and required services", "duration": "24 hours" },
+        "step2": { "title": "Reception", "description": "Warehouse arrival, inbound inspection and WMS registration", "duration": "24-48 hours" },
+        "step3": { "title": "Storage", "description": "Location, inventory control and value-added services", "duration": "As needed" },
+        "step4": { "title": "Dispatch", "description": "Picking, packing, loading and delivery coordination", "duration": "24-48 hours" }
+      },
+      "servicesTitle": "Warehouse services we offer",
+      "services": {
+        "service1": { "title": "Merchandise Storage", "description": "Secure spaces in warehouses strategically located near main ports and airports. Rates per m³ or pallet according to volume." },
+        "service2": { "title": "Inventory Control / WMS", "description": "Warehouse management system (WMS) integrated with your ERP. Complete visibility of entries, exits and available stock." },
+        "service3": { "title": "Merchandise Inspection", "description": "Physical verification of quantity, quality and packaging conditions pre-shipment or post-arrival." },
+        "service4": { "title": "Repacking / Repackaging", "description": "Cargo reconditioning services, packaging change or consolidation of multiple suppliers." },
+        "service5": { "title": "4PL Services / Fulfillment", "description": "Comprehensive supply chain management. We administer inventories, orders, picking, packing and distribution." }
+      },
+      "stats": {
+        "title": "Global logistics infrastructure",
+        "stat1": { "value": "15+", "label": "Global Warehouses" },
+        "stat2": { "value": "50K+", "label": "m² Storage" },
+        "stat3": { "value": "99.8%", "label": "Accuracy Rate" },
+        "stat4": { "value": "24/7", "label": "Continuous Operation" }
+      },
+      "faqs": [
+        { "question": "In which locations do you have warehouses?", "answer": "We have own and partner warehouses at key port/airport locations: Valparaíso, San Antonio (Chile), Callao (Peru), Buenos Aires (Argentina), Los Angeles, Miami (USA), Shanghai, Ningbo (China). All with ISO certification, 24/7 security and integrated WMS." },
+        { "question": "How is storage charged?", "answer": "Rate per m³ or per pallet according to volume and dwell time. First 7-15 days are usually included in sea freight (free time). After that charged per day or week. For long-term contracts (+3 months) we offer preferential rates with included 4PL services." },
+        { "question": "Can I see my inventory in real time?", "answer": "Yes, through your WebTracking portal you access a dashboard with real-time updated inventory: available stock, physical warehouse location, entries/exits, merchandise aging, and personalized reports. API integration available to connect with your ERP." },
+        { "question": "Do you offer fulfillment services for e-commerce?", "answer": "Yes, we offer complete 4PL services: inventory reception, storage, picking & packing per orders, integration with Shopify/WooCommerce/Mercado Libre, and last-mile coordination. Ideal for companies selling online and needing logistics outsourcing." },
+        { "question": "What does the merchandise inspection service include?", "answer": "Complete physical inspection: unit count vs. packing list, quality verification, damage or non-conformity detection, detailed photographs, and digital report with evidence. Ideal for purchases from new suppliers or high-value goods. Performed pre-shipment or post-arrival." },
+        { "question": "Can you consolidate cargo from multiple suppliers?", "answer": "Yes, one of our main services. We receive goods from your different suppliers at our warehouse at origin (e.g. Shanghai), inspect, re-pack if necessary, consolidate in a single container, and send to destination. You reduce freight costs and optimize cubing." },
+        { "question": "What is a 4PL service and when is it convenient?", "answer": "4PL (Fourth Party Logistics) is when you outsource your entire logistics operation: we manage suppliers, inventories, storage, distribution and KPIs. Convenient when you need focus on sales/marketing and prefer leaving logistics to experts. Includes WMS, data analysis and continuous optimization." }
+      ],
+      "cta": { "title": "Ready to optimize your storage and inventory?", "subtitle": "Discover how our 4PL services can generate competitive advantages", "btnPrimary": "Request quote", "btnSecondary": "Speak with an expert" }
+    },
+    "multimodal": {
+      "hero": { "title": "Multimodal Service: Integrated Optimized Routes", "subtitle": "Perfect balance between cost and time through strategic combination of sea, air and land transport." },
+      "features": {
+        "feature1": { "title": "Cost Optimization", "description": "Perfect balance between cost and time through strategic combination of modes" },
+        "feature2": { "title": "Route Flexibility", "description": "Ocean/Air, Air/Ocean and land combinations for optimized routes" },
+        "feature3": { "title": "Transit Reduction", "description": "Up to 40% less time vs. pure sea without full air costs" }
+      },
+      "whyChoose": {
+        "title": "Profitability through multimodal optimization",
+        "p1": "Given companies' constant search for process optimization, with a view to obtaining advantages in their industries, our company currently provides a multimodal service.",
+        "p2": "We deliver the competitiveness of sea cargo transport, without detriment to the associated transit time, resulting in an efficient and effective operation.",
+        "p3": "Although multimodal service is intrinsic to all Mediterranean origins and/or destinations in the case of sea transport, we currently offer ocean/air or air/ocean services for various routes that allow profitability for our clients' operations."
+      },
+      "processTitle": "Multimodal service process",
+      "process": {
+        "step1": { "title": "Analysis", "description": "Origin/destination evaluation, urgency and budget for optimal route", "duration": "24 hours" },
+        "step2": { "title": "Planning", "description": "Multimodal route design with transshipments and integrated coordination", "duration": "48 hours" },
+        "step3": { "title": "Execution", "description": "Leg management, transshipments and end-to-end tracking", "duration": "Variable per combination" },
+        "step4": { "title": "Delivery", "description": "Last leg coordinated with POD and feedback", "duration": "24-72 hours" }
+      },
+      "servicesTitle": "Multimodal services we offer",
+      "services": {
+        "service1": { "title": "Ocean/Air (Sea-Air)", "description": "Combination of sea transport on main leg with air on final stage. Ideal to balance cost and speed." },
+        "service2": { "title": "Air/Ocean (Air-Sea)", "description": "Initial air leg to strategic hub, then sea to final destination. Maximum speed in critical first stage." },
+        "service3": { "title": "Sea + Land (Regional Multimodal)", "description": "Combination of international sea transit with regional land distribution. Ideal for Mediterranean destinations." },
+        "service4": { "title": "Air + Land (Regional Express)", "description": "International flight to hub airport with express last-mile land. Maximum door-to-door speed." }
+      },
+      "stats": {
+        "title": "Proven multimodal efficiency",
+        "stat1": { "value": "-40%", "label": "Savings vs. Air" },
+        "stat2": { "value": "-15", "label": "Days vs. Sea" },
+        "stat3": { "value": "5K+", "label": "Multimodal Shipments/Year" },
+        "stat4": { "value": "95%", "label": "Client Satisfaction" }
+      },
+      "faqs": [
+        { "question": "What is multimodal service and when is it convenient?", "answer": "Multimodal service combines two or more transport modes (sea-air, air-land, etc.) to optimize cost/time balance. Convenient when pure air is too expensive but you need less time than standard sea. Save up to 50% vs. air with 15-20 days less than sea." },
+        { "question": "What is Ocean/Air and what are its advantages?", "answer": "Ocean/Air is sea on main leg (e.g. Asia-Europe) + air on final leg (Europe-South America). Advantages: 40-50% savings vs. full air, 15-20 days reduction vs. pure sea, less risk of port delays at destination. Ideal for cost-time balance when you have tight deadline but limited budget." },
+        { "question": "How does transshipment between modes work?", "answer": "We manage all transshipment at intermediate hub: deconsolidation, cross-docking, mode change and new documentation. You only receive end-to-end tracking without managing each leg. Typical hubs: Dubai, Amsterdam, Miami, Panama. Transshipment time: 24-72 hours depending on hub and available connections." },
+        { "question": "Is multimodal service more expensive than standard sea?", "answer": "Yes, typically 20-30% more expensive than pure sea, but 40-50% cheaper than full air. The advantage is in time: you reduce 15-20 days vs. sea with much lower cost than air. Ideal when air exceeds budget but sea is too slow for your deadline." },
+        { "question": "Do you offer multimodal routes for Mediterranean destinations?", "answer": "Yes, specialists in sea+land routes: container to main port (Valparaíso, Buenos Aires, Callao) + land to inland cities (Santiago, Córdoba, Arequipa). We coordinate customs transit (DTA), last mile and delivery with all-inclusive rate origin port → final address." },
+        { "question": "Can I track the entire multimodal journey?", "answer": "Yes, through WebTracking you see end-to-end tracking with visibility at each stage: origin departure, hub arrival, transshipment, second leg, destination arrival and final delivery. Automatic notifications at each milestone. Single point of contact for any inquiry during entire transit." },
+        { "question": "What documentation is required for multimodal service?", "answer": "Standard documents: Invoice, Packing List, BL (sea leg) or AWB (air leg), Certificate of Origin. We manage transshipment and mode change documentation. For FTA destinations we leverage tariff preferences. Complete advisory included in service." }
+      ],
+      "cta": { "title": "Ready to make your operations profitable?", "subtitle": "Discover how multimodal service can optimize cost and time", "btnPrimary": "Request quote", "btnSecondary": "Speak with an expert" }
+    },
+    "customs": {
+      "hero": { "title": "Customs Service: Guaranteed Regulatory Compliance", "subtitle": "International network of certified agents for customs process advisory, anticipating documentary and regulatory requirements." },
+      "features": {
+        "feature1": { "title": "Regulatory Compliance", "description": "Expert advisory in customs regulations and correct tariff classification" },
+        "feature2": { "title": "Agile Clearance", "description": "Proactive documentation management to minimize customs clearance times" },
+        "feature3": { "title": "Certified Agents", "description": "Network of customs agents at main ports and airports" }
+      },
+      "whyChoose": {
+        "title": "Anticipation and regulatory compliance",
+        "p1": "Our extensive network of offices internationally allows us to advise our clients on the various customs processes necessary for export and/or import of goods.",
+        "p2": "This service will allow us to anticipate the necessary requirements at documentary and packing level so that operations do not suffer delays and/or problems at origin or destination customs.",
+        "p3": "We have certified customs agents at main ports and airports, with expertise in tariff classification, FTA leverage, special regimes and customs compliance."
+      },
+      "processTitle": "Customs clearance process",
+      "process": {
+        "step1": { "title": "Document Review", "description": "Analysis of invoice, packing list, certificates and required permits", "duration": "24 hours pre-arrival" },
+        "step2": { "title": "DIN/DUS Submission", "description": "Electronic transmission of customs declaration to authority", "duration": "24-48 hours post-arrival" },
+        "step3": { "title": "Review and Examination", "description": "Coordination with customs for documentary or physical inspection", "duration": "1-3 business days" },
+        "step4": { "title": "Release and Delivery", "description": "Nationalized goods pickup and delivery coordination", "duration": "24-48 hours post-release" }
+      },
+      "servicesTitle": "Customs services we offer",
+      "services": {
+        "service1": { "title": "Tariff Classification", "description": "Correct determination of tariff code (HTS/NCM) to avoid costly errors and comply with regulations." },
+        "service2": { "title": "Import Clearance", "description": "Comprehensive management of goods nationalization process in destination country. Coordination with authorities and clients." },
+        "service3": { "title": "Export Clearance", "description": "Complete documentation process for legal exit of goods from country of origin to international markets." },
+        "service4": { "title": "Special Regimes", "description": "Management of suspensive and special regimes that optimize trade flow and tax deferral." },
+        "service5": { "title": "Consulting and Compliance", "description": "Strategic advisory for customs compliance, preventive audits and foreign trade process optimization." }
+      },
+      "stats": {
+        "title": "Experience in customs compliance",
+        "stat1": { "value": "20K+", "label": "Annual Clearances" },
+        "stat2": { "value": "12", "label": "Countries with Agents" },
+        "stat3": { "value": "98%", "label": "Releases Without Observation" },
+        "stat4": { "value": "35+", "label": "Years Experience" }
+      },
+      "faqs": [
+        { "question": "What is customs service and why is it necessary?", "answer": "Customs service manages the legal import/export process before authorities. It's mandatory for international trade: determines tariff classification, calculates taxes, verifies regulatory compliance, obtains special permits, and coordinates cargo pickup. Without certified customs agent you cannot nationalize cargo." },
+        { "question": "How long does the customs clearance process take?", "answer": "Depends on country and cargo type: Chile/Peru (typically 24-72 hours), Argentina/Brazil (3-7 days). Factors affecting: document correctness, physical vs. documentary examination, regulated products requiring permits (SAG, ISP), and port congestion. Our proactive management minimizes times." },
+        { "question": "What documents are required to import?", "answer": "Basic documents: Commercial Invoice, Packing List, BL/AWB, Certificate of Origin (if FTA applies). For regulated products: SAG permits (agricultural), ISP (pharmaceutical/food), SEC (electrical), sanitary authorization. Our team advises on specific requirements according to country and product." },
+        { "question": "How is the tariff to pay calculated?", "answer": "Tariff is calculated: CIF Value (cost + freight + insurance) × Tariff rate according to HTS/NCM code. Additionally VAT is added on (CIF + tariff). Tariff preferences exist through FTA (e.g. Chile-EU: 0% with EUR1 Origin Cert.). We do nationalization cost simulation pre-shipment." },
+        { "question": "What is tariff classification and why is it important?", "answer": "Tariff classification is the 8-10 digit code (HTS/NCM/TARIC) that identifies your product and determines: applicable tariff rate, required permits, restrictions or prohibitions, and FTA preferences eligibility. Classification error can result in: fines, extra costs, delays, or cargo seizure." },
+        { "question": "Do you offer advisory to leverage Free Trade Agreements?", "answer": "Yes, FTA specialists: Chile-EU, Chile-USA, Chile-China, Pacific Alliance, Mercosur, etc. We analyze value chain, rules of origin, and accumulation to determine eligibility. We manage Certificates of Origin (Form A, EUR1, COO) and maximize tariff savings. Advisory included at no additional cost." },
+        { "question": "What happens if customs retains my goods?", "answer": "Common retention reasons: documentary error, incorrect classification, missing permits, questioned valuation, discrepant physical examination. Our team manages: response to observations, submission of additional documents, error correction, and coordination with customs for release. Constant communication with you during process." }
+      ],
+      "cta": { "title": "Need customs advisory?", "subtitle": "Our experts help you anticipate requirements and avoid delays", "btnPrimary": "Request advisory", "btnSecondary": "Speak with an expert" }
+    }
+  },
   "services": {
     "title": "Our Services",
     "subtitle": "Select one of our services",

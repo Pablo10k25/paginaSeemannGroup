@@ -1,0 +1,232 @@
+{
+  "landTransport_es": {
+    "hero": {
+      "title": "Transporte Terrestre: Conectando Destinos Continentales",
+      "subtitle": "Alianzas estratégicas con transportistas certificados para recogida y despacho con servicio rápido, seguro y tracking en tiempo real."
+    },
+    "features": {
+      "feature1": {
+        "title": "Cobertura regional",
+        "description": "Alianzas estratégicas con transportistas locales en toda Sudamérica y Norteamérica"
+      },
+      "feature2": {
+        "title": "Carga segura",
+        "description": "Vehículos equipados con GPS, seguros de carga y protocolos de seguridad certificados"
+      },
+      "feature3": {
+        "title": "Entrega oportuna",
+        "description": "Monitoreo en tiempo real y coordinación proactiva para cumplir tus deadlines"
+      }
+    },
+    "whyChoose": {
+      "title": "Servicio rápido y seguro",
+      "p1": "En vista que varios de los incoterms actualmente utilizados en los procesos de compra y venta de comercio exterior involucran el tránsito terrestre, hemos realizado alianzas con las diversas empresas a nivel internacional.",
+      "p2": "Esto nos permite entregarles los servicios de recogida y/o despacho de sus operaciones, a través de un servicio rápido y seguro, que velará no sólo por la entrega de la carga de forma oportuna, sino también unas óptimas condiciones en la cual se realizará la misma.",
+      "p3": "Todas nuestras alianzas cuentan con tracking GPS, seguros de carga certificados y protocolos de seguridad que garantizan la integridad de tu mercancía durante todo el tránsito."
+    },
+    "processTitle": "Proceso de transporte terrestre",
+    "process": {
+      "step1": {
+        "title": "Cotización",
+        "description": "Análisis de ruta, tipo de vehículo y condiciones de carga",
+        "duration": "12-24 horas"
+      },
+      "step2": {
+        "title": "Coordinación",
+        "description": "Programación de recolección y preparación de documentación",
+        "duration": "24-48 horas"
+      },
+      "step3": {
+        "title": "Transporte",
+        "description": "Recolección, tránsito con GPS tracking y gestión proactiva",
+        "duration": "Variable según distancia"
+      },
+      "step4": {
+        "title": "Entrega",
+        "description": "Descarga en destino final y POD (Proof of Delivery)",
+        "duration": "Según coordinación"
+      }
+    },
+    "servicesTitle": "Servicios que ofrecemos en transporte terrestre",
+    "services": {
+      "service1": {
+        "title": "Less than Truck Load (LTL)",
+        "description": "Servicio de carga parcial para volúmenes que no requieren un camión completo. Ideal para envíos regulares de menor tamaño."
+      },
+      "service2": {
+        "title": "Full Truck Load (FTL)",
+        "description": "Camión completo dedicado para tu carga. Máxima velocidad y seguridad sin consolidación con terceros."
+      },
+      "service3": {
+        "title": "Roll-on/Roll-off (RoRo)",
+        "description": "Transporte terrestre de vehículos y maquinaria rodante. Carga mediante conducción sin necesidad de grúas."
+      },
+      "service4": {
+        "title": "Break Bulk (BB) / Carga Proyecto",
+        "description": "Transporte de carga suelta no containerizada que requiere manejo especializado y planificación detallada."
+      },
+      "service5": {
+        "title": "Cargas en Tránsito / Bonded Cargo",
+        "description": "Gestión de mercancía en régimen de tránsito internacional terrestre. Operaciones cross-border optimizadas."
+      }
+    },
+    "stats": {
+      "title": "Red terrestre regional",
+      "stat1": { "value": "7", "label": "Países Operativos" },
+      "stat2": { "value": "8K+", "label": "Envíos Anuales" },
+      "stat3": { "value": "50+", "label": "Transportistas Partners" },
+      "stat4": { "value": "96%", "label": "On-time Delivery" }
+    },
+    "faqs": [
+      {
+        "question": "¿Qué diferencia hay entre LTL y FTL?",
+        "answer": "LTL (Less than Truck Load) es cuando tu carga no llena un camión completo, por lo que se consolida con otros clientes. FTL (Full Truck Load) es un camión dedicado solo para tu carga. FTL es más rápido (sin paradas intermedias) y seguro, ideal para +10 toneladas. LTL es más económico para volúmenes pequeños."
+      },
+      {
+        "question": "¿Qué cobertura geográfica tienen?",
+        "answer": "Cobertura completa en Chile, Perú, Argentina, Bolivia, Paraguay, Uruguay y Brasil mediante alianzas con transportistas certificados. También gestionamos rutas México-USA y Centroamérica. Cada aliado cumple nuestros estándares de seguridad, GPS tracking y seguros de carga."
+      },
+      {
+        "question": "¿Ofrecen seguimiento GPS en tiempo real?",
+        "answer": "Sí, todos nuestros transportes cuentan con GPS tracking que puedes consultar en tu portal WebTracking. Actualizaciones cada 30 minutos durante el tránsito, alertas en puntos clave (frontera, aduana, entrega), y notificaciones automáticas vía email/SMS."
+      },
+      {
+        "question": "¿Qué documentación se requiere para transporte terrestre internacional?",
+        "answer": "Documentos básicos: Invoice Comercial, Packing List, DTA (Declaración de Tránsito Aduanero), Carta Porte CMR/CRT. Para productos regulados: certificados sanitarios, fitosanitarios, permisos especiales. Nuestro equipo gestiona toda la documentación pre-embarque."
+      },
+      {
+        "question": "¿Cómo manejan las cargas sobredimensionadas?",
+        "answer": "Para carga sobredimensionada (maquinaria, estructuras) gestionamos permisos de circulación, escoltas obligatorias, restricciones horarias, y coordinación con autoridades de tránsito. Evaluamos rutas, puentes y altura de cables para garantizar tránsito seguro. Incluye seguro de carga todo riesgo."
+      },
+      {
+        "question": "¿Qué seguro de carga incluye el servicio?",
+        "answer": "Nuestros transportistas tienen seguro de responsabilidad civil obligatorio. Para cargas de alto valor ofrecemos seguro todo riesgo adicional (robo, daño, accidente) con cobertura según valor declarado. Prima calculada según mercancía, ruta y condiciones específicas."
+      },
+      {
+        "question": "¿Cuánto tarda un envío terrestre típico?",
+        "answer": "Depende de la ruta: Santiago-Valparaíso (mismo día), Santiago-Buenos Aires (3-4 días), Santiago-Lima (4-5 días), Santiago-São Paulo (7-10 días). Tiempos incluyen tránsito, pasos fronterizos y aduanas. Ofrecemos servicio express con prioridad en fronteras."
+      }
+    ],
+    "cta": {
+      "title": "¿Listo para optimizar tu logística terrestre?",
+      "subtitle": "Obtén una cotización y descubre nuestras rutas y tiempos de entrega",
+      "btnPrimary": "Solicitar cotización",
+      "btnSecondary": "Hablar con un experto"
+    }
+  },
+  "warehouse_es": {
+    "hero": {
+      "title": "Warehouse & Fulfillment: Almacenaje Estratégico 24/7",
+      "subtitle": "Control de inventario en tiempo real, servicios 4PL y fulfillment para generar ventajas competitivas en tu industria."
+    },
+    "features": {
+      "feature1": {
+        "title": "Almacenaje estratégico",
+        "description": "Ubicaciones en puertos y aeropuertos clave con acceso 24/7 y seguridad perimetral"
+      },
+      "feature2": {
+        "title": "Control de inventario",
+        "description": "WMS (Warehouse Management System) con visibilidad en tiempo real de tu stock"
+      },
+      "feature3": {
+        "title": "Pick & Pack",
+        "description": "Servicios de fulfillment, repacking e inspección de mercancía"
+      }
+    },
+    "whyChoose": {
+      "title": "Ventajas competitivas mediante gestión logística",
+      "p1": "Actualmente contamos con una amplia cobertura de warehouse a nivel mundial, que le otorgará a nuestros clientes la capacidad de almacenar y consolidar carga en los diversos puertos y/o aeropuertos, con el objetivo de optimizar cada logística.",
+      "p2": "Seemann ofrece la posibilidad de establecer una administración de inventarios en nuestros almacenes, permitiendo entregar servicios de 4PL, permitiendo generar ventajas competitivas a nuestros clientes en sus respectivas industrias.",
+      "p3": "Nuestro sistema WMS te permite visibilidad en tiempo real de tu stock, con reportes automatizados, alertas de reposición y dashboards personalizados para toma de decisiones informada."
+    },
+    "processTitle": "Proceso de warehouse & fulfillment",
+    "process": {
+      "step1": {
+        "title": "Cotización",
+        "description": "Análisis de volumetría, tipo de carga y servicios requeridos",
+        "duration": "24 horas"
+      },
+      "step2": {
+        "title": "Recepción",
+        "description": "Arribo a warehouse, inspección de entrada y registro en WMS",
+        "duration": "24-48 horas"
+      },
+      "step3": {
+        "title": "Almacenaje",
+        "description": "Ubicación, control de inventario y servicios value-added",
+        "duration": "Según necesidad"
+      },
+      "step4": {
+        "title": "Despacho",
+        "description": "Picking, packing, carga y coordinación de entrega",
+        "duration": "24-48 horas"
+      }
+    },
+    "servicesTitle": "Servicios que ofrecemos en warehouse",
+    "services": {
+      "service1": {
+        "title": "Almacenaje de mercancía",
+        "description": "Espacios seguros en almacenes estratégicamente ubicados cerca de puertos y aeropuertos principales. Tarifas por m³ o pallet según volumen."
+      },
+      "service2": {
+        "title": "Control de inventario / WMS",
+        "description": "Sistema de gestión de almacén (WMS) integrado con tu ERP. Visibilidad completa de entradas, salidas y stock disponible."
+      },
+      "service3": {
+        "title": "Inspección de mercancía",
+        "description": "Verificación física de cantidad, calidad y condiciones de empaque pre-embarque o post-arribo."
+      },
+      "service4": {
+        "title": "Repacking / Reembalaje",
+        "description": "Servicios de reacondicionamiento de carga, cambio de embalaje o consolidación de múltiples proveedores."
+      },
+      "service5": {
+        "title": "Servicios 4PL / Fulfillment",
+        "description": "Gestión integral de tu cadena de suministro. Administramos inventarios, órdenes, picking, packing y distribución."
+      }
+    },
+    "stats": {
+      "title": "Infraestructura logística global",
+      "stat1": { "value": "15+", "label": "Warehouses Globales" },
+      "stat2": { "value": "50K+", "label": "m² Almacenaje" },
+      "stat3": { "value": "99.8%", "label": "Accuracy Rate" },
+      "stat4": { "value": "24/7", "label": "Operación Continua" }
+    },
+    "faqs": [
+      {
+        "question": "¿En qué ubicaciones tienen almacenes?",
+        "answer": "Contamos con almacenes propios y aliados en puertos/aeropuertos clave: Valparaíso, San Antonio (Chile), Callao (Perú), Buenos Aires (Argentina), Los Angeles, Miami (USA), Shanghai, Ningbo (China). Todos con certificación ISO, seguridad 24/7 y WMS integrado."
+      },
+      {
+        "question": "¿Cómo se cobra el almacenaje?",
+        "answer": "Tarifa por m³ o por pallet según volumen y tiempo de estadía. Primeros 7-15 días suelen estar incluidos en flete marítimo (free time). Después se cobra por día o semana. Para contratos de largo plazo (+3 meses) ofrecemos tarifas preferenciales con servicios 4PL incluidos."
+      },
+      {
+        "question": "¿Puedo ver mi inventario en tiempo real?",
+        "answer": "Sí, a través de tu portal WebTracking accedes a dashboard con inventario actualizado en tiempo real: stock disponible, ubicación física en warehouse, entradas/salidas, aging de mercancía, y reportes personalizados. Integración API disponible para conectar con tu ERP."
+      },
+      {
+        "question": "¿Ofrecen servicios de fulfillment para e-commerce?",
+        "answer": "Sí, ofrecemos servicios 4PL completos: recepción de inventario, almacenaje, picking & packing según órdenes, integración con Shopify/WooCommerce/Mercado Libre, y coordinación de última milla. Ideal para empresas que venden online y necesitan outsourcing logístico."
+      },
+      {
+        "question": "¿Qué incluye el servicio de inspección de mercancía?",
+        "answer": "Inspección física completa: conteo de unidades vs. packing list, verificación de calidad, detección de daños o no conformidades, fotografías detalladas, y reporte digital con evidencia. Ideal para compras a proveedores nuevos o mercancía de alto valor. Se realiza pre-embarque o post-arribo."
+      },
+      {
+        "question": "¿Pueden consolidar carga de múltiples proveedores?",
+        "answer": "Sí, uno de nuestros servicios principales. Recibimos mercancía de tus diferentes proveedores en nuestro warehouse en origen (ej. Shanghai), inspeccionamos, re-embalamos si necesario, consolidamos en un contenedor único, y enviamos a destino. Reduces costos de flete y optimizas cubicaje."
+      },
+      {
+        "question": "¿Qué es un servicio 4PL y cuándo conviene?",
+        "answer": "4PL (Fourth Party Logistics) es cuando outsourceas toda tu operación logística: gestionamos proveedores, inventarios, almacenaje, distribución y KPIs. Conviene cuando necesitas focus en ventas/marketing y prefieres dejar logística a expertos. Incluye WMS, análisis de datos y optimización continua."
+      }
+    ],
+    "cta": {
+      "title": "¿Listo para optimizar tu almacenaje e inventario?",
+      "subtitle": "Descubre cómo nuestros servicios 4PL pueden generar ventajas competitivas",
+      "btnPrimary": "Solicitar cotización",
+      "btnSecondary": "Hablar con un experto"
+    }
+  }
+}

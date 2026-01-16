@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18n';
 import { Plane, Clock, Shield, Target, FileCheck, Rocket, Package, Zap } from 'lucide-react';
 import ServiceHero from '../../components/Services/ServiceHero';
 import FeatureGrid from '../../components/Services/FeatureGrid';
@@ -10,6 +11,8 @@ import WebTrackingMock from '../../components/Services/WebTrackingMock';
 import FAQAccordion from '../../components/Services/FAQAccordion';
 
 const TransporteAereo = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     // Múltiples intentos para forzar scroll al inicio
     window.scrollTo(0, 0);
@@ -41,25 +44,25 @@ const TransporteAereo = () => {
   const features = [
     {
       icon: <Clock size={48} strokeWidth={1.5} />,
-      title: 'Respuesta en 24h',
-      description: 'Confirmación de ruta y tarifa en tiempo récord para optimizar tu cadena de suministro'
+      title: t('servicePages.airTransport.features.feature1.title'),
+      description: t('servicePages.airTransport.features.feature1.description')
     },
     {
       icon: <Shield size={48} strokeWidth={1.5} />,
-      title: 'Tracking 24/7',
-      description: 'Visibilidad completa por AWB en cada etapa del proceso con actualizaciones en tiempo real'
+      title: t('servicePages.airTransport.features.feature2.title'),
+      description: t('servicePages.airTransport.features.feature2.description')
     },
     {
       icon: <Target size={48} strokeWidth={1.5} />,
-      title: 'Soluciones especializadas',
-      description: 'Manejo certificado DG, Pharma y temperatura controlada con cumplimiento normativo'
+      title: t('servicePages.airTransport.features.feature3.title'),
+      description: t('servicePages.airTransport.features.feature3.description')
     }
   ];
 
   const services = [
     {
-      title: 'Carga General / General Cargo',
-      description: 'Gestión completa de envíos comerciales con rutas optimizadas y frecuencias flexibles. Ideal para mercancía estándar que requiere tiempos de tránsito reducidos.',
+      title: t('servicePages.airTransport.services.service1.title'),
+      description: t('servicePages.airTransport.services.service1.description'),
       examples: [
         'Productos manufacturados y componentes industriales',
         'Textiles y prendas de vestir con deadlines ajustados',
@@ -68,8 +71,8 @@ const TransporteAereo = () => {
       ]
     },
     {
-      title: 'Carga Peligrosa / Dangerous Goods (DG Shipments)',
-      description: 'Manejo certificado de mercancías peligrosas con personal capacitado según normativas IATA. Cumplimiento estricto de regulaciones internacionales.',
+      title: t('servicePages.airTransport.services.service2.title'),
+      description: t('servicePages.airTransport.services.service2.description'),
       examples: [
         'Baterías de litio y equipos electrónicos con componentes DG',
         'Productos químicos clasificados según UN (ONU)',
@@ -78,8 +81,8 @@ const TransporteAereo = () => {
       ]
     },
     {
-      title: 'Carga Proyecto / Project Cargo',
-      description: 'Soluciones para carga sobredimensionada y fuera de medida (oversize & out-of-gauge). Planificación detallada y coordinación multiequipo.',
+      title: t('servicePages.airTransport.services.service3.title'),
+      description: t('servicePages.airTransport.services.service3.description'),
       examples: [
         'Maquinaria industrial pesada y equipamiento minero',
         'Componentes de energías renovables (palas eólicas, paneles)',
@@ -88,8 +91,8 @@ const TransporteAereo = () => {
       ]
     },
     {
-      title: 'Carga en Tránsito / Bonded Cargo',
-      description: 'Gestión de carga bajo régimen de tránsito aduanero sin nacionalización. Optimización de tiempos y costos en operaciones multi-país.',
+      title: t('servicePages.airTransport.services.service4.title'),
+      description: t('servicePages.airTransport.services.service4.description'),
       examples: [
         'Mercancía en tránsito hacia destinos finales mediterráneos',
         'Consolidación en hubs estratégicos (Miami, Panamá)',
@@ -97,8 +100,8 @@ const TransporteAereo = () => {
       ]
     },
     {
-      title: 'Just-in-Time (JIT)',
-      description: 'Operaciones sincronizadas con tu línea de producción. Entregas precisas que evitan costos de almacenaje y optimizan capital de trabajo.',
+      title: t('servicePages.airTransport.services.service5.title'),
+      description: t('servicePages.airTransport.services.service5.description'),
       examples: [
         'Componentes automotrices para líneas de ensamblaje',
         'Repuestos críticos para industria minera y manufactura',
@@ -107,8 +110,8 @@ const TransporteAereo = () => {
       ]
     },
     {
-      title: 'Carga Perecedera / Pharmaceutical & Reefer',
-      description: 'Transporte de productos farmacéuticos y perecederos con control de temperatura validado. Cadena de frío certificada.',
+      title: t('servicePages.airTransport.services.service6.title'),
+      description: t('servicePages.airTransport.services.service6.description'),
       examples: [
         'Vacunas y medicamentos con validación ATP/FEU',
         'Productos biológicos y muestras clínicas',
@@ -117,8 +120,8 @@ const TransporteAereo = () => {
       ]
     },
     {
-      title: 'Charter / Vuelos Dedicados',
-      description: 'Vuelos exclusivos para cargas críticas que requieren salida inmediata. Máxima flexibilidad y control total del proceso.',
+      title: t('servicePages.airTransport.services.service7.title'),
+      description: t('servicePages.airTransport.services.service7.description'),
       examples: [
         'Emergencias mineras y paradas de planta',
         'Equipamiento médico urgente',
@@ -127,8 +130,8 @@ const TransporteAereo = () => {
       ]
     },
     {
-      title: 'Courier Internacional',
-      description: 'Entregas rápidas puerta a puerta para documentos y paquetes pequeños. Ideal para muestras, contratos y envíos urgentes.',
+      title: t('servicePages.airTransport.services.service8.title'),
+      description: t('servicePages.airTransport.services.service8.description'),
       examples: [
         'Documentos legales y contratos internacionales',
         'Muestras de producto para clientes y ferias',
@@ -141,60 +144,31 @@ const TransporteAereo = () => {
   const processSteps = [
     {
       icon: <FileCheck size={40} />,
-      title: 'Cotización',
-      description: 'Solicitud de tarifa con análisis de rutas y opciones de tránsito',
-      duration: '24 horas'
+      title: t('servicePages.airTransport.process.step1.title'),
+      description: t('servicePages.airTransport.process.step1.description'),
+      duration: t('servicePages.airTransport.process.step1.duration')
     },
     {
       icon: <Package size={40} />,
-      title: 'Planificación',
-      description: 'Coordinación de recolección, booking y documentación requerida',
-      duration: '48-72 horas'
+      title: t('servicePages.airTransport.process.step2.title'),
+      description: t('servicePages.airTransport.process.step2.description'),
+      duration: t('servicePages.airTransport.process.step2.duration')
     },
     {
       icon: <Rocket size={40} />,
-      title: 'Ejecución',
-      description: 'Embarque, tránsito con tracking 24/7 y gestión proactiva',
-      duration: 'Variable según ruta'
+      title: t('servicePages.airTransport.process.step3.title'),
+      description: t('servicePages.airTransport.process.step3.description'),
+      duration: t('servicePages.airTransport.process.step3.duration')
     },
     {
       icon: <Zap size={40} />,
-      title: 'Entrega',
-      description: 'Desaduanaje, última milla y feedback post-operación',
-      duration: '24-48 horas'
+      title: t('servicePages.airTransport.process.step4.title'),
+      description: t('servicePages.airTransport.process.step4.description'),
+      duration: t('servicePages.airTransport.process.step4.duration')
     }
   ];
 
-  const faqs = [
-    {
-      question: '¿Qué tipos de cargas admite el servicio aéreo?',
-      answer: 'Admitimos todo tipo de carga: general cargo, mercancías peligrosas (DG) con certificación IATA, productos farmacéuticos con control de temperatura, carga proyecto (oversize), y carga perecedera. Cada tipo requiere documentación específica y cumplimiento de regulaciones internacionales.'
-    },
-    {
-      question: '¿Cuánto tarda un envío aéreo típico entre Asia y Sudamérica?',
-      answer: 'El tiempo de tránsito directo es de 2-4 días dependiendo del origen/destino específico. Rutas con conexión pueden tomar 5-7 días. Esto incluye vuelo, conexiones, y desaduanaje. Ofrecemos opciones express con vuelos directos para reducciones de hasta 50% del tiempo estándar.'
-    },
-    {
-      question: '¿Ofrecen manejo de mercancías peligrosas?',
-      answer: 'Sí, contamos con certificación y personal capacitado para manejo de DG según IATA. Manejamos baterías de litio, productos químicos clasificados UN, materiales inflamables y corrosivos. Incluimos asesoría en embalaje, etiquetado y documentación DGD (Dangerous Goods Declaration).'
-    },
-    {
-      question: '¿Cómo funciona el seguimiento en tiempo real?',
-      answer: 'A través de nuestro portal WebTracking accedes a tu panel personalizado con ubicación GPS por etapas, documentos digitales (AWB, Invoice, Packing List), notificaciones automáticas en hitos clave, y reportes de performance. Disponible 24/7 desde cualquier dispositivo.'
-    },
-    {
-      question: '¿Qué documentación debo preparar para exportar vía aérea?',
-      answer: 'Documentos básicos: Invoice comercial, Packing List, y Certificado de Origen (si aplica). Para DG: DGD y MSDS. Para productos regulados: permisos sanitarios, fitosanitarios, o autorizaciones específicas. Nuestro equipo te asesora en cada requisito según origen/destino y tipo de mercancía.'
-    },
-    {
-      question: '¿Qué ventajas ofrece el servicio Just-in-Time?',
-      answer: 'El servicio JIT elimina costos de almacenaje, reduce capital inmovilizado en inventario, y sincroniza entregas con tu producción. Coordinamos con tus sistemas ERP/WMS para entregas programadas con precisión de horas, ideal para industria automotriz, minera y farmacéutica.'
-    },
-    {
-      question: '¿Ofrecen vuelos charter o dedicados?',
-      answer: 'Sí, para cargas críticas que requieren salida inmediata (emergencias mineras, equipamiento médico urgente, proyectos con deadlines no negociables) gestionamos charters dedicados. Cotización de disponibilidad en menos de 4 horas, con máxima flexibilidad de ruta y horario.'
-    }
-  ];
+  const faqs = (t('servicePages.airTransport.faqs', { returnObjects: true }) as Array<{question: string; answer: string}>) || [];
 
   return (
     <>
@@ -227,12 +201,12 @@ const TransporteAereo = () => {
       </Helmet>
 
       <ServiceHero
-        title="Transporte Aéreo: Velocidad, Trazabilidad y Flexibilidad"
-        subtitle="Reducción de tiempos de tránsito mediante rutas optimizadas y control en tiempo real. Soluciones para carga general, DG, pharma y project cargo."
+        title={t('servicePages.airTransport.hero.title')}
+        subtitle={t('servicePages.airTransport.hero.subtitle')}
         backgroundImage="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&h=900&fit=crop"
         icon={<Plane size={64} strokeWidth={1.5} />}
-        ctaPrimary={{ text: 'Solicitar cotización', link: '/contacto' }}
-        ctaSecondary={{ text: 'Ver WebTracking', link: '#webtracking' }}
+        ctaPrimary={{ text: t('servicePages.airTransport.cta.btnPrimary'), link: '/contacto' }}
+        ctaSecondary={{ text: t('servicePages.airTransport.cta.btnSecondary'), link: '#webtracking' }}
       />
 
       <FeatureGrid features={features} columns={3} />
@@ -241,20 +215,14 @@ const TransporteAereo = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
-              <h2 className="mb-4">¿Por qué elegir nuestro servicio aéreo?</h2>
-              <p className="lead text-muted mb-4">
-                Dada la naturaleza del transporte aéreo, donde el plazo de entrega resulta ser el factor fundamental, nuestro servicio se caracteriza por una <strong>oportuna y proactiva gestión de las operaciones</strong>.
-              </p>
-              <p className="mb-4">
-                Analizamos diversas opciones de embarque, garantizando una mayor frecuencia de salida y flexibilidad en el tránsito, que nos permitirá obtener un menor tiempo de tránsito, <strong>garantizando el éxito de los negocios en los cuales nos involucramos</strong>.
-              </p>
-              <p className="mb-0">
-                Dado que nuestra propuesta se basa en la <strong>individualización de los clientes</strong>, nuestro servicio siempre buscará y presentará alternativas para los tránsitos, que permita el establecimiento de soluciones adaptadas a cada una las distintas realidades de las diversas industrias.
-              </p>
+              <h2 className="mb-4">{t('servicePages.airTransport.whyChoose.title')}</h2>
+              <p className="lead text-muted mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p1') }} />
+              <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p2') }} />
+              <p className="mb-0" dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p3') }} />
             </div>
             <div className="col-lg-6">
               <img
-                src="/images/1203.jpg"
+                src="/images/1202.png"
                 alt="Cargo aéreo internacional"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"
@@ -264,10 +232,10 @@ const TransporteAereo = () => {
         </div>
       </section>
 
-      <ProcessSteps steps={processSteps} title="Nuestro proceso de trabajo" />
+      <ProcessSteps steps={processSteps} title={t('servicePages.airTransport.processTitle')} />
 
       <ServiceAccordion
-        title="Servicios que ofrecemos en transporte aéreo"
+        title={t('servicePages.airTransport.servicesTitle')}
         items={services}
       />
 
@@ -277,24 +245,24 @@ const TransporteAereo = () => {
         <div className="container text-center">
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              <h2 className="mb-4">35+ años conectando el mundo</h2>
+              <h2 className="mb-4">{t('servicePages.airTransport.stats.title')}</h2>
               <div className="row g-4 mb-5">
                 <div className="col-md-4">
                   <div className="metric-card">
-                    <div className="metric-value">+100</div>
-                    <div className="metric-label">Destinos Globales</div>
+                    <div className="metric-value">{t('servicePages.airTransport.stats.stat1.value')}</div>
+                    <div className="metric-label">{t('servicePages.airTransport.stats.stat1.label')}</div>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="metric-card">
-                    <div className="metric-value">+10K</div>
-                    <div className="metric-label">Envíos Anuales</div>
+                    <div className="metric-value">{t('servicePages.airTransport.stats.stat2.value')}</div>
+                    <div className="metric-label">{t('servicePages.airTransport.stats.stat2.label')}</div>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="metric-card">
-                    <div className="metric-value">98%</div>
-                    <div className="metric-label">On-time Delivery</div>
+                    <div className="metric-value">{t('servicePages.airTransport.stats.stat3.value')}</div>
+                    <div className="metric-label">{t('servicePages.airTransport.stats.stat3.label')}</div>
                   </div>
                 </div>
               </div>
@@ -307,16 +275,16 @@ const TransporteAereo = () => {
 
       <section className="cta-service-final py-5">
         <div className="container text-center text-white">
-          <h2 className="mb-4">¿Listo para optimizar tus envíos aéreos?</h2>
+          <h2 className="mb-4">{t('servicePages.airTransport.cta.title')}</h2>
           <p className="lead mb-4">
-            Obtén una cotización personalizada y descubre cómo podemos reducir tus tiempos de tránsito
+            {t('servicePages.airTransport.cta.subtitle')}
           </p>
           <div className="d-flex gap-3 justify-content-center flex-wrap">
             <Link to="/contacto" className="btn btn-light btn-lg px-5">
-              Solicitar cotización
+              {t('servicePages.airTransport.cta.btnPrimary')}
             </Link>
             <Link to="/contacto" className="btn btn-outline-light btn-lg px-5">
-              Hablar con un experto
+              {t('servicePages.airTransport.cta.btnSecondary')}
             </Link>
           </div>
         </div>

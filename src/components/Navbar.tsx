@@ -128,6 +128,48 @@ const Navbar = () => {
           <div className={`collapse navbar-collapse ${isMobileMenuOpen ? 'show' : ''}`}>
             <ul className="navbar-nav ms-auto site-navigation">
               
+              {/* Nuestra Empresa */}
+              <li 
+                className={`nav-item dropdown ${openDropdown === 'empresa' ? 'show' : ''}`}
+                onMouseEnter={() => setOpenDropdown('empresa')}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleDropdown('empresa');
+                  }}
+                  aria-expanded={openDropdown === 'empresa'}
+                >
+                  {t('navbar.ourCompany')}
+                </a>
+                <ul className={`dropdown-menu ${openDropdown === 'empresa' ? 'show' : ''}`}>
+                  <li>
+                    <Link className="dropdown-item" to="/nuestra-empresa" onClick={() => window.scrollTo(0, 0)}>
+                      {t('navbar.history')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="#" onClick={() => window.scrollTo(0, 0)}>
+                      {t('navbar.photos')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/nuestra-empresa#oficinas-section">
+                      {t('navbar.offices')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/team" onClick={() => window.scrollTo(0, 0)}>
+                      {t('navbar.network')}
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
               {/* Servicios */}
               <li 
                 className={`nav-item dropdown ${openDropdown === 'servicios' ? 'show' : ''}`}
@@ -191,48 +233,6 @@ const Navbar = () => {
                   <li>
                     <Link className="dropdown-item fw-semibold" to="/servicios" onClick={() => window.scrollTo(0, 0)}>
                       {t('navbar.viewAllServices')}
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-
-              {/* Nuestra Empresa */}
-              <li 
-                className={`nav-item dropdown ${openDropdown === 'empresa' ? 'show' : ''}`}
-                onMouseEnter={() => setOpenDropdown('empresa')}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    toggleDropdown('empresa');
-                  }}
-                  aria-expanded={openDropdown === 'empresa'}
-                >
-                  {t('navbar.ourCompany')}
-                </a>
-                <ul className={`dropdown-menu ${openDropdown === 'empresa' ? 'show' : ''}`}>
-                  <li>
-                    <Link className="dropdown-item" to="/nuestra-empresa" onClick={() => window.scrollTo(0, 0)}>
-                      {t('navbar.history')}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#" onClick={() => window.scrollTo(0, 0)}>
-                      {t('navbar.photos')}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/nuestra-empresa#oficinas-section">
-                      {t('navbar.offices')}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/team" onClick={() => window.scrollTo(0, 0)}>
-                      {t('navbar.network')}
                     </Link>
                   </li>
                 </ul>

@@ -213,7 +213,7 @@ const ServicioMultimodal = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="/images/1207.jpg"
+                src="/images/1209.jpg"
                 alt="Transporte multimodal integrado"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"
