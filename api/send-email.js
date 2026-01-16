@@ -97,7 +97,7 @@ export default async function handler(req, res) {
         }
       }
 
-      // Email al equipo
+      // Email al equipo (versión mejorada para evitar spam)
       try {
         await fetch('https://api.brevo.com/v3/smtp/email', {
           method: 'POST',
@@ -106,18 +106,63 @@ export default async function handler(req, res) {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            sender: { name: 'Seemann Group Web', email: 'pablotrax03@gmail.com' },
+            sender: { name: 'Seemann Group', email: 'pablotrax03@gmail.com' },
             to: [{ email: 'pablotrax03@gmail.com', name: 'Pablo Piñeiro' }],
-            subject: `🔔 Nuevo contacto: ${nombre}`,
+            subject: `Nuevo contacto: ${nombre}`,
             htmlContent: `
-              <div style="font-family: Arial, sans-serif;">
-                <h2>🔔 Nuevo Contacto</h2>
-                <p><strong>Nombre:</strong> ${nombre}</p>
-                <p><strong>Teléfono:</strong> <a href="tel:${telefono}">${telefono}</a></p>
-                <p><strong>Email:</strong> ${correo || 'No proporcionado'}</p>
-                <p><small>Fecha: ${new Date().toLocaleString('es-CL')}</small></p>
+              <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
+                <div style="background: linear-gradient(135deg, #bd2121 0%, #8b1515 100%); color: white; padding: 25px; border-radius: 8px 8px 0 0; margin-bottom: 20px;">
+                  <h1 style="margin: 0; font-size: 24px; font-weight: 600;">Nuevo Contacto</h1>
+                  <p style="margin: 8px 0 0 0; opacity: 0.95; font-size: 14px;">Formulario Web - Seemann Group</p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                  <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #495057; display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Nombre</strong>
+                        <span style="color: #212529; font-size: 16px;">${nombre}</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #dee2e6;">
+                        <strong style="color: #495057; display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Teléfono</strong>
+                        <a href="tel:${telefono}" style="color: #bd2121; font-size: 16px; text-decoration: none; font-weight: 500;">${telefono}</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px 0;">
+                        <strong style="color: #495057; display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Email</strong>
+                        <span style="color: #212529; font-size: 16px;">${correo || 'No proporcionado'}</span>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                
+                <div style="background: #e9ecef; padding: 15px; border-radius: 8px; border-left: 4px solid #bd2121;">
+                  <p style="margin: 0; font-size: 13px; color: #6c757d; line-height: 1.6;">
+                    <strong>Fecha:</strong> ${new Date().toLocaleString('es-CL', { 
+                      timeZone: 'America/Santiago',
+                      year: 'numeric',
+                      month: 'long', 
+                      day: 'numeric',
+                      hour: '2-digit',
+                      minute: '2-digit'
+                    })}<br>
+                    Este mensaje fue enviado automáticamente desde el formulario de contacto web.
+                  </p>
+                </div>
+                
+                <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid #dee2e6; text-align: center;">
+                  <p style="margin: 0; color: #6c757d; font-size: 12px;">
+                    <strong style="color: #bd2121;">SEEMANN GROUP</strong><br>
+                    Soluciones Logísticas Internacionales<br>
+                    <a href="tel:+56226048386" style="color: #6c757d; text-decoration: none;">+56 2 2604 8386</a>
+                  </p>
+                </div>
               </div>
             `,
+            textContent: `NUEVO CONTACTO - Seemann Group\n\nNombre: ${nombre}\nTeléfono: ${telefono}\nEmail: ${correo || 'No proporcionado'}\n\nFecha: ${new Date().toLocaleString('es-CL')}\n\nEste es un mensaje automático del formulario de contacto web.`,
           }),
         });
       } catch (err) {
