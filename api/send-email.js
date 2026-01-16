@@ -1,4 +1,6 @@
-exports.default = async function handler(req, res) {
+import { GoogleAuth } from 'google-auth-library';
+
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -22,7 +24,6 @@ exports.default = async function handler(req, res) {
     if (process.env.GOOGLE_SHEET_ID && process.env.GOOGLE_CREDENTIALS) {
       try {
         const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
-        const { GoogleAuth } = require('google-auth-library');
         
         const auth = new GoogleAuth({
           credentials: credentials,
