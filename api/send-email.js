@@ -1,20 +1,6 @@
 const brevo = require('@getbrevo/brevo');
 const { google } = require('googleapis');
 
-// Configurar Brevo
-let apiInstance = new brevo.TransactionalEmailsApi();
-let apiKey = apiInstance.authentications['apiKey'];
-apiKey.apiKey = process.env.BREVO_API_KEY;
-
-// Configurar Google Sheets
-const auth = new google.auth.GoogleAuth({
-  credentials: process.env.GOOGLE_CREDENTIALS ? JSON.parse(process.env.GOOGLE_CREDENTIALS) : null,
-  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-});
-
-const sheets = google.sheets({ version: 'v4', auth });
-const SPREADSHEET_ID = process.env.GOOGLE_SHEET_ID;
-
 module.exports = async function handler(req, res) {
   // Habilitar CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -36,6 +22,9 @@ module.exports = async function handler(req, res) {
   }
 
   try {
+    console.log('🔍 Iniciando handler de send-email');
+    console.log('📦 Body recibido:', JSON.stringify(req.body));
+    
     const { 
       nombre, 
       telefono, 
@@ -44,8 +33,31 @@ module.exports = async function handler(req, res) {
 
     // Validar datos requeridos
     if (!nombre || !telefono) {
+      console.log('❌ Validación fallida: faltan datos');
       return res.status(400).json({ error: 'Faltan datos requeridos: nombre y teléfono son obligatorios' });
     }
+
+    console.log('✅ Datos validados correctamente');
+    console.log('🔑 Verificando variables de entorno...');
+    console.log('BREVO_API_KEY:', process.env.BREVO_API_KEY ? '✓ Configurada' : '✗ NO configurada');
+    console.log('GOOGLE_SHEET_ID:', process.env.GOOGLE_SHEET_ID ? '✓ Configurada' : '✗ NO configurada');
+    console.log('GOOGLE_CREDENTIALS:', process.env.GOOGLE_CREDENTIALS ? '✓ Configurada' : '✗ NO configurada');
+
+    // Configurar Brevo
+    console.log('🔧 Configurando Brevo...');
+    let apiInstance = new brevo.TransactionalEmailsApi();
+    let apiKey = apiInstance.authentications['apiKey'];
+    apiKey.apiKey = process.env.BREVO_API_KEY;
+
+    // Configurar Google Sheets
+    console.log('🔧 Configurando Google Sheets...');
+    const auth = new google.auth.GoogleAuth({
+      credentials: process.env.GOOGLE_CREDENTIALS ? JSON.parse(process.env.GOOGLE_CREDENTIALS) : null,
+      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    });
+
+    const sheets = google.sheets({ version: 'v4', auth });
+    const SPREADSHEET_ID = process.env.GOOGLE_SHEET_ID;
 
     // 1. GUARDAR EN GOOGLE SHEETS
     if (SPREADSHEET_ID) {
@@ -166,9 +178,12 @@ module.exports = async function handler(req, res) {
 
   } catch (error) {
     console.error('❌ Error general:', error);
+    console.error('Stack trace:', error.stack);
     return res.status(500).json({ 
+      success: false,
       error: 'Error interno del servidor',
-      details: error.message
+      message: error.message,
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
     });
   }
 };
