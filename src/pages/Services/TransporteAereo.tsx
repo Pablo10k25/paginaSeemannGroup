@@ -222,7 +222,7 @@ const TransporteAereo = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="/images/1202.png"
+                src="/images/Imagen Transporte Aereo.png"
                 alt="Cargo aéreo internacional"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"

@@ -230,7 +230,7 @@ const ServicioAduanas = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="/images/logo2.jpg"
+                src="/images/Imagen Servicio de Aduanas.png"
                 alt="Documentación aduanera y compliance"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"
