@@ -41,7 +41,7 @@ const Servicios = () => {
         t('servicesPage.airTransport.benefit2', 'Tracking en tiempo real'),
         t('servicesPage.airTransport.benefit3', 'Cobertura global 100+ destinos')
       ],
-      image: '/images/1202.png',
+      image: '/images/Imagen Transporte Aereo.png',
       color: '#0ea5e9',
       detailLink: '/servicios/transporte-aereo'
     },
@@ -55,7 +55,7 @@ const Servicios = () => {
         t('servicesPage.seaTransport.benefit2', 'Tarifas competitivas certificadas'),
         t('servicesPage.seaTransport.benefit3', 'Gestión documental completa')
       ],
-      image: '/images/im1.png',
+      image: '/images/Imagen Transporte Marítimo.png',
       color: '#3b82f6',
       detailLink: '/servicios/transporte-maritimo'
     },
@@ -69,7 +69,7 @@ const Servicios = () => {
         t('servicesPage.landTransport.benefit2', 'Flota moderna rastreada GPS'),
         t('servicesPage.landTransport.benefit3', 'Entregas puntuales garantizadas')
       ],
-      image: '/images/im2.png',
+      image: '/images/Imagen Transporte Terrestre.png',
       color: '#22c55e',
       detailLink: '/servicios/transporte-terrestre'
     },
@@ -83,7 +83,7 @@ const Servicios = () => {
         t('servicesPage.warehouse.benefit2', 'WMS para control de inventario'),
         t('servicesPage.warehouse.benefit3', 'Pick & Pack personalizado')
       ],
-      image: '/images/im3.png',
+      image: '/images/Imagen Warehouse & Fulfillment.png',
       color: '#f59e0b',
       detailLink: '/servicios/warehouse'
     },
@@ -97,7 +97,7 @@ const Servicios = () => {
         t('servicesPage.multimodal.benefit2', 'Un solo interlocutor end-to-end'),
         t('servicesPage.multimodal.benefit3', 'Soluciones personalizadas')
       ],
-      image: '/images/1209.jpg',
+      image: '/images/Imagen Servicio Multimodal.png',
       color: '#8b5cf6',
       detailLink: '/servicios/servicio-multimodal'
     },
@@ -111,7 +111,7 @@ const Servicios = () => {
         t('servicesPage.customs.benefit2', 'Clasificación arancelaria correcta'),
         t('servicesPage.customs.benefit3', 'Despachos ágiles sin demoras')
       ],
-      image: '/images/logo2.jpg',
+      image: '/images/Imagen Servicio de Aduanas.png',
       color: '#ef4444',
       detailLink: '/servicios/servicio-aduanas'
     }

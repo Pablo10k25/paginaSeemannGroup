@@ -160,20 +160,37 @@ const ServicesPreviewGrid = () => {
                   }
                 }}
               >
-                {/* Image Background */}
+                {/* Image Background with Grid Overlay */}
                 <div 
                   className="service-preview-image"
                   style={{
-                    backgroundImage: `url(${service.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundImage: `
+                      linear-gradient(0deg, rgba(0,0,0,0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px),
+                      url(${service.image})
+                    `,
+                    backgroundSize: '20px 20px, 20px 20px, cover',
+                    backgroundPosition: 'center, center, center',
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    opacity: 0.15,
+                    opacity: 0.2,
                     transition: 'opacity 0.3s ease',
+                    zIndex: 0
+                  }}
+                />
+                
+                {/* Additional gradient overlay for better text readability */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)',
                     zIndex: 0
                   }}
                 />
