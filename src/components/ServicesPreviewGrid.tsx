@@ -175,7 +175,7 @@ const ServicesPreviewGrid = () => {
                   }}
                 />
                 
-                {/* Grid Pattern Overlay */}
+                {/* Grid Pattern Overlay MUY SUTIL */}
                 <div 
                   style={{
                     position: 'absolute',
@@ -184,14 +184,14 @@ const ServicesPreviewGrid = () => {
                     width: '100%',
                     height: '100%',
                     backgroundImage: `
-                      repeating-linear-gradient(0deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 20px),
-                      repeating-linear-gradient(90deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 20px)
+                      repeating-linear-gradient(0deg, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 1px, transparent 1px, transparent 20px),
+                      repeating-linear-gradient(90deg, rgba(0,0,0,0.08) 0px, rgba(0,0,0,0.08) 1px, transparent 1px, transparent 20px)
                     `,
                     zIndex: 1
                   }}
                 />
                 
-                {/* White overlay for text readability - very subtle */}
+                {/* White overlay MÍNIMO para legibilidad */}
                 <div 
                   style={{
                     position: 'absolute',
@@ -199,7 +199,8 @@ const ServicesPreviewGrid = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    background: 'rgba(255,255,255,0.25)',
+                    background: 'rgba(255,255,255,0.70)',
+                    backdropFilter: 'blur(0.5px)',
                     zIndex: 2
                   }}
                 />
