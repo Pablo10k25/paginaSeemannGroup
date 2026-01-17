@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18n';
+import { useTranslation } from 'react-i18next';
 import { Plane, Clock, Shield, Target, FileCheck, Rocket, Package, Zap } from 'lucide-react';
 import ServiceHero from '../../components/Services/ServiceHero';
 import FeatureGrid from '../../components/Services/FeatureGrid';
