@@ -171,7 +171,6 @@ const ServicesPreviewGrid = () => {
                     backgroundImage: `url(${service.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    opacity: 0.35,
                     zIndex: 0
                   }}
                 />
@@ -185,10 +184,9 @@ const ServicesPreviewGrid = () => {
                     width: '100%',
                     height: '100%',
                     backgroundImage: `
-                      linear-gradient(0deg, rgba(255,255,255,0.4) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)
+                      repeating-linear-gradient(0deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 20px),
+                      repeating-linear-gradient(90deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 20px)
                     `,
-                    backgroundSize: '20px 20px',
                     zIndex: 1
                   }}
                 />
@@ -201,7 +199,7 @@ const ServicesPreviewGrid = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    background: 'rgba(255,255,255,0.65)',
+                    background: 'rgba(255,255,255,0.50)',
                     zIndex: 2
                   }}
                 />
