@@ -99,46 +99,6 @@ const ServicioMultimodal = () => {
         'Cost reduction vs. pure air',
         'Time optimization vs. pure sea'
       ]
-    },
-    {
-      title: t('servicePages.multimodal.services.service5.title'),
-      description: t('servicePages.multimodal.services.service5.description'),
-      examples: [
-        'Sea transport of heavy machinery',
-        'Specialized land transport with permits',
-        'Cranes and loading/unloading equipment',
-        'All-risk insurance and technical coordination'
-      ]
-    },
-    {
-      title: t('servicePages.multimodal.services.service6.title'),
-      description: t('servicePages.multimodal.services.service6.description'),
-      examples: [
-        'Single point of contact for entire supply chain',
-        'Unified end-to-end tracking',
-        'Supplier and carrier management',
-        'Consolidated reporting and KPIs'
-      ]
-    },
-    {
-      title: t('servicePages.multimodal.services.service7.title'),
-      description: t('servicePages.multimodal.services.service7.description'),
-      examples: [
-        'Storage in strategic hubs',
-        'Cross-docking and cargo consolidation',
-        'Modal transshipment without delays',
-        'In-transit inventory with visibility'
-      ]
-    },
-    {
-      title: t('servicePages.multimodal.services.service8.title'),
-      description: t('servicePages.multimodal.services.service8.description'),
-      examples: [
-        'Transport of chemicals with DG certification',
-        'Pharma handling with cold chain',
-        'Perishable goods with ATP/FEU',
-        'Specialized documentation and compliance'
-      ]
     }
   ];
 

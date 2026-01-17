@@ -64,79 +64,79 @@ const TransporteAereo = () => {
       title: t('servicePages.airTransport.services.service1.title'),
       description: t('servicePages.airTransport.services.service1.description'),
       examples: [
-        'Productos manufacturados y componentes industriales',
-        'Textiles y prendas de vestir con deadlines ajustados',
-        'Electrónica de consumo y dispositivos tecnológicos',
-        'Muestras comerciales y prototipos para ferias internacionales'
+        'Manufactured products and industrial components',
+        'Textiles and apparel with tight deadlines',
+        'Consumer electronics and technological devices',
+        'Commercial samples and prototypes for international fairs'
       ]
     },
     {
       title: t('servicePages.airTransport.services.service2.title'),
       description: t('servicePages.airTransport.services.service2.description'),
       examples: [
-        'Baterías de litio y equipos electrónicos con componentes DG',
-        'Productos químicos clasificados según UN (ONU)',
-        'Materiales inflamables y corrosivos con embalaje especializado',
-        'Documentación DGD completa y etiquetado IATA conforme'
+        'Lithium batteries and electronic equipment with DG components',
+        'Chemical products classified according to UN',
+        'Flammable and corrosive materials with specialized packaging',
+        'Complete DGD documentation and IATA compliant labeling'
       ]
     },
     {
       title: t('servicePages.airTransport.services.service3.title'),
       description: t('servicePages.airTransport.services.service3.description'),
       examples: [
-        'Maquinaria industrial pesada y equipamiento minero',
-        'Componentes de energías renovables (palas eólicas, paneles)',
-        'Estructuras metálicas de gran tamaño',
-        'Estudios de viabilidad y charters dedicados'
+        'Heavy industrial machinery and mining equipment',
+        'Renewable energy components (wind blades, panels)',
+        'Large-sized metal structures',
+        'Feasibility studies and dedicated charters'
       ]
     },
     {
       title: t('servicePages.airTransport.services.service4.title'),
       description: t('servicePages.airTransport.services.service4.description'),
       examples: [
-        'Mercancía en tránsito hacia destinos finales mediterráneos',
-        'Consolidación en hubs estratégicos (Miami, Panamá)',
-        'Reducción de costos arancelarios y tiempos de desaduanaje'
+        'Cargo in transit to Mediterranean final destinations',
+        'Consolidation in strategic hubs (Miami, Panama)',
+        'Reduction of tariff costs and customs clearance times'
       ]
     },
     {
       title: t('servicePages.airTransport.services.service5.title'),
       description: t('servicePages.airTransport.services.service5.description'),
       examples: [
-        'Componentes automotrices para líneas de ensamblaje',
-        'Repuestos críticos para industria minera y manufactura',
-        'Insumos farmacéuticos para producción continua',
-        'Coordinación con tus sistemas ERP/WMS'
+        'Automotive components for assembly lines',
+        'Critical spare parts for mining and manufacturing industry',
+        'Pharmaceutical supplies for continuous production',
+        'Coordination with your ERP/WMS systems'
       ]
     },
     {
       title: t('servicePages.airTransport.services.service6.title'),
       description: t('servicePages.airTransport.services.service6.description'),
       examples: [
-        'Vacunas y medicamentos con validación ATP/FEU',
-        'Productos biológicos y muestras clínicas',
-        'Alimentos y productos agrícolas de alto valor',
-        'Data loggers y monitoreo continuo de temperatura'
+        'Vaccines and medications with ATP/FEU validation',
+        'Biological products and clinical samples',
+        'High-value food and agricultural products',
+        'Data loggers and continuous temperature monitoring'
       ]
     },
     {
       title: t('servicePages.airTransport.services.service7.title'),
       description: t('servicePages.airTransport.services.service7.description'),
       examples: [
-        'Emergencias mineras y paradas de planta',
-        'Equipamiento médico urgente',
-        'Proyectos con deadlines no negociables',
-        'Cotización y disponibilidad en menos de 4 horas'
+        'Mining emergencies and plant shutdowns',
+        'Urgent medical equipment',
+        'Projects with non-negotiable deadlines',
+        'Quote and availability in less than 4 hours'
       ]
     },
     {
       title: t('servicePages.airTransport.services.service8.title'),
       description: t('servicePages.airTransport.services.service8.description'),
       examples: [
-        'Documentos legales y contratos internacionales',
-        'Muestras de producto para clientes y ferias',
-        'Repuestos pequeños de alta criticidad',
-        'Tracking door-to-door con POD digital'
+        'Legal documents and international contracts',
+        'Product samples for clients and trade shows',
+        'Small high-criticality spare parts',
+        'Door-to-door tracking with digital POD'
       ]
     }
   ];

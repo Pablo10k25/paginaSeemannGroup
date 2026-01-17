@@ -109,36 +109,6 @@ const ServicioAduanas = () => {
         'Medical equipment and devices',
         'Food and agricultural products (SAG)'
       ]
-    },
-    {
-      title: t('servicePages.customs.services.service6.title'),
-      description: t('servicePages.customs.services.service6.description'),
-      examples: [
-        'AEO certification (Authorized Economic Operator)',
-        'Trusted importer/exporter programs',
-        'Customs compliance audits',
-        'Training on regulations and regulatory changes'
-      ]
-    },
-    {
-      title: t('servicePages.customs.services.service7.title'),
-      description: t('servicePages.customs.services.service7.description'),
-      examples: [
-        'Tariff classification consulting',
-        'Free trade agreement analysis',
-        'Tariff cost optimization',
-        'Due diligence for complex operations'
-      ]
-    },
-    {
-      title: t('servicePages.customs.services.service8.title'),
-      description: t('servicePages.customs.services.service8.description'),
-      examples: [
-        'Digital portal for procedure tracking',
-        'Automatic alerts for customs status',
-        'Operation history and documentation',
-        'Customs cost and KPI reporting'
-      ]
     }
   ];
 

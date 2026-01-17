@@ -109,46 +109,6 @@ const Warehouse = () => {
         'Deconsolidation and segregation by destination',
         'Distribution route optimization'
       ]
-    },
-    {
-      title: t('servicePages.warehouse.services.service6.title'),
-      description: t('servicePages.warehouse.services.service6.description'),
-      examples: [
-        '24/7 CCTV monitoring and access control',
-        'Trained personnel in merchandise handling',
-        'Storage insurance included',
-        'Periodic inventory audits'
-      ]
-    },
-    {
-      title: t('servicePages.warehouse.services.service7.title'),
-      description: t('servicePages.warehouse.services.service7.description'),
-      examples: [
-        'Temporary storage for imports',
-        'Customs documentation management',
-        'Coordination with customs agents',
-        'Preparation for SAG/ISP inspections'
-      ]
-    },
-    {
-      title: t('servicePages.warehouse.services.service8.title'),
-      description: t('servicePages.warehouse.services.service8.description'),
-      examples: [
-        'Returns management (reverse logistics)',
-        'Disposal of obsolete products',
-        'Certified recycling and destruction',
-        'Environmental reports and compliance'
-      ]
-    },
-    {
-      title: t('servicePages.warehouse.services.service8.title'),
-      description: t('servicePages.warehouse.services.service8.description'),
-      examples: [
-        'Gestión de devoluciones (reverse logistics)',
-        'Disposición de productos obsoletos',
-        'Reciclaje y destrucción certificada',
-        'Reportes ambientales y compliance'
-      ]
     }
   ];
 
