@@ -171,6 +171,7 @@ const ServicesPreviewGrid = () => {
                     backgroundImage: `url(${service.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    opacity: 0.35,
                     zIndex: 0
                   }}
                 />
@@ -184,15 +185,15 @@ const ServicesPreviewGrid = () => {
                     width: '100%',
                     height: '100%',
                     backgroundImage: `
-                      linear-gradient(0deg, rgba(0,0,0,0.08) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)
+                      linear-gradient(0deg, rgba(255,255,255,0.4) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)
                     `,
                     backgroundSize: '20px 20px',
                     zIndex: 1
                   }}
                 />
                 
-                {/* White overlay for text readability */}
+                {/* White overlay for text readability - very subtle */}
                 <div 
                   style={{
                     position: 'absolute',
@@ -200,7 +201,7 @@ const ServicesPreviewGrid = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0.55) 100%)',
+                    background: 'rgba(255,255,255,0.65)',
                     zIndex: 2
                   }}
                 />
