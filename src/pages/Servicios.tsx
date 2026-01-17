@@ -83,7 +83,7 @@ const Servicios = () => {
         t('servicesPage.warehouse.benefit2', 'WMS para control de inventario'),
         t('servicesPage.warehouse.benefit3', 'Pick & Pack personalizado')
       ],
-      image: '/images/Imagen Warehouse & Fulfillment.png',
+      image: '/images/ImagenWare.png',
       color: '#f59e0b',
       detailLink: '/servicios/warehouse'
     },
