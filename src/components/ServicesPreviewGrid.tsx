@@ -200,7 +200,7 @@ const ServicesPreviewGrid = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.85) 100%)',
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0.55) 100%)',
                     zIndex: 2
                   }}
                 />
