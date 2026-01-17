@@ -648,11 +648,39 @@
       "feature3Desc": "Automatic alerts for each milestone",
       "cta": "Access System"
     },
+    "webtracking": {
+      "badge": "24/7 Tracking",
+      "title": "WEBTRACKING",
+      "subtitle": "Track your cargo in real time",
+      "description": "Access your personalized portal and monitor each stage of your shipments with real-time updated information",
+      "feature1Title": "Real-time Location",
+      "feature1Desc": "GPS tracking by stages of your shipment",
+      "feature2Title": "Digital Documents",
+      "feature2Desc": "Invoice, AWB, Packing List, Certificates",
+      "feature3Title": "Automatic Notifications",
+      "feature3Desc": "Alerts at key milestones of the process",
+      "feature4Title": "Complete History",
+      "feature4Desc": "Access to past operations and analysis",
+      "feature5Title": "Secure Information",
+      "feature5Desc": "Protected and encrypted access 24/7",
+      "feature6Title": "Reports & Analytics",
+      "feature6Desc": "Metrics and KPIs of your operations",
+      "nav1": "My Shipments",
+      "nav2": "Documents",
+      "nav3": "Reports",
+      "status1": "In Transit",
+      "status2": "Delivered",
+      "status3": "At Customs",
+      "cta": "Access Client Portal",
+      "ctaSubtext": "Portal available for all our clients at no additional cost"
+    },
     "finalCta": {
       "title": "Ready to optimize your logistics?",
       "subtitle": "Our experts are ready to design the perfect solution for your business",
       "cta1": "Request Quote",
-      "cta2": "Talk to an Expert"
+      "cta2": "Speak with an Expert",
+      "faqTitle": "Frequently Asked Questions",
+      "faqSubtitle": "We answer your questions about this service"
     },
     "intro": {
       "title": "Our services",

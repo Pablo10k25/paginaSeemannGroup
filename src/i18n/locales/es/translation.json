@@ -810,11 +810,39 @@
       "feature3Desc": "Alertas automáticas de cada milestone",
       "cta": "Acceder al Sistema"
     },
+    "webtracking": {
+      "badge": "Tracking 24/7",
+      "title": "WEBTRACKING",
+      "subtitle": "Monitorea tu carga en tiempo real",
+      "description": "Accede a tu portal personalizado y monitorea cada etapa de tus envíos con información actualizada en tiempo real",
+      "feature1Title": "Ubicación en tiempo real",
+      "feature1Desc": "Tracking GPS por etapas de tu envío",
+      "feature2Title": "Documentos digitales",
+      "feature2Desc": "Invoice, AWB, Packing List, Certificados",
+      "feature3Title": "Notificaciones automáticas",
+      "feature3Desc": "Alertas en hitos clave del proceso",
+      "feature4Title": "Historial completo",
+      "feature4Desc": "Acceso a operaciones pasadas y análisis",
+      "feature5Title": "Información segura",
+      "feature5Desc": "Acceso protegido y encriptado 24/7",
+      "feature6Title": "Reportes & Analytics",
+      "feature6Desc": "Métricas y KPIs de tus operaciones",
+      "nav1": "Mis envíos",
+      "nav2": "Documentos",
+      "nav3": "Reportes",
+      "status1": "En tránsito",
+      "status2": "Entregado",
+      "status3": "En aduana",
+      "cta": "Acceder al Portal de Clientes",
+      "ctaSubtext": "Portal disponible para todos nuestros clientes sin costo adicional"
+    },
     "finalCta": {
       "title": "¿Listo para optimizar tu logística?",
       "subtitle": "Nuestros expertos están listos para diseñar la solución perfecta para tu negocio",
       "cta1": "Solicitar Cotización",
-      "cta2": "Hablar con un Experto"
+      "cta2": "Hablar con un Experto",
+      "faqTitle": "Preguntas Frecuentes",
+      "faqSubtitle": "Resolvemos tus dudas sobre este servicio"
     },
     "intro": {
       "title": "Nuestros servicios",

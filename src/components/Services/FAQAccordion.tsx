@@ -9,10 +9,11 @@ interface FAQ {
 
 interface FAQAccordionProps {
   title?: string;
+  subtitle?: string;
   faqs: FAQ[];
 }
 
-const FAQAccordion = ({ title = 'Preguntas Frecuentes', faqs }: FAQAccordionProps) => {
+const FAQAccordion = ({ title = 'Preguntas Frecuentes', subtitle = 'Resolvemos tus dudas sobre este servicio', faqs }: FAQAccordionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -26,7 +27,7 @@ const FAQAccordion = ({ title = 'Preguntas Frecuentes', faqs }: FAQAccordionProp
           transition={{ duration: 0.6 }}
         >
           <h2 className="mb-3">{title}</h2>
-          <p className="text-muted">Resolvemos tus dudas sobre este servicio</p>
+          <p className="text-muted">{subtitle}</p>
         </motion.div>
 
         <div className="row justify-content-center">

@@ -272,7 +272,11 @@ const ServicioAduanas = () => {
         </div>
       </section>
 
-      <FAQAccordion faqs={faqs} />
+      <FAQAccordion 
+        title={t('servicesPage.finalCta.faqTitle', 'Preguntas Frecuentes')}
+        subtitle={t('servicesPage.finalCta.faqSubtitle', 'Resolvemos tus dudas sobre este servicio')}
+        faqs={faqs} 
+      />
 
       <section className="cta-service-final py-5">
         <div className="container text-center text-white">

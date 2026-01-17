@@ -1,37 +1,40 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { MapPin, FileText, Bell, Clock, Shield, TrendingUp } from 'lucide-react';
 
 const WebTrackingMock = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: <MapPin size={32} />,
-      title: 'Ubicación en tiempo real',
-      description: 'Tracking GPS por etapas de tu envío'
+      title: t('servicesPage.webtracking.feature1Title'),
+      description: t('servicesPage.webtracking.feature1Desc')
     },
     {
       icon: <FileText size={32} />,
-      title: 'Documentos digitales',
-      description: 'Invoice, AWB, Packing List, Certificados'
+      title: t('servicesPage.webtracking.feature2Title'),
+      description: t('servicesPage.webtracking.feature2Desc')
     },
     {
       icon: <Bell size={32} />,
-      title: 'Notificaciones automáticas',
-      description: 'Alertas en hitos clave del proceso'
+      title: t('servicesPage.webtracking.feature3Title'),
+      description: t('servicesPage.webtracking.feature3Desc')
     },
     {
       icon: <Clock size={32} />,
-      title: 'Historial completo',
-      description: 'Acceso a operaciones pasadas y análisis'
+      title: t('servicesPage.webtracking.feature4Title'),
+      description: t('servicesPage.webtracking.feature4Desc')
     },
     {
       icon: <Shield size={32} />,
-      title: 'Información segura',
-      description: 'Acceso protegido y encriptado 24/7'
+      title: t('servicesPage.webtracking.feature5Title'),
+      description: t('servicesPage.webtracking.feature5Desc')
     },
     {
       icon: <TrendingUp size={32} />,
-      title: 'Reportes & Analytics',
-      description: 'Métricas y KPIs de tus operaciones'
+      title: t('servicesPage.webtracking.feature6Title'),
+      description: t('servicesPage.webtracking.feature6Desc')
     }
   ];
 
@@ -45,10 +48,10 @@ const WebTrackingMock = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="badge bg-danger mb-3 px-4 py-2 fs-6">WEBTRACKING</span>
-          <h2 className="mb-3">Trazabilidad completa de tus operaciones</h2>
+          <span className="badge bg-danger mb-3 px-4 py-2 fs-6">{t('servicesPage.webtracking.badge')}</span>
+          <h2 className="mb-3">{t('servicesPage.webtracking.title')}</h2>
           <p className="text-muted lead mx-auto" style={{ maxWidth: '700px' }}>
-            Accede a tu portal personalizado y monitorea cada etapa de tus envíos con información actualizada en tiempo real
+            {t('servicesPage.webtracking.description')}
           </p>
         </motion.div>
 
@@ -66,14 +69,14 @@ const WebTrackingMock = () => {
                 <div className="dashboard-header">
                   <div className="dashboard-logo">SEEMANN</div>
                   <div className="dashboard-nav">
-                    <span>Mis envíos</span>
-                    <span>Documentos</span>
-                    <span>Reportes</span>
+                    <span>{t('servicesPage.webtracking.nav1')}</span>
+                    <span>{t('servicesPage.webtracking.nav2')}</span>
+                    <span>{t('servicesPage.webtracking.nav3')}</span>
                   </div>
                 </div>
                 <div className="dashboard-content">
                   <div className="shipment-card active">
-                    <div className="shipment-status">En tránsito</div>
+                    <div className="shipment-status">{t('servicesPage.webtracking.status1')}</div>
                     <div className="shipment-id">AWB: 123-4567890</div>
                     <div className="shipment-route">Shanghai → Valparaíso</div>
                     <div className="shipment-progress">
@@ -81,12 +84,12 @@ const WebTrackingMock = () => {
                     </div>
                   </div>
                   <div className="shipment-card">
-                    <div className="shipment-status completed">Entregado</div>
+                    <div className="shipment-status completed">{t('servicesPage.webtracking.status2')}</div>
                     <div className="shipment-id">BL: 987-6543210</div>
                     <div className="shipment-route">Los Angeles → Santiago</div>
                   </div>
                   <div className="shipment-card">
-                    <div className="shipment-status">En aduana</div>
+                    <div className="shipment-status">{t('servicesPage.webtracking.status3')}</div>
                     <div className="shipment-id">AWB: 456-7891234</div>
                     <div className="shipment-route">Miami → Lima</div>
                   </div>
@@ -140,10 +143,10 @@ const WebTrackingMock = () => {
               }
             }}
           >
-            Acceder al Portal de Clientes
+            {t('servicesPage.webtracking.cta')}
           </a>
           <p className="text-muted small mt-3">
-            Portal disponible para todos nuestros clientes sin costo adicional
+            {t('servicesPage.webtracking.ctaSubtext')}
           </p>
         </motion.div>
       </div>
