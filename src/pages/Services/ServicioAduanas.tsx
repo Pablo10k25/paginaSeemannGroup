@@ -64,80 +64,80 @@ const ServicioAduanas = () => {
       title: t('servicePages.customs.services.service1.title'),
       description: t('servicePages.customs.services.service1.description'),
       examples: [
-        'Clasificación arancelaria correcta (NCM/HTS)',
-        'Valoración aduanera según normativa OMC',
-        'Preparación de DUS/DIN con documentación completa',
-        'Gestión de permisos especiales (SAG, ISP, SEC)'
+        'Correct tariff classification (NCM/HTS)',
+        'Customs valuation according to WTO regulations',
+        'DUS/DIN preparation with complete documentation',
+        'Special permit management (SAG, ISP, SEC)'
       ]
     },
     {
       title: t('servicePages.customs.services.service2.title'),
       description: t('servicePages.customs.services.service2.description'),
       examples: [
-        'DUS para exportación marítima, aérea y terrestre',
-        'Certificados de origen para TLC (USA, UE, China)',
-        'Inspecciones SAG para productos agrícolas',
-        'Gestión de drawback y reintegros tributarios'
+        'DUS for sea, air and land export',
+        'Certificates of origin for FTA (USA, EU, China)',
+        'SAG inspections for agricultural products',
+        'Drawback and tax refund management'
       ]
     },
     {
       title: t('servicePages.customs.services.service3.title'),
       description: t('servicePages.customs.services.service3.description'),
       examples: [
-        'Coordinación con agentes de aduanas oficiales',
-        'Seguimiento de inspecciones físicas y documentales',
-        'Resolución de observaciones y rectificatorias',
-        'Pagos de aranceles e impuestos'
+        'Coordination with official customs agents',
+        'Physical and documentary inspection tracking',
+        'Resolution of observations and amendments',
+        'Tariff and tax payments'
       ]
     },
     {
       title: t('servicePages.customs.services.service4.title'),
       description: t('servicePages.customs.services.service4.description'),
       examples: [
-        'Gestión de regímenes de admisión temporal',
-        'Perfeccionamiento activo y pasivo',
-        'Zonas francas y depósitos aduaneros',
-        'Tránsito internacional y trasbordos'
+        'Temporary admission regime management',
+        'Active and passive processing',
+        'Free zones and customs warehouses',
+        'International transit and transshipments'
       ]
     },
     {
       title: t('servicePages.customs.services.service5.title'),
       description: t('servicePages.customs.services.service5.description'),
       examples: [
-        'Importación de productos farmacéuticos (ISP)',
-        'Productos químicos y sustancias controladas',
-        'Equipamiento médico y dispositivos',
-        'Alimentos y productos agrícolas (SAG)'
+        'Import of pharmaceutical products (ISP)',
+        'Chemical products and controlled substances',
+        'Medical equipment and devices',
+        'Food and agricultural products (SAG)'
       ]
     },
     {
       title: t('servicePages.customs.services.service6.title'),
       description: t('servicePages.customs.services.service6.description'),
       examples: [
-        'Certificación OEA (Operador Económico Autorizado)',
-        'Programas de importador/exportador confiable',
-        'Auditorías de compliance aduanero',
-        'Capacitación en regulaciones y cambios normativos'
+        'AEO certification (Authorized Economic Operator)',
+        'Trusted importer/exporter programs',
+        'Customs compliance audits',
+        'Training on regulations and regulatory changes'
       ]
     },
     {
       title: t('servicePages.customs.services.service7.title'),
       description: t('servicePages.customs.services.service7.description'),
       examples: [
-        'Consultoría en clasificación arancelaria',
-        'Análisis de tratados de libre comercio',
-        'Optimización de costos arancelarios',
-        'Due diligence para operaciones complejas'
+        'Tariff classification consulting',
+        'Free trade agreement analysis',
+        'Tariff cost optimization',
+        'Due diligence for complex operations'
       ]
     },
     {
       title: t('servicePages.customs.services.service8.title'),
       description: t('servicePages.customs.services.service8.description'),
       examples: [
-        'Portal digital para seguimiento de trámites',
-        'Alertas automáticas de estados aduaneros',
-        'Histórico de operaciones y documentación',
-        'Reportería de costos y KPIs aduaneros'
+        'Digital portal for procedure tracking',
+        'Automatic alerts for customs status',
+        'Operation history and documentation',
+        'Customs cost and KPI reporting'
       ]
     }
   ];

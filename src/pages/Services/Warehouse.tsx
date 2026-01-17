@@ -64,70 +64,80 @@ const Warehouse = () => {
       title: t('servicePages.warehouse.services.service1.title'),
       description: t('servicePages.warehouse.services.service1.description'),
       examples: [
-        'Recepción y descarga con control de calidad',
-        'Almacenamiento rack selectivo y drive-in',
-        'Preparación de pedidos (picking y packing)',
-        'Distribución last-mile y entregas programadas'
+        'Reception and unloading with quality control',
+        'Selective rack and drive-in storage',
+        'Order preparation (picking and packing)',
+        'Last-mile distribution and scheduled deliveries'
       ]
     },
     {
       title: t('servicePages.warehouse.services.service2.title'),
       description: t('servicePages.warehouse.services.service2.description'),
       examples: [
-        'Integración API con tu ERP/WMS',
-        'Inventarios en tiempo real vía dashboard',
-        'Trazabilidad por lote y serial number',
-        'Alertas automáticas de stock mínimo'
+        'API integration with your ERP/WMS',
+        'Real-time inventories via dashboard',
+        'Traceability by batch and serial number',
+        'Automatic minimum stock alerts'
       ]
     },
     {
       title: t('servicePages.warehouse.services.service3.title'),
       description: t('servicePages.warehouse.services.service3.description'),
       examples: [
-        'Almacenamiento de productos químicos clasificados',
-        'Cámaras de frío (2°C - 8°C) para pharma',
-        'Áreas segregadas para inflamables',
-        'Control de temperatura y humedad 24/7'
+        'Storage of classified chemical products',
+        'Cold rooms (2°C - 8°C) for pharma',
+        'Segregated areas for flammables',
+        '24/7 temperature and humidity control'
       ]
     },
     {
       title: t('servicePages.warehouse.services.service4.title'),
       description: t('servicePages.warehouse.services.service4.description'),
       examples: [
-        'Etiquetado y re-etiquetado de productos',
-        'Kitting y ensamblaje ligero',
-        'Embalaje personalizado y shrink wrap',
-        'Control de calidad y certificaciones'
+        'Product labeling and re-labeling',
+        'Kitting and light assembly',
+        'Custom packaging and shrink wrap',
+        'Quality control and certifications'
       ]
     },
     {
       title: t('servicePages.warehouse.services.service5.title'),
       description: t('servicePages.warehouse.services.service5.description'),
       examples: [
-        'Cross-docking para reducir tiempos',
-        'Consolidación de cargas múltiples',
-        'Desconsolidación y segregación por destino',
-        'Optimización de rutas de distribución'
+        'Cross-docking to reduce times',
+        'Consolidation of multiple loads',
+        'Deconsolidation and segregation by destination',
+        'Distribution route optimization'
       ]
     },
     {
       title: t('servicePages.warehouse.services.service6.title'),
       description: t('servicePages.warehouse.services.service6.description'),
       examples: [
-        'Monitoreo CCTV 24/7 y control de accesos',
-        'Personal capacitado en manejo de mercancía',
-        'Seguro de almacenamiento incluido',
-        'Auditorías periódicas de inventario'
+        '24/7 CCTV monitoring and access control',
+        'Trained personnel in merchandise handling',
+        'Storage insurance included',
+        'Periodic inventory audits'
       ]
     },
     {
       title: t('servicePages.warehouse.services.service7.title'),
       description: t('servicePages.warehouse.services.service7.description'),
       examples: [
-        'Almacenamiento temporal para importaciones',
-        'Gestión de documentación aduanera',
-        'Coordinación con agentes de aduanas',
-        'Preparación para inspecciones SAG/ISP'
+        'Temporary storage for imports',
+        'Customs documentation management',
+        'Coordination with customs agents',
+        'Preparation for SAG/ISP inspections'
+      ]
+    },
+    {
+      title: t('servicePages.warehouse.services.service8.title'),
+      description: t('servicePages.warehouse.services.service8.description'),
+      examples: [
+        'Returns management (reverse logistics)',
+        'Disposal of obsolete products',
+        'Certified recycling and destruction',
+        'Environmental reports and compliance'
       ]
     },
     {

@@ -62,66 +62,66 @@ const TransporteMaritimo = () => {
       title: t('servicePages.seaTransport.services.service1.title'),
       description: t('servicePages.seaTransport.services.service1.description'),
       examples: [
-        'Contenedores secos estándar (Dry Van) 20\'/40\'/40\'HC',
-        'Contenedores High Cube para cargas de gran volumen',
-        'Open Top para maquinaria y cargas especiales',
-        'Flat Rack para carga sobredimensionada',
-        'Negociación de contratos anuales con tarifas preferentes'
+        'Standard dry containers (Dry Van) 20\'/40\'/40\'HC',
+        'High Cube containers for high-volume cargo',
+        'Open Top for machinery and special cargo',
+        'Flat Rack for oversized cargo',
+        'Annual contract negotiation with preferential rates'
       ]
     },
     {
       title: t('servicePages.seaTransport.services.service2.title'),
       description: t('servicePages.seaTransport.services.service2.description'),
       examples: [
-        'Cargas desde 1 m³ con tarifas por volumen/peso',
-        'Consolidación en hubs estratégicos (Shanghai, Hamburg, Miami)',
-        'Coordinación de múltiples proveedores en origen',
-        'Desconsolidación y distribución en destino',
-        'Seguro de carga puerta a puerta disponible'
+        'Cargo from 1 m³ with volume/weight rates',
+        'Consolidation in strategic hubs (Shanghai, Hamburg, Miami)',
+        'Coordination of multiple suppliers at origin',
+        'Deconsolidation and distribution at destination',
+        'Door-to-door cargo insurance available'
       ]
     },
     {
       title: t('servicePages.seaTransport.services.service3.title'),
       description: t('servicePages.seaTransport.services.service3.description'),
       examples: [
-        'Vehículos, camiones, buses y maquinaria agrícola',
-        'Equipamiento minero sobre ruedas',
-        'Grúas móviles y maquinaria de construcción',
-        'Gestión de documentación vehicular y permisos',
-        'Rutas especializadas RoRo a Sudamérica y Oceanía'
+        'Vehicles, trucks, buses and agricultural machinery',
+        'Wheeled mining equipment',
+        'Mobile cranes and construction machinery',
+        'Vehicle documentation and permit management',
+        'Specialized RoRo routes to South America and Oceania'
       ]
     },
     {
       title: t('servicePages.seaTransport.services.service4.title'),
       description: t('servicePages.seaTransport.services.service4.description'),
       examples: [
-        'Estructuras metálicas y vigas de gran tamaño',
-        'Maquinaria industrial que excede dimensiones de contenedor',
-        'Componentes de plantas industriales y energía',
-        'Estudio de estiba, trincado y plan de carga',
-        'Coordinación con grúas especializadas y transporte terrestre'
+        'Metal structures and large beams',
+        'Industrial machinery exceeding container dimensions',
+        'Industrial and energy plant components',
+        'Stowage, lashing and cargo plan study',
+        'Coordination with specialized cranes and land transport'
       ]
     },
     {
       title: t('servicePages.seaTransport.services.service5.title'),
       description: t('servicePages.seaTransport.services.service5.description'),
       examples: [
-        'Transbordo en puertos intermedios (Panamá, Callao)',
-        'Carga en tránsito hacia países mediterráneos',
-        'Optimización de rutas y reducción de costos arancelarios',
-        'Coordinación entre aduanas de múltiples jurisdicciones'
+        'Transshipment at intermediate ports (Panama, Callao)',
+        'Cargo in transit to Mediterranean countries',
+        'Route optimization and tariff cost reduction',
+        'Coordination between customs in multiple jurisdictions'
       ]
     },
     {
       title: t('servicePages.seaTransport.services.service6.title'),
       description: t('servicePages.seaTransport.services.service6.description'),
       examples: [
-        'Productos farmacéuticos y químicos sensibles',
-        'Alimentos congelados y productos del mar',
-        'Frutas y vegetales con cadena de frío',
-        'Flores y productos agrícolas de exportación',
-        'Data loggers y certificación de temperatura ATP/FEU',
-        'Contenedores 20\' y 40\' Reefer High Cube'
+        'Pharmaceutical and sensitive chemical products',
+        'Frozen food and seafood',
+        'Fruits and vegetables with cold chain',
+        'Flowers and export agricultural products',
+        'Data loggers and ATP/FEU temperature certification',
+        '20\' and 40\' Reefer High Cube containers'
       ]
     }
   ];

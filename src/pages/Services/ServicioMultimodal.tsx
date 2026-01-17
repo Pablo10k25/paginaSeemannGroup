@@ -64,80 +64,80 @@ const ServicioMultimodal = () => {
       title: t('servicePages.multimodal.services.service1.title'),
       description: t('servicePages.multimodal.services.service1.description'),
       examples: [
-        'Carga contenerizada FCL/LCL desde Asia',
-        'Transporte terrestre desde puerto a destino final',
-        'Despacho aduanero integral',
-        'Entrega door-to-door en toda Latinoamérica'
+        'Containerized FCL/LCL cargo from Asia',
+        'Land transport from port to final destination',
+        'Comprehensive customs clearance',
+        'Door-to-door delivery throughout Latin America'
       ]
     },
     {
       title: t('servicePages.multimodal.services.service2.title'),
       description: t('servicePages.multimodal.services.service2.description'),
       examples: [
-        'Vuelo internacional con carga general o DG',
-        'Transporte terrestre refrigerado',
-        'Almacenamiento temporal',
-        'Distribución last-mile urbana'
+        'International flight with general cargo or DG',
+        'Refrigerated land transport',
+        'Temporary storage',
+        'Urban last-mile distribution'
       ]
     },
     {
       title: t('servicePages.multimodal.services.service3.title'),
       description: t('servicePages.multimodal.services.service3.description'),
       examples: [
-        'Transporte terrestre desde origen a puerto',
-        'Embarque marítimo intercontinental',
-        'Vuelo final para componentes urgentes',
-        'Coordinación de permisos y documentación'
+        'Land transport from origin to port',
+        'Intercontinental sea shipment',
+        'Final flight for urgent components',
+        'Permit and documentation coordination'
       ]
     },
     {
       title: t('servicePages.multimodal.services.service4.title'),
       description: t('servicePages.multimodal.services.service4.description'),
       examples: [
-        'Ruta: Proveedor (Asia) → Puerto + Vuelo urgente → Cliente (LATAM)',
-        'Consolidación en hub estratégico',
-        'Reducción de costos vs. aéreo puro',
-        'Optimización de tiempos vs. marítimo puro'
+        'Route: Supplier (Asia) → Port + Urgent flight → Client (LATAM)',
+        'Consolidation in strategic hub',
+        'Cost reduction vs. pure air',
+        'Time optimization vs. pure sea'
       ]
     },
     {
       title: t('servicePages.multimodal.services.service5.title'),
       description: t('servicePages.multimodal.services.service5.description'),
       examples: [
-        'Transporte marítimo de maquinaria pesada',
-        'Transporte terrestre especializado con permisos',
-        'Grúas y equipamiento de carga/descarga',
-        'Seguros all-risk y coordinación técnica'
+        'Sea transport of heavy machinery',
+        'Specialized land transport with permits',
+        'Cranes and loading/unloading equipment',
+        'All-risk insurance and technical coordination'
       ]
     },
     {
       title: t('servicePages.multimodal.services.service6.title'),
       description: t('servicePages.multimodal.services.service6.description'),
       examples: [
-        'Single point of contact para toda la cadena',
-        'Tracking unificado end-to-end',
-        'Gestión de proveedores y carriers',
-        'Reportería consolidada y KPIs'
+        'Single point of contact for entire supply chain',
+        'Unified end-to-end tracking',
+        'Supplier and carrier management',
+        'Consolidated reporting and KPIs'
       ]
     },
     {
       title: t('servicePages.multimodal.services.service7.title'),
       description: t('servicePages.multimodal.services.service7.description'),
       examples: [
-        'Almacenamiento en hubs estratégicos',
-        'Cross-docking y consolidación de cargas',
-        'Transbordo entre modos sin demoras',
-        'Inventario en tránsito con visibilidad'
+        'Storage in strategic hubs',
+        'Cross-docking and cargo consolidation',
+        'Modal transshipment without delays',
+        'In-transit inventory with visibility'
       ]
     },
     {
       title: t('servicePages.multimodal.services.service8.title'),
       description: t('servicePages.multimodal.services.service8.description'),
       examples: [
-        'Transporte de químicos con certificación DG',
-        'Manejo de pharma con cadena de frío',
-        'Mercancía perecible con ATP/FEU',
-        'Documentación especializada y compliance'
+        'Transport of chemicals with DG certification',
+        'Pharma handling with cold chain',
+        'Perishable goods with ATP/FEU',
+        'Specialized documentation and compliance'
       ]
     }
   ];

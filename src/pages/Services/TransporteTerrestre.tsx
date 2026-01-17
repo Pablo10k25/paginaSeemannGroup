@@ -63,54 +63,54 @@ const TransporteTerrestre = () => {
       title: t('servicePages.landTransport.services.service1.title'),
       description: t('servicePages.landTransport.services.service1.description'),
       examples: [
-        'Cargas desde 100 kg hasta 10 toneladas',
-        'Consolidación de múltiples clientes en rutas fijas',
-        'Salidas diarias en corredores principales',
-        'Tarifa por peso/volumen con prorrateo',
-        'Entregas urbanas y distribución local'
+        'Cargo from 100 kg up to 10 tons',
+        'Consolidation of multiple clients on fixed routes',
+        'Daily departures on main corridors',
+        'Weight/volume rate with proration',
+        'Urban deliveries and local distribution'
       ]
     },
     {
       title: t('servicePages.landTransport.services.service2.title'),
       description: t('servicePages.landTransport.services.service2.description'),
       examples: [
-        'Camiones de 28 toneladas (capacidad estándar)',
-        'Tractocamiones con semiremolque (33 toneladas)',
-        'Servicio directo puerta a puerta sin transbordos',
-        'Ideal para cargas frágiles o de alto valor',
-        'Tracking GPS en tiempo real durante todo el trayecto'
+        '28-ton trucks (standard capacity)',
+        'Tractor-trailers with semi-trailer (33 tons)',
+        'Direct door-to-door service without transshipments',
+        'Ideal for fragile or high-value cargo',
+        'Real-time GPS tracking throughout the journey'
       ]
     },
     {
       title: t('servicePages.landTransport.services.service3.title'),
       description: t('servicePages.landTransport.services.service3.description'),
       examples: [
-        'Vehículos ligeros y pesados (autos, camiones, buses)',
-        'Maquinaria agrícola y de construcción sobre ruedas',
-        'Equipamiento minero autopropulsado',
-        'Gestión de permisos de circulación y escoltas',
-        'Rutas especializadas para cargas sobredimensionadas'
+        'Light and heavy vehicles (cars, trucks, buses)',
+        'Agricultural and construction machinery on wheels',
+        'Self-propelled mining equipment',
+        'Circulation permit and escort management',
+        'Specialized routes for oversized cargo'
       ]
     },
     {
       title: t('servicePages.landTransport.services.service4.title'),
       description: t('servicePages.landTransport.services.service4.description'),
       examples: [
-        'Maquinaria industrial de gran tamaño',
-        'Estructuras metálicas y vigas',
-        'Componentes para minería y construcción',
-        'Coordinación de camas bajas y plataformas especiales',
-        'Gestión de permisos especiales y rutas autorizadas'
+        'Large-scale industrial machinery',
+        'Metal structures and beams',
+        'Components for mining and construction',
+        'Coordination of lowboys and special platforms',
+        'Special permit and authorized route management'
       ]
     },
     {
       title: t('servicePages.landTransport.services.service5.title'),
       description: t('servicePages.landTransport.services.service5.description'),
       examples: [
-        'Coordinación de pasos fronterizos Chile-Argentina-Perú',
-        'Gestión de DTA (Declaración de Tránsito Aduanero)',
-        'Optimización de rutas multi-país',
-        'Cumplimiento normativo en cada jurisdicción'
+        'Coordination of Chile-Argentina-Peru border crossings',
+        'DTA management (Customs Transit Declaration)',
+        'Multi-country route optimization',
+        'Regulatory compliance in each jurisdiction'
       ]
     }
   ];
