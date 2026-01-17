@@ -183,7 +183,7 @@ const ServicioMultimodal = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="/images/Imagen Multimodal.png"
+                src="/images/Imagen Servicio Multimodal.png"
                 alt="Transporte multimodal integrado"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"

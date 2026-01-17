@@ -193,7 +193,7 @@ const Warehouse = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="/images/Imagen Warehouse.png"
+                src="/images/Imagen Warehouse & Fulfillment.png"
                 alt="Almacenamiento y logística"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"
