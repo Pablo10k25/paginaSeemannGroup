@@ -193,7 +193,7 @@ const Warehouse = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="/images/Imagen Warehouse & Fulfillment.png"
+                src="C:\\Users\\pabli\\Documents\\GitHub\\paginaSeemannGroup\\public\\images\\ImagenWare.png"
                 alt="Almacenamiento y logística"
                 className="img-fluid rounded shadow-lg"
                 loading="lazy"
