@@ -160,29 +160,39 @@ const ServicesPreviewGrid = () => {
                   }
                 }}
               >
-                {/* Image Background with Grid Overlay */}
+                {/* Image Background */}
                 <div 
-                  className="service-preview-image"
                   style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    backgroundImage: `url(${service.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    zIndex: 0
+                  }}
+                />
+                
+                {/* Grid Pattern Overlay */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
                     backgroundImage: `
-                      linear-gradient(0deg, rgba(0,0,0,0.05) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px),
-                      url(${service.image})
+                      linear-gradient(0deg, rgba(0,0,0,0.08) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)
                     `,
-                    backgroundSize: '20px 20px, 20px 20px, cover',
-                    backgroundPosition: 'center, center, center',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    opacity: 0.2,
-                    transition: 'opacity 0.3s ease',
-                    zIndex: 0
+                    backgroundSize: '20px 20px',
+                    zIndex: 1
                   }}
                 />
                 
-                {/* Additional gradient overlay for better text readability */}
+                {/* White overlay for text readability */}
                 <div 
                   style={{
                     position: 'absolute',
@@ -190,12 +200,12 @@ const ServicesPreviewGrid = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%)',
-                    zIndex: 0
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.85) 100%)',
+                    zIndex: 2
                   }}
                 />
                 
-                <div className="service-preview-content" style={{ position: 'relative', zIndex: 1 }}>
+                <div className="service-preview-content" style={{ position: 'relative', zIndex: 3 }}>
                   {/* Icon with color accent */}
                   <div 
                     className="service-preview-icon"
