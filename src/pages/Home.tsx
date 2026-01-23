@@ -1,4 +1,6 @@
 ﻿import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import HeroSlider from '../components/HeroSlider';
 import StatsBar from '../components/StatsBar';
@@ -10,6 +12,7 @@ import WhatsAppButton from '../components/WhatsAppButton';
 import AOS from 'aos';
 
 const Home = () => {
+  const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init({
