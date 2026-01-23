@@ -4,7 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Calculator } from 'lucide-react';
 
-const HeroSlider = () => {
+interface HeroSliderProps {
+  version?: 'old' | 'new';
+}
+
+const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
   const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -111,25 +115,56 @@ const HeroSlider = () => {
                     transition={{ duration: 0.6, delay: 0.6, ease: "backOut" }}
                     style={{ position: 'relative', zIndex: 3 }}
                   >
-                    <Link to="/contacto">
-                    <motion.button
-                      className="btn btn-primary text-white btn-lg me-3 mb-3"
-                      whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(189, 33, 33, 0.5)" }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Calculator size={20} className="me-2" />
-                      {t('hero.ctaQuote', 'Cotizar Ahora')}
-                    </motion.button>
-                  </Link>
-                    <motion.a 
-                      href="#servicios-section"
-                      className="btn btn-outline-white border-w-2 btn-lg mb-3"
-                      whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      {t('hero.ctaCoverage', 'Ver Cobertura')}
-                      <ArrowRight size={20} className="ms-2" />
-                    </motion.a>
+                    {version === 'old' ? (
+                      <>
+                        <Link to="/contacto">
+                          <motion.button
+                            className="btn btn-primary text-white btn-lg me-3 mb-3"
+                            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(189, 33, 33, 0.5)" }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            <Calculator size={20} className="me-2" />
+                            Solicitar Cotización
+                          </motion.button>
+                        </Link>
+                        <motion.p 
+                          className="text-white mt-3"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.8, delay: 0.8 }}
+                          style={{ position: 'relative', zIndex: 3, fontSize: '0.95rem' }}
+                        >
+                          Si eres un cliente de Seemann, <a href="/portal-clientes" className="text-white fw-bold text-decoration-underline">entra al portal de Clientes para Cotizar Ahora</a>
+                        </motion.p>
+                      </>
+                    ) : (
+                      <div className="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
+                        <Link to="/contacto">
+                          <motion.button
+                            className="btn btn-lg btn-light text-primary fw-bold px-5 py-3"
+                            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255, 255, 255, 0.3)" }}
+                            whileTap={{ scale: 0.95 }}
+                            style={{ minWidth: '260px' }}
+                          >
+                            <Calculator size={24} className="me-2" />
+                            Solicita tu Cotización
+                            <div className="small mt-1 fw-normal">Para nuevos clientes</div>
+                          </motion.button>
+                        </Link>
+                        <a href="/portal-clientes">
+                          <motion.button
+                            className="btn btn-lg btn-primary text-white fw-bold px-5 py-3"
+                            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(189, 33, 33, 0.5)" }}
+                            whileTap={{ scale: 0.95 }}
+                            style={{ minWidth: '260px' }}
+                          >
+                            <ArrowRight size={24} className="me-2" />
+                            Cotiza Ahora
+                            <div className="small mt-1 fw-normal">Clientes con sesión activa</div>
+                          </motion.button>
+                        </a>
+                      </div>
+                    )}
                   </motion.div>
                 )}
               </div>
