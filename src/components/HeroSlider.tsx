@@ -67,10 +67,10 @@ const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
-          initial={{ opacity: 0, scale: 1.1 }}
+          initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          exit={{ opacity: 0, scale: 1.05 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
           className={`hero-slide ${slides[currentSlide].overlay ? 'overlay' : ''}`}
           style={{
             backgroundImage: `url(${slides[currentSlide].image})`,

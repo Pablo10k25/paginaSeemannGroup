@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
@@ -10,10 +11,12 @@ interface Executive {
   phone: string;
   image: string;
   hierarchy: number; // 1: Gerente, 2: Especialista, 3: Ejecutivo
+  country: string; // 'CL', 'US', 'PE', 'CO', 'MX'
 }
 
 const ExecutiveTeam = () => {
   const { t } = useTranslation();
+  const [selectedCountry, setSelectedCountry] = useState('CL');
 
   const executives: Executive[] = [
     {
@@ -23,7 +26,8 @@ const ExecutiveTeam = () => {
       email: 'ifmaldonado@seemanngroup.com',
       phone: '+56984607954',
       image: '/ejecutivos/im.png',
-      hierarchy: 1
+      hierarchy: 1,
+      country: 'CL'
     },
     {
       id: 'na',
@@ -32,7 +36,8 @@ const ExecutiveTeam = () => {
       email: 'naguilera@seemanngroup.com',
       phone: '+56958022095',
       image: '/ejecutivos/na.png',
-      hierarchy: 1
+      hierarchy: 1,
+      country: 'CL'
     },
     {
       id: 'dc',
@@ -41,7 +46,8 @@ const ExecutiveTeam = () => {
       email: 'dcaceres@seemanngroup.com',
       phone: '+56989335603',
       image: '/ejecutivos/dc.jpeg',
-      hierarchy: 2
+      hierarchy: 2,
+      country: 'CL'
     },
     {
       id: 'jz',
@@ -50,7 +56,8 @@ const ExecutiveTeam = () => {
       email: 'jzambrano@seemanngroup.com',
       phone: '+56985339119',
       image: '/ejecutivos/jz.png',
-      hierarchy: 3
+      hierarchy: 3,
+      country: 'CL'
     },
     {
       id: 'jf',
@@ -59,7 +66,8 @@ const ExecutiveTeam = () => {
       email: 'jflores@seemanngroup.com',
       phone: '+56941456933',
       image: '/ejecutivos/jf.jpeg',
-      hierarchy: 3
+      hierarchy: 3,
+      country: 'CL'
     },
     {
       id: 'nl',
@@ -68,7 +76,8 @@ const ExecutiveTeam = () => {
       email: 'nlobo@seemanngroup.com',
       phone: '+56985039253',
       image: '/ejecutivos/nl.jpeg',
-      hierarchy: 3
+      hierarchy: 3,
+      country: 'CL'
     },
     {
       id: 'lm',
@@ -77,7 +86,8 @@ const ExecutiveTeam = () => {
       email: 'lmartinez@seemanngroup.com',
       phone: '+56958178234',
       image: '/ejecutivos/lm.png',
-      hierarchy: 3
+      hierarchy: 3,
+      country: 'CL'
     },
     {
       id: 'ds',
@@ -86,12 +96,24 @@ const ExecutiveTeam = () => {
       email: 'dsoto@seemanngroup.com',
       phone: '+56987698674',
       image: '/ejecutivos/ds.png',
-      hierarchy: 3
+      hierarchy: 3,
+      country: 'CL'
     }
   ];
 
+  const countries = [
+    { code: 'CL', name: 'Chile', flag: '🇨🇱' },
+    { code: 'US', name: 'USA', flag: '🇺🇸' },
+    { code: 'PE', name: 'Perú', flag: '🇵🇪' },
+    { code: 'CO', name: 'Colombia', flag: '🇨🇴' },
+    { code: 'MX', name: 'México', flag: '🇲🇽' }
+  ];
+
+  // Filtrar ejecutivos por país seleccionado
+  const filteredExecutives = executives.filter(exec => exec.country === selectedCountry);
+  
   // Ordenar por jerarquía
-  const sortedExecutives = [...executives].sort((a, b) => a.hierarchy - b.hierarchy);
+  const sortedExecutives = [...filteredExecutives].sort((a, b) => a.hierarchy - b.hierarchy);
 
   const formatPhoneForWhatsApp = (phone: string) => {
     return phone.replace(/\+/g, '').replace(/\s/g, '');
@@ -189,8 +211,48 @@ const ExecutiveTeam = () => {
         <div className="row mb-4">
           <div className="col-12 text-center">
             <div className="block-heading-1" data-aos="fade-up">
-              <span>{t('executives.meetTeam')}</span>
-              <h2>{t('executives.ourTeam')}</h2>
+              <span className="text-primary" style={{ fontSize: '1.1rem', letterSpacing: '1px' }}>
+                {t('executives.contactLabel', 'Contacta a')}
+              </span>
+              <h2 style={{ fontSize: '2.5rem', fontWeight: '700', textTransform: 'uppercase' }}>
+                {t('executives.teamTitle', 'NUESTRO EQUIPO')}
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        {/* Country Selector - Banderas */}
+        <div className="row mb-5">
+          <div className="col-12">
+            <div className="d-flex justify-content-center gap-3 flex-wrap" data-aos="fade-up">
+              {countries.map((country) => (
+                <button
+                  key={country.code}
+                  onClick={() => setSelectedCountry(country.code)}
+                  className={`country-flag-btn ${selectedCountry === country.code ? 'active' : ''}`}
+                  style={{
+                    border: selectedCountry === country.code ? '3px solid #bd2121' : '2px solid #ddd',
+                    borderRadius: '12px',
+                    padding: '15px 25px',
+                    background: selectedCountry === country.code ? '#fff' : '#f8f9fa',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    boxShadow: selectedCountry === country.code ? '0 4px 12px rgba(189, 33, 33, 0.3)' : '0 2px 6px rgba(0,0,0,0.1)',
+                    transform: selectedCountry === country.code ? 'scale(1.05)' : 'scale(1)'
+                  }}
+                >
+                  <div className="d-flex flex-column align-items-center gap-2">
+                    <span style={{ fontSize: '2.5rem' }}>{country.flag}</span>
+                    <span style={{ 
+                      fontSize: '0.9rem', 
+                      fontWeight: selectedCountry === country.code ? '700' : '500',
+                      color: selectedCountry === country.code ? '#bd2121' : '#333'
+                    }}>
+                      {country.name}
+                    </span>
+                  </div>
+                </button>
+              ))}
             </div>
           </div>
         </div>

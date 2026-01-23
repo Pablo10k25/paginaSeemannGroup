@@ -765,8 +765,8 @@
     "subtitle": "We are here to help you with your international logistics",
     "title": "Request your quotes with us",
     "meetTeam": "Meet our team",
-    "ourTeam": "Our Executives",
-    "contactViaWhatsApp": "Contact via WhatsApp"
+    "ourTeam": "Our Executives",    "contactLabel": "Contact",
+    "teamTitle": "OUR TEAM",    "contactViaWhatsApp": "Contact via WhatsApp"
   },
   "newclients": {
     "subtitle": "It is a pleasure for us to have you as a new client",
