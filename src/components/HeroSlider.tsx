@@ -116,10 +116,10 @@ const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
                     style={{ position: 'relative', zIndex: 3 }}
                   >
                     {version === 'old' ? (
-                      <>
+                      <div className="d-flex flex-column align-items-center">
                         <Link to="/contacto">
                           <motion.button
-                            className="btn btn-primary text-white btn-lg me-3 mb-3"
+                            className="btn btn-primary text-white btn-lg px-4 py-2 mb-3"
                             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(189, 33, 33, 0.5)" }}
                             whileTap={{ scale: 0.95 }}
                           >
@@ -128,41 +128,47 @@ const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
                           </motion.button>
                         </Link>
                         <motion.p 
-                          className="text-white mt-3"
+                          className="text-white text-center"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.8, delay: 0.8 }}
-                          style={{ position: 'relative', zIndex: 3, fontSize: '0.95rem' }}
+                          style={{ position: 'relative', zIndex: 3, fontSize: '0.95rem', maxWidth: '500px' }}
                         >
                           Si eres un cliente de Seemann, <a href="/portal-clientes" className="text-white fw-bold text-decoration-underline">entra al portal de Clientes para Cotizar Ahora</a>
                         </motion.p>
-                      </>
+                      </div>
                     ) : (
-                      <div className="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
-                        <Link to="/contacto">
-                          <motion.button
-                            className="btn btn-lg btn-light text-primary fw-bold px-5 py-3"
-                            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255, 255, 255, 0.3)" }}
-                            whileTap={{ scale: 0.95 }}
-                            style={{ minWidth: '260px' }}
-                          >
-                            <Calculator size={24} className="me-2" />
-                            Solicita tu Cotización
-                            <div className="small mt-1 fw-normal">Para nuevos clientes</div>
-                          </motion.button>
-                        </Link>
-                        <a href="/portal-clientes">
-                          <motion.button
-                            className="btn btn-lg btn-primary text-white fw-bold px-5 py-3"
-                            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(189, 33, 33, 0.5)" }}
-                            whileTap={{ scale: 0.95 }}
-                            style={{ minWidth: '260px' }}
-                          >
-                            <ArrowRight size={24} className="me-2" />
-                            Cotiza Ahora
-                            <div className="small mt-1 fw-normal">Clientes con sesión activa</div>
-                          </motion.button>
-                        </a>
+                      <div className="d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center">
+                        <div className="d-flex flex-column align-items-center">
+                          <Link to="/contacto">
+                            <motion.button
+                              className="btn btn-lg btn-light text-primary fw-bold px-4 py-2"
+                              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255, 255, 255, 0.3)" }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <Calculator size={20} className="me-2" />
+                              Solicita tu Cotización
+                            </motion.button>
+                          </Link>
+                          <p className="text-white mt-2 mb-0" style={{ fontSize: '0.9rem' }}>
+                            Para nuevos clientes
+                          </p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center">
+                          <a href="/portal-clientes">
+                            <motion.button
+                              className="btn btn-lg btn-primary text-white fw-bold px-4 py-2"
+                              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(189, 33, 33, 0.5)" }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <ArrowRight size={20} className="me-2" />
+                              Cotiza Ahora
+                            </motion.button>
+                          </a>
+                          <p className="text-white mt-2 mb-0" style={{ fontSize: '0.9rem' }}>
+                            Clientes con sesión activa
+                          </p>
+                        </div>
                       </div>
                     )}
                   </motion.div>
