@@ -102,11 +102,11 @@ const ExecutiveTeam = () => {
   ];
 
   const countries = [
-    { code: 'CL', name: 'Chile', flag: '🇨🇱' },
-    { code: 'US', name: 'USA', flag: '🇺🇸' },
-    { code: 'PE', name: 'Perú', flag: '🇵🇪' },
-    { code: 'CO', name: 'Colombia', flag: '🇨🇴' },
-    { code: 'MX', name: 'México', flag: '🇲🇽' }
+    { code: 'CL', name: 'Chile', flag: 'https://flagcdn.com/cl.svg' },
+    { code: 'US', name: 'USA', flag: 'https://flagcdn.com/us.svg' },
+    { code: 'PE', name: 'Perú', flag: 'https://flagcdn.com/pe.svg' },
+    { code: 'CO', name: 'Colombia', flag: 'https://flagcdn.com/co.svg' },
+    { code: 'MX', name: 'México', flag: 'https://flagcdn.com/mx.svg' }
   ];
 
   // Filtrar ejecutivos por país seleccionado
@@ -242,7 +242,17 @@ const ExecutiveTeam = () => {
                   }}
                 >
                   <div className="d-flex flex-column align-items-center gap-2">
-                    <span style={{ fontSize: '2.5rem' }}>{country.flag}</span>
+                    <img 
+                      src={country.flag} 
+                      alt={`${country.name} flag`}
+                      style={{ 
+                        width: '60px', 
+                        height: '45px',
+                        objectFit: 'cover',
+                        borderRadius: '4px',
+                        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                      }}
+                    />
                     <span style={{ 
                       fontSize: '0.9rem', 
                       fontWeight: selectedCountry === country.code ? '700' : '500',
