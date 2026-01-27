@@ -187,11 +187,17 @@ const Servicios = () => {
           <div className="row align-items-center">
             <div className="col-lg-6" data-aos="fade-right">
               <div className="services-value-image">
-                <img 
-                  src="/images/1202.png" 
-                  alt="Seemann Group Services" 
+                <video 
+                  src="/images/VideoSee.mp4" 
                   className="img-fluid rounded-lg shadow-lg"
-                />
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+                >
+                  Tu navegador no soporta el elemento de video.
+                </video>
               </div>
             </div>
             <div className="col-lg-6" data-aos="fade-left">
