@@ -62,82 +62,35 @@ const TransporteAereo = () => {
   const services = [
     {
       title: t('servicePages.airTransport.services.service1.title'),
-      description: t('servicePages.airTransport.services.service1.description'),
-      examples: [
-        'Manufactured products and industrial components',
-        'Textiles and apparel with tight deadlines',
-        'Consumer electronics and technological devices',
-        'Commercial samples and prototypes for international fairs'
-      ]
+      description: t('servicePages.airTransport.services.service1.description')
     },
     {
       title: t('servicePages.airTransport.services.service2.title'),
-      description: t('servicePages.airTransport.services.service2.description'),
-      examples: [
-        'Lithium batteries and electronic equipment with DG components',
-        'Chemical products classified according to UN',
-        'Flammable and corrosive materials with specialized packaging',
-        'Complete DGD documentation and IATA compliant labeling'
-      ]
+      description: t('servicePages.airTransport.services.service2.description')
     },
     {
       title: t('servicePages.airTransport.services.service3.title'),
-      description: t('servicePages.airTransport.services.service3.description'),
-      examples: [
-        'Heavy industrial machinery and mining equipment',
-        'Renewable energy components (wind blades, panels)',
-        'Large-sized metal structures',
-        'Feasibility studies and dedicated charters'
-      ]
+      description: t('servicePages.airTransport.services.service3.description')
     },
     {
       title: t('servicePages.airTransport.services.service4.title'),
-      description: t('servicePages.airTransport.services.service4.description'),
-      examples: [
-        'Cargo in transit to Mediterranean final destinations',
-        'Consolidation in strategic hubs (Miami, Panama)',
-        'Reduction of tariff costs and customs clearance times'
-      ]
+      description: t('servicePages.airTransport.services.service4.description')
     },
     {
       title: t('servicePages.airTransport.services.service5.title'),
-      description: t('servicePages.airTransport.services.service5.description'),
-      examples: [
-        'Automotive components for assembly lines',
-        'Critical spare parts for mining and manufacturing industry',
-        'Pharmaceutical supplies for continuous production',
-        'Coordination with your ERP/WMS systems'
-      ]
+      description: t('servicePages.airTransport.services.service5.description')
     },
     {
       title: t('servicePages.airTransport.services.service6.title'),
-      description: t('servicePages.airTransport.services.service6.description'),
-      examples: [
-        'Vaccines and medications with ATP/FEU validation',
-        'Biological products and clinical samples',
-        'High-value food and agricultural products',
-        'Data loggers and continuous temperature monitoring'
-      ]
+      description: t('servicePages.airTransport.services.service6.description')
     },
     {
       title: t('servicePages.airTransport.services.service7.title'),
-      description: t('servicePages.airTransport.services.service7.description'),
-      examples: [
-        'Mining emergencies and plant shutdowns',
-        'Urgent medical equipment',
-        'Projects with non-negotiable deadlines',
-        'Quote and availability in less than 4 hours'
-      ]
+      description: t('servicePages.airTransport.services.service7.description')
     },
     {
       title: t('servicePages.airTransport.services.service8.title'),
-      description: t('servicePages.airTransport.services.service8.description'),
-      examples: [
-        'Legal documents and international contracts',
-        'Product samples for clients and trade shows',
-        'Small high-criticality spare parts',
-        'Door-to-door tracking with digital POD'
-      ]
+      description: t('servicePages.airTransport.services.service8.description')
     }
   ];
 
@@ -216,7 +169,7 @@ const TransporteAereo = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.airTransport.whyChoose.title')}</h2>
-              <p className="lead text-muted mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p1') }} />
+              <p className="lead mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }} dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p1') }} />
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p2') }} />
               <p className="mb-0" dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p3') }} />
             </div>

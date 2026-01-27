@@ -60,69 +60,27 @@ const TransporteMaritimo = () => {
   const services = [
     {
       title: t('servicePages.seaTransport.services.service1.title'),
-      description: t('servicePages.seaTransport.services.service1.description'),
-      examples: [
-        'Standard dry containers (Dry Van) 20\'/40\'/40\'HC',
-        'High Cube containers for high-volume cargo',
-        'Open Top for machinery and special cargo',
-        'Flat Rack for oversized cargo',
-        'Annual contract negotiation with preferential rates'
-      ]
+      description: t('servicePages.seaTransport.services.service1.description')
     },
     {
       title: t('servicePages.seaTransport.services.service2.title'),
-      description: t('servicePages.seaTransport.services.service2.description'),
-      examples: [
-        'Cargo from 1 m³ with volume/weight rates',
-        'Consolidation in strategic hubs (Shanghai, Hamburg, Miami)',
-        'Coordination of multiple suppliers at origin',
-        'Deconsolidation and distribution at destination',
-        'Door-to-door cargo insurance available'
-      ]
+      description: t('servicePages.seaTransport.services.service2.description')
     },
     {
       title: t('servicePages.seaTransport.services.service3.title'),
-      description: t('servicePages.seaTransport.services.service3.description'),
-      examples: [
-        'Vehicles, trucks, buses and agricultural machinery',
-        'Wheeled mining equipment',
-        'Mobile cranes and construction machinery',
-        'Vehicle documentation and permit management',
-        'Specialized RoRo routes to South America and Oceania'
-      ]
+      description: t('servicePages.seaTransport.services.service3.description')
     },
     {
       title: t('servicePages.seaTransport.services.service4.title'),
-      description: t('servicePages.seaTransport.services.service4.description'),
-      examples: [
-        'Metal structures and large beams',
-        'Industrial machinery exceeding container dimensions',
-        'Industrial and energy plant components',
-        'Stowage, lashing and cargo plan study',
-        'Coordination with specialized cranes and land transport'
-      ]
+      description: t('servicePages.seaTransport.services.service4.description')
     },
     {
       title: t('servicePages.seaTransport.services.service5.title'),
-      description: t('servicePages.seaTransport.services.service5.description'),
-      examples: [
-        'Transshipment at intermediate ports (Panama, Callao)',
-        'Cargo in transit to Mediterranean countries',
-        'Route optimization and tariff cost reduction',
-        'Coordination between customs in multiple jurisdictions'
-      ]
+      description: t('servicePages.seaTransport.services.service5.description')
     },
     {
       title: t('servicePages.seaTransport.services.service6.title'),
-      description: t('servicePages.seaTransport.services.service6.description'),
-      examples: [
-        'Pharmaceutical and sensitive chemical products',
-        'Frozen food and seafood',
-        'Fruits and vegetables with cold chain',
-        'Flowers and export agricultural products',
-        'Data loggers and ATP/FEU temperature certification',
-        '20\' and 40\' Reefer High Cube containers'
-      ]
+      description: t('servicePages.seaTransport.services.service6.description')
     }
   ];
 
@@ -196,7 +154,7 @@ const TransporteMaritimo = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.seaTransport.whyChoose.title')}</h2>
-              <p className="lead text-muted mb-4">{t('servicePages.seaTransport.whyChoose.p1')}</p>
+              <p className="lead mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }}>{t('servicePages.seaTransport.whyChoose.p1')}</p>
               <p className="mb-4">{t('servicePages.seaTransport.whyChoose.p2')}</p>
               <p className="mb-0">{t('servicePages.seaTransport.whyChoose.p3')}</p>
             </div>

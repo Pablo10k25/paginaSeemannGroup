@@ -62,53 +62,23 @@ const Warehouse = () => {
   const services = [
     {
       title: t('servicePages.warehouse.services.service1.title'),
-      description: t('servicePages.warehouse.services.service1.description'),
-      examples: [
-        'Reception and unloading with quality control',
-        'Selective rack and drive-in storage',
-        'Order preparation (picking and packing)',
-        'Last-mile distribution and scheduled deliveries'
-      ]
+      description: t('servicePages.warehouse.services.service1.description')
     },
     {
       title: t('servicePages.warehouse.services.service2.title'),
-      description: t('servicePages.warehouse.services.service2.description'),
-      examples: [
-        'API integration with your ERP/WMS',
-        'Real-time inventories via dashboard',
-        'Traceability by batch and serial number',
-        'Automatic minimum stock alerts'
-      ]
+      description: t('servicePages.warehouse.services.service2.description')
     },
     {
       title: t('servicePages.warehouse.services.service3.title'),
-      description: t('servicePages.warehouse.services.service3.description'),
-      examples: [
-        'Storage of classified chemical products',
-        'Cold rooms (2°C - 8°C) for pharma',
-        'Segregated areas for flammables',
-        '24/7 temperature and humidity control'
-      ]
+      description: t('servicePages.warehouse.services.service3.description')
     },
     {
       title: t('servicePages.warehouse.services.service4.title'),
-      description: t('servicePages.warehouse.services.service4.description'),
-      examples: [
-        'Product labeling and re-labeling',
-        'Kitting and light assembly',
-        'Custom packaging and shrink wrap',
-        'Quality control and certifications'
-      ]
+      description: t('servicePages.warehouse.services.service4.description')
     },
     {
       title: t('servicePages.warehouse.services.service5.title'),
-      description: t('servicePages.warehouse.services.service5.description'),
-      examples: [
-        'Cross-docking to reduce times',
-        'Consolidation of multiple loads',
-        'Deconsolidation and segregation by destination',
-        'Distribution route optimization'
-      ]
+      description: t('servicePages.warehouse.services.service5.description')
     }
   ];
 
@@ -187,7 +157,7 @@ const Warehouse = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.warehouse.whyChoose.title')}</h2>
-              <p className="lead text-muted mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.warehouse.whyChoose.p1') }} />
+              <p className="lead mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }} dangerouslySetInnerHTML={{ __html: t('servicePages.warehouse.whyChoose.p1') }} />
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.warehouse.whyChoose.p2') }} />
               <p className="mb-0" dangerouslySetInnerHTML={{ __html: t('servicePages.warehouse.whyChoose.p3') }} />
             </div>

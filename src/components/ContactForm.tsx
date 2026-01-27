@@ -27,8 +27,9 @@ const ContactForm = () => {
   }, []);
   const [formData, setFormData] = useState({
     name: '',
+    phone: '',
     email: '',
-    phone: ''
+    position: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -56,7 +57,8 @@ const ContactForm = () => {
         body: JSON.stringify({
           nombre: formData.name,
           telefono: formData.phone,
-          correo: formData.email || undefined
+          correo: formData.email || undefined,
+          cargo: formData.position || undefined
         }),
       });
 
@@ -65,7 +67,7 @@ const ContactForm = () => {
       if (response.ok && data.success) {
         setIsSubmitting(false);
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '' });
+        setFormData({ name: '', phone: '', email: '', position: '' });
         
         // Resetear estado después de 5 segundos
         setTimeout(() => setSubmitStatus('idle'), 5000);
@@ -194,7 +196,7 @@ const ContactForm = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder={t('contact.form.namePlaceholder', 'Tu nombre')}
+                      placeholder={t('contact.form.namePlaceholder', 'Tu nombre completo')}
                     />
                   </div>
 
@@ -214,10 +216,10 @@ const ContactForm = () => {
                     />
                   </div>
 
-                  <div className="mb-4">
+                  <div className="mb-3">
                     <label className="form-label">
                       <Mail size={18} className="me-2" />
-                      {t('contact.form.email', 'Email Corporativo')}
+                      {t('contact.form.email', 'Email Corporativo')} *
                     </label>
                     <input
                       type="email"
@@ -225,7 +227,23 @@ const ContactForm = () => {
                       className="form-control form-control-lg"
                       value={formData.email}
                       onChange={handleChange}
+                      required
                       placeholder={t('contact.form.emailPlaceholder', 'tu@empresa.com')}
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="form-label">
+                      <User size={18} className="me-2" />
+                      {t('contact.form.position', 'Cargo')} ({t('contact.form.optional', 'Opcional')})
+                    </label>
+                    <input
+                      type="text"
+                      name="position"
+                      className="form-control form-control-lg"
+                      value={formData.position}
+                      onChange={handleChange}
+                      placeholder={t('contact.form.positionPlaceholder', 'Gerente de Operaciones, Director, etc.')}
                     />
                   </div>
 

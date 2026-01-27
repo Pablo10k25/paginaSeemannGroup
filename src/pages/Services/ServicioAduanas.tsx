@@ -62,53 +62,23 @@ const ServicioAduanas = () => {
   const services = [
     {
       title: t('servicePages.customs.services.service1.title'),
-      description: t('servicePages.customs.services.service1.description'),
-      examples: [
-        'Correct tariff classification (NCM/HTS)',
-        'Customs valuation according to WTO regulations',
-        'DUS/DIN preparation with complete documentation',
-        'Special permit management (SAG, ISP, SEC)'
-      ]
+      description: t('servicePages.customs.services.service1.description')
     },
     {
       title: t('servicePages.customs.services.service2.title'),
-      description: t('servicePages.customs.services.service2.description'),
-      examples: [
-        'DUS for sea, air and land export',
-        'Certificates of origin for FTA (USA, EU, China)',
-        'SAG inspections for agricultural products',
-        'Drawback and tax refund management'
-      ]
+      description: t('servicePages.customs.services.service2.description')
     },
     {
       title: t('servicePages.customs.services.service3.title'),
-      description: t('servicePages.customs.services.service3.description'),
-      examples: [
-        'Coordination with official customs agents',
-        'Physical and documentary inspection tracking',
-        'Resolution of observations and amendments',
-        'Tariff and tax payments'
-      ]
+      description: t('servicePages.customs.services.service3.description')
     },
     {
       title: t('servicePages.customs.services.service4.title'),
-      description: t('servicePages.customs.services.service4.description'),
-      examples: [
-        'Temporary admission regime management',
-        'Active and passive processing',
-        'Free zones and customs warehouses',
-        'International transit and transshipments'
-      ]
+      description: t('servicePages.customs.services.service4.description')
     },
     {
       title: t('servicePages.customs.services.service5.title'),
-      description: t('servicePages.customs.services.service5.description'),
-      examples: [
-        'Import of pharmaceutical products (ISP)',
-        'Chemical products and controlled substances',
-        'Medical equipment and devices',
-        'Food and agricultural products (SAG)'
-      ]
+      description: t('servicePages.customs.services.service5.description')
     }
   ];
 
@@ -187,7 +157,7 @@ const ServicioAduanas = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.customs.whyChoose.title')}</h2>
-              <p className="lead text-muted mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.customs.whyChoose.p1') }} />
+              <p className="lead mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }} dangerouslySetInnerHTML={{ __html: t('servicePages.customs.whyChoose.p1') }} />
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.customs.whyChoose.p2') }} />
               <p className="mb-0" dangerouslySetInnerHTML={{ __html: t('servicePages.customs.whyChoose.p3') }} />
             </div>

@@ -62,43 +62,19 @@ const ServicioMultimodal = () => {
   const services = [
     {
       title: t('servicePages.multimodal.services.service1.title'),
-      description: t('servicePages.multimodal.services.service1.description'),
-      examples: [
-        'Containerized FCL/LCL cargo from Asia',
-        'Land transport from port to final destination',
-        'Comprehensive customs clearance',
-        'Door-to-door delivery throughout Latin America'
-      ]
+      description: t('servicePages.multimodal.services.service1.description')
     },
     {
       title: t('servicePages.multimodal.services.service2.title'),
-      description: t('servicePages.multimodal.services.service2.description'),
-      examples: [
-        'International flight with general cargo or DG',
-        'Refrigerated land transport',
-        'Temporary storage',
-        'Urban last-mile distribution'
-      ]
+      description: t('servicePages.multimodal.services.service2.description')
     },
     {
       title: t('servicePages.multimodal.services.service3.title'),
-      description: t('servicePages.multimodal.services.service3.description'),
-      examples: [
-        'Land transport from origin to port',
-        'Intercontinental sea shipment',
-        'Final flight for urgent components',
-        'Permit and documentation coordination'
-      ]
+      description: t('servicePages.multimodal.services.service3.description')
     },
     {
       title: t('servicePages.multimodal.services.service4.title'),
-      description: t('servicePages.multimodal.services.service4.description'),
-      examples: [
-        'Route: Supplier (Asia) → Port + Urgent flight → Client (LATAM)',
-        'Consolidation in strategic hub',
-        'Cost reduction vs. pure air',
-        'Time optimization vs. pure sea'
-      ]
+      description: t('servicePages.multimodal.services.service4.description')
     }
   ];
 
@@ -177,7 +153,7 @@ const ServicioMultimodal = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.multimodal.whyChoose.title')}</h2>
-              <p className="lead text-muted mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.multimodal.whyChoose.p1') }} />
+              <p className="lead mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }} dangerouslySetInnerHTML={{ __html: t('servicePages.multimodal.whyChoose.p1') }} />
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.multimodal.whyChoose.p2') }} />
               <p className="mb-0" dangerouslySetInnerHTML={{ __html: t('servicePages.multimodal.whyChoose.p3') }} />
             </div>

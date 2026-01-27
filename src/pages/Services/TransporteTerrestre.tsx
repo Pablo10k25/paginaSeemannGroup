@@ -61,57 +61,23 @@ const TransporteTerrestre = () => {
   const services = [
     {
       title: t('servicePages.landTransport.services.service1.title'),
-      description: t('servicePages.landTransport.services.service1.description'),
-      examples: [
-        'Cargo from 100 kg up to 10 tons',
-        'Consolidation of multiple clients on fixed routes',
-        'Daily departures on main corridors',
-        'Weight/volume rate with proration',
-        'Urban deliveries and local distribution'
-      ]
+      description: t('servicePages.landTransport.services.service1.description')
     },
     {
       title: t('servicePages.landTransport.services.service2.title'),
-      description: t('servicePages.landTransport.services.service2.description'),
-      examples: [
-        '28-ton trucks (standard capacity)',
-        'Tractor-trailers with semi-trailer (33 tons)',
-        'Direct door-to-door service without transshipments',
-        'Ideal for fragile or high-value cargo',
-        'Real-time GPS tracking throughout the journey'
-      ]
+      description: t('servicePages.landTransport.services.service2.description')
     },
     {
       title: t('servicePages.landTransport.services.service3.title'),
-      description: t('servicePages.landTransport.services.service3.description'),
-      examples: [
-        'Light and heavy vehicles (cars, trucks, buses)',
-        'Agricultural and construction machinery on wheels',
-        'Self-propelled mining equipment',
-        'Circulation permit and escort management',
-        'Specialized routes for oversized cargo'
-      ]
+      description: t('servicePages.landTransport.services.service3.description')
     },
     {
       title: t('servicePages.landTransport.services.service4.title'),
-      description: t('servicePages.landTransport.services.service4.description'),
-      examples: [
-        'Large-scale industrial machinery',
-        'Metal structures and beams',
-        'Components for mining and construction',
-        'Coordination of lowboys and special platforms',
-        'Special permit and authorized route management'
-      ]
+      description: t('servicePages.landTransport.services.service4.description')
     },
     {
       title: t('servicePages.landTransport.services.service5.title'),
-      description: t('servicePages.landTransport.services.service5.description'),
-      examples: [
-        'Coordination of Chile-Argentina-Peru border crossings',
-        'DTA management (Customs Transit Declaration)',
-        'Multi-country route optimization',
-        'Regulatory compliance in each jurisdiction'
-      ]
+      description: t('servicePages.landTransport.services.service5.description')
     }
   ];
 
@@ -185,7 +151,7 @@ const TransporteTerrestre = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.landTransport.whyChoose.title')}</h2>
-              <p className="lead text-muted mb-4">{t('servicePages.landTransport.whyChoose.p1')}</p>
+              <p className="lead mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }}>{t('servicePages.landTransport.whyChoose.p1')}</p>
               <p className="mb-4">{t('servicePages.landTransport.whyChoose.p2')}</p>
               <p className="mb-0">{t('servicePages.landTransport.whyChoose.p3')}</p>
             </div>
