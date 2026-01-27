@@ -55,7 +55,7 @@ const ServicesPreviewGrid = () => {
     {
       id: 'warehouse',
       icon: <Warehouse size={48} strokeWidth={1.5} />,
-      image: '/images/Imagen Warehouse & Fulfillment.png',
+      image: '/images/ImagenWare.png',
       name: t('servicesPage.grid.warehouse.title', 'Warehouse & Fulfillment'),
       oneLiner: t('servicesPage.grid.warehouse.oneLiner', 'Almacenaje estratégico 24/7'),
       color: '#f59e0b',
@@ -171,11 +171,13 @@ const ServicesPreviewGrid = () => {
                     backgroundImage: `url(${service.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    opacity: 0.35,
+                    filter: 'blur(1px)',
                     zIndex: 0
                   }}
                 />
                 
-                {/* Grid Pattern Overlay */}
+                {/* White overlay for text readability - more transparent */}
                 <div 
                   style={{
                     position: 'absolute',
@@ -183,23 +185,7 @@ const ServicesPreviewGrid = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundImage: `
-                      repeating-linear-gradient(0deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 20px),
-                      repeating-linear-gradient(90deg, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 1px, transparent 1px, transparent 20px)
-                    `,
-                    zIndex: 1
-                  }}
-                />
-                
-                {/* White overlay for text readability - very subtle */}
-                <div 
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    background: 'rgba(255,255,255,0.25)',
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.9) 100%)',
                     zIndex: 2
                   }}
                 />

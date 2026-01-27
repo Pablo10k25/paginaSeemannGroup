@@ -134,7 +134,7 @@ const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
                           transition={{ duration: 0.8, delay: 0.8 }}
                           style={{ position: 'relative', zIndex: 3, fontSize: '0.95rem', maxWidth: '500px' }}
                         >
-                          Si eres un cliente de Seemann, <a href="/portal-clientes" className="text-white fw-bold text-decoration-underline">entra al portal de Clientes para Cotizar Ahora</a>
+                          Si eres un cliente de Seemann, <a href="https://portalclientes.seemanngroup.com/login" className="text-white fw-bold text-decoration-underline" target="_blank" rel="noopener noreferrer">entra al portal de Clientes para Cotizar Ahora</a>
                         </motion.p>
                       </div>
                     ) : (
@@ -155,7 +155,7 @@ const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
                           </p>
                         </div>
                         <div className="d-flex flex-column align-items-center">
-                          <a href="/portal-clientes">
+                          <a href="https://portalclientes.seemanngroup.com/login" target="_blank" rel="noopener noreferrer">
                             <motion.button
                               className="btn btn-lg btn-primary text-white fw-bold px-4 py-2"
                               whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(189, 33, 33, 0.5)" }}
