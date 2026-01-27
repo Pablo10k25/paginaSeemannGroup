@@ -25,20 +25,17 @@ const Home = () => {
 
   return (
     <div className="site-wrap" id="home-section">
-      {/* VERSIÓN ANTERIOR (Mejorada) - Con slider de 3 imágenes */}
+      {/* Hero Principal - Slider de 3 imágenes */}
       <HeroSlider version="old" />
-
-      {/* VERSIÓN NUEVA - Con 2 botones separados y slider de 3 imágenes */}
-      <HeroSlider version="new" />
 
       {/* Stats Bar - Números que impresionan */}
       <StatsBar />
 
-      {/* Tracking Section - Nueva */}
-      <TrackingSection />
-
       {/* Servicios Section - Preview Grid Moderna */}
       <ServicesPreviewGrid />
+
+      {/* Tracking Section */}
+      <TrackingSection />
 
       {/* Testimonials Section - Social Proof */}
       <TestimonialsSection />

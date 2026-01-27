@@ -76,7 +76,7 @@ const BlogSection = () => {
                 data-aos-delay={index * 100}
               >
                 <article className="blog-card">
-                  <Link to={`/blog/${slug}`} className="blog-card-image-link">
+                  <Link to={`/insights/${slug}`} className="blog-card-image-link">
                     <div 
                       className="blog-card-image"
                       style={{ backgroundImage: `url(${imageUrl})` }}
@@ -102,14 +102,14 @@ const BlogSection = () => {
                     </div>
 
                     <h3 className="blog-card-title">
-                      <Link to={`/blog/${slug}`}>{title}</Link>
+                      <Link to={`/insights/${slug}`}>{title}</Link>
                     </h3>
 
                     {excerpt && (
                       <p className="blog-card-excerpt">{excerpt}</p>
                     )}
 
-                    <Link to={`/blog/${slug}`} className="blog-card-link">
+                    <Link to={`/insights/${slug}`} className="blog-card-link">
                       {t('blog.readMore')}
                       <ArrowRight size={16} className="ms-2" />
                     </Link>
@@ -123,7 +123,7 @@ const BlogSection = () => {
         {posts.length >= 3 && (
           <div className="row mt-5">
             <div className="col-12 text-center">
-              <Link to="/blog" className="btn btn-outline-danger btn-lg">
+              <Link to="/insights" className="btn btn-outline-danger btn-lg">
                 {t('blog.viewAll')}
               </Link>
             </div>

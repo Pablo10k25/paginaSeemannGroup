@@ -165,7 +165,7 @@
         },
         "service4": {
           "title": "Carga en Tránsito / Bonded Cargo",
-          "description": "Gestión de carga bajo régimen de tránsito aduanero sin nacionalización. Carga en tránsito hacia destinos finales mediterráneos. Consolidación en hubs estratégicos (Miami, Panamá). Reducción de costos arancelarios y tiempos de desaduanaje."
+          "description": "Gestión de carga bajo régimen de tránsito aduanero sin nacionalización. Optimización de tiempos y costos en operaciones multi-país."
         },
         "service5": {
           "title": "Just-in-Time (JIT)",
@@ -913,7 +913,7 @@
   },
   "blog": {
     "subtitle": "Noticias y Novedades",
-    "title": "Nuestro Blog",
+    "title": "Nuestros Insights",
     "readMore": "Leer más",
     "viewAll": "Ver todos los artículos",
     "backToBlog": "Volver al blog",

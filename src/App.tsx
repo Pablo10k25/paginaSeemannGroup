@@ -61,8 +61,8 @@ function App() {
           <Route path="/servicios/servicio-multimodal" element={<ServicioMultimodal />} />
           <Route path="/servicios/servicio-aduanas" element={<ServicioAduanas />} />
           <Route path="/nuestra-empresa" element={<NuestraEmpresa />} />
-          <Route path="/blog" element={<BlogList />} />
-          <Route path="/blog/:slug" element={<BlogPost />} /> 
+          <Route path="/insights" element={<BlogList />} />
+          <Route path="/insights/:slug" element={<BlogPost />} /> 
           <Route path="/team" element={<Cotizaciones />} />
           <Route path="/nuevos-clientes" element={<NewClients />} />
           <Route path="/contacto" element={<ContactForm />} />

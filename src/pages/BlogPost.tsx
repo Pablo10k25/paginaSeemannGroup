@@ -110,7 +110,7 @@ const BlogPost = () => {
           <div className="text-center" style={{ minHeight: '60vh' }}>
             <h1 className="mb-4">{t('blog.notFound')}</h1>
             <p className="mb-4">{t('blog.notFoundMessage')}</p>
-            <Link to="/blog" className="btn btn-primary">
+            <Link to="/insights" className="btn btn-primary">
               <ArrowLeft size={16} className="me-2" />
               {t('blog.backToBlog')}
             </Link>
@@ -143,7 +143,7 @@ const BlogPost = () => {
           <div className="col-lg-10 col-xl-8">
             
             <div className="blog-post-back" data-aos="fade-up">
-              <Link to="/blog" className="blog-back-link">
+              <Link to="/insights" className="blog-back-link">
                 <ArrowLeft size={18} />
                 {t('blog.backToBlog')}
               </Link>
@@ -219,7 +219,7 @@ const BlogPost = () => {
               </div>
 
               <div className="blog-post-footer" data-aos="fade-up">
-                <Link to="/blog" className="btn btn-outline-danger">
+                <Link to="/insights" className="btn btn-outline-danger">
                   <ArrowLeft size={16} className="me-2" />
                   {t('blog.backToBlog')}
                 </Link>

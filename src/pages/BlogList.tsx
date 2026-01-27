@@ -115,7 +115,7 @@ const BlogList = () => {
                     data-aos-delay={index * 50}
                   >
                     <article className="blog-card">
-                      <Link to={`/blog/${slug}`} className="blog-card-image-link">
+                      <Link to={`/insights/${slug}`} className="blog-card-image-link">
                         <div 
                           className="blog-card-image"
                           style={{ backgroundImage: `url(${imageUrl})` }}
@@ -143,14 +143,14 @@ const BlogList = () => {
                         </div>
 
                         <h3 className="blog-card-title">
-                          <Link to={`/blog/${slug}`}>{title}</Link>
+                          <Link to={`/insights/${slug}`}>{title}</Link>
                         </h3>
 
                         {excerpt && (
                           <p className="blog-card-excerpt">{excerpt}</p>
                         )}
 
-                        <Link to={`/blog/${slug}`} className="blog-card-link">
+                        <Link to={`/insights/${slug}`} className="blog-card-link">
                           {t('blog.readMore')}
                           <ArrowRight size={16} className="ms-2" />
                         </Link>

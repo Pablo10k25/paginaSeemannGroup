@@ -126,7 +126,7 @@
         "service1": { "title": "General Cargo", "description": "Complete management of commercial shipments with optimized routes and flexible frequencies. Ideal for standard cargo requiring reduced transit times." },
         "service2": { "title": "Dangerous Goods (DG Shipments)", "description": "Certified handling of dangerous goods with trained personnel according to IATA standards. Strict compliance with international regulations." },
         "service3": { "title": "Project Cargo", "description": "Solutions for oversized and out-of-gauge cargo. Detailed planning and multi-team coordination." },
-        "service4": { "title": "Bonded Cargo / In Transit", "description": "Management of cargo under customs transit regime without nationalization. Cargo in transit to Mediterranean final destinations. Consolidation in strategic hubs (Miami, Panama). Reduction of tariff costs and customs clearance times." },
+        "service4": { "title": "Bonded Cargo / In Transit", "description": "Management of cargo under customs transit regime without nationalization. Time and cost optimization in multi-country operations." },
         "service5": { "title": "Just-in-Time (JIT)", "description": "Operations synchronized with your production line. Precise deliveries that avoid storage costs and optimize working capital." },
         "service6": { "title": "Pharmaceutical & Reefer / Perishable Cargo", "description": "Transport of pharmaceutical and perishable products with validated temperature control. Certified cold chain." },
         "service7": { "title": "Charter / Dedicated Flights", "description": "Exclusive flights for critical cargo requiring immediate departure. Maximum flexibility and total process control." },
@@ -751,7 +751,7 @@
   },
   "blog": {
     "subtitle": "News and Updates",
-    "title": "Our Blog",
+    "title": "Our Insights",
     "readMore": "Read more",
     "viewAll": "View all articles",
     "backToBlog": "Back to blog",
