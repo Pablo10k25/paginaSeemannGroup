@@ -14,7 +14,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { nombre, telefono, correo } = req.body;
+    const { nombre, telefono, correo, cargo } = req.body;
 
     if (!nombre || !telefono) {
       return res.status(400).json({ error: 'Faltan datos requeridos' });
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
         const timestamp = new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' });
         
         const response = await fetch(
-          `https://sheets.googleapis.com/v4/spreadsheets/${process.env.GOOGLE_SHEET_ID}/values/Respuestas!A:D:append?valueInputOption=USER_ENTERED`,
+          `https://sheets.googleapis.com/v4/spreadsheets/${process.env.GOOGLE_SHEET_ID}/values/Respuestas!A:E:append?valueInputOption=USER_ENTERED`,
           {
             method: 'POST',
             headers: {
@@ -43,7 +43,7 @@ export default async function handler(req, res) {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              values: [[timestamp, nombre, telefono, correo || 'No proporcionado']],
+              values: [[timestamp, nombre, telefono, correo || 'No proporcionado', cargo || 'No proporcionado']],
             }),
           }
         );
@@ -70,6 +70,7 @@ export default async function handler(req, res) {
             <tr><td style="padding: 8px; border: 1px solid #ddd; background: #f9f9f9;"><strong>Nombre:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${nombre}</td></tr>
             <tr><td style="padding: 8px; border: 1px solid #ddd; background: #f9f9f9;"><strong>Teléfono:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${telefono}</td></tr>
             ${correo ? `<tr><td style="padding: 8px; border: 1px solid #ddd; background: #f9f9f9;"><strong>Email:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${correo}</td></tr>` : ''}
+            ${cargo ? `<tr><td style="padding: 8px; border: 1px solid #ddd; background: #f9f9f9;"><strong>Cargo:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${cargo}</td></tr>` : ''}
           </table>
           <p>Nuestro equipo se pondrá en contacto con usted a la brevedad.</p>
           <p>Saludos cordiales,<br><strong>Equipo Seemann Group</strong></p>
@@ -131,9 +132,15 @@ export default async function handler(req, res) {
                       </td>
                     </tr>
                     <tr>
-                      <td style="padding: 12px 0;">
+                      <td style="padding: 12px 0; border-bottom: 1px solid #dee2e6;">
                         <strong style="color: #495057; display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Email</strong>
                         <span style="color: #212529; font-size: 16px;">${correo || 'No proporcionado'}</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px 0;">
+                        <strong style="color: #495057; display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Cargo</strong>
+                        <span style="color: #212529; font-size: 16px;">${cargo || 'No proporcionado'}</span>
                       </td>
                     </tr>
                   </table>

@@ -154,7 +154,7 @@ const TransporteMaritimo = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.seaTransport.whyChoose.title')}</h2>
-              <p className="lead mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }}>{t('servicePages.seaTransport.whyChoose.p1')}</p>
+              <p className="lead mb-4" style={{ color: '#070707', lineHeight: '1.3' }}>{t('servicePages.seaTransport.whyChoose.p1')}</p>
               <p className="mb-4">{t('servicePages.seaTransport.whyChoose.p2')}</p>
               <p className="mb-0">{t('servicePages.seaTransport.whyChoose.p3')}</p>
             </div>
@@ -229,9 +229,9 @@ const TransporteMaritimo = () => {
             <Link to="/contacto" className="btn btn-light btn-lg px-5">
               {t('servicePages.seaTransport.cta.btnPrimary')}
             </Link>
-            <Link to="/contacto" className="btn btn-outline-light btn-lg px-5">
+            <a href="https://pagina-seemann-group-mu.vercel.app/team" className="btn btn-outline-light btn-lg px-5">
               {t('servicePages.seaTransport.cta.btnSecondary')}
-            </Link>
+            </a>
           </div>
         </div>
       </section>

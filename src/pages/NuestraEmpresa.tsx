@@ -192,13 +192,13 @@ const NuestraEmpresa = () => {
                     >
                       Est. 1985
                     </div>
-                    <p className="lead mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }}>
+                    <p className="lead mb-4" style={{ color: '#070707', lineHeight: '1.3' }}>
                       {t('ourCompany.historia.p1')}
                     </p>
-                    <p className="mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }}>
+                    <p className="mb-4" style={{ color: '#070707', lineHeight: '1.3' }}>
                       {t('ourCompany.historia.p2')}
                     </p>
-                    <p className="mb-0" style={{ color: '#2c3e50', lineHeight: '1.8' }}>
+                    <p className="mb-0" style={{ color: '#070707', lineHeight: '1.3' }}>
                       {t('ourCompany.historia.p3')}
                     </p>
                   </div>
@@ -269,8 +269,8 @@ const NuestraEmpresa = () => {
                   </div>
                 </div>
                 <div className="card-body p-4">
-                  <p className="mb-3" style={{ color: '#2c3e50', lineHeight: '1.8' }}>{t('ourCompany.mision.p1')}</p>
-                  <p className="mb-0" style={{ color: '#2c3e50', lineHeight: '1.8' }}>{t('ourCompany.mision.p2')}</p>
+                  <p className="mb-3" style={{ color: '#070707', lineHeight: '1.3' }}>{t('ourCompany.mision.p1')}</p>
+                  <p className="mb-0" style={{ color: '#070707', lineHeight: '1.3' }}>{t('ourCompany.mision.p2')}</p>
                 </div>
               </div>
             </motion.div>
@@ -325,8 +325,8 @@ const NuestraEmpresa = () => {
                   </div>
                 </div>
                 <div className="card-body p-4">
-                  <p className="mb-3" style={{ color: '#2c3e50', lineHeight: '1.8' }}>{t('ourCompany.vision.p1')}</p>
-                  <p className="mb-0" style={{ color: '#2c3e50', lineHeight: '1.8' }}>{t('ourCompany.vision.p2')}</p>
+                  <p className="mb-3" style={{ color: '#070707', lineHeight: '1.3' }}>{t('ourCompany.vision.p1')}</p>
+                  <p className="mb-0" style={{ color: '#070707', lineHeight: '1.3' }}>{t('ourCompany.vision.p2')}</p>
                 </div>
               </div>
             </motion.div>

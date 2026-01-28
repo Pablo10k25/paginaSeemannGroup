@@ -153,7 +153,7 @@ const ServicioMultimodal = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.multimodal.whyChoose.title')}</h2>
-              <p className="lead mb-4" style={{ color: '#2c3e50', lineHeight: '1.8' }} dangerouslySetInnerHTML={{ __html: t('servicePages.multimodal.whyChoose.p1') }} />
+              <p className="lead mb-4" style={{ color: '#070707', lineHeight: '1.3' }} dangerouslySetInnerHTML={{ __html: t('servicePages.multimodal.whyChoose.p1') }} />
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.multimodal.whyChoose.p2') }} />
               <p className="mb-0" dangerouslySetInnerHTML={{ __html: t('servicePages.multimodal.whyChoose.p3') }} />
             </div>
@@ -224,9 +224,9 @@ const ServicioMultimodal = () => {
             <Link to="/contacto" className="btn btn-light btn-lg px-5">
               {t('servicePages.multimodal.cta.btnPrimary')}
             </Link>
-            <Link to="/contacto" className="btn btn-outline-light btn-lg px-5">
+            <a href="https://pagina-seemann-group-mu.vercel.app/team" className="btn btn-outline-light btn-lg px-5">
               {t('servicePages.multimodal.cta.btnSecondary')}
-            </Link>
+            </a>
           </div>
         </div>
       </section>
