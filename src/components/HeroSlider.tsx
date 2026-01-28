@@ -124,7 +124,7 @@ const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
                             whileTap={{ scale: 0.95 }}
                           >
                             <Calculator size={20} className="me-2" />
-                            Solicitar Cotización
+                            {t('hero.requestQuoteBtn', 'Solicitar Cotización')}
                           </motion.button>
                         </Link>
                         <motion.p 
@@ -134,7 +134,7 @@ const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
                           transition={{ duration: 0.8, delay: 0.8 }}
                           style={{ position: 'relative', zIndex: 3, fontSize: '0.95rem', maxWidth: '500px' }}
                         >
-                          Si eres un cliente de Seemann, <a href="https://portalclientes.seemanngroup.com/login" className="text-white fw-bold text-decoration-underline" target="_blank" rel="noopener noreferrer">entra al portal de Clientes para Cotizar Ahora</a>
+                          {t('hero.clientPortalText', 'Si eres un cliente de Seemann, ')}<a href="https://portalclientes.seemanngroup.com/login" className="text-white fw-bold text-decoration-underline" target="_blank" rel="noopener noreferrer">{t('hero.clientPortalLink', 'entra al portal de Clientes para Cotizar Ahora')}</a>
                         </motion.p>
                       </div>
                     ) : (
@@ -147,11 +147,11 @@ const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
                               whileTap={{ scale: 0.95 }}
                             >
                               <Calculator size={20} className="me-2" />
-                              Solicita tu Cotización
+                              {t('hero.requestQuoteBtn', 'Solicita tu Cotización')}
                             </motion.button>
                           </Link>
                           <p className="text-white mt-2 mb-0" style={{ fontSize: '0.9rem' }}>
-                            Para nuevos clientes
+                            {t('hero.newClientLabel', 'Para nuevos clientes')}
                           </p>
                         </div>
                         <div className="d-flex flex-column align-items-center">
@@ -162,11 +162,11 @@ const HeroSlider = ({ version = 'old' }: HeroSliderProps) => {
                               whileTap={{ scale: 0.95 }}
                             >
                               <ArrowRight size={20} className="me-2" />
-                              Cotiza Ahora
+                              {t('hero.quoteBtn', 'Cotiza Ahora')}
                             </motion.button>
                           </a>
                           <p className="text-white mt-2 mb-0" style={{ fontSize: '0.9rem' }}>
-                            Clientes con sesión activa
+                            {t('hero.existingClientLabel', 'Clientes con sesión activa')}
                           </p>
                         </div>
                       </div>

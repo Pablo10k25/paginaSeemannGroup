@@ -21,8 +21,13 @@
     "welcome": "Connecting your business to the world",
     "newClientSubtitle": "35+ years moving more than cargo: we move trust",
     "newClientBtn": "New Client",
+    "newClientLabel": "For new clients",
+    "existingClientLabel": "Clients with active session",
     "quoteTitle": "Logistics solutions that drive your business",
     "quoteBtn": "Quote Now",
+    "requestQuoteBtn": "Request Quote",
+    "clientPortalText": "If you are a Seemann client, enter the ",
+    "clientPortalLink": "Client Portal to Quote Now",
     "experience": "Proven experience in international logistics",
     "globalNetwork": "Your global logistics partner",
     "networkDesc": "Own network in 5 countries with 3 strategic international alliances",
@@ -87,6 +92,9 @@
     "subtitle": "Contact us and discover how we can help you",
     "quote": "Request Quote",
     "contact": "Contact Us"
+  },
+  "services": {
+    "viewAll": "View all services in detail"
   },
   "industries": {
     "title": "Solutions for your industry",
@@ -754,6 +762,7 @@
   "blog": {
     "subtitle": "News and Updates",
     "title": "Our Insights",
+    "description": "Stay informed with the latest news in international trade and global logistics",
     "readMore": "Read more",
     "viewAll": "View all articles",
     "backToBlog": "Back to blog",
@@ -798,6 +807,9 @@
       "phonePlaceholder": "+56 9 XXXX XXXX",
       "company": "Company",
       "companyPlaceholder": "Your company name",
+      "position": "Position",
+      "optional": "Optional",
+      "positionPlaceholder": "Operations Manager, Director, etc.",
       "message": "Message",
       "messagePlaceholder": "Tell us about your logistics needs...",
       "submit": "Send Request",
