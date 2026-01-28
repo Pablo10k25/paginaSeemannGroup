@@ -590,57 +590,57 @@
       "bullet3Title": "Result",
       "bullet3Desc": "Optimized operations, 24/7 visibility, and controlled costs to drive your growth."
     },
+    "air": {
+      "title": "Air Transport",
+      "oneLiner": "Global speed and precision",
+      "shortDesc": "Speed and efficiency for urgent cargo",
+      "benefit1": "Express Deliveries 24-72hrs",
+      "benefit2": "Real-time tracking",
+      "benefit3": "Global coverage 100+ destinations"
+    },
+    "sea": {
+      "title": "Sea Transport",
+      "oneLiner": "Ocean capacity and economy",
+      "shortDesc": "Optimized FCL and LCL solutions",
+      "benefit1": "Full Container (FCL) and Consolidated (LCL)",
+      "benefit2": "Certified competitive rates",
+      "benefit3": "Complete document management"
+    },
+    "land": {
+      "title": "Land Transport",
+      "oneLiner": "Connecting continental destinations",
+      "shortDesc": "National and international land connection",
+      "benefit1": "Routes Chile, Peru, Argentina",
+      "benefit2": "Modern GPS-tracked fleet",
+      "benefit3": "Guaranteed on-time deliveries"
+    },
+    "warehouse": {
+      "title": "Warehouse & Fulfillment",
+      "oneLiner": "Strategic 24/7 warehousing",
+      "shortDesc": "Specialized warehousing and distribution",
+      "benefit1": "Certified strategic warehouses",
+      "benefit2": "WMS for inventory control",
+      "benefit3": "Personalized Pick & Pack"
+    },
+    "multimodal": {
+      "title": "Multimodal Service",
+      "oneLiner": "Optimized integrated routes",
+      "shortDesc": "Optimal combination of transport modes",
+      "benefit1": "Cost and time optimization",
+      "benefit2": "Single end-to-end contact",
+      "benefit3": "Personalized solutions"
+    },
+    "customs": {
+      "title": "Customs Service",
+      "oneLiner": "Guaranteed regulatory compliance",
+      "shortDesc": "Comprehensive and efficient customs management",
+      "benefit1": "Certified customs agents",
+      "benefit2": "Correct tariff classification",
+      "benefit3": "Agile clearances without delays"
+    },
     "grid": {
       "title": "Our Services",
-      "subtitle": "Logistics solutions designed for every need",
-      "air": {
-        "title": "Air Transport",
-        "oneLiner": "Global speed and precision",
-        "shortDesc": "Speed and efficiency for urgent cargo",
-        "benefit1": "Express Deliveries 24-72hrs",
-        "benefit2": "Real-time tracking",
-        "benefit3": "Global coverage 100+ destinations"
-      },
-      "sea": {
-        "title": "Sea Transport",
-        "oneLiner": "Ocean capacity and economy",
-        "shortDesc": "Optimized FCL and LCL solutions",
-        "benefit1": "Full Container (FCL) and Consolidated (LCL)",
-        "benefit2": "Certified competitive rates",
-        "benefit3": "Complete document management"
-      },
-      "land": {
-        "title": "Land Transport",
-        "oneLiner": "Connecting continental destinations",
-        "shortDesc": "National and international land connection",
-        "benefit1": "Routes Chile, Peru, Argentina",
-        "benefit2": "Modern GPS-tracked fleet",
-        "benefit3": "Guaranteed on-time deliveries"
-      },
-      "warehouse": {
-        "title": "Warehouse & Fulfillment",
-        "oneLiner": "Strategic 24/7 warehousing",
-        "shortDesc": "Specialized warehousing and distribution",
-        "benefit1": "Certified strategic warehouses",
-        "benefit2": "WMS for inventory control",
-        "benefit3": "Personalized Pick & Pack"
-      },
-      "multimodal": {
-        "title": "Multimodal Service",
-        "oneLiner": "Optimized integrated routes",
-        "shortDesc": "Optimal combination of transport modes",
-        "benefit1": "Cost and time optimization",
-        "benefit2": "Single end-to-end contact",
-        "benefit3": "Personalized solutions"
-      },
-      "customs": {
-        "title": "Customs Service",
-        "oneLiner": "Guaranteed regulatory compliance",
-        "shortDesc": "Comprehensive and efficient customs management",
-        "benefit1": "Certified customs agents",
-        "benefit2": "Correct tariff classification",
-        "benefit3": "Agile clearances without delays"
-      }
+      "subtitle": "Logistics solutions designed for every need"
     },
     "card": {
       "cta1": "More information"

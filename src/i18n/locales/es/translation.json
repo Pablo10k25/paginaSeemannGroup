@@ -744,57 +744,57 @@
       "bullet3Title": "Resultado",
       "bullet3Desc": "Operaciones optimizadas, visibilidad 24/7 y costos controlados para impulsar tu crecimiento."
     },
+    "air": {
+      "title": "Transporte Aéreo",
+      "oneLiner": "Velocidad y precisión global",
+      "shortDesc": "Velocidad y eficiencia para cargas urgentes",
+      "benefit1": "Entregas Express 24-72hrs",
+      "benefit2": "Tracking en tiempo real",
+      "benefit3": "Cobertura global 100+ destinos"
+    },
+    "sea": {
+      "title": "Transporte Marítimo",
+      "oneLiner": "Capacidad y economía en océanos",
+      "shortDesc": "Soluciones FCL y LCL optimizadas",
+      "benefit1": "Full Container (FCL) y Consolidado (LCL)",
+      "benefit2": "Tarifas competitivas certificadas",
+      "benefit3": "Gestión documental completa"
+    },
+    "land": {
+      "title": "Transporte Terrestre",
+      "oneLiner": "Conectando destinos continentales",
+      "shortDesc": "Conexión terrestre nacional e internacional",
+      "benefit1": "Rutas Chile, Perú, Argentina",
+      "benefit2": "Flota moderna rastreada GPS",
+      "benefit3": "Entregas puntuales garantizadas"
+    },
+    "warehouse": {
+      "title": "Warehouse & Fulfillment",
+      "oneLiner": "Almacenaje estratégico 24/7",
+      "shortDesc": "Almacenaje y distribución especializada",
+      "benefit1": "Bodegas certificadas estratégicas",
+      "benefit2": "WMS para control de inventario",
+      "benefit3": "Pick & Pack personalizado"
+    },
+    "multimodal": {
+      "title": "Servicio Multimodal",
+      "oneLiner": "Rutas optimizadas integradas",
+      "shortDesc": "Combinación óptima de modos de transporte",
+      "benefit1": "Optimización de costos y tiempos",
+      "benefit2": "Un solo interlocutor end-to-end",
+      "benefit3": "Soluciones personalizadas"
+    },
+    "customs": {
+      "title": "Servicio de Aduanas",
+      "oneLiner": "Cumplimiento normativo garantizado",
+      "shortDesc": "Gestión aduanera integral y eficiente",
+      "benefit1": "Agentes aduaneros certificados",
+      "benefit2": "Clasificación arancelaria correcta",
+      "benefit3": "Despachos ágiles sin demoras"
+    },
     "grid": {
       "title": "Nuestros Servicios",
-      "subtitle": "Soluciones logísticas diseñadas para cada necesidad",
-      "air": {
-        "title": "Transporte Aéreo",
-        "oneLiner": "Velocidad y precisión global",
-        "shortDesc": "Velocidad y eficiencia para cargas urgentes",
-        "benefit1": "Entregas Express 24-72hrs",
-        "benefit2": "Tracking en tiempo real",
-        "benefit3": "Cobertura global 100+ destinos"
-      },
-      "sea": {
-        "title": "Transporte Marítimo",
-        "oneLiner": "Capacidad y economía en océanos",
-        "shortDesc": "Soluciones FCL y LCL optimizadas",
-        "benefit1": "Full Container (FCL) y Consolidado (LCL)",
-        "benefit2": "Tarifas competitivas certificadas",
-        "benefit3": "Gestión documental completa"
-      },
-      "land": {
-        "title": "Transporte Terrestre",
-        "oneLiner": "Conectando destinos continentales",
-        "shortDesc": "Conexión terrestre nacional e internacional",
-        "benefit1": "Rutas Chile, Perú, Argentina",
-        "benefit2": "Flota moderna rastreada GPS",
-        "benefit3": "Entregas puntuales garantizadas"
-      },
-      "warehouse": {
-        "title": "Warehouse & Fulfillment",
-        "oneLiner": "Almacenaje estratégico 24/7",
-        "shortDesc": "Almacenaje y distribución especializada",
-        "benefit1": "Bodegas certificadas estratégicas",
-        "benefit2": "WMS para control de inventario",
-        "benefit3": "Pick & Pack personalizado"
-      },
-      "multimodal": {
-        "title": "Servicio Multimodal",
-        "oneLiner": "Rutas optimizadas integradas",
-        "shortDesc": "Combinación óptima de modos de transporte",
-        "benefit1": "Optimización de costos y tiempos",
-        "benefit2": "Un solo interlocutor end-to-end",
-        "benefit3": "Soluciones personalizadas"
-      },
-      "customs": {
-        "title": "Servicio de Aduanas",
-        "oneLiner": "Cumplimiento normativo garantizado",
-        "shortDesc": "Gestión aduanera integral y eficiente",
-        "benefit1": "Agentes aduaneros certificados",
-        "benefit2": "Clasificación arancelaria correcta",
-        "benefit3": "Despachos ágiles sin demoras"
-      }
+      "subtitle": "Soluciones logísticas diseñadas para cada necesidad"
     },
     "card": {
       "cta1": "Ver más información"
