@@ -188,7 +188,7 @@ const BlogList = () => {
                           )}
                         </div>
 
-                        <h3 className="blog-card-title" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif', fontWeight: '600' }}>
+                        <h3 className="blog-card-title">
                           <Link to={`/insights/${slug}`}>{title}</Link>
                         </h3>
 

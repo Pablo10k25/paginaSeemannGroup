@@ -37,7 +37,7 @@ const ServicesPreviewGrid = () => {
         t('servicesPage.air.benefit2', 'Tracking en tiempo real'),
         t('servicesPage.air.benefit3', 'Cobertura global 100+ destinos')
       ],
-      image: '/images/Imagen Transporte Aereo.png',
+      image: '/images/ImagenAer.png',
       color: '#0ea5e9',
       detailLink: '/servicios/transporte-aereo'
     },
@@ -51,7 +51,7 @@ const ServicesPreviewGrid = () => {
         t('servicesPage.sea.benefit2', 'Tarifas competitivas certificadas'),
         t('servicesPage.sea.benefit3', 'Gestión documental completa')
       ],
-      image: '/images/Imagen Transporte Maritimo.png',
+      image: '/images/ImagenMar.png',
       color: '#3b82f6',
       detailLink: '/servicios/transporte-maritimo'
     },
@@ -65,7 +65,7 @@ const ServicesPreviewGrid = () => {
         t('servicesPage.land.benefit2', 'Flota moderna rastreada GPS'),
         t('servicesPage.land.benefit3', 'Entregas puntuales garantizadas')
       ],
-      image: '/images/Imagen Transporte Terrestre.png',
+      image: '/images/ImagenTer.png',
       color: '#22c55e',
       detailLink: '/servicios/transporte-terrestre'
     },
@@ -79,7 +79,7 @@ const ServicesPreviewGrid = () => {
         t('servicesPage.warehouse.benefit2', 'WMS para control de inventario'),
         t('servicesPage.warehouse.benefit3', 'Pick & Pack personalizado')
       ],
-      image: '/images/Imagen Warehouse.png',
+      image: '/images/ImagenWare.png',
       color: '#f59e0b',
       detailLink: '/servicios/warehouse'
     },
@@ -93,7 +93,7 @@ const ServicesPreviewGrid = () => {
         t('servicesPage.multimodal.benefit2', 'Un solo interlocutor end-to-end'),
         t('servicesPage.multimodal.benefit3', 'Soluciones personalizadas')
       ],
-      image: '/images/Imagen Servicio Multimodal.png',
+      image: '/images/ImagenMulti.png',
       color: '#8b5cf6',
       detailLink: '/servicios/servicio-multimodal'
     },
@@ -107,7 +107,7 @@ const ServicesPreviewGrid = () => {
         t('servicesPage.customs.benefit2', 'Clasificación arancelaria correcta'),
         t('servicesPage.customs.benefit3', 'Despachos ágiles sin demoras')
       ],
-      image: '/images/Imagen Servicio de Aduanas.png',
+      image: '/images/ImagenAdu.png',
       color: '#ef4444',
       detailLink: '/servicios/servicio-aduanas'
     }
@@ -230,7 +230,7 @@ const ServicesPreviewGrid = () => {
             className="btn btn-outline-danger btn-lg px-5"
             style={{ borderWidth: '2px' }}
           >
-            Ver todos los servicios en detalle
+            {t('services.viewAll', 'Ver todos los servicios en detalle')}
             <ArrowRight size={20} className="ms-2" strokeWidth={2} />
           </Link>
         </motion.div>

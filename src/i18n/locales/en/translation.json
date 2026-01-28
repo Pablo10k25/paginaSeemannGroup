@@ -383,6 +383,8 @@
   "services": {
     "title": "Our Services",
     "subtitle": "Select one of our services",
+    "description": "Comprehensive logistics solutions designed for every need",
+    "viewAll": "View all services in detail",
     "seeMore": "See more",
     "contactUs": "Contact us",
     "howWeHelp": {

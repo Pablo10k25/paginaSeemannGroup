@@ -545,6 +545,8 @@
   "services": {
     "title": "Nuestros Servicios",
     "subtitle": "Seleccione uno de nuestros servicios",
+    "description": "Soluciones logísticas integrales diseñadas para cada necesidad",
+    "viewAll": "Ver todos los servicios en detalle",
     "seeMore": "Ver más",
     "contactUs": "Contáctanos",
     "howWeHelp": {

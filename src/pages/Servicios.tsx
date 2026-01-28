@@ -34,12 +34,12 @@ const Servicios = () => {
     {
       id: 'aereo',
       icon: <Plane size={40} />,
-      title: t('servicesPage.airTransport.title', 'Transporte Aéreo'),
-      subtitle: t('servicesPage.airTransport.shortDesc', 'Velocidad y eficiencia para cargas urgentes'),
+      title: t('servicesPage.air.title', 'Transporte Aéreo'),
+      subtitle: t('servicesPage.air.shortDesc', 'Velocidad y eficiencia para cargas urgentes'),
       benefits: [
-        t('servicesPage.airTransport.benefit1', 'Entregas Express 24-72hrs'),
-        t('servicesPage.airTransport.benefit2', 'Tracking en tiempo real'),
-        t('servicesPage.airTransport.benefit3', 'Cobertura global 100+ destinos')
+        t('servicesPage.air.benefit1', 'Entregas Express 24-72hrs'),
+        t('servicesPage.air.benefit2', 'Tracking en tiempo real'),
+        t('servicesPage.air.benefit3', 'Cobertura global 100+ destinos')
       ],
       image: '/images/Imagen Transporte Aereo.png',
       color: '#0ea5e9',
@@ -48,12 +48,12 @@ const Servicios = () => {
     {
       id: 'maritimo',
       icon: <Ship size={40} />,
-      title: t('servicesPage.seaTransport.title', 'Transporte Marítimo'),
-      subtitle: t('servicesPage.seaTransport.shortDesc', 'Soluciones FCL y LCL optimizadas'),
+      title: t('servicesPage.sea.title', 'Transporte Marítimo'),
+      subtitle: t('servicesPage.sea.shortDesc', 'Soluciones FCL y LCL optimizadas'),
       benefits: [
-        t('servicesPage.seaTransport.benefit1', 'Full Container (FCL) y Consolidado (LCL)'),
-        t('servicesPage.seaTransport.benefit2', 'Tarifas competitivas certificadas'),
-        t('servicesPage.seaTransport.benefit3', 'Gestión documental completa')
+        t('servicesPage.sea.benefit1', 'Full Container (FCL) y Consolidado (LCL)'),
+        t('servicesPage.sea.benefit2', 'Tarifas competitivas certificadas'),
+        t('servicesPage.sea.benefit3', 'Gestión documental completa')
       ],
       image: '/images/Imagen Transporte Marítimo.png',
       color: '#3b82f6',
@@ -62,12 +62,12 @@ const Servicios = () => {
     {
       id: 'terrestre',
       icon: <Truck size={40} />,
-      title: t('servicesPage.landTransport.title', 'Transporte Terrestre'),
-      subtitle: t('servicesPage.landTransport.shortDesc', 'Conexión terrestre nacional e internacional'),
+      title: t('servicesPage.land.title', 'Transporte Terrestre'),
+      subtitle: t('servicesPage.land.shortDesc', 'Conexión terrestre nacional e internacional'),
       benefits: [
-        t('servicesPage.landTransport.benefit1', 'Rutas Chile, Perú, Argentina'),
-        t('servicesPage.landTransport.benefit2', 'Flota moderna rastreada GPS'),
-        t('servicesPage.landTransport.benefit3', 'Entregas puntuales garantizadas')
+        t('servicesPage.land.benefit1', 'Rutas Chile, Perú, Argentina'),
+        t('servicesPage.land.benefit2', 'Flota moderna rastreada GPS'),
+        t('servicesPage.land.benefit3', 'Entregas puntuales garantizadas')
       ],
       image: '/images/Imagen Transporte Terrestre.png',
       color: '#22c55e',
