@@ -168,7 +168,7 @@ const ServicesPreviewGrid = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
         >
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.id}
               className="col-md-6 col-lg-4"
