@@ -20,13 +20,10 @@ const BlogPost = () => {
   const normalizeText = (text: string): string => {
     if (!text) return text;
     
-    // Map of Unicode fancy characters to normal characters
+    // Map of Unicode Mathematical Bold Italic characters to normal characters
     const fancyToNormal: { [key: string]: string } = {
-      // Mathematical Bold Italic (what your title uses)
       '𝙇': 'L', '𝙤': 'o', '𝙜': 'g', '𝙞': 'i', '𝙨': 's', '𝙩': 't', '𝙘': 'c', '𝙖': 'a',
-      '𝙙': 'd', '𝙚': 'e', '𝙢': 'm', '𝙥': 'p', '𝙘': 'c', '𝙩': 't', '𝙤': 'o', '𝙥': 'p',
-      '𝙧': 'r', '𝙮': 'y', '𝙘': 'c', '𝙩': 't', '𝙖': 'a', '𝙗': 'b', '𝙣': 'n', '𝙡': 'l',
-      '𝙘': 'c', '𝙣': 'n', '𝙛': 'f', 'í': 'í', 'ó': 'ó'
+      '𝙙': 'd', '𝙚': 'e', '𝙢': 'm', '𝙥': 'p', '𝙧': 'r', '𝙮': 'y', '𝙗': 'b', '𝙣': 'n', '𝙡': 'l', '𝙛': 'f'
     };
     
     return text.split('').map(char => fancyToNormal[char] || char).join('');
