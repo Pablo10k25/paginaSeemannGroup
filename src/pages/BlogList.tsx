@@ -13,6 +13,21 @@ const BlogList = () => {
   const [posts, setPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // Function to normalize Unicode fancy/italic characters to regular text
+  const normalizeText = (text: string): string => {
+    if (!text) return text;
+    
+    // Map of Unicode fancy characters to normal characters
+    const fancyToNormal: { [key: string]: string } = {
+      // Mathematical Bold Italic
+      '𝙇': 'L', '𝙤': 'o', '𝙜': 'g', '𝙞': 'i', '𝙨': 's', '𝙩': 't', '𝙘': 'c', '𝙖': 'a',
+      '𝙙': 'd', '𝙚': 'e', '𝙢': 'm', '𝙥': 'p', '𝙧': 'r', '𝙮': 'y', '𝙗': 'b', '𝙣': 'n',
+      '𝙡': 'l', '𝙛': 'f'
+    };
+    
+    return text.split('').map(char => fancyToNormal[char] || char).join('');
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -189,7 +204,7 @@ const BlogList = () => {
                         </div>
 
                         <h3 className="blog-card-title">
-                          <Link to={`/insights/${slug}`}>{title}</Link>
+                          <Link to={`/insights/${slug}`}>{normalizeText(title)}</Link>
                         </h3>
 
                         {excerpt && (
