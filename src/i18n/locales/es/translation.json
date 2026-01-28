@@ -892,6 +892,10 @@
     },
     "warehouse": {
       "title": "Warehouse",
+      "shortDesc": "Almacenaje y distribución especializada",
+      "benefit1": "Bodegas certificadas estratégicas",
+      "benefit2": "WMS para control de inventario",
+      "benefit3": "Pick & Pack personalizado",
       "p1": "Actualmente contamos con una amplia cobertura de warehouse a nivel mundial, que le otorgará a nuestros clientes la capacidad de almacenar y consolidar carga en los diversos puertos y/o aeropuertos, con el objetivo de optimizar cada logística.",
       "servicesIntro": "Dentro de los servicios que actualmente podemos entregarle a nuestro cliente se encuentra:",
       "service1": "Almacenaje de las órdenes",
@@ -901,10 +905,18 @@
     },
     "multimodal": {
       "title": "Servicio Multimodal",
+      "shortDesc": "Combinación óptima de modos de transporte",
+      "benefit1": "Optimización de costos y tiempos",
+      "benefit2": "Un solo interlocutor end-to-end",
+      "benefit3": "Soluciones personalizadas",
       "p1": "Dada la constante búsqueda de las empresa por la optimización de los procesos, con miras a la obtención de ventajas en sus industrias, es que nuestra empresa actualmente brinda un servicio multimodal a través del cual entrega la competitividad del transporte marítimo de cargas, sin desmedro del tiempo de tránsito asociado."
     },
     "customs": {
       "title": "Servicio de Aduanas",
+      "shortDesc": "Gestión aduanera integral y eficiente",
+      "benefit1": "Agentes aduaneros certificados",
+      "benefit2": "Clasificación arancelaria correcta",
+      "benefit3": "Despachos ágiles sin demoras",
       "p1": "Nuestra amplia red de oficinas a nivel internacional, nos permite asesorar a nuestros clientes en los diversos procesos de aduanas necesarios para la exportación y/o importación de bienes. Dicho servicio nos permitirá anticipar los requisitos necesarios a nivel documental y de packing."
     }
   },

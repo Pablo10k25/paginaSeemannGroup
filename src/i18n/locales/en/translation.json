@@ -738,6 +738,10 @@
     },
     "warehouse": {
       "title": "Warehouse",
+      "shortDesc": "Specialized warehousing and distribution",
+      "benefit1": "Certified strategic warehouses",
+      "benefit2": "WMS for inventory control",
+      "benefit3": "Personalized Pick & Pack",
       "p1": "We currently have extensive warehouse coverage worldwide, which will give our clients the ability to store and consolidate cargo at various ports and/or airports, with the aim of optimizing each logistics operation.",
       "servicesIntro": "Among the services we can currently provide to our client are:",
       "service1": "Order storage",
@@ -747,10 +751,18 @@
     },
     "multimodal": {
       "title": "Multimodal Service",
+      "shortDesc": "Optimal combination of transport modes",
+      "benefit1": "Cost and time optimization",
+      "benefit2": "Single end-to-end contact",
+      "benefit3": "Personalized solutions",
       "p1": "Given companies' constant search for process optimization, with a view to obtaining advantages in their industries, our company currently provides a multimodal service through which it delivers the competitiveness of maritime cargo transport, without detriment to the associated transit time."
     },
     "customs": {
       "title": "Customs Service",
+      "shortDesc": "Comprehensive and efficient customs management",
+      "benefit1": "Certified customs agents",
+      "benefit2": "Correct tariff classification",
+      "benefit3": "Agile clearances without delays",
       "p1": "Our extensive network of offices internationally allows us to advise our clients on the various customs processes necessary for the export and/or import of goods. This service will allow us to anticipate the necessary requirements at the documentary and packing level."
     }
   },
