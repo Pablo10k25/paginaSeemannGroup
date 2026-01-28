@@ -151,7 +151,7 @@ const TransporteTerrestre = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.landTransport.whyChoose.title')}</h2>
-              <p className="lead mb-4" style={{ color: '#070707', lineHeight: '1.3' }}>{t('servicePages.landTransport.whyChoose.p1')}</p>
+              <p className="mb-4" style={{ color: '#070707', lineHeight: '1.3' }}>{t('servicePages.landTransport.whyChoose.p1')}</p>
               <p className="mb-4">{t('servicePages.landTransport.whyChoose.p2')}</p>
               <p className="mb-0">{t('servicePages.landTransport.whyChoose.p3')}</p>
             </div>

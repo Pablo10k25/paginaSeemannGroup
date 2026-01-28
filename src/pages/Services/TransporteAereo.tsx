@@ -169,7 +169,7 @@ const TransporteAereo = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <h2 className="mb-4">{t('servicePages.airTransport.whyChoose.title')}</h2>
-              <p className="lead mb-4" style={{ color: '#070707', lineHeight: '1.3' }} dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p1') }} />
+              <p className="mb-4" style={{ color: '#070707', lineHeight: '1.3' }} dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p1') }} />
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p2') }} />
               <p className="mb-0" dangerouslySetInnerHTML={{ __html: t('servicePages.airTransport.whyChoose.p3') }} />
             </div>

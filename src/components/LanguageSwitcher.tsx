@@ -22,29 +22,31 @@ const LanguageSwitcher = () => {
         alignItems: 'center',
         gap: '6px',
         padding: '8px 14px',
-        border: '1px solid rgba(255, 255, 255, 0.2)',
+        border: '1px solid #dee2e6',
         borderRadius: '20px',
-        background: 'rgba(255, 255, 255, 0.1)',
-        color: 'white',
+        background: 'white',
+        color: '#333',
         fontSize: '0.9rem',
         fontWeight: '500',
         cursor: 'pointer',
         transition: 'all 0.3s ease',
-        backdropFilter: 'blur(10px)',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
-        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+        e.currentTarget.style.background = '#f8f9fa';
+        e.currentTarget.style.borderColor = '#bd2121';
         e.currentTarget.style.transform = 'translateY(-2px)';
+        e.currentTarget.style.boxShadow = '0 4px 8px rgba(189, 33, 33, 0.15)';
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
-        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        e.currentTarget.style.background = 'white';
+        e.currentTarget.style.borderColor = '#dee2e6';
         e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
       }}
     >
       <Globe size={16} />
-      <span>{isEnglish ? 'EN' : 'ES'}</span>
+      <span>{isEnglish ? 'English' : 'Español'}</span>
     </button>
   );
 };

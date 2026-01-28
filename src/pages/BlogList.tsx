@@ -42,43 +42,89 @@ const BlogList = () => {
 
   return (
     <div className="site-wrap">
+      {/* Hero Section - Modern & Minimalist */}
       <div 
-        className="site-section-cover overlay inner-page bg-light" 
-        style={{ 
-          backgroundImage: "url('/images/blog-header.jpg')",
-          minHeight: '400px'
+        className="position-relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, #bd2121 0%, #8b1515 100%)',
+          paddingTop: '100px',
+          paddingBottom: '100px'
         }}
         data-aos="fade"
       >
-        <div className="container">
-          <div className="row align-items-center justify-content-center text-center" style={{ minHeight: '400px' }}>
-            <div className="col-lg-10">
-              <div className="py-5">
-                <div className="block-heading-1">
-                  <span 
-                    className="d-block mb-2 text-white" 
-                    data-aos="fade-up"
-                    style={{ 
-                      fontSize: '1rem',
-                      letterSpacing: '2px',
-                      textTransform: 'uppercase'
-                    }}
-                  >
-                    {t('blog.subtitle')}
-                  </span>
-                  <h1 
-                    className="mb-0 text-white" 
-                    data-aos="fade-up" 
-                    data-aos-delay="100"
-                    style={{ 
-                      fontSize: '3rem',
-                      fontWeight: '700',
-                      textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-                    }}
-                  >
-                    {t('blog.title')}
-                  </h1>
-                </div>
+        {/* Decorative circles */}
+        <div 
+          style={{
+            position: 'absolute',
+            top: '-50px',
+            right: '-50px',
+            width: '300px',
+            height: '300px',
+            borderRadius: '50%',
+            background: 'rgba(255, 255, 255, 0.05)',
+            filter: 'blur(40px)'
+          }}
+        />
+        <div 
+          style={{
+            position: 'absolute',
+            bottom: '-100px',
+            left: '-100px',
+            width: '400px',
+            height: '400px',
+            borderRadius: '50%',
+            background: 'rgba(255, 255, 255, 0.03)',
+            filter: 'blur(60px)'
+          }}
+        />
+
+        <div className="container position-relative">
+          <div className="row align-items-center justify-content-center text-center">
+            <div className="col-lg-8">
+              <div data-aos="fade-up">
+                <span 
+                  className="d-inline-block mb-3 px-4 py-2"
+                  style={{ 
+                    fontSize: '0.85rem',
+                    letterSpacing: '2px',
+                    textTransform: 'uppercase',
+                    color: 'rgba(255, 255, 255, 0.9)',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    borderRadius: '50px',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    backdropFilter: 'blur(10px)',
+                    fontWeight: '600'
+                  }}
+                >
+                  {t('blog.subtitle', 'Noticias y Novedades')}
+                </span>
+                <h1 
+                  className="mb-3 text-white" 
+                  data-aos="fade-up" 
+                  data-aos-delay="100"
+                  style={{ 
+                    fontSize: '3.5rem',
+                    fontWeight: '700',
+                    lineHeight: '1.2',
+                    marginBottom: '1.5rem'
+                  }}
+                >
+                  {t('blog.title', 'Nuestros Insights')}
+                </h1>
+                <p 
+                  className="text-white mb-0"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  style={{
+                    fontSize: '1.1rem',
+                    opacity: '0.9',
+                    maxWidth: '600px',
+                    margin: '0 auto',
+                    lineHeight: '1.6'
+                  }}
+                >
+                  {t('blog.description', 'Mantente informado con las últimas novedades del comercio internacional y la logística global')}
+                </p>
               </div>
             </div>
           </div>
@@ -142,7 +188,7 @@ const BlogList = () => {
                           )}
                         </div>
 
-                        <h3 className="blog-card-title">
+                        <h3 className="blog-card-title" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif', fontWeight: '600' }}>
                           <Link to={`/insights/${slug}`}>{title}</Link>
                         </h3>
 

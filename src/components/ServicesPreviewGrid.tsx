@@ -8,17 +8,19 @@ import {
   Warehouse,
   Route,
   FileText,
-  ArrowRight
+  ArrowRight,
+  CheckCircle2
 } from 'lucide-react';
 
 interface ServicePreview {
   id: string;
   icon: React.ReactNode;
+  title: string;
+  subtitle: string;
+  benefits: string[];
   image: string;
-  name: string;
-  oneLiner: string;
   color: string;
-  link: string;
+  detailLink: string;
 }
 
 const ServicesPreviewGrid = () => {
@@ -26,58 +28,88 @@ const ServicesPreviewGrid = () => {
 
   const services: ServicePreview[] = [
     {
-      id: 'air',
-      icon: <Plane size={48} strokeWidth={1.5} />,
-      image: '/images/ImagenAer.png',
-      name: t('servicesPage.grid.air.title', 'Transporte Aéreo'),
-      oneLiner: t('servicesPage.grid.air.oneLiner', 'Velocidad y precisión global'),
+      id: 'aereo',
+      icon: <Plane size={40} />,
+      title: t('servicesPage.air.title', 'Transporte Aéreo'),
+      subtitle: t('servicesPage.air.shortDesc', 'Velocidad y eficiencia para cargas urgentes'),
+      benefits: [
+        t('servicesPage.air.benefit1', 'Entregas Express 24-72hrs'),
+        t('servicesPage.air.benefit2', 'Tracking en tiempo real'),
+        t('servicesPage.air.benefit3', 'Cobertura global 100+ destinos')
+      ],
+      image: '/images/Imagen Transporte Aereo.png',
       color: '#0ea5e9',
-      link: '/servicios#transporte-aereo'
+      detailLink: '/servicios/transporte-aereo'
     },
     {
-      id: 'sea',
-      icon: <Ship size={48} strokeWidth={1.5} />,
-      image: '/images/ImagenMar.png',
-      name: t('servicesPage.grid.sea.title', 'Transporte Marítimo'),
-      oneLiner: t('servicesPage.grid.sea.oneLiner', 'Capacidad y economía en océanos'),
+      id: 'maritimo',
+      icon: <Ship size={40} />,
+      title: t('servicesPage.sea.title', 'Transporte Marítimo'),
+      subtitle: t('servicesPage.sea.shortDesc', 'Soluciones FCL y LCL optimizadas'),
+      benefits: [
+        t('servicesPage.sea.benefit1', 'Full Container (FCL) y Consolidado (LCL)'),
+        t('servicesPage.sea.benefit2', 'Tarifas competitivas certificadas'),
+        t('servicesPage.sea.benefit3', 'Gestión documental completa')
+      ],
+      image: '/images/Imagen Transporte Maritimo.png',
       color: '#3b82f6',
-      link: '/servicios#transporte-maritimo'
+      detailLink: '/servicios/transporte-maritimo'
     },
     {
-      id: 'land',
-      icon: <Truck size={48} strokeWidth={1.5} />,
-      image: '/images/ImagenTer.png',
-      name: t('servicesPage.grid.land.title', 'Transporte Terrestre'),
-      oneLiner: t('servicesPage.grid.land.oneLiner', 'Conectando destinos continentales'),
+      id: 'terrestre',
+      icon: <Truck size={40} />,
+      title: t('servicesPage.land.title', 'Transporte Terrestre'),
+      subtitle: t('servicesPage.land.shortDesc', 'Conexión terrestre nacional e internacional'),
+      benefits: [
+        t('servicesPage.land.benefit1', 'Rutas Chile, Perú, Argentina'),
+        t('servicesPage.land.benefit2', 'Flota moderna rastreada GPS'),
+        t('servicesPage.land.benefit3', 'Entregas puntuales garantizadas')
+      ],
+      image: '/images/Imagen Transporte Terrestre.png',
       color: '#22c55e',
-      link: '/servicios#transporte-terrestre'
+      detailLink: '/servicios/transporte-terrestre'
     },
     {
       id: 'warehouse',
-      icon: <Warehouse size={48} strokeWidth={1.5} />,
-      image: '/images/ImagenWare.png',
-      name: t('servicesPage.grid.warehouse.title', 'Warehouse & Fulfillment'),
-      oneLiner: t('servicesPage.grid.warehouse.oneLiner', 'Almacenaje estratégico 24/7'),
+      icon: <Warehouse size={40} />,
+      title: t('servicesPage.warehouse.title', 'Warehouse'),
+      subtitle: t('servicesPage.warehouse.shortDesc', 'Almacenaje y distribución especializada'),
+      benefits: [
+        t('servicesPage.warehouse.benefit1', 'Bodegas certificadas estratégicas'),
+        t('servicesPage.warehouse.benefit2', 'WMS para control de inventario'),
+        t('servicesPage.warehouse.benefit3', 'Pick & Pack personalizado')
+      ],
+      image: '/images/Imagen Warehouse.png',
       color: '#f59e0b',
-      link: '/servicios#warehouse'
+      detailLink: '/servicios/warehouse'
     },
     {
       id: 'multimodal',
-      icon: <Route size={48} strokeWidth={1.5} />,
-      image: '/images/ImagenMulti.png',
-      name: t('servicesPage.grid.multimodal.title', 'Servicio Multimodal'),
-      oneLiner: t('servicesPage.grid.multimodal.oneLiner', 'Rutas optimizadas integradas'),
+      icon: <Route size={40} />,
+      title: t('servicesPage.multimodal.title', 'Servicio Multimodal'),
+      subtitle: t('servicesPage.multimodal.shortDesc', 'Combinación óptima de modos de transporte'),
+      benefits: [
+        t('servicesPage.multimodal.benefit1', 'Optimización de costos y tiempos'),
+        t('servicesPage.multimodal.benefit2', 'Un solo interlocutor end-to-end'),
+        t('servicesPage.multimodal.benefit3', 'Soluciones personalizadas')
+      ],
+      image: '/images/Imagen Servicio Multimodal.png',
       color: '#8b5cf6',
-      link: '/servicios#servicio-multimodal'
+      detailLink: '/servicios/servicio-multimodal'
     },
     {
-      id: 'customs',
-      icon: <FileText size={48} strokeWidth={1.5} />,
-      image: '/images/ImagenAdu.png',
-      name: t('servicesPage.grid.customs.title', 'Servicio de Aduanas'),
-      oneLiner: t('servicesPage.grid.customs.oneLiner', 'Cumplimiento normativo garantizado'),
+      id: 'aduanas',
+      icon: <FileText size={40} />,
+      title: t('servicesPage.customs.title', 'Servicio de Aduanas'),
+      subtitle: t('servicesPage.customs.shortDesc', 'Gestión aduanera integral y eficiente'),
+      benefits: [
+        t('servicesPage.customs.benefit1', 'Agentes aduaneros certificados'),
+        t('servicesPage.customs.benefit2', 'Clasificación arancelaria correcta'),
+        t('servicesPage.customs.benefit3', 'Despachos ágiles sin demoras')
+      ],
+      image: '/images/Imagen Servicio de Aduanas.png',
       color: '#ef4444',
-      link: '/servicios#servicio-aduanas'
+      detailLink: '/servicios/servicio-aduanas'
     }
   ];
 
@@ -86,7 +118,7 @@ const ServicesPreviewGrid = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.08
+        staggerChildren: 0.1
       }
     }
   };
@@ -94,139 +126,98 @@ const ServicesPreviewGrid = () => {
   const cardVariants = {
     hidden: { 
       opacity: 0, 
-      y: 20 
+      y: 30 
     },
     visible: { 
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 0.5,
-        ease: "easeOut" as const
+        duration: 0.5
       }
     }
   };
 
   return (
-    <section className="services-preview-section bg-light py-5">
+    <section className="bg-white py-5" id="servicios-grid">
       <div className="container">
-        {/* Section Header */}
-        <motion.div 
-          className="text-center mb-5"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="text-uppercase fw-bold text-danger small d-block mb-2">
-            {t('services.subtitle', 'SELECCIONE UNO DE NUESTROS SERVICIOS')}
-          </span>
-          <h2 className="display-5 fw-bold mb-3">
-            {t('services.title', 'NUESTROS SERVICIOS')}
-          </h2>
-          <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>
-            {t('services.description', 'Soluciones logísticas integrales para cargas de alto valor en comercio internacional')}
-          </p>
-        </motion.div>
+        <div className="row mb-5">
+          <div className="col-12 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-uppercase fw-bold text-danger small d-block mb-2">
+                {t('services.subtitle', 'SELECCIONE UNO DE NUESTROS SERVICIOS')}
+              </span>
+              <h2 className="display-5 fw-bold mb-3">
+                {t('services.title', 'NUESTROS SERVICIOS')}
+              </h2>
+              <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>
+                {t('services.description', 'Soluciones logísticas integrales diseñadas para cada necesidad')}
+              </p>
+            </motion.div>
+          </div>
+        </div>
 
-        {/* Services Grid */}
         <motion.div 
-          className="services-preview-grid"
+          className="row g-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
         >
-          {services.map((service) => (
+          {services.map((service, index) => (
             <motion.div
               key={service.id}
+              className="col-md-6 col-lg-4"
               variants={cardVariants}
-              className="service-preview-card"
-              whileHover={{ 
-                y: -8,
-                transition: { duration: 0.3 }
-              }}
             >
-              <Link 
-                to={service.link} 
-                className="service-preview-link"
-                onClick={() => {
-                  // Analytics event
-                  if (typeof window !== 'undefined' && (window as any).dataLayer) {
-                    (window as any).dataLayer.push({
-                      event: 'service_preview_click',
-                      service_id: service.id,
-                      service_name: service.name
-                    });
-                  }
-                }}
+              <motion.div 
+                className="service-card-premium"
+                whileHover={{ y: -10 }}
+                transition={{ duration: 0.3 }}
               >
-                {/* Image Background */}
-                <div 
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    backgroundImage: `url(${service.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    opacity: 0.5,
-                    filter: 'blur(1px)',
-                    zIndex: 0
-                  }}
-                />
-                
-                {/* White overlay for text readability - more transparent */}
-                <div 
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.9) 100%)',
-                    zIndex: 2
-                  }}
-                />
-                
-                <div className="service-preview-content" style={{ position: 'relative', zIndex: 3 }}>
-                  {/* Icon with color accent */}
-                  <div 
-                    className="service-preview-icon"
-                    style={{ color: service.color }}
-                  >
+                <div className="service-card-image">
+                  <img src={service.image} alt={service.title} />
+                  <div className="service-card-overlay" style={{ background: `linear-gradient(180deg, transparent 0%, ${service.color}dd 100%)` }}></div>
+                  <div className="service-card-icon" style={{ background: service.color }}>
                     {service.icon}
                   </div>
+                </div>
+                
+                <div className="service-card-content">
+                  <h3 className="service-card-title">{service.title}</h3>
+                  <p className="service-card-subtitle">{service.subtitle}</p>
+                  
+                  <ul className="service-card-benefits">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx}>
+                        <CheckCircle2 size={16} style={{ color: service.color }} />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                  {/* Title */}
-                  <h3 className="service-preview-title">
-                    {service.name}
-                  </h3>
-
-                  {/* One-liner */}
-                  <p className="service-preview-oneliner">
-                    {service.oneLiner}
-                  </p>
-
-                  {/* CTA */}
-                  <div className="service-preview-cta">
-                    <span className="me-2">Ver más información</span>
-                    <ArrowRight size={16} strokeWidth={2} />
+                  <div className="service-card-actions">
+                    <Link 
+                      to={service.detailLink}
+                      className="btn-service-primary"
+                      style={{ background: service.color }}
+                      onClick={() => window.scrollTo(0, 0)}
+                    >
+                      {t('servicesPage.card.cta1', 'Ver más información')}
+                      <ArrowRight size={18} className="ms-2" />
+                    </Link>
                   </div>
                 </div>
-
-                {/* Hover border accent */}
-                <div 
-                  className="service-preview-border"
-                  style={{ backgroundColor: service.color }}
-                />
-              </Link>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Bottom CTA - Full services page */}
+        {/* Bottom CTA */}
         <motion.div 
           className="text-center mt-5"
           initial={{ opacity: 0 }}
