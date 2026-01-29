@@ -196,37 +196,37 @@ const Navbar = () => {
                   <li>
                     <Link className="dropdown-item" to="/servicios/transporte-aereo" onClick={() => window.scrollTo(0, 0)}>
                       <i className="fas fa-plane me-2"></i>
-                      {t('servicesPage.grid.air.title')}
+                      {t('servicesPage.air.title')}
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/servicios/transporte-maritimo" onClick={() => window.scrollTo(0, 0)}>
                       <i className="fas fa-ship me-2"></i>
-                      {t('servicesPage.grid.sea.title')}
+                      {t('servicesPage.sea.title')}
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/servicios/transporte-terrestre" onClick={() => window.scrollTo(0, 0)}>
                       <i className="fas fa-truck me-2"></i>
-                      {t('servicesPage.grid.land.title')}
+                      {t('servicesPage.land.title')}
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/servicios/warehouse" onClick={() => window.scrollTo(0, 0)}>
                       <i className="fas fa-warehouse me-2"></i>
-                      {t('servicesPage.grid.warehouse.title')}
+                      {t('servicesPage.warehouse.title')}
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/servicios/servicio-multimodal" onClick={() => window.scrollTo(0, 0)}>
                       <i className="fas fa-route me-2"></i>
-                      {t('servicesPage.grid.multimodal.title')}
+                      {t('servicesPage.multimodal.title')}
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/servicios/servicio-aduanas" onClick={() => window.scrollTo(0, 0)}>
                       <i className="fas fa-file-alt me-2"></i>
-                      {t('servicesPage.grid.customs.title')}
+                      {t('servicesPage.customs.title')}
                     </Link>
                   </li>
                   <li><hr className="dropdown-divider" /></li>
